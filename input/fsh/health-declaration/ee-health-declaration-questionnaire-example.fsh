@@ -1,4 +1,4 @@
-Instance: ExampleEEHealthDeclarationQuestionnaire
+Instance: ee-health-declaration-questionnaire-example
 InstanceOf: EEHealthDeclarationQuestionnaire
 Description: "Näidis tervisedeklaratsiooni andmestik"
 Usage: #example

@@ -1,7 +1,7 @@
 
 ### Sissejuhatus
 
-QRE (Questionnaire) ehk Küsimustikke teenus on keskne rakendus, mille kaudu väljastatakse, säilitatakse ja hallatakse erinevate kasutusalade küsimustikke. 
+QRE (Questionnaire) ehk Küsimustike teenus on keskne rakendus, mille kaudu väljastatakse, säilitatakse ja hallatakse erinevate kasutusalade küsimustikke. 
 
 
 ### Arendusvahendid ja lähtekood
