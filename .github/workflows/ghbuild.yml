@@ -13,6 +13,8 @@
 
 name: CI
 
+permissions: write-all
+
 # Controls when the action will run.
 on:
   workflow_call: # Reusable by other workflows
