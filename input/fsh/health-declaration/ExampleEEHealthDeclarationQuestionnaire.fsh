@@ -265,12 +265,18 @@ Usage: #example
 
 * item[=].item[0].linkId = "allergies.diagnoses"
 * item[=].item[=].prefix = "3.0"
+// * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].code.code = #previous-diagnoses
+// * item[=].item[=].code.display = "Varasemad diagnoosid"
 * item[=].item[=].text = "Varasemad diagnoosid"
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 
 * item[=].item[=].item[0].linkId = "allergies.diagnoses.group"
 * item[=].item[=].item[=].prefix = "3.0.1"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
+// * item[=].item[=].item[=].code.display = "Varasem diagnoos"
 * item[=].item[=].item[=].text = "Varasem diagnoos"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].required = false
@@ -278,6 +284,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[0].linkId = "allergies.diagnoses.group.diagnosis"
 * item[=].item[=].item[=].item[=].prefix = "3.0.1.1"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #diagnosis
+// * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].type = #coding
 * item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-allergia"
@@ -286,6 +295,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "allergies.diagnoses.group.written-diagnosis"
 * item[=].item[=].item[=].item[=].prefix = "3.0.1.2"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
+// * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].type = #string
 * item[=].item[=].item[=].item[=].required = false
@@ -293,17 +305,18 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "allergies.diagnoses.group.source-reference"
 * item[=].item[=].item[=].item[=].prefix = "3.0.1.3"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #source-reference
+// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
 
-//Continue from here
-
 * item[=].item[+].linkId = "allergies.no-complaints"
 * item[=].item[=].prefix = "3.1"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #no_complaints
+* item[=].item[=].code.code = #no-complaints
 * item[=].item[=].code.display = "Kaebused hetkel puuduvad"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
 * item[=].item[=].type = #boolean
@@ -312,7 +325,7 @@ Usage: #example
 * item[=].item[+].linkId = "allergies.medication-allergy"
 * item[=].item[=].prefix = "3.2"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #allergies_to_medication
+* item[=].item[=].code.code = #medication-allergy
 * item[=].item[=].code.display = "Allergia ravimitele (palun täpsustage)"
 * item[=].item[=].text = "Allergia ravimitele (palun täpsustage)"
 * item[=].item[=].type = #boolean
@@ -336,7 +349,7 @@ Usage: #example
 * item[=].item[+].linkId = "allergies.food-allergy"
 * item[=].item[=].prefix = "3.3"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #allergies_to_food
+* item[=].item[=].code.code = #food-allergy
 * item[=].item[=].code.display = "Allergia toiduainetele (palun täpsustage)"
 * item[=].item[=].text = "Allergia toiduainetele (palun täpsustage)"
 * item[=].item[=].type = #boolean
@@ -360,7 +373,7 @@ Usage: #example
 * item[=].item[+].linkId = "allergies.pollen-allergy"
 * item[=].item[=].prefix = "3.4"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #allergies_to_pollen
+* item[=].item[=].code.code = #pollen-allergy
 * item[=].item[=].code.display = "Allergia õietolmule (palun täpsustage)"
 * item[=].item[=].text = "Allergia õietolmule (palun täpsustage)"
 * item[=].item[=].type = #boolean
@@ -384,7 +397,7 @@ Usage: #example
 * item[=].item[+].linkId = "allergies.pets-allergy"
 * item[=].item[=].prefix = "3.5"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #allergies_to_animals
+* item[=].item[=].code.code = #pets-allergy
 * item[=].item[=].code.display = "Allergia koduloomadele või -lindudele (palun täpsustage)"
 * item[=].item[=].text = "Allergia koduloomadele või -lindudele (palun täpsustage)"
 * item[=].item[=].type = #boolean
@@ -408,7 +421,7 @@ Usage: #example
 * item[=].item[+].linkId = "allergies.other-allergies"
 * item[=].item[=].prefix = "3.6"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #allergies_to_other
+* item[=].item[=].code.code = #other-allergies
 * item[=].item[=].code.display = "Allergia muudele ainetele (palun täpsustage)"
 * item[=].item[=].text = "Allergia muudele ainetele (palun täpsustage)"
 * item[=].item[=].type = #boolean
@@ -432,7 +445,7 @@ Usage: #example
 * item[+].linkId = "mental-health"
 * item[=].prefix = "4"
 * item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].code.code = #mental_state
+* item[=].code.code = #mental-health
 * item[=].code.display = "Psüühika"
 * item[=].text = "Psüühika"
 * item[=].type = #group
@@ -440,18 +453,18 @@ Usage: #example
 
 * item[=].item[0].linkId = "mental-health.diagnoses"
 * item[=].item[=].prefix = "4.0"
-* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #previous_diagnoses
-* item[=].item[=].code.display = "Varasemad diagnoosid"
+// * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].code.code = #previous-diagnoses
+// * item[=].item[=].code.display = "Varasemad diagnoosid"
 * item[=].item[=].text = "Varasemad diagnoosid"
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 
 * item[=].item[=].item[0].linkId = "mental-health.diagnoses.group"
 * item[=].item[=].item[=].prefix = "4.0.1"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #previous_diagnosis_singular
-* item[=].item[=].item[=].code.display = "Varasem diagnoos"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
+// * item[=].item[=].item[=].code.display = "Varasem diagnoos"
 * item[=].item[=].item[=].text = "Varasem diagnoos"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].required = false
@@ -459,9 +472,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[0].linkId = "mental-health.diagnoses.group.diagnosis"
 * item[=].item[=].item[=].item[=].prefix = "4.0.1.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #diagnosis
-* item[=].item[=].item[=].item[=].code.display = "Diagnoos"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #diagnosis
+// * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].type = #coding
 * item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-psyyhika"
@@ -470,9 +483,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "mental-health.diagnoses.group.written-diagnosis"
 * item[=].item[=].item[=].item[=].prefix = "4.0.1.2"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #diagnosis_description
-* item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
+// * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].type = #string
 * item[=].item[=].item[=].item[=].required = false
@@ -480,9 +493,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "mental-health.diagnoses.group.source-reference"
 * item[=].item[=].item[=].item[=].prefix = "4.0.1.3"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #source_reference
-* item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #source-reference
+// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].required = true
@@ -491,7 +504,7 @@ Usage: #example
 * item[=].item[+].linkId = "mental-health.no-complaints"
 * item[=].item[=].prefix = "4.1"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #no_complaints
+* item[=].item[=].code.code = #no-complaints
 * item[=].item[=].code.display = "Kaebused hetkel puuduvad"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
 * item[=].item[=].type = #boolean
@@ -548,7 +561,7 @@ Usage: #example
 * item[=].item[+].linkId = "mental-health.fear-working-alone"
 * item[=].item[=].prefix = "4.4"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #afraid_to_work_alone
+* item[=].item[=].code.code = #fear-working-alone
 * item[=].item[=].code.display = "Kartus töötada üksinda"
 * item[=].item[=].text = "Kartus töötada üksinda"
 * item[=].item[=].type = #boolean
@@ -572,7 +585,7 @@ Usage: #example
 * item[=].item[+].linkId = "mental-health.fear-closed-spaces"
 * item[=].item[=].prefix = "4.5"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #claustrophobia
+* item[=].item[=].code.code = #fear-closed-spaces
 * item[=].item[=].code.display = "Hirm suletud ruumi ees"
 * item[=].item[=].text = "Hirm suletud ruumi ees"
 * item[=].item[=].type = #boolean
@@ -596,7 +609,7 @@ Usage: #example
 * item[=].item[+].linkId = "mental-health.fear-heights"
 * item[=].item[=].prefix = "4.6"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #fear_of_heights
+* item[=].item[=].code.code = #fear-heights
 * item[=].item[=].code.display = "Kõrgusekartus"
 * item[=].item[=].text = "Kõrgusekartus"
 * item[=].item[=].type = #boolean
@@ -620,7 +633,7 @@ Usage: #example
 * item[=].item[+].linkId = "mental-health.other-disease-condition-symptom"
 * item[=].item[=].prefix = "4.7"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #other_condition
+* item[=].item[=].code.code = #other-disease-condition-symptom
 * item[=].item[=].code.display = "Muu haigus/seisund/sümptom (palun täpsustage)"
 * item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
 * item[=].item[=].type = #boolean
@@ -644,7 +657,7 @@ Usage: #example
 * item[=].item[+].linkId = "mental-health.frequent-stress"
 * item[=].item[=].prefix = "4.8"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #stress
+* item[=].item[=].code.code = #frequent-stress
 * item[=].item[=].code.display = "Sagedane stress"
 * item[=].item[=].text = "Sagedane stress"
 * item[=].item[=].type = #boolean
@@ -668,7 +681,7 @@ Usage: #example
 * item[+].linkId = "nervous-system"
 * item[=].prefix = "5"
 * item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].code.code = #nervous_system
+* item[=].code.code = #nervous-system
 * item[=].code.display = "Närvisüsteem"
 * item[=].text = "Närvisüsteem"
 * item[=].type = #group
@@ -676,18 +689,18 @@ Usage: #example
 
 * item[=].item[0].linkId = "nervous-system.diagnoses"
 * item[=].item[=].prefix = "5.0"
-* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #previous_diagnoses
-* item[=].item[=].code.display = "Varasemad diagnoosid"
+// * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].code.code = #previous-diagnoses
+// * item[=].item[=].code.display = "Varasemad diagnoosid"
 * item[=].item[=].text = "Varasemad diagnoosid"
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 
 * item[=].item[=].item[0].linkId = "nervous-system.diagnoses.group"
 * item[=].item[=].item[=].prefix = "5.0.1"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #previous_diagnosis_singular
-* item[=].item[=].item[=].code.display = "Varasem diagnoos"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
+// * item[=].item[=].item[=].code.display = "Varasem diagnoos"
 * item[=].item[=].item[=].text = "Varasem diagnoos"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].required = false
@@ -695,9 +708,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[0].linkId = "nervous-system.diagnoses.group.diagnosis"
 * item[=].item[=].item[=].item[=].prefix = "5.0.1.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #diagnosis
-* item[=].item[=].item[=].item[=].code.display = "Diagnoos"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #diagnosis
+// * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].type = #coding
 * item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-narvisusteem"
@@ -706,9 +719,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "nervous-system.diagnoses.group.written-diagnosis"
 * item[=].item[=].item[=].item[=].prefix = "5.0.1.2"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #diagnosis_description
-* item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
+// * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].type = #string
 * item[=].item[=].item[=].item[=].required = false
@@ -716,9 +729,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "nervous-system.diagnoses.group.source-reference"
 * item[=].item[=].item[=].item[=].prefix = "5.0.1.3"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #source_reference
-* item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #source-reference
+// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].required = true
@@ -727,7 +740,7 @@ Usage: #example
 * item[=].item[+].linkId = "nervous-system.no-complaints"
 * item[=].item[=].prefix = "5.1"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #no_complaints
+* item[=].item[=].code.code = #no-complaints
 * item[=].item[=].code.display = "Kaebused hetkel puuduvad"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
 * item[=].item[=].type = #boolean
@@ -784,7 +797,7 @@ Usage: #example
 * item[=].item[+].linkId = "nervous-system.balance-disorder"
 * item[=].item[=].prefix = "5.4"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #balance_disorder
+* item[=].item[=].code.code = #balance-disorder
 * item[=].item[=].code.display = "Tasakaaluhäired (sh Meniere'i tõbi)"
 * item[=].item[=].text = "Tasakaaluhäired (sh Meniere'i tõbi)"
 * item[=].item[=].type = #boolean
@@ -832,7 +845,7 @@ Usage: #example
 * item[=].item[+].linkId = "nervous-system.seasickness"
 * item[=].item[=].prefix = "5.6"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #sea_sickness
+* item[=].item[=].code.code = #seasickness
 * item[=].item[=].code.display = "Merehaigus"
 * item[=].item[=].text = "Merehaigus"
 * item[=].item[=].type = #boolean
@@ -856,7 +869,7 @@ Usage: #example
 * item[=].item[+].linkId = "nervous-system.coordination-disorder"
 * item[=].item[=].prefix = "5.7"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #coordination_disorder
+* item[=].item[=].code.code = #coordination-disorder
 * item[=].item[=].code.display = "Koordinatsioonihäired (sh. kätega seonduvad)"
 * item[=].item[=].text = "Koordinatsioonihäired (sh. kätega seonduvad)"
 * item[=].item[=].type = #boolean
@@ -884,7 +897,7 @@ Usage: #example
 * item[=].item[+].linkId = "nervous-system.other-disease-condition-symptom"
 * item[=].item[=].prefix = "5.8"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #other_condition
+* item[=].item[=].code.code = #other-disease-condition-symptom
 * item[=].item[=].code.display = "Muu haigus/seisund/sümptom (palun täpsustage)"
 * item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
 * item[=].item[=].type = #boolean
@@ -908,7 +921,7 @@ Usage: #example
 * item[+].linkId = "eyes-vision"
 * item[=].prefix = "6"
 * item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].code.code = #eyesight
+* item[=].code.code = #eyes-vision
 * item[=].code.display = "Silmad ja nägemine"
 * item[=].text = "Silmad ja nägemine"
 * item[=].type = #group
@@ -916,18 +929,18 @@ Usage: #example
 
 * item[=].item[0].linkId = "eyes-vision.diagnoses"
 * item[=].item[=].prefix = "6.0"
-* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #previous_diagnoses
-* item[=].item[=].code.display = "Varasemad diagnoosid"
+// * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].code.code = #previous-diagnoses
+// * item[=].item[=].code.display = "Varasemad diagnoosid"
 * item[=].item[=].text = "Varasemad diagnoosid"
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 
 * item[=].item[=].item[0].linkId = "eyes-vision.diagnoses.group"
 * item[=].item[=].item[=].prefix = "6.0.1"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #previous_diagnosis_singular
-* item[=].item[=].item[=].code.display = "Varasem diagnoos"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
+// * item[=].item[=].item[=].code.display = "Varasem diagnoos"
 * item[=].item[=].item[=].text = "Varasem diagnoos"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].required = false
@@ -935,9 +948,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[0].linkId = "eyes-vision.diagnoses.group.diagnosis"
 * item[=].item[=].item[=].item[=].prefix = "6.0.1.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #diagnosis
-* item[=].item[=].item[=].item[=].code.display = "Diagnoos"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #diagnosis
+// * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].type = #coding
 * item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-silmad-ja-nagemine"
@@ -946,9 +959,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "eyes-vision.diagnoses.group.written-diagnosis"
 * item[=].item[=].item[=].item[=].prefix = "6.0.1.2"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #diagnosis_description
-* item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
+// * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].type = #string
 * item[=].item[=].item[=].item[=].required = false
@@ -956,9 +969,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "eyes-vision.diagnoses.group.source-reference"
 * item[=].item[=].item[=].item[=].prefix = "6.0.1.3"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #source_reference
-* item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #source-reference
+// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].required = true
@@ -967,7 +980,7 @@ Usage: #example
 * item[=].item[+].linkId = "eyes-vision.no-complaints"
 * item[=].item[=].prefix = "6.1"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #no_complaints
+* item[=].item[=].code.code = #no-complaints
 * item[=].item[=].code.display = "Kaebused hetkel puuduvad"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
 * item[=].item[=].type = #boolean
@@ -1020,7 +1033,7 @@ Usage: #example
 * item[=].item[+].linkId = "eyes-vision.limited-view"
 * item[=].item[=].prefix = "6.3"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #limited_field_of_view
+* item[=].item[=].code.code = #limited-view
 * item[=].item[=].code.display = "Kas üles-alla või külgedele vaadates esineb vaatevälja piiratust?"
 * item[=].item[=].text = "Kas üles-alla või külgedele vaadates esineb vaatevälja piiratust?"
 * item[=].item[=].type = #boolean
@@ -1044,7 +1057,7 @@ Usage: #example
 * item[=].item[+].linkId = "eyes-vision.double-vision"
 * item[=].item[=].prefix = "6.4"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #double_vision
+* item[=].item[=].code.code = #double-vision
 * item[=].item[=].code.display = "Kahelinägemine"
 * item[=].item[=].text = "Kahelinägemine"
 * item[=].item[=].type = #boolean
@@ -1068,7 +1081,7 @@ Usage: #example
 * item[=].item[+].linkId = "eyes-vision.colour-vision-disorder"
 * item[=].item[=].prefix = "6.5"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #problems_seeing_color
+* item[=].item[=].code.code = #colour-vision-disorder
 * item[=].item[=].code.display = "Värvusmeele häired"
 * item[=].item[=].text = "Värvusmeele häired"
 * item[=].item[=].type = #boolean
@@ -1092,7 +1105,7 @@ Usage: #example
 * item[=].item[+].linkId = "eyes-vision.other-disease-condition-symptom"
 * item[=].item[=].prefix = "6.6"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #other_condition
+* item[=].item[=].code.code = #other-disease-condition-symptom
 * item[=].item[=].code.display = "Muu haigus/seisund/sümptom (palun täpsustage)"
 * item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
 * item[=].item[=].type = #boolean
@@ -1116,7 +1129,7 @@ Usage: #example
 * item[+].linkId = "ear-nose-throat"
 * item[=].prefix = "7"
 * item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].code.code = #ear_nose_throat
+* item[=].code.code = #ear-nose-throat
 * item[=].code.display = "Kõrv, nina, neel"
 * item[=].text = "Kõrv, nina, neel"
 * item[=].type = #group
@@ -1125,18 +1138,18 @@ Usage: #example
 //continue
 * item[=].item[0].linkId = "ear-nose-throat.diagnoses"
 * item[=].item[=].prefix = "7.0"
-* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #previous_diagnoses
-* item[=].item[=].code.display = "Varasemad diagnoosid"
+// * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].code.code = #previous-diagnoses
+// * item[=].item[=].code.display = "Varasemad diagnoosid"
 * item[=].item[=].text = "Varasemad diagnoosid"
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 
 * item[=].item[=].item[0].linkId = "ear-nose-throat.diagnoses.group"
 * item[=].item[=].item[=].prefix = "7.0.1"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #previous_diagnosis_singular
-* item[=].item[=].item[=].code.display = "Varasem diagnoos"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
+// * item[=].item[=].item[=].code.display = "Varasem diagnoos"
 * item[=].item[=].item[=].text = "Varasem diagnoos"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].required = false
@@ -1144,9 +1157,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[0].linkId = "ear-nose-throat.diagnoses.group.diagnosis"
 * item[=].item[=].item[=].item[=].prefix = "7.0.1.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #diagnosis
-* item[=].item[=].item[=].item[=].code.display = "Diagnoos"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #diagnosis
+// * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].type = #coding
 * item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-korv-nina-neel"
@@ -1155,9 +1168,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "ear-nose-throat.diagnoses.group.written-diagnosis"
 * item[=].item[=].item[=].item[=].prefix = "7.0.1.2"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #diagnosis_description
-* item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
+// * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].type = #string
 * item[=].item[=].item[=].item[=].required = false
@@ -1165,9 +1178,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "ear-nose-throat.diagnoses.group.source-reference"
 * item[=].item[=].item[=].item[=].prefix = "7.0.1.3"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #source_reference
-* item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #source-reference
+// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].required = true
@@ -1176,7 +1189,7 @@ Usage: #example
 * item[=].item[+].linkId = "ear-nose-throat.no-complaints"
 * item[=].item[=].prefix = "7.1"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #no_complaints
+* item[=].item[=].code.code = #no-complaints
 * item[=].item[=].code.display = "Kaebused hetkel puuduvad"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
 * item[=].item[=].type = #boolean
@@ -1185,7 +1198,7 @@ Usage: #example
 * item[=].item[+].linkId = "ear-nose-throat.hearing-loss"
 * item[=].item[=].prefix = "7.2"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #hearing_impairment
+* item[=].item[=].code.code = #hearing-loss
 * item[=].item[=].code.display = "Kuulmislangus"
 * item[=].item[=].text = "Kuulmislangus"
 * item[=].item[=].type = #boolean
@@ -1209,7 +1222,7 @@ Usage: #example
 * item[=].item[+].linkId = "ear-nose-throat.allergic-rhinitis"
 * item[=].item[=].prefix = "7.3"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #allergic_rhinitis
+* item[=].item[=].code.code = #allergic-rhinitis
 * item[=].item[=].code.display = "Allergiline nohu"
 * item[=].item[=].text = "Allergiline nohu"
 * item[=].item[=].type = #boolean
@@ -1233,7 +1246,7 @@ Usage: #example
 * item[=].item[+].linkId = "ear-nose-throat.chronic-sinusitis"
 * item[=].item[=].prefix = "7.4"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #chronic_sinusitis
+* item[=].item[=].code.code = #chronic-sinusitis
 * item[=].item[=].code.display = "Otsmiku- või põskkoopa krooniline põletik"
 * item[=].item[=].text = "Otsmiku- või põskkoopa krooniline põletik"
 * item[=].item[=].type = #boolean
@@ -1257,7 +1270,7 @@ Usage: #example
 * item[=].item[+].linkId = "ear-nose-throat.nasal-obstruction"
 * item[=].item[=].prefix = "7.5"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #nasal_breathing_problems
+* item[=].item[=].code.code = #nasal-obstruction
 * item[=].item[=].code.display = "Ninahingamise takistus"
 * item[=].item[=].text = "Ninahingamise takistus"
 * item[=].item[=].type = #boolean
@@ -1281,7 +1294,7 @@ Usage: #example
 * item[=].item[+].linkId = "ear-nose-throat.frequent-throat-infection"
 * item[=].item[=].prefix = "7.6"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #frequent_throat_infection
+* item[=].item[=].code.code = #frequent-throat-infection
 * item[=].item[=].code.display = "Sagedane (rohkem kui 4x aastas) esinev kurguhaigus"
 * item[=].item[=].text = "Sagedane (rohkem kui 4x aastas) esinev kurguhaigus"
 * item[=].item[=].type = #boolean
@@ -1305,7 +1318,7 @@ Usage: #example
 * item[=].item[+].linkId = "ear-nose-throat.other-disease-condition-symptom"
 * item[=].item[=].prefix = "7.7"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #other_condition
+* item[=].item[=].code.code = #other-disease-condition-symptom
 * item[=].item[=].code.display = "Muu haigus/seisund/sümptom (palun täpsustage)"
 * item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
 * item[=].item[=].type = #boolean
@@ -1329,7 +1342,7 @@ Usage: #example
 * item[+].linkId = "respiratory-system"
 * item[=].prefix = "8"
 * item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].code.code = #respiratory_system
+* item[=].code.code = #respiratory-system
 * item[=].code.display = "Hingamissüsteem"
 * item[=].text = "Hingamissüsteem"
 * item[=].type = #group
@@ -1337,18 +1350,18 @@ Usage: #example
 
 * item[=].item[0].linkId = "respiratory-system.diagnoses"
 * item[=].item[=].prefix = "8.0"
-* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #previous_diagnoses
-* item[=].item[=].code.display = "Varasemad diagnoosid"
+// * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].code.code = #previous-diagnoses
+// * item[=].item[=].code.display = "Varasemad diagnoosid"
 * item[=].item[=].text = "Varasemad diagnoosid"
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 
 * item[=].item[=].item[0].linkId = "respiratory-system.diagnoses.group"
 * item[=].item[=].item[=].prefix = "8.0.1"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #previous_diagnosis_singular
-* item[=].item[=].item[=].code.display = "Varasem diagnoos"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
+// * item[=].item[=].item[=].code.display = "Varasem diagnoos"
 * item[=].item[=].item[=].text = "Varasem diagnoos"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].required = false
@@ -1356,9 +1369,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[0].linkId = "respiratory-system.diagnoses.group.diagnosis"
 * item[=].item[=].item[=].item[=].prefix = "8.0.1.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #diagnosis
-* item[=].item[=].item[=].item[=].code.display = "Diagnoos"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #diagnosis
+// * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].type = #coding
 * item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-hingamissusteem"
@@ -1367,9 +1380,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "respiratory-system.diagnoses.group.written-diagnosis"
 * item[=].item[=].item[=].item[=].prefix = "8.0.1.2"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #diagnosis_description
-* item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
+// * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].type = #string
 * item[=].item[=].item[=].item[=].required = false
@@ -1377,9 +1390,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "respiratory-system.diagnoses.group.source-reference"
 * item[=].item[=].item[=].item[=].prefix = "8.0.1.3"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #source_reference
-* item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #source-reference
+// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].required = true
@@ -1388,7 +1401,7 @@ Usage: #example
 * item[=].item[+].linkId = "respiratory-system.no-complaints"
 * item[=].item[=].prefix = "8.1"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #no_complaints
+* item[=].item[=].code.code = #no-complaints
 * item[=].item[=].code.display = "Kaebused hetkel puuduvad"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
 * item[=].item[=].type = #boolean
@@ -1445,7 +1458,7 @@ Usage: #example
 * item[=].item[+].linkId = "respiratory-system.other-disease-condition-symptom"
 * item[=].item[=].prefix = "8.4"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #other_condition
+* item[=].item[=].code.code = #other-disease-condition-symptom
 * item[=].item[=].code.display = "Muu haigus/seisund/sümptom (palun täpsustage)"
 * item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
 * item[=].item[=].type = #boolean
@@ -1469,7 +1482,7 @@ Usage: #example
 * item[=].item[+].linkId = "respiratory-system.sleep-apnoea"
 * item[=].item[=].prefix = "8.5"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #sleep_apnoe
+* item[=].item[=].code.code = #sleep-apnoea
 * item[=].item[=].code.display = "Uneapnoe"
 * item[=].item[=].text = "Uneapnoe"
 * item[=].item[=].type = #boolean
@@ -1493,7 +1506,7 @@ Usage: #example
 * item[+].linkId = "metabolic-disorder"
 * item[=].prefix = "9"
 * item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].code.code = #metabolism_disorder
+* item[=].code.code = #metabolic-disorder
 * item[=].code.display = "Ainevahetuse häired (sh kilpnäärme haigused)"
 * item[=].text = "Ainevahetuse häired (sh kilpnäärme haigused)"
 * item[=].type = #group
@@ -1501,18 +1514,18 @@ Usage: #example
 
 * item[=].item[0].linkId = "metabolic-disorder.diagnoses"
 * item[=].item[=].prefix = "9.0"
-* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #previous_diagnoses
-* item[=].item[=].code.display = "Varasemad diagnoosid"
+// * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].code.code = #previous-diagnoses
+// * item[=].item[=].code.display = "Varasemad diagnoosid"
 * item[=].item[=].text = "Varasemad diagnoosid"
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 
 * item[=].item[=].item[0].linkId = "metabolic-disorder.diagnoses.group"
 * item[=].item[=].item[=].prefix = "9.0.1"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #previous_diagnosis_singular
-* item[=].item[=].item[=].code.display = "Varasem diagnoos"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
+// * item[=].item[=].item[=].code.display = "Varasem diagnoos"
 * item[=].item[=].item[=].text = "Varasem diagnoos"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].required = false
@@ -1520,9 +1533,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[0].linkId = "metabolic-disorder.diagnoses.group.diagnosis"
 * item[=].item[=].item[=].item[=].prefix = "9.0.1.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #diagnosis
-* item[=].item[=].item[=].item[=].code.display = "Diagnoos"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #diagnosis
+// * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].type = #coding
 * item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-ainevahetuse-haired"
@@ -1531,9 +1544,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "metabolic-disorder.diagnoses.group.written-description"
 * item[=].item[=].item[=].item[=].prefix = "9.0.1.2"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #diagnosis_description
-* item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
+// * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].type = #string
 * item[=].item[=].item[=].item[=].required = false
@@ -1541,9 +1554,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "metabolic-disorder.diagnoses.group.source-reference"
 * item[=].item[=].item[=].item[=].prefix = "9.0.1.3"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #source_reference
-* item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #source-reference
+// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].required = true
@@ -1552,7 +1565,7 @@ Usage: #example
 * item[=].item[+].linkId = "metabolic-disorder.no-complaints"
 * item[=].item[=].prefix = "9.1"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #no_complaints
+* item[=].item[=].code.code = #no-complaints
 * item[=].item[=].code.display = "Kaebused hetkel puuduvad"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
 * item[=].item[=].type = #boolean
@@ -1585,7 +1598,7 @@ Usage: #example
 * item[=].item[+].linkId = "metabolic-disorder.other-disease-condition-symptom"
 * item[=].item[=].prefix = "9.3"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #other_condition
+* item[=].item[=].code.code = #other-disease-condition-symptom
 * item[=].item[=].code.display = "Muu haigus/seisund/sümptom (palun täpsustage)"
 * item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
 * item[=].item[=].type = #boolean
@@ -1606,11 +1619,10 @@ Usage: #example
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
 
-
 * item[+].linkId = "cardiovascular-system"
 * item[=].prefix = "10"
 * item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].code.code = #cardiovascular_system
+* item[=].code.code = #cardiovascular-system
 * item[=].code.display = "Süda ja veresoonkond"
 * item[=].text = "Süda ja veresoonkond"
 * item[=].type = #group
@@ -1618,18 +1630,18 @@ Usage: #example
 
 * item[=].item[0].linkId = "cardiovascular-system.diagnoses"
 * item[=].item[=].prefix = "10.0"
-* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #previous_diagnoses
-* item[=].item[=].code.display = "Varasemad diagnoosid"
+// * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].code.code = #previous-diagnoses
+// * item[=].item[=].code.display = "Varasemad diagnoosid"
 * item[=].item[=].text = "Varasemad diagnoosid"
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 
 * item[=].item[=].item[0].linkId = "cardiovascular-system.diagnoses.group"
 * item[=].item[=].item[=].prefix = "10.0.1"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #previous_diagnosis_singular
-* item[=].item[=].item[=].code.display = "Varasem diagnoos"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
+// * item[=].item[=].item[=].code.display = "Varasem diagnoos"
 * item[=].item[=].item[=].text = "Varasem diagnoos"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].required = false
@@ -1637,9 +1649,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[0].linkId = "cardiovascular-system.diagnoses.group.diagnosis"
 * item[=].item[=].item[=].item[=].prefix = "10.0.1.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #diagnosis
-* item[=].item[=].item[=].item[=].code.display = "Diagnoos"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #diagnosis
+// * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].type = #coding
 * item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-suda-ja-veresoonkond"
@@ -1648,9 +1660,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "cardiovascular-system.diagnoses.group.written-diagnosis"
 * item[=].item[=].item[=].item[=].prefix = "10.0.1.2"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #diagnosis_description
-* item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
+// * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].type = #string
 * item[=].item[=].item[=].item[=].required = false
@@ -1658,9 +1670,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "cardiovascular-system.diagnoses.group.source-reference"
 * item[=].item[=].item[=].item[=].prefix = "10.0.1.3"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #source_reference
-* item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #source-reference
+// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].required = true
@@ -1669,7 +1681,7 @@ Usage: #example
 * item[=].item[+].linkId = "cardiovascular-system.no-complaints"
 * item[=].item[=].prefix = "10.1"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #no_complaints
+* item[=].item[=].code.code = #no-complaints
 * item[=].item[=].code.display = "Kaebused hetkel puuduvad"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
 * item[=].item[=].type = #boolean
@@ -1678,7 +1690,7 @@ Usage: #example
 * item[=].item[+].linkId = "cardiovascular-system.chest-pain-activity"
 * item[=].item[=].prefix = "10.2"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #physical_activity_stenocardia
+* item[=].item[=].code.code = #chest-pain-activity
 * item[=].item[=].code.display = "Koormusega seonduv valu rinnus"
 * item[=].item[=].text = "Koormusega seonduv valu rinnus"
 * item[=].item[=].type = #boolean
@@ -1702,7 +1714,7 @@ Usage: #example
 * item[=].item[+].linkId = "cardiovascular-system.high-blood-pressure"
 * item[=].item[=].prefix = "10.3"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #high_bp
+* item[=].item[=].code.code = #high-blood-pressure
 * item[=].item[=].code.display = "Kõrge vererõhk"
 * item[=].item[=].text = "Kõrge vererõhk"
 * item[=].item[=].type = #boolean
@@ -1726,7 +1738,7 @@ Usage: #example
 * item[=].item[+].linkId = "cardiovascular-system.heart-attack"
 * item[=].item[=].prefix = "10.4"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #previous_mi
+* item[=].item[=].code.code = #heart-attack
 * item[=].item[=].code.display = "Läbipõetud südameinfarkt"
 * item[=].item[=].text = "Läbipõetud südameinfarkt"
 * item[=].item[=].type = #boolean
@@ -1750,7 +1762,7 @@ Usage: #example
 * item[=].item[+].linkId = "cardiovascular-system.arrhythmia"
 * item[=].item[=].prefix = "10.5"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #heart_arrhythmia
+* item[=].item[=].code.code = #arrhythmia
 * item[=].item[=].code.display = "Südame rütmihäired"
 * item[=].item[=].text = "Südame rütmihäired"
 * item[=].item[=].type = #boolean
@@ -1774,7 +1786,7 @@ Usage: #example
 * item[=].item[+].linkId = "cardiovascular-system.angioplasty-stenting"
 * item[=].item[=].prefix = "10.6"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #heart_stenting
+* item[=].item[=].code.code = #angioplasty-stenting
 * item[=].item[=].code.display = "On tehtud südamesondeerimine või stentimine"
 * item[=].item[=].text = "On tehtud südamesondeerimine või stentimine"
 * item[=].item[=].type = #boolean
@@ -1822,7 +1834,7 @@ Usage: #example
 * item[=].item[+].linkId = "cardiovascular-system.heart-operation"
 * item[=].item[=].prefix = "10.8"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #heart_operation
+* item[=].item[=].code.code = #heart-operation
 * item[=].item[=].code.display = "On tehtud südameoperatsioon"
 * item[=].item[=].text = "On tehtud südameoperatsioon"
 * item[=].item[=].type = #boolean
@@ -1846,7 +1858,7 @@ Usage: #example
 * item[=].item[+].linkId = "cardiovascular-system.other-disease-condition-symptom"
 * item[=].item[=].prefix = "10.9"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #other_condition
+* item[=].item[=].code.code = #other-disease-condition-symptom
 * item[=].item[=].code.display = "Muu haigus/seisund/sümptom (palun täpsustage)"
 * item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
 * item[=].item[=].type = #boolean
@@ -1878,18 +1890,18 @@ Usage: #example
 
 * item[=].item[0].linkId = "bones-joints-muscles.diagnoses"
 * item[=].item[=].prefix = "11.0"
-* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #previous_diagnoses
-* item[=].item[=].code.display = "Varasemad diagnoosid"
+// * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].code.code = #previous-diagnoses
+// * item[=].item[=].code.display = "Varasemad diagnoosid"
 * item[=].item[=].text = "Varasemad diagnoosid"
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 
 * item[=].item[=].item[0].linkId = "bones-joints-muscles.diagnoses.group"
 * item[=].item[=].item[=].prefix = "11.0.1"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #previous_diagnosis_singular
-* item[=].item[=].item[=].code.display = "Varasem diagnoos"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
+// * item[=].item[=].item[=].code.display = "Varasem diagnoos"
 * item[=].item[=].item[=].text = "Varasem diagnoos"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].required = false
@@ -1897,9 +1909,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[0].linkId = "bones-joints-muscles.diagnoses.group.diagnosis"
 * item[=].item[=].item[=].item[=].prefix = "11.0.1.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #diagnosis
-* item[=].item[=].item[=].item[=].code.display = "Diagnoos"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #diagnosis
+// * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].type = #coding
 * item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-luud-liigesed-ja-lihased"
@@ -1908,9 +1920,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "bones-joints-muscles.diagnoses.group.written-diagnosis"
 * item[=].item[=].item[=].item[=].prefix = "11.0.1.2"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #written-diagnosis
-* item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
+// * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].type = #string
 * item[=].item[=].item[=].item[=].required = false
@@ -1918,9 +1930,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "bones-joints-muscles.diagnoses.group.source-reference"
 * item[=].item[=].item[=].item[=].prefix = "11.0.1.3"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #source-reference
-* item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #source-reference
+// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].required = true
@@ -2162,18 +2174,18 @@ Usage: #example
 
 * item[=].item[0].linkId = "infections.diagnoses"
 * item[=].item[=].prefix = "12.0"
-* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #previous_diagnoses
-* item[=].item[=].code.display = "Varasemad diagnoosid"
+// * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].code.code = #previous-diagnoses
+// * item[=].item[=].code.display = "Varasemad diagnoosid"
 * item[=].item[=].text = "Varasemad diagnoosid"
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 
 * item[=].item[=].item[0].linkId = "infections.diagnoses.group"
 * item[=].item[=].item[=].prefix = "12.0.1"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #previous_diagnosis_singular
-* item[=].item[=].item[=].code.display = "Varasem diagnoos"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
+// * item[=].item[=].item[=].code.display = "Varasem diagnoos"
 * item[=].item[=].item[=].text = "Varasem diagnoos"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].required = false
@@ -2181,9 +2193,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[0].linkId = "infections.diagnoses.group.diagnosis"
 * item[=].item[=].item[=].item[=].prefix = "12.0.1.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #diagnosis
-* item[=].item[=].item[=].item[=].code.display = "Diagnoos"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #diagnosis
+// * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].type = #coding
 * item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-nakkushaigused"
@@ -2192,9 +2204,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "infections.diagnoses.group.written-diagnosis"
 * item[=].item[=].item[=].item[=].prefix = "12.0.1.2"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #written-diagnosis
-* item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
+// * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].type = #string
 * item[=].item[=].item[=].item[=].required = false
@@ -2202,9 +2214,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "infections.diagnoses.group.source-reference"
 * item[=].item[=].item[=].item[=].prefix = "12.0.1.3"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #source-reference
-* item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #source-reference
+// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].required = true
@@ -2465,7 +2477,7 @@ Usage: #example
 * item[=].item[0].linkId = "previous-treatment.treatment-abroad"
 * item[=].item[=].prefix = "14.1"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #foreign_treatment
+* item[=].item[=].code.code = #treatment-abroad
 * item[=].item[=].code.display = "Kas olete välismaal saanud  haiglaravi või käinud arsti vastuvõtul? Palun täpsustage millal, kus, ja millega seoses"
 * item[=].item[=].text = "Kas olete välismaal saanud  haiglaravi või käinud arsti vastuvõtul? Palun täpsustage millal, kus, ja millega seoses"
 * item[=].item[=].type = #boolean
@@ -2485,9 +2497,9 @@ Usage: #example
 
 * item[=].item[+].linkId = "previous-treatment.regular-medication"
 * item[=].item[=].prefix = "14.2"
-* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #regular-medication
-* item[=].item[=].code.display = "Regulaarsed ravimid"
+// * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].code.code = #regular-medication
+// * item[=].item[=].code.display = "Regulaarsed ravimid"
 * item[=].item[=].text = "Regulaarsed ravimid"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
@@ -2544,18 +2556,18 @@ Usage: #example
 
 * item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.current-prescriptions"
 * item[=].item[=].item[=].prefix = "14.2.3"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #current-prescriptions
-* item[=].item[=].item[=].code.display = "Viimase 9 kuu jooksul välja kirjutatud retseptid"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #current-prescriptions
+// * item[=].item[=].item[=].code.display = "Viimase 9 kuu jooksul välja kirjutatud retseptid"
 * item[=].item[=].item[=].text = "Viimase 9 kuu jooksul välja kirjutatud retseptid"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].required = false
 
 * item[=].item[=].item[=].item[0].linkId = "previous-treatment.regular-medication.current-prescriptions.prescription"
 * item[=].item[=].item[=].item[=].prefix = "14.2.3.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #prescription
-* item[=].item[=].item[=].item[=].code.display = "Retsept"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #prescription
+// * item[=].item[=].item[=].item[=].code.display = "Retsept"
 * item[=].item[=].item[=].item[=].text = "Retsept"
 * item[=].item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].item[=].required = true
@@ -2563,9 +2575,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[=].item[0].linkId = "previous-treatment.regular-medication.current-prescriptions.prescription.date"
 * item[=].item[=].item[=].item[=].item[=].prefix = "14.2.3.1.1"
-* item[=].item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].item[=].code.code = #date
-* item[=].item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// * item[=].item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].item[=].code.code = #date
+// * item[=].item[=].item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].item[=].item[=].required = false
@@ -2573,9 +2585,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.current-prescriptions.prescription.atc"
 * item[=].item[=].item[=].item[=].item[=].prefix = "14.2.3.1.2"
-* item[=].item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].item[=].code.code = #atc
-* item[=].item[=].item[=].item[=].item[=].code.display = "ATC"
+// * item[=].item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].item[=].code.code = #atc
+// * item[=].item[=].item[=].item[=].item[=].code.display = "ATC"
 * item[=].item[=].item[=].item[=].item[=].text = "ATC"
 * item[=].item[=].item[=].item[=].item[=].type = #coding
 * item[=].item[=].item[=].item[=].item[=].required = false
@@ -2583,9 +2595,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.current-prescriptions.prescription.package"
 * item[=].item[=].item[=].item[=].item[=].prefix = "14.2.3.1.3"
-* item[=].item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].item[=].code.code = #package
-* item[=].item[=].item[=].item[=].item[=].code.display = "Pakend"
+// * item[=].item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].item[=].code.code = #package
+// * item[=].item[=].item[=].item[=].item[=].code.display = "Pakend"
 * item[=].item[=].item[=].item[=].item[=].text = "Pakend"
 * item[=].item[=].item[=].item[=].item[=].type = #coding
 * item[=].item[=].item[=].item[=].item[=].required = false
@@ -2593,9 +2605,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.current-prescriptions.prescription.source-reference"
 * item[=].item[=].item[=].item[=].item[=].prefix = "14.2.3.1.3"
-* item[=].item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].item[=].code.code = #source-reference
-* item[=].item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// * item[=].item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].item[=].code.code = #source-reference
+// * item[=].item[=].item[=].item[=].item[=].code.display = "Allika viide"
 * item[=].item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].item[=].required = true
@@ -2624,18 +2636,18 @@ Usage: #example
 
 * item[=].item[=].item[+].linkId = "previous-treatment.hospitalization.previous-hospitalization"
 * item[=].item[=].item[=].prefix = "14.3.2"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #previous-hospitalization
-* item[=].item[=].item[=].code.display = "Varasem haiglaravi"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #previous-hospitalization
+// * item[=].item[=].item[=].code.display = "Varasem haiglaravi"
 * item[=].item[=].item[=].text = "Varasem haiglaravi"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].required = false
 
 * item[=].item[=].item[=].item[0].linkId = "previous-treatment.hospitalization.previous-hospitalization.inpatient-case"
 * item[=].item[=].item[=].item[=].prefix = "14.3.2.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #inpatient-case
-* item[=].item[=].item[=].item[=].code.display = "Statsionaarne haigusjuhtum"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #inpatient-case
+// * item[=].item[=].item[=].item[=].code.display = "Statsionaarne haigusjuhtum"
 * item[=].item[=].item[=].item[=].text = "Statsionaarne haigusjuhtum"
 * item[=].item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].item[=].required = true
@@ -2643,9 +2655,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[=].item[0].linkId = "previous-treatment.hospitalization.previous-hospitalization.inpatient-case.from"
 * item[=].item[=].item[=].item[=].item[=].prefix = "14.3.2.1.1"
-* item[=].item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].item[=].code.code = #from
-* item[=].item[=].item[=].item[=].item[=].code.display = "Alates"
+// * item[=].item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].item[=].code.code = #from
+// * item[=].item[=].item[=].item[=].item[=].code.display = "Alates"
 * item[=].item[=].item[=].item[=].item[=].text = "Alates"
 * item[=].item[=].item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].item[=].item[=].required = true
@@ -2653,9 +2665,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[=].item[+].linkId = "previous-treatment.hospitalization.previous-hospitalization.inpatient-case.to"
 * item[=].item[=].item[=].item[=].item[=].prefix = "14.3.2.1.2"
-* item[=].item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].item[=].code.code = #to
-* item[=].item[=].item[=].item[=].item[=].code.display = "Kuni"
+// * item[=].item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].item[=].code.code = #to
+// * item[=].item[=].item[=].item[=].item[=].code.display = "Kuni"
 * item[=].item[=].item[=].item[=].item[=].text = "Kuni"
 * item[=].item[=].item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].item[=].item[=].required = true
@@ -2663,9 +2675,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[=].item[+].linkId = "previous-treatment.hospitalization.previous-hospitalization.inpatient-case.provider"
 * item[=].item[=].item[=].item[=].item[=].prefix = "14.3.2.1.3"
-* item[=].item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].item[=].code.code = #provider
-* item[=].item[=].item[=].item[=].item[=].code.display = "Tervishoiuasutus"
+// * item[=].item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].item[=].code.code = #provider
+// * item[=].item[=].item[=].item[=].item[=].code.display = "Tervishoiuasutus"
 * item[=].item[=].item[=].item[=].item[=].text = "Tervishoiuasutus"
 * item[=].item[=].item[=].item[=].item[=].type = #string
 * item[=].item[=].item[=].item[=].item[=].required = true
@@ -2673,9 +2685,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[=].item[+].linkId = "previous-treatment.hospitalization.previous-hospitalization.inpatient-case.source-reference"
 * item[=].item[=].item[=].item[=].item[=].prefix = "14.3.2.1.4"
-* item[=].item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].item[=].code.code = #source-reference
-* item[=].item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// * item[=].item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].item[=].code.code = #source-reference
+// * item[=].item[=].item[=].item[=].item[=].code.display = "Allika viide"
 * item[=].item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].item[=].required = true
@@ -2704,18 +2716,18 @@ Usage: #example
 
 * item[=].item[=].item[+].linkId = "previous-treatment.operations.procedures"
 * item[=].item[=].item[=].prefix = "14.4.2"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #procedures
-* item[=].item[=].item[=].code.display = "Teostatud protseduurid"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #procedures
+// * item[=].item[=].item[=].code.display = "Teostatud protseduurid"
 * item[=].item[=].item[=].text = "Teostatud protseduurid"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].required = false
 
 * item[=].item[=].item[=].item[0].linkId = "previous-treatment.operations.procedures.operation"
 * item[=].item[=].item[=].item[=].prefix = "14.4.2.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #operation
-* item[=].item[=].item[=].item[=].code.display = "Operatsioon"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #operation
+// * item[=].item[=].item[=].item[=].code.display = "Operatsioon"
 * item[=].item[=].item[=].item[=].text = "Operatsioon"
 * item[=].item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].item[=].required = true
@@ -2723,9 +2735,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[=].item[0].linkId = "previous-treatment.operations.procedures.operation.date"
 * item[=].item[=].item[=].item[=].item[=].prefix = "14.4.2.1.1"
-* item[=].item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].item[=].code.code = #date
-* item[=].item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// * item[=].item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].item[=].code.code = #date
+// * item[=].item[=].item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].item[=].item[=].required = true
@@ -2733,9 +2745,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[=].item[+].linkId = "previous-treatment.operations.procedures.operation.specific-operation"
 * item[=].item[=].item[=].item[=].item[=].prefix = "14.4.2.1.2"
-* item[=].item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].item[=].code.code = #operation
-* item[=].item[=].item[=].item[=].item[=].code.display = "Operatsioon"
+// * item[=].item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].item[=].code.code = #operation
+// * item[=].item[=].item[=].item[=].item[=].code.display = "Operatsioon"
 * item[=].item[=].item[=].item[=].item[=].text = "Operatsioon"
 * item[=].item[=].item[=].item[=].item[=].type = #coding
 * item[=].item[=].item[=].item[=].item[=].required = true
@@ -2743,9 +2755,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[=].item[+].linkId = "previous-treatment.operations.procedures.operation.add-codes"
 * item[=].item[=].item[=].item[=].item[=].prefix = "14.4.2.1.3"
-* item[=].item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].item[=].code.code = #add-codes
-* item[=].item[=].item[=].item[=].item[=].code.display = "Operatsiooni lisakoodid"
+// * item[=].item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].item[=].code.code = #add-codes
+// * item[=].item[=].item[=].item[=].item[=].code.display = "Operatsiooni lisakoodid"
 * item[=].item[=].item[=].item[=].item[=].text = "Operatsioon lisakoodid"
 * item[=].item[=].item[=].item[=].item[=].type = #coding
 * item[=].item[=].item[=].item[=].item[=].required = false
@@ -2754,9 +2766,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[=].item[+].linkId = "previous-treatment.operations.procedures.operation.source-reference"
 * item[=].item[=].item[=].item[=].item[=].prefix = "14.4.2.1.4"
-* item[=].item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].item[=].code.code = #source-reference
-* item[=].item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// * item[=].item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].item[=].code.code = #source-reference
+// * item[=].item[=].item[=].item[=].item[=].code.display = "Allika viide"
 * item[=].item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].item[=].required = true
@@ -2773,18 +2785,18 @@ Usage: #example
 
 * item[=].item[0].linkId = "traumas.diagnoses"
 * item[=].item[=].prefix = "15.0"
-* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #previous_diagnoses
-* item[=].item[=].code.display = "Varasemad diagnoosid"
+// * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].code.code = #previous-diagnoses
+// * item[=].item[=].code.display = "Varasemad diagnoosid"
 * item[=].item[=].text = "Varasemad diagnoosid"
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 
 * item[=].item[=].item[0].linkId = "traumas.diagnoses.group"
 * item[=].item[=].item[=].prefix = "15.0.1"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #previous_diagnosis_singular
-* item[=].item[=].item[=].code.display = "Varasem diagnoos"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
+// * item[=].item[=].item[=].code.display = "Varasem diagnoos"
 * item[=].item[=].item[=].text = "Varasem diagnoos"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].required = true
@@ -2792,9 +2804,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[0].linkId = "traumas.diagnoses.group.diagnosis"
 * item[=].item[=].item[=].item[=].prefix = "15.0.1.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #diagnosis
-* item[=].item[=].item[=].item[=].code.display = "Diagnoos"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #diagnosis
+// * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].type = #coding
 * item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-traumad"
@@ -2803,9 +2815,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "traumas.diagnoses.group.written-diagnosis"
 * item[=].item[=].item[=].item[=].prefix = "15.0.1.2"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #written-diagnosis
-* item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
+// * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].type = #string
 * item[=].item[=].item[=].item[=].required = false
@@ -2813,9 +2825,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "traumas.diagnoses.group.source-reference"
 * item[=].item[=].item[=].item[=].prefix = "15.0.1.3"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #source-reference
-* item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #source-reference
+// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].required = true
@@ -2929,18 +2941,18 @@ Usage: #example
 
 * item[=].item[0].linkId = "skin-disorders.diagnoses"
 * item[=].item[=].prefix = "17.0"
-* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #previous_diagnoses
-* item[=].item[=].code.display = "Varasemad diagnoosid"
+// * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].code.code = #previous-diagnoses
+// * item[=].item[=].code.display = "Varasemad diagnoosid"
 * item[=].item[=].text = "Varasemad diagnoosid"
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 
 * item[=].item[=].item[0].linkId = "skin-disorders.diagnoses.group"
 * item[=].item[=].item[=].prefix = "17.0.1"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #previous_diagnosis_singular
-* item[=].item[=].item[=].code.display = "Varasem diagnoos"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
+// * item[=].item[=].item[=].code.display = "Varasem diagnoos"
 * item[=].item[=].item[=].text = "Varasem diagnoos"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].required = false
@@ -2948,9 +2960,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[0].linkId = "skin-disorders.diagnoses.group.diagnosis"
 * item[=].item[=].item[=].item[=].prefix = "17.0.1.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #diagnosis
-* item[=].item[=].item[=].item[=].code.display = "Diagnoos"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #diagnosis
+// * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].type = #coding
 * item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-nahahaigused"
@@ -2959,9 +2971,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "skin-disorders.diagnoses.group.written-diagnosis"
 * item[=].item[=].item[=].item[=].prefix = "17.0.1.2"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #written-diagnosis
-* item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
+// * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].type = #string
 * item[=].item[=].item[=].item[=].required = false
@@ -2969,9 +2981,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "skin-disorders.diagnoses.group.source-reference"
 * item[=].item[=].item[=].item[=].prefix = "17.0.1.3"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #source-reference
-* item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #source-reference
+// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].required = true
@@ -3009,18 +3021,18 @@ Usage: #example
 
 * item[=].item[0].linkId = "digestive-organs.diagnoses"
 * item[=].item[=].prefix = "18.0"
-* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #previous_diagnoses
-* item[=].item[=].code.display = "Varasemad diagnoosid"
+// * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].code.code = #previous-diagnoses
+// * item[=].item[=].code.display = "Varasemad diagnoosid"
 * item[=].item[=].text = "Varasemad diagnoosid"
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 
 * item[=].item[=].item[0].linkId = "digestive-organs.diagnoses.group"
 * item[=].item[=].item[=].prefix = "18.0.1"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #previous_diagnosis_singular
-* item[=].item[=].item[=].code.display = "Varasem diagnoos"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
+// * item[=].item[=].item[=].code.display = "Varasem diagnoos"
 * item[=].item[=].item[=].text = "Varasem diagnoos"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].required = true
@@ -3028,9 +3040,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[0].linkId = "digestive-organs.diagnoses.group.diagnosis"
 * item[=].item[=].item[=].item[=].prefix = "18.0.1.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #diagnosis
-* item[=].item[=].item[=].item[=].code.display = "Diagnoos"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #diagnosis
+// * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].type = #coding
 * item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-seedeelundid"
@@ -3039,9 +3051,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "digestive-organs.diagnoses.group.written-diagnosis"
 * item[=].item[=].item[=].item[=].prefix = "18.0.1.2"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #written-diagnosis
-* item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
+// * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].type = #string
 * item[=].item[=].item[=].item[=].required = true
@@ -3049,9 +3061,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "digestive-organs.diagnoses.group.source-reference"
 * item[=].item[=].item[=].item[=].prefix = "18.0.1.3"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #source-reference
-* item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #source-reference
+// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].required = true
@@ -3165,7 +3177,7 @@ Usage: #example
 * item[=].item[+].linkId = "digestive-organs.other-disease-condition-symptom"
 * item[=].item[=].prefix = "18.6"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #other_condition
+* item[=].item[=].code.code = #other-disease-condition-symptom
 * item[=].item[=].code.display = "Muu haigus/seisund/sümptom (palun täpsustage)"
 * item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
 * item[=].item[=].type = #boolean
@@ -3197,18 +3209,18 @@ Usage: #example
 
 * item[=].item[0].linkId = "urogenital-system.diagnoses"
 * item[=].item[=].prefix = "19.0"
-* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #previous_diagnoses
-* item[=].item[=].code.display = "Varasemad diagnoosid"
+// * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].code.code = #previous-diagnoses
+// * item[=].item[=].code.display = "Varasemad diagnoosid"
 * item[=].item[=].text = "Varasemad diagnoosid"
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 
 * item[=].item[=].item[0].linkId = "urogenital-system.diagnoses.group"
 * item[=].item[=].item[=].prefix = "19.0.1"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #previous_diagnosis_singular
-* item[=].item[=].item[=].code.display = "Varasem diagnoos"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
+// * item[=].item[=].item[=].code.display = "Varasem diagnoos"
 * item[=].item[=].item[=].text = "Varasem diagnoos"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].required = true
@@ -3216,9 +3228,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[0].linkId = "urogenital-system.diagnoses.group.diagnosis"
 * item[=].item[=].item[=].item[=].prefix = "19.0.1.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #diagnosis
-* item[=].item[=].item[=].item[=].code.display = "Diagnoos"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #diagnosis
+// * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].type = #coding
 * item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-kuse-ja-suguelundid"
@@ -3227,9 +3239,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "urogenital-system.diagnoses.group.written-diagnosis"
 * item[=].item[=].item[=].item[=].prefix = "19.0.1.2"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #written-diagnosis
-* item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
+// * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].type = #string
 * item[=].item[=].item[=].item[=].required = false
@@ -3237,9 +3249,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "urogenital-system.diagnoses.group.source-reference"
 * item[=].item[=].item[=].item[=].prefix = "19.0.1.3"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #source-reference
-* item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #source-reference
+// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].required = true
@@ -3343,18 +3355,18 @@ Usage: #example
 
 * item[=].item[0].linkId = "blood-problems.diagnoses"
 * item[=].item[=].prefix = "20.0"
-* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #previous_diagnoses
-* item[=].item[=].code.display = "Varasemad diagnoosid"
+// * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].code.code = #previous-diagnoses
+// * item[=].item[=].code.display = "Varasemad diagnoosid"
 * item[=].item[=].text = "Varasemad diagnoosid"
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 
 * item[=].item[=].item[0].linkId = "blood-problems.diagnoses.group"
 * item[=].item[=].item[=].prefix = "20.0.1"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #previous_diagnosis_singular
-* item[=].item[=].item[=].code.display = "Varasem diagnoos"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
+// * item[=].item[=].item[=].code.display = "Varasem diagnoos"
 * item[=].item[=].item[=].text = "Varasem diagnoos"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].required = false
@@ -3362,9 +3374,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[0].linkId = "blood-problems.diagnoses.group.diagnosis"
 * item[=].item[=].item[=].item[=].prefix = "20.0.1.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #diagnosis
-* item[=].item[=].item[=].item[=].code.display = "Diagnoos"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #diagnosis
+// * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].type = #coding
 * item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-verehaigused"
@@ -3373,9 +3385,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "blood-problems.diagnoses.group.written-diagnosis"
 * item[=].item[=].item[=].item[=].prefix = "20.0.1.2"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #written-diagnosis
-* item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
+// * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].type = #string
 * item[=].item[=].item[=].item[=].required = false
@@ -3383,9 +3395,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "blood-problems.diagnoses.group.source-reference"
 * item[=].item[=].item[=].item[=].prefix = "20.0.1.3"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #source-reference
-* item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #source-reference
+// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].required = true
@@ -3678,18 +3690,18 @@ Usage: #example
 
 * item[=].item[0].linkId = "sleep.diagnoses"
 * item[=].item[=].prefix = "22.0"
-* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #previous_diagnoses
-* item[=].item[=].code.display = "Varasemad diagnoosid"
+// * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].code.code = #previous-diagnoses
+// * item[=].item[=].code.display = "Varasemad diagnoosid"
 * item[=].item[=].text = "Varasemad diagnoosid"
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 
 * item[=].item[=].item[0].linkId = "sleep.diagnoses.group"
 * item[=].item[=].item[=].prefix = "22.0.1"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #previous_diagnosis_singular
-* item[=].item[=].item[=].code.display = "Varasem diagnoos"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
+// * item[=].item[=].item[=].code.display = "Varasem diagnoos"
 * item[=].item[=].item[=].text = "Varasem diagnoos"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].required = false
@@ -3697,9 +3709,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[0].linkId = "sleep.diagnoses.group.diagnosis"
 * item[=].item[=].item[=].item[=].prefix = "22.0.1.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #diagnosis
-* item[=].item[=].item[=].item[=].code.display = "Diagnoos"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #diagnosis
+// * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].type = #coding
 * item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-uni"
@@ -3708,9 +3720,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "sleep.diagnoses.group.written-diagnosis"
 * item[=].item[=].item[=].item[=].prefix = "22.0.1.2"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #written-diagnosis
-* item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
+// * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].type = #string
 * item[=].item[=].item[=].item[=].required = false
@@ -3718,9 +3730,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "sleep.diagnoses.group.source-reference"
 * item[=].item[=].item[=].item[=].prefix = "22.0.1.3"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #source-reference
-* item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #source-reference
+// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].required = true
@@ -3879,18 +3891,18 @@ Usage: #example
 
 * item[=].item[=].item[+].linkId = "health-assessment.sick-leave-certs.sick-leave-cert-five-years"
 * item[=].item[=].item[=].prefix = "23.4.2"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #sick-leave-cert-five-years
-* item[=].item[=].item[=].code.display = "Haiguslehed (viimase 5 aasta andmed Tervisekassast)"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #sick-leave-cert-five-years
+// * item[=].item[=].item[=].code.display = "Haiguslehed (viimase 5 aasta andmed Tervisekassast)"
 * item[=].item[=].item[=].text = "Haiguslehed (viimase 5 aasta andmed Tervisekassast)"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].required = false
 
 * item[=].item[=].item[=].item[0].linkId = "health-assessment.sick-leave-certs.sick-leave-cert-five-years.sick-leave-cert"
 * item[=].item[=].item[=].item[=].prefix = "23.4.2.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #sick-leave-cert
-* item[=].item[=].item[=].item[=].code.display = "Haigusleht"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #sick-leave-cert
+// * item[=].item[=].item[=].item[=].code.display = "Haigusleht"
 * item[=].item[=].item[=].item[=].text = "Haigusleht"
 * item[=].item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].item[=].required = true
@@ -3898,9 +3910,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[=].item[0].linkId = "health-assessment.sick-leave-certs.sick-leave-cert-five-years.sick-leave-cert.from"
 * item[=].item[=].item[=].item[=].item[=].prefix = "23.4.2.1.1"
-* item[=].item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].item[=].code.code = #from
-* item[=].item[=].item[=].item[=].item[=].code.display = "Alates"
+// * item[=].item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].item[=].code.code = #from
+// * item[=].item[=].item[=].item[=].item[=].code.display = "Alates"
 * item[=].item[=].item[=].item[=].item[=].text = "Alates"
 * item[=].item[=].item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].item[=].item[=].required = true
@@ -3908,9 +3920,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[=].item[+].linkId = "health-assessment.sick-leave-certs.sick-leave-cert-five-years.sick-leave-cert.duration"
 * item[=].item[=].item[=].item[=].item[=].prefix = "23.4.2.1.2"
-* item[=].item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].item[=].code.code = #duration
-* item[=].item[=].item[=].item[=].item[=].code.display = "Kestus päevades"
+// * item[=].item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].item[=].code.code = #duration
+// * item[=].item[=].item[=].item[=].item[=].code.display = "Kestus päevades"
 * item[=].item[=].item[=].item[=].item[=].text = "Kestus päevades"
 * item[=].item[=].item[=].item[=].item[=].type = #integer
 * item[=].item[=].item[=].item[=].item[=].required = true
@@ -3918,9 +3930,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[=].item[+].linkId = "health-assessment.sick-leave-certs.sick-leave-cert-five-years.sick-leave-cert.diagnosis"
 * item[=].item[=].item[=].item[=].item[=].prefix = "23.4.2.1.3"
-* item[=].item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].item[=].code.code = #diagnosis
-* item[=].item[=].item[=].item[=].item[=].code.display = "Diagnoos"
+// * item[=].item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].item[=].code.code = #diagnosis
+// * item[=].item[=].item[=].item[=].item[=].code.display = "Diagnoos"
 * item[=].item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].item[=].type = #coding
 * item[=].item[=].item[=].item[=].item[=].required = true
@@ -3952,24 +3964,24 @@ Usage: #example
 * item[=].item[=].item[=].item[=].text = "Täpsusta"
 * item[=].item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].enableWhen.question = "health-assessment.partial-work-capacity-loss.foreign_work_disability_given"
+* item[=].item[=].item[=].item[=].enableWhen.question = "health-assessment.partial-work-capacity-loss.partial-work-capacity-loss-abroad"
 * item[=].item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
 
 * item[=].item[=].item[+].linkId = "health-assessment.partial-work-capacity-loss.partial-work-disability"
 * item[=].item[=].item[=].prefix = "23.5.2"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #partial-work-disability
-* item[=].item[=].item[=].code.display = "Osaline töövõimetus (andmed Sotsiaalkindlustusametist)"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #partial-work-disability
+// * item[=].item[=].item[=].code.display = "Osaline töövõimetus (andmed Sotsiaalkindlustusametist)"
 * item[=].item[=].item[=].text = "Osaline töövõimetus (andmed Sotsiaalkindlustusametist)"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].required = false
 
 * item[=].item[=].item[=].item[0].linkId = "health-assessment.partial-work-capacity-loss.partial-work-disability.from"
 * item[=].item[=].item[=].item[=].prefix = "23.5.2.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #from
-* item[=].item[=].item[=].item[=].code.display = "Alates"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #from
+// * item[=].item[=].item[=].item[=].code.display = "Alates"
 * item[=].item[=].item[=].item[=].text = "Alates"
 * item[=].item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].item[=].required = false
@@ -3977,9 +3989,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "health-assessment.partial-work-capacity-loss.partial-work-disability.to"
 * item[=].item[=].item[=].item[=].prefix = "23.5.2.2"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #to
-* item[=].item[=].item[=].item[=].code.display = "kuni"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #to
+// * item[=].item[=].item[=].item[=].code.display = "kuni"
 * item[=].item[=].item[=].item[=].text = "kuni"
 * item[=].item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].item[=].required = false
@@ -4028,18 +4040,18 @@ Usage: #example
 
 * item[=].item[=].item[+].linkId = "health-assessment.disability.disability-data"
 * item[=].item[=].item[=].prefix = "23.6.2"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #disability-data
-* item[=].item[=].item[=].code.display = "Puue (andmed Sotsiaalkindlustusametist)"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #disability-data
+// * item[=].item[=].item[=].code.display = "Puue (andmed Sotsiaalkindlustusametist)"
 * item[=].item[=].item[=].text = "Puue (andmed Sotsiaalkindlustusametist)"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].required = false
 
 * item[=].item[=].item[=].item[0].linkId = "health-assessment.disability.disability-data.from"
 * item[=].item[=].item[=].item[=].prefix = "23.6.2.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #from
-* item[=].item[=].item[=].item[=].code.display = "Alates"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #from
+// * item[=].item[=].item[=].item[=].code.display = "Alates"
 * item[=].item[=].item[=].item[=].text = "Alates"
 * item[=].item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].item[=].required = false
@@ -4047,9 +4059,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "health-assessment.disability.disability-data.to"
 * item[=].item[=].item[=].item[=].prefix = "23.6.2.2"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #to
-* item[=].item[=].item[=].item[=].code.display = "kuni"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #to
+// * item[=].item[=].item[=].item[=].code.display = "kuni"
 * item[=].item[=].item[=].item[=].text = "kuni"
 * item[=].item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].item[=].required = false
@@ -4057,9 +4069,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "health-assessment.disability.disability-data.disability-severity"
 * item[=].item[=].item[=].item[=].prefix = "23.6.2.3"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #disability-severity
-* item[=].item[=].item[=].item[=].code.display = "Puude raskusaste"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #disability-severity
+// * item[=].item[=].item[=].item[=].code.display = "Puude raskusaste"
 * item[=].item[=].item[=].item[=].text = "Puude raskusaste"
 * item[=].item[=].item[=].item[=].type = #coding
 * item[=].item[=].item[=].item[=].required = true
@@ -4080,9 +4092,9 @@ Usage: #example
 
 * item[=].item[0].linkId = "immunization.b-hepatitis"
 * item[=].item[=].prefix = "24.1"
-* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #b-hepatitis
-* item[=].item[=].code.display = "B-viirushepatiit"
+// * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].code.code = #b-hepatitis
+// * item[=].item[=].code.display = "B-viirushepatiit"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
 * item[=].item[=].text = "B-viirushepatiit"
@@ -4098,12 +4110,12 @@ Usage: #example
 
 * item[=].item[=].item[+].linkId = "immunization.b-hepatitis.immunization-his-data"
 * item[=].item[=].item[=].prefix = "24.1.2"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #immunization
-* item[=].item[=].item[=].code.display = "Immuniseerimine"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #immunization
+// * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.b_hepatitis.vaccinated"
+* item[=].item[=].item[=].enableWhen.question = "immunization.b-hepatitis.vaccinated"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -4112,9 +4124,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[0].linkId = "immunization.b-hepatitis.immunization-his-data.date"
 * item[=].item[=].item[=].item[=].prefix = "24.1.2.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #date
-* item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #date
+// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].item[=].required = true
@@ -4122,9 +4134,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "immunization.b-hepatitis.immunization-his-data.source-reference"
 * item[=].item[=].item[=].item[=].prefix = "24.1.2.2"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #source-reference
-* item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #source-reference
+// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].required = true
@@ -4145,9 +4157,9 @@ Usage: #example
 
 * item[=].item[+].linkId = "immunization.tuberculosis"
 * item[=].item[=].prefix = "24.2"
-* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #tuberculosis
-* item[=].item[=].code.display = "Tuberkuloos"
+// * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].code.code = #tuberculosis
+// * item[=].item[=].code.display = "Tuberkuloos"
 * item[=].item[=].text = "Tuberkuloos"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
@@ -4163,9 +4175,9 @@ Usage: #example
 
 * item[=].item[=].item[+].linkId = "immunization.tuberculosis.immunization-his-data"
 * item[=].item[=].item[=].prefix = "24.2.2"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #immunization
-* item[=].item[=].item[=].code.display = "Immuniseerimine"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #immunization
+// * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].enableWhen.question = "immunization.tuberculosis.tuberculosis-vac"
@@ -4177,9 +4189,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[0].linkId = "immunization.tuberculosis.immunization-his-data.date"
 * item[=].item[=].item[=].item[=].prefix = "24.2.2.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #date
-* item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #date
+// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].item[=].required = true
@@ -4187,9 +4199,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "immunization.tuberculosis.immunization-his-data.source-reference"
 * item[=].item[=].item[=].item[=].prefix = "24.2.2.2"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #source-reference
-* item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #source-reference
+// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].required = true
@@ -4210,9 +4222,9 @@ Usage: #example
 
 * item[=].item[+].linkId = "immunization.rotavirus"
 * item[=].item[=].prefix = "24.3"
-* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #rotavirus
-* item[=].item[=].code.display = "Rotaviirus"
+// * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].code.code = #rotavirus
+// * item[=].item[=].code.display = "Rotaviirus"
 * item[=].item[=].text = "Rotaviirus"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
@@ -4228,9 +4240,9 @@ Usage: #example
 
 * item[=].item[=].item[+].linkId = "immunization.rotavirus.immunization-his-data"
 * item[=].item[=].item[=].prefix = "24.3.2"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #immunization
-* item[=].item[=].item[=].code.display = "Immuniseerimine"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #immunization
+// * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].enableWhen.question = "immunization.rotavirus.rotavirus-vac"
@@ -4242,9 +4254,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[0].linkId = "immunization.rotavirus.immunization-his-data.date"
 * item[=].item[=].item[=].item[=].prefix = "24.3.2.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #date
-* item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #date
+// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].item[=].required = true
@@ -4252,9 +4264,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "immunization.rotavirus.immunization-his-data.source-reference"
 * item[=].item[=].item[=].item[=].prefix = "24.3.2.2"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #source-reference
-* item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #source-reference
+// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].required = true
@@ -4275,9 +4287,9 @@ Usage: #example
 
 * item[=].item[+].linkId = "immunization.diphteria"
 * item[=].item[=].prefix = "24.4"
-* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #diphteria
-* item[=].item[=].code.display = "Difteeria"
+// * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].code.code = #diphteria
+// * item[=].item[=].code.display = "Difteeria"
 * item[=].item[=].text = "Difteeria"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
@@ -4293,9 +4305,9 @@ Usage: #example
 
 * item[=].item[=].item[+].linkId = "immunization.diphteria.immunization-his-data"
 * item[=].item[=].item[=].prefix = "24.4.2"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #immunization
-* item[=].item[=].item[=].code.display = "Immuniseerimine"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #immunization
+// * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].enableWhen.question = "immunization.diphteria.diphtheria-vac"
@@ -4307,9 +4319,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[0].linkId = "immunization.diphteria.immunization-his-data.date"
 * item[=].item[=].item[=].item[=].prefix = "24.4.2.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #date
-* item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #date
+// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].item[=].required = true
@@ -4317,9 +4329,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "immunization.diphteria.immunization-his-data.source-reference"
 * item[=].item[=].item[=].item[=].prefix = "24.4.2.2"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #source-reference
-* item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #source-reference
+// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].required = true
@@ -4340,9 +4352,9 @@ Usage: #example
 
 * item[=].item[+].linkId = "immunization.tetanus"
 * item[=].item[=].prefix = "24.5"
-* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #tetanus
-* item[=].item[=].code.display = "Teetanus"
+// * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].code.code = #tetanus
+// * item[=].item[=].code.display = "Teetanus"
 * item[=].item[=].text = "Teetanus"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
@@ -4350,7 +4362,7 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "immunization.tetanus.tetanus-vac"
 * item[=].item[=].item[=].prefix = "24.5.1"
 * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #tetanus_vaccinated
+* item[=].item[=].item[=].code.code = #tetanus-vac
 * item[=].item[=].item[=].code.display = "Kas Teile on tehtud teetanuse vaktsiin?"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud teetanuse vaktsiin?"
 * item[=].item[=].item[=].type = #boolean
@@ -4358,9 +4370,9 @@ Usage: #example
 
 * item[=].item[=].item[+].linkId = "immunization.tetanus.immunization-his-data"
 * item[=].item[=].item[=].prefix = "24.5.2"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #immunization
-* item[=].item[=].item[=].code.display = "Immuniseerimine"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #immunization
+// * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].enableWhen.question = "immunization.tetanus.tetanus-vac"
@@ -4372,9 +4384,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[0].linkId = "immunization.tetanus.immunization-his-data.date"
 * item[=].item[=].item[=].item[=].prefix = "24.5.2.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #date
-* item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #date
+// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].item[=].required = true
@@ -4382,9 +4394,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "immunization.tetanus.immunization-his-data.source-reference"
 * item[=].item[=].item[=].item[=].prefix = "24.5.2.2"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #source-reference
-* item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #source-reference
+// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].required = true
@@ -4405,9 +4417,9 @@ Usage: #example
 
 * item[=].item[+].linkId = "immunization.pertussis"
 * item[=].item[=].prefix = "24.6"
-* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #pertussis
-* item[=].item[=].code.display = "Läkaköha"
+// * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].code.code = #pertussis
+// * item[=].item[=].code.display = "Läkaköha"
 * item[=].item[=].text = "Läkaköha"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
@@ -4423,9 +4435,9 @@ Usage: #example
 
 * item[=].item[=].item[+].linkId = "immunization.pertussis.immunization-his-data"
 * item[=].item[=].item[=].prefix = "24.6.2"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #immunization
-* item[=].item[=].item[=].code.display = "Immuniseerimine"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #immunization
+// * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].enableWhen.question = "immunization.pertussis.pertussis-vac"
@@ -4437,9 +4449,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[0].linkId = "immunization.pertussis.immunization-his-data.date"
 * item[=].item[=].item[=].item[=].prefix = "24.6.2.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #date
-* item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #date
+// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].item[=].required = true
@@ -4447,9 +4459,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "immunization.pertussis.immunization-his-data.source-reference"
 * item[=].item[=].item[=].item[=].prefix = "24.6.2.2"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #source-reference
-* item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #source-reference
+// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].required = true
@@ -4470,9 +4482,9 @@ Usage: #example
 
 * item[=].item[+].linkId = "immunization.polio"
 * item[=].item[=].prefix = "24.7"
-* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #polio
-* item[=].item[=].code.display = "Poliomüeliit"
+// * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].code.code = #polio
+// * item[=].item[=].code.display = "Poliomüeliit"
 * item[=].item[=].text = "Poliomüeliit"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
@@ -4488,9 +4500,9 @@ Usage: #example
 
 * item[=].item[=].item[+].linkId = "immunization.polio.immunization-his-data"
 * item[=].item[=].item[=].prefix = "24.7.2"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #immunization
-* item[=].item[=].item[=].code.display = "Immuniseerimine"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #immunization
+// * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].enableWhen.question = "immunization.polio.poliovirus-vac"
@@ -4502,9 +4514,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[0].linkId = "immunization.polio.immunization-his-data.date"
 * item[=].item[=].item[=].item[=].prefix = "24.7.2.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #date
-* item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #date
+// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].item[=].required = true
@@ -4512,9 +4524,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "immunization.polio.immunization-his-data.source-reference"
 * item[=].item[=].item[=].item[=].prefix = "24.7.2.2"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #source-reference
-* item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #source-reference
+// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].required = true
@@ -4533,16 +4545,16 @@ Usage: #example
 * item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].repeats = true
 
-* item[=].item[+].linkId = "immunization.hemo_influenza"
+* item[=].item[+].linkId = "immunization.hemo-influenza"
 * item[=].item[=].prefix = "24.8"
-* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #influenza
-* item[=].item[=].code.display = "Influensa"
+// * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].code.code = #influenza
+// * item[=].item[=].code.display = "Influensa"
 * item[=].item[=].text = "Influensa"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "immunization.hemo_influenza.haemophilus-influenza-vac"
+* item[=].item[=].item[0].linkId = "immunization.hemo-influenza.haemophilus-influenza-vac"
 * item[=].item[=].item[=].prefix = "24.8.1"
 * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 * item[=].item[=].item[=].code.code = #haemophilus-influenza-vac
@@ -4551,48 +4563,48 @@ Usage: #example
 * item[=].item[=].item[=].type = #boolean
 * item[=].item[=].item[=].required = true
 
-* item[=].item[=].item[+].linkId = "immunization.hemo_influenza.immunization-his-data"
+* item[=].item[=].item[+].linkId = "immunization.hemo-influenza.immunization-his-data"
 * item[=].item[=].item[=].prefix = "24.8.2"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #immunization
-* item[=].item[=].item[=].code.display = "Immuniseerimine"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #immunization
+// * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.hemo_influenza.haemophilus-influenza-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.hemo-influenza.haemophilus-influenza-vac"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].repeats = true
 * item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[0].linkId = "immunization.hemo_influenza.immunization-his-data.date"
+* item[=].item[=].item[=].item[0].linkId = "immunization.hemo-influenza.immunization-his-data.date"
 * item[=].item[=].item[=].item[=].prefix = "24.8.2.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #date
-* item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #date
+// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "immunization.hemo_influenza.immunization-his-data.source-reference"
+* item[=].item[=].item[=].item[+].linkId = "immunization.hemo-influenza.immunization-his-data.source-reference"
 * item[=].item[=].item[=].item[=].prefix = "24.8.2.2"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #source-reference
-* item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #source-reference
+// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[+].linkId = "immunization.hemo_influenza.date"
+* item[=].item[=].item[+].linkId = "immunization.hemo-influenza.date"
 * item[=].item[=].item[=].prefix = "24.8.3"
 * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 * item[=].item[=].item[=].code.code = #date
 * item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.hemo_influenza.haemophilus-influenza-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.hemo-influenza.haemophilus-influenza-vac"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -4600,9 +4612,9 @@ Usage: #example
 
 * item[=].item[+].linkId = "immunization.measles"
 * item[=].item[=].prefix = "24.9"
-* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #measles
-* item[=].item[=].code.display = "Leetrid"
+// * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].code.code = #measles
+// * item[=].item[=].code.display = "Leetrid"
 * item[=].item[=].text = "Leetrid"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
@@ -4618,9 +4630,9 @@ Usage: #example
 
 * item[=].item[=].item[+].linkId = "immunization.measles.immunization-his-data"
 * item[=].item[=].item[=].prefix = "24.9.2"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #immunization
-* item[=].item[=].item[=].code.display = "Immuniseerimine"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #immunization
+// * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].enableWhen.question = "immunization.measles.measles-vac"
@@ -4632,9 +4644,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[0].linkId = "immunization.measles.immunization-his-data.date"
 * item[=].item[=].item[=].item[=].prefix = "24.9.2.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #date
-* item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #date
+// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].item[=].required = true
@@ -4642,9 +4654,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "immunization.measles.immunization-his-data.source-reference"
 * item[=].item[=].item[=].item[=].prefix = "24.9.2.2"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #source-reference
-* item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #source-reference
+// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].required = true
@@ -4665,9 +4677,9 @@ Usage: #example
 
 * item[=].item[+].linkId = "immunization.mumps"
 * item[=].item[=].prefix = "24.10"
-* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #mumps
-* item[=].item[=].code.display = "Mumps"
+// * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].code.code = #mumps
+// * item[=].item[=].code.display = "Mumps"
 * item[=].item[=].text = "Mumps"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
@@ -4683,9 +4695,9 @@ Usage: #example
 
 * item[=].item[=].item[+].linkId = "immunization.mumps.immunization-his-data"
 * item[=].item[=].item[=].prefix = "24.10.2"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #immunization
-* item[=].item[=].item[=].code.display = "Immuniseerimine"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #immunization
+// * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].enableWhen.question = "immunization.mumps.mumps-vac"
@@ -4697,9 +4709,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[0].linkId = "immunization.mumps.immunization-his-data.date"
 * item[=].item[=].item[=].item[=].prefix = "24.10.2.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #date
-* item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #date
+// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].item[=].required = true
@@ -4707,9 +4719,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "immunization.mumps.immunization-his-data.source-reference"
 * item[=].item[=].item[=].item[=].prefix = "24.10.2.2"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #source-reference
-* item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #source-reference
+// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].required = true
@@ -4730,9 +4742,9 @@ Usage: #example
 
 * item[=].item[+].linkId = "immunization.rubella"
 * item[=].item[=].prefix = "24.11"
-* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #rubella
-* item[=].item[=].code.display = "Punetised"
+// * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].code.code = #rubella
+// * item[=].item[=].code.display = "Punetised"
 * item[=].item[=].text = "Punetised"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
@@ -4748,9 +4760,9 @@ Usage: #example
 
 * item[=].item[=].item[+].linkId = "immunization.rubella.immunization-his-data"
 * item[=].item[=].item[=].prefix = "24.11.2"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #immunization
-* item[=].item[=].item[=].code.display = "Immuniseerimine"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #immunization
+// * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].enableWhen.question = "immunization.rubella.rubella-vac"
@@ -4762,9 +4774,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[0].linkId = "immunization.rubella.immunization-his-data.date"
 * item[=].item[=].item[=].item[=].prefix = "24.11.2.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #date
-* item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #date
+// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].item[=].required = true
@@ -4772,9 +4784,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "immunization.rubella.immunization-his-data.source-reference"
 * item[=].item[=].item[=].item[=].prefix = "24.11.2.2"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #source-reference
-* item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #source-reference
+// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].required = true
@@ -4795,9 +4807,9 @@ Usage: #example
 
 * item[=].item[+].linkId = "immunization.hpv"
 * item[=].item[=].prefix = "24.12"
-* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #hpv
-* item[=].item[=].code.display = "HPV"
+// * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].code.code = #hpv
+// * item[=].item[=].code.display = "HPV"
 * item[=].item[=].text = "HPV"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
@@ -4813,9 +4825,9 @@ Usage: #example
 
 * item[=].item[=].item[+].linkId = "immunization.hpv.immunization-his-data"
 * item[=].item[=].item[=].prefix = "24.12.2"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #immunization
-* item[=].item[=].item[=].code.display = "Immuniseerimine"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #immunization
+// * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].enableWhen.question = "immunization.hpv.hpv-vac"
@@ -4827,9 +4839,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[0].linkId = "immunization.hpv.immunization-his-data.date"
 * item[=].item[=].item[=].item[=].prefix = "24.12.2.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #date
-* item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #date
+// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].item[=].required = true
@@ -4837,15 +4849,15 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "immunization.hpv.immunization-his-data.source-reference"
 * item[=].item[=].item[=].item[=].prefix = "24.12.2.2"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #source-reference
-* item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #source-reference
+// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[+].linkId = "immunization.hpv.self_report_date"
+* item[=].item[=].item[+].linkId = "immunization.hpv.date"
 * item[=].item[=].item[=].prefix = "24.12.3"
 * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 * item[=].item[=].item[=].code.code = #date
@@ -4860,9 +4872,9 @@ Usage: #example
 
 * item[=].item[+].linkId = "immunization.covid"
 * item[=].item[=].prefix = "24.13"
-* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #covid
-* item[=].item[=].code.display = "COVID"
+// * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].code.code = #covid
+// * item[=].item[=].code.display = "COVID"
 * item[=].item[=].text = "COVID"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
@@ -4878,9 +4890,9 @@ Usage: #example
 
 * item[=].item[=].item[+].linkId = "immunization.covid.immunization-his-data"
 * item[=].item[=].item[=].prefix = "24.13.2"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #immunization
-* item[=].item[=].item[=].code.display = "Immuniseerimine"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #immunization
+// * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].enableWhen.question = "immunization.covid.covid-vac"
@@ -4892,9 +4904,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[0].linkId = "immunization.covid.immunization-his-data.date"
 * item[=].item[=].item[=].item[=].prefix = "24.13.2.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #date
-* item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #date
+// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].item[=].required = true
@@ -4902,9 +4914,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "immunization.covid.immunization-his-data.source-reference"
 * item[=].item[=].item[=].item[=].prefix = "24.13.2.2"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #source-reference
-* item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #source-reference
+// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].required = true
@@ -4925,9 +4937,9 @@ Usage: #example
 
 * item[=].item[+].linkId = "immunization.flu"
 * item[=].item[=].prefix = "24.14"
-* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #flu
-* item[=].item[=].code.display = "Gripiviirus"
+// * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].code.code = #flu
+// * item[=].item[=].code.display = "Gripiviirus"
 * item[=].item[=].text = "Gripiviirus"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
@@ -4943,9 +4955,9 @@ Usage: #example
 
 * item[=].item[=].item[+].linkId = "immunization.flu.immunization-his-data"
 * item[=].item[=].item[=].prefix = "24.14.2"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #immunization
-* item[=].item[=].item[=].code.display = "Immuniseerimine"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #immunization
+// * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].enableWhen.question = "immunization.flu.influenza-vac"
@@ -4957,9 +4969,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[0].linkId = "immunization.flu.immunization-his-data.date"
 * item[=].item[=].item[=].item[=].prefix = "24.14.2.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #date
-* item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #date
+// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].item[=].required = true
@@ -4967,9 +4979,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "immunization.flu.immunization-his-data.source-reference"
 * item[=].item[=].item[=].item[=].prefix = "24.14.2.2"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #source-reference
-* item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #source-reference
+// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].required = true
@@ -4990,9 +5002,9 @@ Usage: #example
 
 * item[=].item[+].linkId = "immunization.pneumococcus"
 * item[=].item[=].prefix = "24.15"
-* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #pneumococcus
-* item[=].item[=].code.display = "Pneumokokk"
+// * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].code.code = #pneumococcus
+// * item[=].item[=].code.display = "Pneumokokk"
 * item[=].item[=].text = "Pneumokokk"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
@@ -5008,9 +5020,9 @@ Usage: #example
 
 * item[=].item[=].item[+].linkId = "immunization.pneumococcus.immunization-his-data"
 * item[=].item[=].item[=].prefix = "24.15.2"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #immunization
-* item[=].item[=].item[=].code.display = "Immuniseerimine"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #immunization
+// * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].enableWhen.question = "immunization.pneumococcus.pneumococcus-vac"
@@ -5022,9 +5034,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[0].linkId = "immunization.pneumococcus.immunization-his-data.date"
 * item[=].item[=].item[=].item[=].prefix = "24.15.2.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #date
-* item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #date
+// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].item[=].required = true
@@ -5032,9 +5044,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "immunization.pneumococcus.immunization-his-data.source-reference"
 * item[=].item[=].item[=].item[=].prefix = "24.15.2.2"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #source-reference
-* item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #source-reference
+// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].required = true
@@ -5053,16 +5065,16 @@ Usage: #example
 * item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].repeats = true
 
-* item[=].item[+].linkId = "immunization.a_hepatitis"
+* item[=].item[+].linkId = "immunization.a-hepatitis"
 * item[=].item[=].prefix = "24.16"
-* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #a_hepatitis
-* item[=].item[=].code.display = "A-hepatiit"
+// * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].code.code = #a-hepatitis
+// * item[=].item[=].code.display = "A-hepatiit"
 * item[=].item[=].text = "A-hepatiit"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "immunization.a_hepatitis.hepatitis-A-vac"
+* item[=].item[=].item[0].linkId = "immunization.a-hepatitis.hepatitis-A-vac"
 * item[=].item[=].item[=].prefix = "24.16.1"
 * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 * item[=].item[=].item[=].code.code = #hepatitis-A-vac
@@ -5071,48 +5083,48 @@ Usage: #example
 * item[=].item[=].item[=].type = #boolean
 * item[=].item[=].item[=].required = true
 
-* item[=].item[=].item[+].linkId = "immunization.a_hepatitis.immunization-his-data"
+* item[=].item[=].item[+].linkId = "immunization.a-hepatitis.immunization-his-data"
 * item[=].item[=].item[=].prefix = "24.16.2"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #immunization
-* item[=].item[=].item[=].code.display = "Immuniseerimine"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #immunization
+// * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.a_hepatitis.hepatitis-A-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.a-hepatitis.hepatitis-A-vac"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].repeats = true
 * item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[0].linkId = "immunization.a_hepatitis.immunization-his-data.date"
+* item[=].item[=].item[=].item[0].linkId = "immunization.a-hepatitis.immunization-his-data.date"
 * item[=].item[=].item[=].item[=].prefix = "24.16.2.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #date
-* item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #date
+// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "immunization.a_hepatitis.immunization-his-data.source-reference"
+* item[=].item[=].item[=].item[+].linkId = "immunization.a-hepatitis.immunization-his-data.source-reference"
 * item[=].item[=].item[=].item[=].prefix = "24.16.2.2"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #source-reference
-* item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #source-reference
+// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[+].linkId = "immunization.a_hepatitis.date"
+* item[=].item[=].item[+].linkId = "immunization.a-hepatitis.date"
 * item[=].item[=].item[=].prefix = "24.16.3"
 * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 * item[=].item[=].item[=].code.code = #date
 * item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.a_hepatitis.hepatitis-A-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.a-hepatitis.hepatitis-A-vac"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -5120,9 +5132,9 @@ Usage: #example
 
 * item[=].item[+].linkId = "immunization.varicella"
 * item[=].item[=].prefix = "24.17"
-* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #varicella
-* item[=].item[=].code.display = "Tuulerõuged"
+// * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].code.code = #varicella
+// * item[=].item[=].code.display = "Tuulerõuged"
 * item[=].item[=].text = "Tuulerõuged"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
@@ -5138,9 +5150,9 @@ Usage: #example
 
 * item[=].item[=].item[+].linkId = "immunization.varicella.immunization-his-data"
 * item[=].item[=].item[=].prefix = "24.17.2"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #immunization
-* item[=].item[=].item[=].code.display = "Immuniseerimine"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #immunization
+// * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].enableWhen.question = "immunization.varicella.varicella-vac"
@@ -5152,9 +5164,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[0].linkId = "immunization.varicella.immunization-his-data.date"
 * item[=].item[=].item[=].item[=].prefix = "24.17.2.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #date
-* item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #date
+// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].item[=].required = true
@@ -5162,9 +5174,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "immunization.varicella.immunization-his-data.source-reference"
 * item[=].item[=].item[=].item[=].prefix = "24.17.2.2"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #source-reference
-* item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #source-reference
+// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].required = true
@@ -5185,9 +5197,9 @@ Usage: #example
 
 * item[=].item[+].linkId = "immunization.shingles"
 * item[=].item[=].prefix = "24.18"
-* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #shingles
-* item[=].item[=].code.display = "Vöötohatis"
+// * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].code.code = #shingles
+// * item[=].item[=].code.display = "Vöötohatis"
 * item[=].item[=].text = "Vöötohatis"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
@@ -5203,9 +5215,9 @@ Usage: #example
 
 * item[=].item[=].item[+].linkId = "immunization.shingles.immunization-his-data"
 * item[=].item[=].item[=].prefix = "24.18.2"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #immunization
-* item[=].item[=].item[=].code.display = "Immuniseerimine"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #immunization
+// * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].enableWhen.question = "immunization.shingles.herpes-zoster-vac"
@@ -5217,9 +5229,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[0].linkId = "immunization.shingles.immunization-his-data.date"
 * item[=].item[=].item[=].item[=].prefix = "24.18.2.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #date
-* item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #date
+// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].item[=].required = true
@@ -5227,9 +5239,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "immunization.shingles.immunization-his-data.source-reference"
 * item[=].item[=].item[=].item[=].prefix = "24.18.2.2"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #source-reference
-* item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #source-reference
+// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].required = true
@@ -5250,9 +5262,9 @@ Usage: #example
 
 * item[=].item[+].linkId = "immunization.meningococcus"
 * item[=].item[=].prefix = "24.19"
-* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #meningococcus
-* item[=].item[=].code.display = "Meningokokk"
+// * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].code.code = #meningococcus
+// * item[=].item[=].code.display = "Meningokokk"
 * item[=].item[=].text = "Meningokokk"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
@@ -5268,9 +5280,9 @@ Usage: #example
 
 * item[=].item[=].item[+].linkId = "immunization.meningococcus.immunization-his-data"
 * item[=].item[=].item[=].prefix = "24.19.2"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #immunization
-* item[=].item[=].item[=].code.display = "Immuniseerimine"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #immunization
+// * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].enableWhen.question = "immunization.meningococcus.meningococcus-vac"
@@ -5282,9 +5294,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[0].linkId = "immunization.meningococcus.immunization-his-data.date"
 * item[=].item[=].item[=].item[=].prefix = "24.19.2.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #date
-* item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #date
+// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].item[=].required = true
@@ -5292,9 +5304,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "immunization.meningococcus.immunization-his-data.source-reference"
 * item[=].item[=].item[=].item[=].prefix = "24.19.2.2"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #source-reference
-* item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #source-reference
+// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].required = true
@@ -5315,9 +5327,9 @@ Usage: #example
 
 * item[=].item[+].linkId = "immunization.yellow-fever"
 * item[=].item[=].prefix = "24.20"
-* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #yellow-fever
-* item[=].item[=].code.display = "Kollapalavik"
+// * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].code.code = #yellow-fever
+// * item[=].item[=].code.display = "Kollapalavik"
 * item[=].item[=].text = "Kollapalavik"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
@@ -5333,9 +5345,9 @@ Usage: #example
 
 * item[=].item[=].item[+].linkId = "immunization.yellow-fever.immunization-his-data"
 * item[=].item[=].item[=].prefix = "24.20.2"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #immunization
-* item[=].item[=].item[=].code.display = "Immuniseerimine"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #immunization
+// * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].enableWhen.question = "immunization.yellow-fever.yellow-fever-vac"
@@ -5347,9 +5359,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[0].linkId = "immunization.yellow-fever.immunization-his-data.date"
 * item[=].item[=].item[=].item[=].prefix = "24.20.2.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #date
-* item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #date
+// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].item[=].required = true
@@ -5357,9 +5369,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "immunization.yellow-fever.immunization-his-data.source-reference"
 * item[=].item[=].item[=].item[=].prefix = "24.20.2.2"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #source-reference
-* item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #source-reference
+// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].required = true
@@ -5380,9 +5392,9 @@ Usage: #example
 
 * item[=].item[+].linkId = "immunization.typhoid-fever"
 * item[=].item[=].prefix = "24.21"
-* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #typhoid-fever
-* item[=].item[=].code.display = "Kõhutüüfus"
+// * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].code.code = #typhoid-fever
+// * item[=].item[=].code.display = "Kõhutüüfus"
 * item[=].item[=].text = "Kõhutüüfus"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
@@ -5398,9 +5410,9 @@ Usage: #example
 
 * item[=].item[=].item[+].linkId = "immunization.typhoid-fever.immunization-his-data"
 * item[=].item[=].item[=].prefix = "24.21.2"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #immunization
-* item[=].item[=].item[=].code.display = "Immuniseerimine"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #immunization
+// * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].enableWhen.question = "immunization.typhoid-fever.typhoid-vac"
@@ -5412,9 +5424,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[0].linkId = "immunization.typhoid-fever.immunization-his-data.date"
 * item[=].item[=].item[=].item[=].prefix = "24.21.2.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #date
-* item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #date
+// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].item[=].required = true
@@ -5422,9 +5434,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "immunization.typhoid-fever.immunization-his-data.source-reference"
 * item[=].item[=].item[=].item[=].prefix = "24.21.2.2"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #source-reference
-* item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #source-reference
+// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].required = true
@@ -5445,9 +5457,9 @@ Usage: #example
 
 * item[=].item[+].linkId = "immunization.tick-encephalitis"
 * item[=].item[=].prefix = "24.22"
-* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #tick_encephalitis
-* item[=].item[=].code.display = "Puukentsefaliit"
+// * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].code.code = #tick-encephalitis
+// * item[=].item[=].code.display = "Puukentsefaliit"
 * item[=].item[=].text = "Puukentsefaliit"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
@@ -5463,9 +5475,9 @@ Usage: #example
 
 * item[=].item[=].item[+].linkId = "immunization.tick-encephalitis.immunization-his-data"
 * item[=].item[=].item[=].prefix = "24.22.2"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #immunization
-* item[=].item[=].item[=].code.display = "Immuniseerimine"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #immunization
+// * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].enableWhen.question = "immunization.tick-encephalitis.tick-borne-encephalitis-vac"
@@ -5477,9 +5489,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[0].linkId = "immunization.tick-encephalitis.immunization-his-data.date"
 * item[=].item[=].item[=].item[=].prefix = "24.22.2.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #date
-* item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #date
+// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].item[=].required = true
@@ -5487,9 +5499,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "immunization.tick-encephalitis.immunization-his-data.source-reference"
 * item[=].item[=].item[=].item[=].prefix = "24.22.2.2"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #source-reference
-* item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #source-reference
+// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].required = true
@@ -5510,9 +5522,9 @@ Usage: #example
 
 * item[=].item[+].linkId = "immunization.other-vac"
 * item[=].item[=].prefix = "24.23"
-* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #other-vac
-* item[=].item[=].code.display = "Muud vaktsiinid"
+// * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].code.code = #other-vac
+// * item[=].item[=].code.display = "Muud vaktsiinid"
 * item[=].item[=].text = "Muud vaktsiinid"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
@@ -5540,9 +5552,9 @@ Usage: #example
 
 * item[=].item[=].item[+].linkId = "immunization.other-vac.immunization-his-data"
 * item[=].item[=].item[=].prefix = "24.23.2"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #immunization
-* item[=].item[=].item[=].code.display = "Immuniseerimine"
+// * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].code.code = #immunization
+// * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].enableWhen.question = "immunization.other-vac.vaccinated"
@@ -5554,9 +5566,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[0].linkId = "immunization.other-vac.immunization-his-data.preventable-disease"
 * item[=].item[=].item[=].item[=].prefix = "24.23.2.1"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #vaccine-preventable-disease
-* item[=].item[=].item[=].item[=].code.display = "vaktsiinvälditav haigus või haigustekitaja"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #vaccine-preventable-disease
+// * item[=].item[=].item[=].item[=].code.display = "vaktsiinvälditav haigus või haigustekitaja"
 * item[=].item[=].item[=].item[=].text = "vaktsiinvälditav haigus või haigustekitaja"
 * item[=].item[=].item[=].item[=].type = #coding
 * item[=].item[=].item[=].item[=].required = true
@@ -5564,9 +5576,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "immunization.other-vac.immunization-his-data.date"
 * item[=].item[=].item[=].item[=].prefix = "24.23.2.2"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #date
-* item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #date
+// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].item[=].required = true
@@ -5574,9 +5586,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "immunization.other-vac.immunization-his-data.source-reference"
 * item[=].item[=].item[=].item[=].prefix = "24.23.2.3"
-* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].item[=].code.code = #source-reference
-* item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+// * item[=].item[=].item[=].item[=].code.code = #source-reference
+// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].required = true
