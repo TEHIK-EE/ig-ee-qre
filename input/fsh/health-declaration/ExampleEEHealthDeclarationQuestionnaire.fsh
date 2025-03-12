@@ -2513,7 +2513,7 @@ Usage: #example
 * item[=].item[=].item[=].type = #boolean
 * item[=].item[=].item[=].enableWhen.question = "patient-gender"
 * item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerCoding = #N
+* item[=].item[=].item[=].enableWhen.answerCoding = #female
 * item[=].item[=].item[=].required = true
 
 * item[=].item[=].item[=].item[0].linkId = "previous-treatment.regular-medication.regular-medication-women.specification"
@@ -2538,7 +2538,7 @@ Usage: #example
 * item[=].item[=].item[=].type = #boolean
 * item[=].item[=].item[=].enableWhen.question = "patient-gender"
 * item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerCoding = #M
+* item[=].item[=].item[=].enableWhen.answerCoding = #male
 * item[=].item[=].item[=].required = true
 
 * item[=].item[=].item[=].item[0].linkId = "previous-treatment.regular-medication.regular-medication-men.specification"
@@ -2927,7 +2927,7 @@ Usage: #example
 * item[=].type = #boolean
 * item[=].enableWhen.question = "patient-gender"
 * item[=].enableWhen.operator = #=
-* item[=].enableWhen.answerCoding = #N
+* item[=].enableWhen.answerCoding = #female
 * item[=].required = true
 
 * item[+].linkId = "skin-disorders"
