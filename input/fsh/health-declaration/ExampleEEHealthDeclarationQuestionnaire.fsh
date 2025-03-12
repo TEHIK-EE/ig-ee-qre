@@ -33,7 +33,7 @@ Usage: #example
 * item[+].linkId = "patient-gender"
 * item[=].text = "Sugu"
 * item[=].type = #coding
-* item[=].answerValueSet = "https://fhir.ee/ValueSet/sugu"
+* item[=].answerValueSet = "http://hl7.org/fhir/ValueSet/administrative-gender"
 * item[=].required = true
 * item[=].readOnly = true
 
