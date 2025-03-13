@@ -249,7 +249,7 @@ Usage: #example
 * item[=].type = #group
 * item[=].required = true
 
-* item[=].item[0].linkId = "allergies.diagnoses"
+* item[=].item[0].linkId = "allergies.diagnoses-group"
 // * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].code.code = #previous-diagnoses
 // * item[=].item[=].code.display = "Varasemad diagnoosid"
@@ -257,7 +257,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 
-* item[=].item[=].item[0].linkId = "allergies.diagnoses.group"
+* item[=].item[=].item[0].linkId = "allergies.diagnoses-group.previous-diagnosis"
 // * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
@@ -266,7 +266,7 @@ Usage: #example
 * item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "allergies.diagnoses.group.diagnosis"
+* item[=].item[=].item[=].item[0].linkId = "allergies.diagnoses-group.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
@@ -276,7 +276,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "allergies.diagnoses.group.written-diagnosis"
+* item[=].item[=].item[=].item[+].linkId = "allergies.diagnoses-group.previous-diagnosis.written-diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
@@ -285,7 +285,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "allergies.diagnoses.group.source-reference"
+* item[=].item[=].item[=].item[+].linkId = "allergies.diagnoses-group.previous-diagnosis.source-reference"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #source-reference
 // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
@@ -421,7 +421,7 @@ Usage: #example
 * item[=].type = #group
 * item[=].required = true
 
-* item[=].item[0].linkId = "mental-health.diagnoses"
+* item[=].item[0].linkId = "mental-health.diagnoses-group"
 // * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].code.code = #previous-diagnoses
 // * item[=].item[=].code.display = "Varasemad diagnoosid"
@@ -429,7 +429,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 
-* item[=].item[=].item[0].linkId = "mental-health.diagnoses.group"
+* item[=].item[=].item[0].linkId = "mental-health.diagnoses-group.previous-diagnosis"
 // * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
@@ -438,7 +438,7 @@ Usage: #example
 * item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "mental-health.diagnoses.group.diagnosis"
+* item[=].item[=].item[=].item[0].linkId = "mental-health.diagnoses-group.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
@@ -448,7 +448,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "mental-health.diagnoses.group.written-diagnosis"
+* item[=].item[=].item[=].item[+].linkId = "mental-health.diagnoses-group.previous-diagnosis.written-diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
@@ -457,7 +457,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "mental-health.diagnoses.group.source-reference"
+* item[=].item[=].item[=].item[+].linkId = "mental-health.diagnoses-group.previous-diagnosis.source-reference"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #source-reference
 // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
@@ -637,7 +637,7 @@ Usage: #example
 * item[=].type = #group
 * item[=].required = true
 
-* item[=].item[0].linkId = "nervous-system.diagnoses"
+* item[=].item[0].linkId = "nervous-system.diagnoses-group"
 // * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].code.code = #previous-diagnoses
 // * item[=].item[=].code.display = "Varasemad diagnoosid"
@@ -645,7 +645,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 
-* item[=].item[=].item[0].linkId = "nervous-system.diagnoses.group"
+* item[=].item[=].item[0].linkId = "nervous-system.diagnoses-group.previous-diagnosis"
 // * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
@@ -654,7 +654,7 @@ Usage: #example
 * item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "nervous-system.diagnoses.group.diagnosis"
+* item[=].item[=].item[=].item[0].linkId = "nervous-system.diagnoses-group.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
@@ -664,7 +664,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "nervous-system.diagnoses.group.written-diagnosis"
+* item[=].item[=].item[=].item[+].linkId = "nervous-system.diagnoses-group.previous-diagnosis.written-diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
@@ -673,7 +673,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "nervous-system.diagnoses.group.source-reference"
+* item[=].item[=].item[=].item[+].linkId = "nervous-system.diagnoses-group.previous-diagnosis.source-reference"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #source-reference
 // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
@@ -857,7 +857,7 @@ Usage: #example
 * item[=].type = #group
 * item[=].required = true
 
-* item[=].item[0].linkId = "eyes-vision.diagnoses"
+* item[=].item[0].linkId = "eyes-vision.diagnoses-group"
 // * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].code.code = #previous-diagnoses
 // * item[=].item[=].code.display = "Varasemad diagnoosid"
@@ -865,7 +865,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 
-* item[=].item[=].item[0].linkId = "eyes-vision.diagnoses.group"
+* item[=].item[=].item[0].linkId = "eyes-vision.diagnoses-group.previous-diagnosis"
 // * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
@@ -874,7 +874,7 @@ Usage: #example
 * item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "eyes-vision.diagnoses.group.diagnosis"
+* item[=].item[=].item[=].item[0].linkId = "eyes-vision.diagnoses-group.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
@@ -884,7 +884,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "eyes-vision.diagnoses.group.written-diagnosis"
+* item[=].item[=].item[=].item[+].linkId = "eyes-vision.diagnoses-group.previous-diagnosis.written-diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
@@ -893,7 +893,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "eyes-vision.diagnoses.group.source-reference"
+* item[=].item[=].item[=].item[+].linkId = "eyes-vision.diagnoses-group.previous-diagnosis.source-reference"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #source-reference
 // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
@@ -1052,7 +1052,7 @@ Usage: #example
 * item[=].required = true
 
 //continue
-* item[=].item[0].linkId = "ear-nose-throat.diagnoses"
+* item[=].item[0].linkId = "ear-nose-throat.diagnoses-group"
 // * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].code.code = #previous-diagnoses
 // * item[=].item[=].code.display = "Varasemad diagnoosid"
@@ -1060,7 +1060,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 
-* item[=].item[=].item[0].linkId = "ear-nose-throat.diagnoses.group"
+* item[=].item[=].item[0].linkId = "ear-nose-throat.diagnoses-group.previous-diagnosis"
 // * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
@@ -1069,7 +1069,7 @@ Usage: #example
 * item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "ear-nose-throat.diagnoses.group.diagnosis"
+* item[=].item[=].item[=].item[0].linkId = "ear-nose-throat.diagnoses-group.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
@@ -1079,7 +1079,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "ear-nose-throat.diagnoses.group.written-diagnosis"
+* item[=].item[=].item[=].item[+].linkId = "ear-nose-throat.diagnoses-group.previous-diagnosis.written-diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
@@ -1088,7 +1088,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "ear-nose-throat.diagnoses.group.source-reference"
+* item[=].item[=].item[=].item[+].linkId = "ear-nose-throat.diagnoses-group.previous-diagnosis.source-reference"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #source-reference
 // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
@@ -1246,7 +1246,7 @@ Usage: #example
 * item[=].type = #group
 * item[=].required = true
 
-* item[=].item[0].linkId = "respiratory-system.diagnoses"
+* item[=].item[0].linkId = "respiratory-system.diagnoses-group"
 // * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].code.code = #previous-diagnoses
 // * item[=].item[=].code.display = "Varasemad diagnoosid"
@@ -1254,7 +1254,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 
-* item[=].item[=].item[0].linkId = "respiratory-system.diagnoses.group"
+* item[=].item[=].item[0].linkId = "respiratory-system.diagnoses-group.previous-diagnosis"
 // * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
@@ -1263,7 +1263,7 @@ Usage: #example
 * item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "respiratory-system.diagnoses.group.diagnosis"
+* item[=].item[=].item[=].item[0].linkId = "respiratory-system.diagnoses-group.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
@@ -1273,7 +1273,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "respiratory-system.diagnoses.group.written-diagnosis"
+* item[=].item[=].item[=].item[+].linkId = "respiratory-system.diagnoses-group.previous-diagnosis.written-diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
@@ -1282,7 +1282,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "respiratory-system.diagnoses.group.source-reference"
+* item[=].item[=].item[=].item[+].linkId = "respiratory-system.diagnoses-group.previous-diagnosis.source-reference"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #source-reference
 // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
@@ -1396,7 +1396,7 @@ Usage: #example
 * item[=].type = #group
 * item[=].required = true
 
-* item[=].item[0].linkId = "metabolic-disorder.diagnoses"
+* item[=].item[0].linkId = "metabolic-disorder.diagnoses-group"
 // * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].code.code = #previous-diagnoses
 // * item[=].item[=].code.display = "Varasemad diagnoosid"
@@ -1404,7 +1404,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 
-* item[=].item[=].item[0].linkId = "metabolic-disorder.diagnoses.group"
+* item[=].item[=].item[0].linkId = "metabolic-disorder.diagnoses-group.previous-diagnosis"
 // * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
@@ -1413,7 +1413,7 @@ Usage: #example
 * item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "metabolic-disorder.diagnoses.group.diagnosis"
+* item[=].item[=].item[=].item[0].linkId = "metabolic-disorder.diagnoses-group.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
@@ -1423,7 +1423,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "metabolic-disorder.diagnoses.group.written-description"
+* item[=].item[=].item[=].item[+].linkId = "metabolic-disorder.diagnoses-group.previous-diagnosis.written-description"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
@@ -1432,7 +1432,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "metabolic-disorder.diagnoses.group.source-reference"
+* item[=].item[=].item[=].item[+].linkId = "metabolic-disorder.diagnoses-group.previous-diagnosis.source-reference"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #source-reference
 // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
@@ -1502,7 +1502,7 @@ Usage: #example
 * item[=].type = #group
 * item[=].required = true
 
-* item[=].item[0].linkId = "cardiovascular-system.diagnoses"
+* item[=].item[0].linkId = "cardiovascular-system.diagnoses-group"
 // * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].code.code = #previous-diagnoses
 // * item[=].item[=].code.display = "Varasemad diagnoosid"
@@ -1510,7 +1510,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 
-* item[=].item[=].item[0].linkId = "cardiovascular-system.diagnoses.group"
+* item[=].item[=].item[0].linkId = "cardiovascular-system.diagnoses-group.previous-diagnosis"
 // * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
@@ -1519,7 +1519,7 @@ Usage: #example
 * item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "cardiovascular-system.diagnoses.group.diagnosis"
+* item[=].item[=].item[=].item[0].linkId = "cardiovascular-system.diagnoses-group.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
@@ -1529,7 +1529,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "cardiovascular-system.diagnoses.group.written-diagnosis"
+* item[=].item[=].item[=].item[+].linkId = "cardiovascular-system.diagnoses-group.previous-diagnosis.written-diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
@@ -1538,7 +1538,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "cardiovascular-system.diagnoses.group.source-reference"
+* item[=].item[=].item[=].item[+].linkId = "cardiovascular-system.diagnoses-group.previous-diagnosis.source-reference"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #source-reference
 // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
@@ -1740,7 +1740,7 @@ Usage: #example
 * item[=].type = #group
 * item[=].required = true
 
-* item[=].item[0].linkId = "bones-joints-muscles.diagnoses"
+* item[=].item[0].linkId = "bones-joints-muscles.diagnoses-group"
 // * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].code.code = #previous-diagnoses
 // * item[=].item[=].code.display = "Varasemad diagnoosid"
@@ -1748,7 +1748,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 
-* item[=].item[=].item[0].linkId = "bones-joints-muscles.diagnoses.group"
+* item[=].item[=].item[0].linkId = "bones-joints-muscles.diagnoses-group.previous-diagnosis"
 // * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
@@ -1757,7 +1757,7 @@ Usage: #example
 * item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "bones-joints-muscles.diagnoses.group.diagnosis"
+* item[=].item[=].item[=].item[0].linkId = "bones-joints-muscles.diagnoses-group.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
@@ -1767,7 +1767,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "bones-joints-muscles.diagnoses.group.written-diagnosis"
+* item[=].item[=].item[=].item[+].linkId = "bones-joints-muscles.diagnoses-group.previous-diagnosis.written-diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
@@ -1776,7 +1776,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "bones-joints-muscles.diagnoses.group.source-reference"
+* item[=].item[=].item[=].item[+].linkId = "bones-joints-muscles.diagnoses-group.previous-diagnosis.source-reference"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #source-reference
 // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
@@ -2000,7 +2000,7 @@ Usage: #example
 * item[=].type = #group
 * item[=].required = true
 
-* item[=].item[0].linkId = "infections.diagnoses"
+* item[=].item[0].linkId = "infections.diagnoses-group"
 // * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].code.code = #previous-diagnoses
 // * item[=].item[=].code.display = "Varasemad diagnoosid"
@@ -2008,7 +2008,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 
-* item[=].item[=].item[0].linkId = "infections.diagnoses.group"
+* item[=].item[=].item[0].linkId = "infections.diagnoses-group.previous-diagnosis"
 // * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
@@ -2017,7 +2017,7 @@ Usage: #example
 * item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "infections.diagnoses.group.diagnosis"
+* item[=].item[=].item[=].item[0].linkId = "infections.diagnoses-group.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
@@ -2027,7 +2027,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "infections.diagnoses.group.written-diagnosis"
+* item[=].item[=].item[=].item[+].linkId = "infections.diagnoses-group.previous-diagnosis.written-diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
@@ -2036,7 +2036,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "infections.diagnoses.group.source-reference"
+* item[=].item[=].item[=].item[+].linkId = "infections.diagnoses-group.previous-diagnosis.source-reference"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #source-reference
 // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
@@ -2557,7 +2557,7 @@ Usage: #example
 * item[=].type = #group
 * item[=].required = true
 
-* item[=].item[0].linkId = "traumas.diagnoses"
+* item[=].item[0].linkId = "traumas.diagnoses-group"
 // * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].code.code = #previous-diagnoses
 // * item[=].item[=].code.display = "Varasemad diagnoosid"
@@ -2565,7 +2565,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 
-* item[=].item[=].item[0].linkId = "traumas.diagnoses.group"
+* item[=].item[=].item[0].linkId = "traumas.diagnoses-group.previous-diagnosis"
 // * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
@@ -2574,7 +2574,7 @@ Usage: #example
 * item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "traumas.diagnoses.group.diagnosis"
+* item[=].item[=].item[=].item[0].linkId = "traumas.diagnoses-group.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
@@ -2584,7 +2584,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "traumas.diagnoses.group.written-diagnosis"
+* item[=].item[=].item[=].item[+].linkId = "traumas.diagnoses-group.previous-diagnosis.written-diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
@@ -2593,7 +2593,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "traumas.diagnoses.group.source-reference"
+* item[=].item[=].item[=].item[+].linkId = "traumas.diagnoses-group.previous-diagnosis.source-reference"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #source-reference
 // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
@@ -2701,7 +2701,7 @@ Usage: #example
 * item[=].type = #group
 * item[=].required = true
 
-* item[=].item[0].linkId = "skin-disorders.diagnoses"
+* item[=].item[0].linkId = "skin-disorders.diagnoses-group"
 // * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].code.code = #previous-diagnoses
 // * item[=].item[=].code.display = "Varasemad diagnoosid"
@@ -2709,7 +2709,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 
-* item[=].item[=].item[0].linkId = "skin-disorders.diagnoses.group"
+* item[=].item[=].item[0].linkId = "skin-disorders.diagnoses-group.previous-diagnosis"
 // * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
@@ -2718,7 +2718,7 @@ Usage: #example
 * item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "skin-disorders.diagnoses.group.diagnosis"
+* item[=].item[=].item[=].item[0].linkId = "skin-disorders.diagnoses-group.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
@@ -2728,7 +2728,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "skin-disorders.diagnoses.group.written-diagnosis"
+* item[=].item[=].item[=].item[+].linkId = "skin-disorders.diagnoses-group.previous-diagnosis.written-diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
@@ -2737,7 +2737,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "skin-disorders.diagnoses.group.source-reference"
+* item[=].item[=].item[=].item[+].linkId = "skin-disorders.diagnoses-group.previous-diagnosis.source-reference"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #source-reference
 // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
@@ -2774,7 +2774,7 @@ Usage: #example
 * item[=].type = #group
 * item[=].required = true
 
-* item[=].item[0].linkId = "digestive-organs.diagnoses"
+* item[=].item[0].linkId = "digestive-organs.diagnoses-group"
 // * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].code.code = #previous-diagnoses
 // * item[=].item[=].code.display = "Varasemad diagnoosid"
@@ -2782,7 +2782,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 
-* item[=].item[=].item[0].linkId = "digestive-organs.diagnoses.group"
+* item[=].item[=].item[0].linkId = "digestive-organs.diagnoses-group.previous-diagnosis"
 // * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
@@ -2791,7 +2791,7 @@ Usage: #example
 * item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "digestive-organs.diagnoses.group.diagnosis"
+* item[=].item[=].item[=].item[0].linkId = "digestive-organs.diagnoses-group.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
@@ -2801,7 +2801,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "digestive-organs.diagnoses.group.written-diagnosis"
+* item[=].item[=].item[=].item[+].linkId = "digestive-organs.diagnoses-group.previous-diagnosis.written-diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
@@ -2810,7 +2810,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "digestive-organs.diagnoses.group.source-reference"
+* item[=].item[=].item[=].item[+].linkId = "digestive-organs.diagnoses-group.previous-diagnosis.source-reference"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #source-reference
 // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
@@ -2946,7 +2946,7 @@ Usage: #example
 * item[=].type = #group
 * item[=].required = true
 
-* item[=].item[0].linkId = "urogenital-system.diagnoses"
+* item[=].item[0].linkId = "urogenital-system.diagnoses-group"
 // * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].code.code = #previous-diagnoses
 // * item[=].item[=].code.display = "Varasemad diagnoosid"
@@ -2954,7 +2954,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 
-* item[=].item[=].item[0].linkId = "urogenital-system.diagnoses.group"
+* item[=].item[=].item[0].linkId = "urogenital-system.diagnoses-group.previous-diagnosis"
 // * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
@@ -2963,7 +2963,7 @@ Usage: #example
 * item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "urogenital-system.diagnoses.group.diagnosis"
+* item[=].item[=].item[=].item[0].linkId = "urogenital-system.diagnoses-group.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
@@ -2973,7 +2973,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "urogenital-system.diagnoses.group.written-diagnosis"
+* item[=].item[=].item[=].item[+].linkId = "urogenital-system.diagnoses-group.previous-diagnosis.written-diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
@@ -2982,7 +2982,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "urogenital-system.diagnoses.group.source-reference"
+* item[=].item[=].item[=].item[+].linkId = "urogenital-system.diagnoses-group.previous-diagnosis.source-reference"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #source-reference
 // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
@@ -3079,7 +3079,7 @@ Usage: #example
 * item[=].type = #group
 * item[=].required = true
 
-* item[=].item[0].linkId = "blood-problems.diagnoses"
+* item[=].item[0].linkId = "blood-problems.diagnoses-group"
 // * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].code.code = #previous-diagnoses
 // * item[=].item[=].code.display = "Varasemad diagnoosid"
@@ -3087,7 +3087,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 
-* item[=].item[=].item[0].linkId = "blood-problems.diagnoses.group"
+* item[=].item[=].item[0].linkId = "blood-problems.diagnoses-group.previous-diagnosis"
 // * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
@@ -3096,7 +3096,7 @@ Usage: #example
 * item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "blood-problems.diagnoses.group.diagnosis"
+* item[=].item[=].item[=].item[0].linkId = "blood-problems.diagnoses-group.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
@@ -3106,7 +3106,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "blood-problems.diagnoses.group.written-diagnosis"
+* item[=].item[=].item[=].item[+].linkId = "blood-problems.diagnoses-group.previous-diagnosis.written-diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
@@ -3115,7 +3115,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "blood-problems.diagnoses.group.source-reference"
+* item[=].item[=].item[=].item[+].linkId = "blood-problems.diagnoses-group.previous-diagnosis.source-reference"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #source-reference
 // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
@@ -3386,7 +3386,7 @@ Usage: #example
 * item[=].type = #group
 * item[=].required = true
 
-* item[=].item[0].linkId = "sleep.diagnoses"
+* item[=].item[0].linkId = "sleep.diagnoses-group"
 // * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].code.code = #previous-diagnoses
 // * item[=].item[=].code.display = "Varasemad diagnoosid"
@@ -3394,7 +3394,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 
-* item[=].item[=].item[0].linkId = "sleep.diagnoses.group"
+* item[=].item[=].item[0].linkId = "sleep.diagnoses-group.previous-diagnosis"
 // * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
@@ -3403,7 +3403,7 @@ Usage: #example
 * item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "sleep.diagnoses.group.diagnosis"
+* item[=].item[=].item[=].item[0].linkId = "sleep.diagnoses-group.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
@@ -3413,7 +3413,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "sleep.diagnoses.group.written-diagnosis"
+* item[=].item[=].item[=].item[+].linkId = "sleep.diagnoses-group.previous-diagnosis.written-diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
@@ -3422,7 +3422,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "sleep.diagnoses.group.source-reference"
+* item[=].item[=].item[=].item[+].linkId = "sleep.diagnoses-group.previous-diagnosis.source-reference"
 // * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 // * item[=].item[=].item[=].item[=].code.code = #source-reference
 // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
