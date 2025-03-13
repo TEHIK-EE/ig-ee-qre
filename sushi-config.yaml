@@ -6,7 +6,7 @@
 id: ee.fhir.qre
 canonical: https://fhir.ee/qre
 name: QRE
-title: Küsimustikke teenus
+title: Küsimustike teenus
 # description: Example Implementation Guide for getting started with SUSHI
 status: active # draft | active | retired | unknown
 version: 1.0.0
