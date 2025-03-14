@@ -1,4 +1,4 @@
-Instance: ee-health-declaration-questionnaire-example
+Instance: Questionnaire-health-declaration
 InstanceOf: EEHealthDeclarationQuestionnaire
 Description: "Näidis tervisedeklaratsiooni andmestik"
 Usage: #example
@@ -18,16 +18,16 @@ Usage: #example
 
 * item[0].linkId = "category"
 * item[=].type = #coding
-* item[=].answerOption[0].valueCoding.system = "https://fhir.ee/ValueSet/tervisekontrolli-liik"
+* item[=].answerOption[0].valueCoding.system = $HDC
 * item[=].answerOption[0].valueCoding.code = #driver-group-I
-* item[=].answerOption[0].valueCoding.display = "I grupi mootorsõidukijuhi tervisekontroll"
-* item[=].answerOption[1].valueCoding.system = "https://fhir.ee/ValueSet/tervisekontrolli-liik"
+* item[=].answerOption[0].valueCoding.display = $HDC
+* item[=].answerOption[1].valueCoding.system = $HDC
 * item[=].answerOption[1].valueCoding.code = #driver-group-II
 * item[=].answerOption[1].valueCoding.display = "II grupi mootorsõidukijuhi tervisekontroll"
-* item[=].answerOption[2].valueCoding.system = "https://fhir.ee/ValueSet/tervisekontrolli-liik"
+* item[=].answerOption[2].valueCoding.system = $HDC
 * item[=].answerOption[2].valueCoding.code = #occupational
 * item[=].answerOption[2].valueCoding.display = "Töötervishoiu tervisekontroll"
-* item[=].answerOption[3].valueCoding.system = "https://fhir.ee/ValueSet/tervisekontrolli-liik"
+* item[=].answerOption[3].valueCoding.system = $HDC
 * item[=].answerOption[3].valueCoding.code = #military-service
 * item[=].answerOption[3].valueCoding.display = "Kaitseväeteenistuse tervisekontroll"
 * item[=].required = true
