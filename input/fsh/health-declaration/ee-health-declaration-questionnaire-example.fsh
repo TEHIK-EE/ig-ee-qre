@@ -20,7 +20,7 @@ Usage: #example
 * item[=].type = #coding
 * item[=].answerOption[0].valueCoding.system = $HDC
 * item[=].answerOption[0].valueCoding.code = #driver-group-I
-* item[=].answerOption[0].valueCoding.display = $HDC
+* item[=].answerOption[0].valueCoding.display = "I grupi mootorsõidukijuhi tervisekontroll"
 * item[=].answerOption[1].valueCoding.system = $HDC
 * item[=].answerOption[1].valueCoding.code = #driver-group-II
 * item[=].answerOption[1].valueCoding.display = "II grupi mootorsõidukijuhi tervisekontroll"
@@ -2349,59 +2349,35 @@ Usage: #example
 * item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].item[=].required = true
 
-
 * item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.current-prescriptions"
-// * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #current-prescriptions
-// * item[=].item[=].item[=].code.display = "Viimase 9 kuu jooksul välja kirjutatud retseptid"
-* item[=].item[=].item[=].text = "Viimase 9 kuu jooksul välja kirjutatud retseptid"
+* item[=].item[=].item[=].text = "Retsept"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "previous-treatment.regular-medication.current-prescriptions.prescription"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #prescription
-// * item[=].item[=].item[=].item[=].code.display = "Retsept"
-* item[=].item[=].item[=].item[=].text = "Retsept"
-* item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[0].linkId = "previous-treatment.regular-medication.current-prescriptions.date"
+* item[=].item[=].item[=].item[=].text = "Kuupäev"
+* item[=].item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].repeats = true
+* item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[=].item[0].linkId = "previous-treatment.regular-medication.current-prescriptions.prescription.date"
-// * item[=].item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].item[=].item[=].code.display = "Kuupäev"
-* item[=].item[=].item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.current-prescriptions.atc"
+* item[=].item[=].item[=].item[=].text = "ATC"
+* item[=].item[=].item[=].item[=].type = #coding
+* item[=].item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.current-prescriptions.prescription.atc"
-// * item[=].item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].item[=].code.code = #atc
-// * item[=].item[=].item[=].item[=].item[=].code.display = "ATC"
-* item[=].item[=].item[=].item[=].item[=].text = "ATC"
-* item[=].item[=].item[=].item[=].item[=].type = #coding
-* item[=].item[=].item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.current-prescriptions.package"
+* item[=].item[=].item[=].item[=].text = "Pakend"
+* item[=].item[=].item[=].item[=].type = #coding
+* item[=].item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.current-prescriptions.prescription.package"
-// * item[=].item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].item[=].code.code = #package
-// * item[=].item[=].item[=].item[=].item[=].code.display = "Pakend"
-* item[=].item[=].item[=].item[=].item[=].text = "Pakend"
-* item[=].item[=].item[=].item[=].item[=].type = #coding
-* item[=].item[=].item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].item[=].item[=].readOnly = true
-
-* item[=].item[=].item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.current-prescriptions.prescription.source-reference"
-// * item[=].item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].item[=].code.code = #source-reference
-// * item[=].item[=].item[=].item[=].item[=].code.display = "Allika viide"
-* item[=].item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].item[=].type = #reference
-* item[=].item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.current-prescriptions.source-reference"
+* item[=].item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].item[=].type = #reference
+* item[=].item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].item[=].readOnly = true
 
 * item[=].item[+].linkId = "previous-treatment.hospitalization"
 * item[=].item[=].code.system = $HDQ
@@ -2422,60 +2398,37 @@ Usage: #example
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
 
-* item[=].item[=].item[+].linkId = "previous-treatment.hospitalization.previous-hospitalization"
-// * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #previous-hospitalization
-// * item[=].item[=].item[=].code.display = "Varasem haiglaravi"
-* item[=].item[=].item[=].text = "Varasem haiglaravi"
+* item[=].item[=].item[+].linkId = "previous-treatment.hospitalization.inpatient-case"
+* item[=].item[=].item[=].text = "Statsionaarne haigusjuhtum"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "previous-treatment.hospitalization.previous-hospitalization.inpatient-case"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #inpatient-case
-// * item[=].item[=].item[=].item[=].code.display = "Statsionaarne haigusjuhtum"
-* item[=].item[=].item[=].item[=].text = "Statsionaarne haigusjuhtum"
-* item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[0].linkId = "previous-treatment.hospitalization.inpatient-case.from"
+* item[=].item[=].item[=].item[=].text = "Alates"
+* item[=].item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].repeats = true
+* item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[=].item[0].linkId = "previous-treatment.hospitalization.previous-hospitalization.inpatient-case.from"
-// * item[=].item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].item[=].code.code = #from
-// * item[=].item[=].item[=].item[=].item[=].code.display = "Alates"
-* item[=].item[=].item[=].item[=].item[=].text = "Alates"
-* item[=].item[=].item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].item[+].linkId = "previous-treatment.hospitalization.inpatient-case.to"
+* item[=].item[=].item[=].item[=].text = "Kuni"
+* item[=].item[=].item[=].item[=].type = #date
+* item[=].item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[=].item[+].linkId = "previous-treatment.hospitalization.previous-hospitalization.inpatient-case.to"
-// * item[=].item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].item[=].code.code = #to
-// * item[=].item[=].item[=].item[=].item[=].code.display = "Kuni"
-* item[=].item[=].item[=].item[=].item[=].text = "Kuni"
-* item[=].item[=].item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].item[+].linkId = "previous-treatment.hospitalization.inpatient-case.provider"
+* item[=].item[=].item[=].item[=].text = "Tervishoiuasutus"
+* item[=].item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[=].item[+].linkId = "previous-treatment.hospitalization.previous-hospitalization.inpatient-case.provider"
-// * item[=].item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].item[=].code.code = #provider
-// * item[=].item[=].item[=].item[=].item[=].code.display = "Tervishoiuasutus"
-* item[=].item[=].item[=].item[=].item[=].text = "Tervishoiuasutus"
-* item[=].item[=].item[=].item[=].item[=].type = #string
-* item[=].item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].item[+].linkId = "previous-treatment.hospitalization.inpatient-case.source-reference"
+* item[=].item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].item[=].type = #reference
+* item[=].item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[=].item[+].linkId = "previous-treatment.hospitalization.previous-hospitalization.inpatient-case.source-reference"
-// * item[=].item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].item[=].code.code = #source-reference
-// * item[=].item[=].item[=].item[=].item[=].code.display = "Allika viide"
-* item[=].item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].item[=].type = #reference
-* item[=].item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].item[=].readOnly = true
-
-* item[=].item[+].linkId = "previous-treatment.surgery"
+* item[=].item[+].linkId = "previous-treatment.surgeries"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #operations
 * item[=].item[=].code.display = "Kas teid on opereeritud? Palun täpsustage, millal, mille tõttu"
@@ -2483,70 +2436,48 @@ Usage: #example
 * item[=].item[=].type = #boolean
 * item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "previous-treatment.surgery.specification"
+* item[=].item[=].item[0].linkId = "previous-treatment.surgeries.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "previous-treatment.surgery"
+* item[=].item[=].item[=].enableWhen.question = "previous-treatment.surgeries"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
 
-* item[=].item[=].item[+].linkId = "previous-treatment.surgery.procedures"
-// * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #procedures
-// * item[=].item[=].item[=].code.display = "Teostatud protseduurid"
-* item[=].item[=].item[=].text = "Teostatud protseduurid"
+
+* item[=].item[=].item[+].linkId = "previous-treatment.surgeries.surgery"
+* item[=].item[=].item[=].text = "Operatsioon"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "previous-treatment.surgery.procedures.operation"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #operation
-// * item[=].item[=].item[=].item[=].code.display = "Operatsioon"
-* item[=].item[=].item[=].item[=].text = "Operatsioon"
-* item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[0].linkId = "previous-treatment.surgeries.surgery.surgery-date"
+* item[=].item[=].item[=].item[=].text = "Kuupäev"
+* item[=].item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].item[=].readOnly = true
+
+* item[=].item[=].item[=].item[+].linkId = "previous-treatment.surgeries.surgery.surgery-code"
+* item[=].item[=].item[=].item[=].text = "Operatsioon"
+* item[=].item[=].item[=].item[=].type = #coding
+* item[=].item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].item[=].readOnly = true
+
+* item[=].item[=].item[=].item[+].linkId = "previous-treatment.surgeries.surgery.surgery-add-codes"
+* item[=].item[=].item[=].item[=].text = "Operatsioon lisakoodid"
+* item[=].item[=].item[=].item[=].type = #coding
+* item[=].item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].item[=].repeats = true
+* item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[=].item[0].linkId = "previous-treatment.surgery.procedures.operation.date"
-// * item[=].item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].item[=].item[=].code.display = "Kuupäev"
-* item[=].item[=].item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].item[=].readOnly = true
-
-* item[=].item[=].item[=].item[=].item[+].linkId = "previous-treatment.surgery.procedures.operation.specific-operation"
-// * item[=].item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].item[=].code.code = #operation
-// * item[=].item[=].item[=].item[=].item[=].code.display = "Operatsioon"
-* item[=].item[=].item[=].item[=].item[=].text = "Operatsioon"
-* item[=].item[=].item[=].item[=].item[=].type = #coding
-* item[=].item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].item[=].readOnly = true
-
-* item[=].item[=].item[=].item[=].item[+].linkId = "previous-treatment.surgery.procedures.operation.add-codes"
-// * item[=].item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].item[=].code.code = #add-codes
-// * item[=].item[=].item[=].item[=].item[=].code.display = "Operatsiooni lisakoodid"
-* item[=].item[=].item[=].item[=].item[=].text = "Operatsioon lisakoodid"
-* item[=].item[=].item[=].item[=].item[=].type = #coding
-* item[=].item[=].item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].item[=].item[=].repeats = true
-* item[=].item[=].item[=].item[=].item[=].readOnly = true
-
-* item[=].item[=].item[=].item[=].item[+].linkId = "previous-treatment.surgery.procedures.operation.source-reference"
-// * item[=].item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].item[=].code.code = #source-reference
-// * item[=].item[=].item[=].item[=].item[=].code.display = "Allika viide"
-* item[=].item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].item[=].type = #reference
-* item[=].item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].item[+].linkId = "previous-treatment.surgeries.surgery.source-reference"
+* item[=].item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].item[=].type = #reference
+* item[=].item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].item[=].readOnly = true
 
 * item[+].linkId = "traumas"
 * item[=].prefix = "15"
