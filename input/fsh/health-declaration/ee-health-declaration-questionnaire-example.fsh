@@ -250,9 +250,9 @@ Usage: #example
 * item[=].required = true
 
 * item[=].item[0].linkId = "allergies.diagnoses-group"
-// * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #previous-diagnoses
-// * item[=].item[=].code.display = "Varasemad diagnoosid"
+* item[=].item[=].code.system = $HDQ
+* item[=].item[=].code.code = #previous-diagnoses
+* item[=].item[=].code.display = "Varasemad diagnoosid"
 * item[=].item[=].text = "Varasemad diagnoosid"
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
@@ -422,9 +422,9 @@ Usage: #example
 * item[=].required = true
 
 * item[=].item[0].linkId = "mental-health.diagnoses-group"
-// * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #previous-diagnoses
-// * item[=].item[=].code.display = "Varasemad diagnoosid"
+* item[=].item[=].code.system = $HDQ
+* item[=].item[=].code.code = #previous-diagnoses
+* item[=].item[=].code.display = "Varasemad diagnoosid"
 * item[=].item[=].text = "Varasemad diagnoosid"
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
@@ -638,9 +638,9 @@ Usage: #example
 * item[=].required = true
 
 * item[=].item[0].linkId = "nervous-system.diagnoses-group"
-// * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #previous-diagnoses
-// * item[=].item[=].code.display = "Varasemad diagnoosid"
+* item[=].item[=].code.system = $HDQ
+* item[=].item[=].code.code = #previous-diagnoses
+* item[=].item[=].code.display = "Varasemad diagnoosid"
 * item[=].item[=].text = "Varasemad diagnoosid"
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
@@ -858,9 +858,9 @@ Usage: #example
 * item[=].required = true
 
 * item[=].item[0].linkId = "eyes-vision.diagnoses-group"
-// * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #previous-diagnoses
-// * item[=].item[=].code.display = "Varasemad diagnoosid"
+* item[=].item[=].code.system = $HDQ
+* item[=].item[=].code.code = #previous-diagnoses
+* item[=].item[=].code.display = "Varasemad diagnoosid"
 * item[=].item[=].text = "Varasemad diagnoosid"
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
@@ -1053,9 +1053,9 @@ Usage: #example
 
 //continue
 * item[=].item[0].linkId = "ear-nose-throat.diagnoses-group"
-// * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #previous-diagnoses
-// * item[=].item[=].code.display = "Varasemad diagnoosid"
+* item[=].item[=].code.system = $HDQ
+* item[=].item[=].code.code = #previous-diagnoses
+* item[=].item[=].code.display = "Varasemad diagnoosid"
 * item[=].item[=].text = "Varasemad diagnoosid"
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
@@ -1247,9 +1247,9 @@ Usage: #example
 * item[=].required = true
 
 * item[=].item[0].linkId = "respiratory-system.diagnoses-group"
-// * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #previous-diagnoses
-// * item[=].item[=].code.display = "Varasemad diagnoosid"
+* item[=].item[=].code.system = $HDQ
+* item[=].item[=].code.code = #previous-diagnoses
+* item[=].item[=].code.display = "Varasemad diagnoosid"
 * item[=].item[=].text = "Varasemad diagnoosid"
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
@@ -1397,9 +1397,9 @@ Usage: #example
 * item[=].required = true
 
 * item[=].item[0].linkId = "metabolic-disorder.diagnoses-group"
-// * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #previous-diagnoses
-// * item[=].item[=].code.display = "Varasemad diagnoosid"
+* item[=].item[=].code.system = $HDQ
+* item[=].item[=].code.code = #previous-diagnoses
+* item[=].item[=].code.display = "Varasemad diagnoosid"
 * item[=].item[=].text = "Varasemad diagnoosid"
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
@@ -1503,9 +1503,9 @@ Usage: #example
 * item[=].required = true
 
 * item[=].item[0].linkId = "cardiovascular-system.diagnoses-group"
-// * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #previous-diagnoses
-// * item[=].item[=].code.display = "Varasemad diagnoosid"
+* item[=].item[=].code.system = $HDQ
+* item[=].item[=].code.code = #previous-diagnoses
+* item[=].item[=].code.display = "Varasemad diagnoosid"
 * item[=].item[=].text = "Varasemad diagnoosid"
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
@@ -1741,9 +1741,9 @@ Usage: #example
 * item[=].required = true
 
 * item[=].item[0].linkId = "bones-joints-muscles.diagnoses-group"
-// * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #previous-diagnoses
-// * item[=].item[=].code.display = "Varasemad diagnoosid"
+* item[=].item[=].code.system = $HDQ
+* item[=].item[=].code.code = #previous-diagnoses
+* item[=].item[=].code.display = "Varasemad diagnoosid"
 * item[=].item[=].text = "Varasemad diagnoosid"
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
@@ -2001,9 +2001,9 @@ Usage: #example
 * item[=].required = true
 
 * item[=].item[0].linkId = "infections.diagnoses-group"
-// * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #previous-diagnoses
-// * item[=].item[=].code.display = "Varasemad diagnoosid"
+* item[=].item[=].code.system = $HDQ
+* item[=].item[=].code.code = #previous-diagnoses
+* item[=].item[=].code.display = "Varasemad diagnoosid"
 * item[=].item[=].text = "Varasemad diagnoosid"
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
@@ -2241,8 +2241,8 @@ Usage: #example
 * item[=].item[0].linkId = "other-chronic-disorders.none"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #none
-* item[=].item[=].code.display = "Puuduvad"
-* item[=].item[=].text = "Puuduvad"
+* item[=].item[=].code.display = "Hetkel puuduvad"
+* item[=].item[=].text = "Hetkel puuduvad"
 * item[=].item[=].type = #boolean
 * item[=].item[=].required = true
 
@@ -2279,9 +2279,9 @@ Usage: #example
 
 * item[=].item[0].linkId = "previous-treatment.treatment-abroad"
 * item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #treatment-abroad
-* item[=].item[=].code.display = "Kas olete välismaal saanud  haiglaravi või käinud arsti vastuvõtul? Palun täpsustage millal, kus, ja millega seoses"
-* item[=].item[=].text = "Kas olete välismaal saanud  haiglaravi või käinud arsti vastuvõtul? Palun täpsustage millal, kus, ja millega seoses"
+* item[=].item[=].code.code = #treatment-abroad-five-years
+* item[=].item[=].code.display = "Kas olete viimase 5 aasta jooksul saanud välismaal haiglaravi või käinud arsti vastuvõtul? Palun täpsustage millal, kus, ja millega seoses"
+* item[=].item[=].text = "Kas olete viimase 5 aasta jooksul saanud välismaal haiglaravi või käinud arsti vastuvõtul? Palun täpsustage millal, kus, ja millega seoses"
 * item[=].item[=].type = #boolean
 * item[=].item[=].required = true
 
@@ -2307,8 +2307,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "previous-treatment.regular-medication.regular-medication-women"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #regular-medication-women
-* item[=].item[=].item[=].code.display = "Kas tarvitate regulaarselt mingeid ravimeid (sh rasestumisvastaseid vahendeid)? Palun loetlege, milliseid"
-* item[=].item[=].item[=].text = "Kas tarvitate regulaarselt mingeid ravimeid (sh rasestumisvastaseid vahendeid)? Palun loetlege, milliseid"
+* item[=].item[=].item[=].code.display = "Kas tarvitate regulaarselt mingeid ravimeid (sh rasestumisvastaseid vahendeid)? Palun loetlege, milliseid olete tarvitanud viimase 9 kuu jooksul."
+* item[=].item[=].item[=].text = "Kas tarvitate regulaarselt mingeid ravimeid (sh rasestumisvastaseid vahendeid)? Palun loetlege, milliseid olete tarvitanud viimase 9 kuu jooksul."
 * item[=].item[=].item[=].type = #boolean
 * item[=].item[=].item[=].enableWhen.question = "patient-gender"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -2330,8 +2330,8 @@ Usage: #example
 * item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.regular-medication-men"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #regular-medication-men
-* item[=].item[=].item[=].code.display = "Kas tarvitate regulaarselt mingeid ravimeid? Palun loetlege, milliseid"
-* item[=].item[=].item[=].text = "Kas tarvitate regulaarselt mingeid ravimeid? Palun loetlege, milliseid"
+* item[=].item[=].item[=].code.display = "Kas tarvitate regulaarselt mingeid ravimeid? Palun loetlege, milliseid olete tarvitanud viimase 9 kuu jooksul."
+* item[=].item[=].item[=].text = "Kas tarvitate regulaarselt mingeid ravimeid? Palun loetlege, milliseid olete tarvitanud viimase 9 kuu jooksul."
 * item[=].item[=].item[=].type = #boolean
 * item[=].item[=].item[=].enableWhen.question = "patient-gender"
 * item[=].item[=].item[=].enableWhen.operator = #!=
@@ -2350,7 +2350,10 @@ Usage: #example
 * item[=].item[=].item[=].item[=].required = true
 
 * item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.current-prescriptions"
-* item[=].item[=].item[=].text = "Retsept"
+* item[=].item[=].item[=].code.system = $HDQ
+* item[=].item[=].item[=].code.code = #current-prescriptions
+* item[=].item[=].item[=].code.display = "Viimase 9 kuu jooksul välja kirjutatud retseptid"
+* item[=].item[=].item[=].text = "Viimase 9 kuu jooksul välja kirjutatud retseptid"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].repeats = true
@@ -2381,9 +2384,9 @@ Usage: #example
 
 * item[=].item[+].linkId = "previous-treatment.hospitalization"
 * item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #hospitalization
-* item[=].item[=].code.display = "Kas olete viibinud haiglaravil?"
-* item[=].item[=].text = "Kas olete viibinud haiglaravil?"
+* item[=].item[=].code.code = #hospitalization-five-years
+* item[=].item[=].code.display = "Kas olete viimase 5 aasta jooksul viibinud haiglaravil? "
+* item[=].item[=].text = "Kas olete viimase 5 aasta jooksul viibinud haiglaravil? "
 * item[=].item[=].type = #boolean
 * item[=].item[=].required = true
 
@@ -2430,9 +2433,9 @@ Usage: #example
 
 * item[=].item[+].linkId = "previous-treatment.surgeries"
 * item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #operations
-* item[=].item[=].code.display = "Kas teid on opereeritud? Palun täpsustage, millal, mille tõttu"
-* item[=].item[=].text = "Kas teid on opereeritud? Palun täpsustage, millal, mille tõttu"
+* item[=].item[=].code.code = #operations-five-years
+* item[=].item[=].code.display = "Kas teid on viimase 5 aasta jooksul opereeritud? Palun täpsustage, millal, mille tõttu"
+* item[=].item[=].text = "Kas teid on viimase 5 aasta jooksul opereeritud? Palun täpsustage, millal, mille tõttu"
 * item[=].item[=].type = #boolean
 * item[=].item[=].required = true
 
@@ -2460,13 +2463,13 @@ Usage: #example
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "previous-treatment.surgeries.surgery.surgery-code"
+* item[=].item[=].item[=].item[+].linkId = "previous-treatment.surgeries.surgery.code"
 * item[=].item[=].item[=].item[=].text = "Operatsioon"
 * item[=].item[=].item[=].item[=].type = #coding
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "previous-treatment.surgeries.surgery.surgery-add-codes"
+* item[=].item[=].item[=].item[+].linkId = "previous-treatment.surgeries.surgery.surgery-add-code"
 * item[=].item[=].item[=].item[=].text = "Operatsioon lisakoodid"
 * item[=].item[=].item[=].item[=].type = #coding
 * item[=].item[=].item[=].item[=].required = false
@@ -2489,9 +2492,9 @@ Usage: #example
 * item[=].required = true
 
 * item[=].item[0].linkId = "traumas.diagnoses-group"
-// * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #previous-diagnoses
-// * item[=].item[=].code.display = "Varasemad diagnoosid"
+* item[=].item[=].code.system = $HDQ
+* item[=].item[=].code.code = #previous-diagnoses
+* item[=].item[=].code.display = "Varasemad diagnoosid"
 * item[=].item[=].text = "Varasemad diagnoosid"
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
@@ -2536,8 +2539,8 @@ Usage: #example
 * item[=].item[+].linkId = "traumas.none"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #none
-* item[=].item[=].code.display = "Puuduvad"
-* item[=].item[=].text = "Puuduvad"
+* item[=].item[=].code.display = "Hetkel puuduvad"
+* item[=].item[=].text = "Hetkel puuduvad"
 * item[=].item[=].type = #boolean
 * item[=].item[=].required = true
 
@@ -2626,16 +2629,16 @@ Usage: #example
 * item[+].linkId = "skin-disorders"
 * item[=].prefix = "17"
 * item[=].code.system = $HDQ
-* item[=].code.code = #skin-disorders
-* item[=].code.display = "Nahahaigused: millal põdenud, milliseid?"
-* item[=].text = "Nahahaigused: millal põdenud, milliseid?"
+* item[=].code.code = #skin-disorders-five-years
+* item[=].code.display = "Nahahaigused viimase 5 aasta jooksul: millal põdenud, milliseid?"
+* item[=].text = "Nahahaigused viimase 5 aasta jooksul: millal põdenud, milliseid?"
 * item[=].type = #group
 * item[=].required = true
 
 * item[=].item[0].linkId = "skin-disorders.diagnoses-group"
-// * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #previous-diagnoses
-// * item[=].item[=].code.display = "Varasemad diagnoosid"
+* item[=].item[=].code.system = $HDQ
+* item[=].item[=].code.code = #previous-diagnoses
+* item[=].item[=].code.display = "Varasemad diagnoosid"
 * item[=].item[=].text = "Varasemad diagnoosid"
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
@@ -2706,9 +2709,9 @@ Usage: #example
 * item[=].required = true
 
 * item[=].item[0].linkId = "digestive-organs.diagnoses-group"
-// * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #previous-diagnoses
-// * item[=].item[=].code.display = "Varasemad diagnoosid"
+* item[=].item[=].code.system = $HDQ
+* item[=].item[=].code.code = #previous-diagnoses
+* item[=].item[=].code.display = "Varasemad diagnoosid"
 * item[=].item[=].text = "Varasemad diagnoosid"
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
@@ -2878,9 +2881,9 @@ Usage: #example
 * item[=].required = true
 
 * item[=].item[0].linkId = "urogenital-system.diagnoses-group"
-// * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #previous-diagnoses
-// * item[=].item[=].code.display = "Varasemad diagnoosid"
+* item[=].item[=].code.system = $HDQ
+* item[=].item[=].code.code = #previous-diagnoses
+* item[=].item[=].code.display = "Varasemad diagnoosid"
 * item[=].item[=].text = "Varasemad diagnoosid"
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
@@ -3011,9 +3014,9 @@ Usage: #example
 * item[=].required = true
 
 * item[=].item[0].linkId = "blood-problems.diagnoses-group"
-// * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #previous-diagnoses
-// * item[=].item[=].code.display = "Varasemad diagnoosid"
+* item[=].item[=].code.system = $HDQ
+* item[=].item[=].code.code = #previous-diagnoses
+* item[=].item[=].code.display = "Varasemad diagnoosid"
 * item[=].item[=].text = "Varasemad diagnoosid"
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
@@ -3318,9 +3321,9 @@ Usage: #example
 * item[=].required = true
 
 * item[=].item[0].linkId = "sleep.diagnoses-group"
-// * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #previous-diagnoses
-// * item[=].item[=].code.display = "Varasemad diagnoosid"
+* item[=].item[=].code.system = $HDQ
+* item[=].item[=].code.code = #previous-diagnoses
+* item[=].item[=].code.display = "Varasemad diagnoosid"
 * item[=].item[=].text = "Varasemad diagnoosid"
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
@@ -3499,55 +3502,38 @@ Usage: #example
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].required = false
 
-* item[=].item[=].item[+].linkId = "health-assessment.sick-leave-certs.sick-leave-cert-five-years"
-// * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #sick-leave-cert-five-years
-// * item[=].item[=].item[=].code.display = "Haiguslehed (viimase 5 aasta andmed Tervisekassast)"
-* item[=].item[=].item[=].text = "Haiguslehed (viimase 5 aasta andmed Tervisekassast)"
+* item[=].item[=].item[+].linkId = "health-assessment.sick-leave-certs.sick-leave-cert"
+* item[=].item[=].item[=].code.system = $HDQ
+* item[=].item[=].item[=].code.code = #sick-leave
+* item[=].item[=].item[=].code.display = "Haigusleht"
+* item[=].item[=].item[=].text = "Haigusleht"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "health-assessment.sick-leave-certs.sick-leave-cert-five-years.sick-leave-cert"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #sick-leave-cert
-// * item[=].item[=].item[=].item[=].code.display = "Haigusleht"
-* item[=].item[=].item[=].item[=].text = "Haigusleht"
-* item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[0].linkId = "health-assessment.sick-leave-certs.sick-leave-cert.from"
+* item[=].item[=].item[=].item[=].text = "Alates"
+* item[=].item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].repeats = true
+* item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[=].item[0].linkId = "health-assessment.sick-leave-certs.sick-leave-cert-five-years.sick-leave-cert.from"
-// * item[=].item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].item[=].code.code = #from
-// * item[=].item[=].item[=].item[=].item[=].code.display = "Alates"
-* item[=].item[=].item[=].item[=].item[=].text = "Alates"
-* item[=].item[=].item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].item[+].linkId = "health-assessment.sick-leave-certs.sick-leave-cert.duration"
+* item[=].item[=].item[=].item[=].text = "Kestus päevades"
+* item[=].item[=].item[=].item[=].type = #integer
+* item[=].item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[=].item[+].linkId = "health-assessment.sick-leave-certs.sick-leave-cert-five-years.sick-leave-cert.duration"
-// * item[=].item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].item[=].code.code = #duration
-// * item[=].item[=].item[=].item[=].item[=].code.display = "Kestus päevades"
-* item[=].item[=].item[=].item[=].item[=].text = "Kestus päevades"
-* item[=].item[=].item[=].item[=].item[=].type = #integer
-* item[=].item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].item[=].readOnly = true
-
-* item[=].item[=].item[=].item[=].item[+].linkId = "health-assessment.sick-leave-certs.sick-leave-cert-five-years.sick-leave-cert.diagnosis"
-// * item[=].item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].item[=].code.code = #diagnosis
-// * item[=].item[=].item[=].item[=].item[=].code.display = "Diagnoos"
-* item[=].item[=].item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].item[=].item[=].type = #coding
-* item[=].item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].item[+].linkId = "health-assessment.sick-leave-certs.sick-leave-cert.diagnosis"
+* item[=].item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].item[=].type = #coding
+* item[=].item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].item[=].readOnly = true
 
 * item[=].item[+].linkId = "health-assessment.partial-work-capacity-loss"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #partial-work-capacity-loss
-* item[=].item[=].code.display = "Töövõimetus"
-* item[=].item[=].text = "Töövõimetus"
+* item[=].item[=].code.display = "Osaline töövõime"
+* item[=].item[=].text = "Osaline töövõime"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
 
@@ -3634,9 +3620,9 @@ Usage: #example
 * item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
 
 * item[=].item[=].item[+].linkId = "health-assessment.disability.disability-data"
-// * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #disability-data
-// * item[=].item[=].item[=].code.display = "Puue (andmed Sotsiaalkindlustusametist)"
+* item[=].item[=].item[=].code.system = $HDQ
+* item[=].item[=].item[=].code.code = #disability-data
+* item[=].item[=].item[=].code.display = "Puue (andmed Sotsiaalkindlustusametist)"
 * item[=].item[=].item[=].text = "Puue (andmed Sotsiaalkindlustusametist)"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].required = false
