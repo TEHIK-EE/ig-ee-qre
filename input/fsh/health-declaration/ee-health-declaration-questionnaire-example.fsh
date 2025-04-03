@@ -3675,7 +3675,7 @@ Usage: #example
 * item[=].item[=].required = true
 * item[=].item[=].text = "B-viirushepatiit"
 
-* item[=].item[=].item[0].linkId = "immunization.b-hepatitis.heptatitis-B-vac"
+* item[=].item[=].item[0].linkId = "immunization.b-hepatitis.vac-done"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #heptatitis-B-vac
 * item[=].item[=].item[=].code.display = "Kas Teile on tehtud B-viirushepatiidi vaktsiin?"
@@ -3689,7 +3689,7 @@ Usage: #example
 // * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.b-hepatitis.heptatitis-B-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.b-hepatitis.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -3720,7 +3720,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.b-hepatitis.heptatitis-B-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.b-hepatitis.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -3734,7 +3734,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "immunization.tuberculosis.tuberculosis-vac"
+* item[=].item[=].item[0].linkId = "immunization.tuberculosis.vac-done"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #tuberculosis-vac
 * item[=].item[=].item[=].code.display = "Kas Teile on tehtud tuberkuloosi vaktsiin?"
@@ -3748,7 +3748,7 @@ Usage: #example
 // * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.tuberculosis.tuberculosis-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.tuberculosis.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -3779,7 +3779,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.tuberculosis.tuberculosis-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.tuberculosis.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -3793,7 +3793,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "immunization.rotavirus.rotavirus-vac"
+* item[=].item[=].item[0].linkId = "immunization.rotavirus.vac-done"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #rotavirus-vac
 * item[=].item[=].item[=].code.display = "Kas Teile on tehtud rotaviirusnakkuse vaktsiin?"
@@ -3807,7 +3807,7 @@ Usage: #example
 // * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.rotavirus.rotavirus-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.rotavirus.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -3838,7 +3838,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.rotavirus.rotavirus-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.rotavirus.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -3852,7 +3852,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "immunization.diphteria.diphtheria-vac"
+* item[=].item[=].item[0].linkId = "immunization.diphteria.vac-done"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #diphtheria-vac
 * item[=].item[=].item[=].code.display = "Kas Teile on tehtud difteeria vaktsiin?"
@@ -3866,7 +3866,7 @@ Usage: #example
 // * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.diphteria.diphtheria-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.diphteria.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -3897,7 +3897,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.diphteria.diphtheria-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.diphteria.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -3911,7 +3911,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "immunization.tetanus.tetanus-vac"
+* item[=].item[=].item[0].linkId = "immunization.tetanus.vac-done"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #tetanus-vac
 * item[=].item[=].item[=].code.display = "Kas Teile on tehtud teetanuse vaktsiin?"
@@ -3925,7 +3925,7 @@ Usage: #example
 // * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.tetanus.tetanus-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.tetanus.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -3956,7 +3956,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.tetanus.tetanus-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.tetanus.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -3970,7 +3970,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "immunization.pertussis.pertussis-vac"
+* item[=].item[=].item[0].linkId = "immunization.pertussis.vac-done"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #pertussis-vac
 * item[=].item[=].item[=].code.display = "Kas Teile on tehtud atsellulaarse läkaköha vaktsiin?"
@@ -3984,7 +3984,7 @@ Usage: #example
 // * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.pertussis.pertussis-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.pertussis.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -4015,7 +4015,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.pertussis.pertussis-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.pertussis.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -4029,7 +4029,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "immunization.polio.poliovirus-vac"
+* item[=].item[=].item[0].linkId = "immunization.polio.vac-done"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #poliovirus-vac
 * item[=].item[=].item[=].code.display = "Kas Teile on tehtud inaktiveeritud poliomüeliidi vaktsiin?"
@@ -4043,7 +4043,7 @@ Usage: #example
 // * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.polio.poliovirus-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.polio.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -4074,7 +4074,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.polio.poliovirus-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.polio.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -4088,7 +4088,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "immunization.hemo-influenza.haemophilus-influenza-vac"
+* item[=].item[=].item[0].linkId = "immunization.hemo-influenza.vac-done"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #haemophilus-influenza-vac
 * item[=].item[=].item[=].code.display = "Kas Teile on tehtud Haemophilus influenzae tüüp b nakkuse vaktsiin?"
@@ -4102,7 +4102,7 @@ Usage: #example
 // * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.hemo-influenza.haemophilus-influenza-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.hemo-influenza.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -4133,7 +4133,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.hemo-influenza.haemophilus-influenza-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.hemo-influenza.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -4147,7 +4147,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "immunization.measles.measles-vac"
+* item[=].item[=].item[0].linkId = "immunization.measles.vac-done"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #measles-vac
 * item[=].item[=].item[=].code.display = "Kas Teile on tehtud leetrite vaktsiin?"
@@ -4161,7 +4161,7 @@ Usage: #example
 // * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.measles.measles-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.measles.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -4192,7 +4192,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.measles.measles-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.measles.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -4206,7 +4206,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "immunization.mumps.mumps-vac"
+* item[=].item[=].item[0].linkId = "immunization.mumps.vac-done"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #mumps-vac
 * item[=].item[=].item[=].code.display = "Kas Teile on tehtud mumpsi vaktsiin?"
@@ -4220,7 +4220,7 @@ Usage: #example
 // * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.mumps.mumps-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.mumps.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -4251,7 +4251,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.mumps.mumps-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.mumps.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -4265,7 +4265,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "immunization.rubella.rubella-vac"
+* item[=].item[=].item[0].linkId = "immunization.rubella.vac-done"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #rubella-vac
 * item[=].item[=].item[=].code.display = "Kas Teile on tehtud punetiste vaktsiin?"
@@ -4279,7 +4279,7 @@ Usage: #example
 // * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.rubella.rubella-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.rubella.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -4310,7 +4310,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.rubella.rubella-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.rubella.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -4324,7 +4324,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "immunization.hpv.hpv-vac"
+* item[=].item[=].item[0].linkId = "immunization.hpv.vac-done"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #hpv-vac
 * item[=].item[=].item[=].code.display = "Kas Teile on tehtud papilloomiviirusnakkuse vaktsiin?"
@@ -4338,7 +4338,7 @@ Usage: #example
 // * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.hpv.hpv-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.hpv.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -4369,7 +4369,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.hpv.hpv-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.hpv.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -4383,7 +4383,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "immunization.covid.covid-vac"
+* item[=].item[=].item[0].linkId = "immunization.covid.vac-done"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #covid-vac
 * item[=].item[=].item[=].code.display = "Kas Teile on tehtud COVID vaktsiin?"
@@ -4397,7 +4397,7 @@ Usage: #example
 // * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.covid.covid-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.covid.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -4428,7 +4428,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.covid.covid-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.covid.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -4442,7 +4442,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "immunization.flu.influenza-vac"
+* item[=].item[=].item[0].linkId = "immunization.flu.vac-done"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #influenza-vac
 * item[=].item[=].item[=].code.display = "Kas Teile on tehtud gripivaktsiin?"
@@ -4456,7 +4456,7 @@ Usage: #example
 // * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.flu.influenza-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.flu.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -4487,7 +4487,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.flu.influenza-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.flu.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -4501,7 +4501,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "immunization.pneumococcus.pneumococcus-vac"
+* item[=].item[=].item[0].linkId = "immunization.pneumococcus.vac-done"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #pneumococcus-vac
 * item[=].item[=].item[=].code.display = "Kas Teile on tehtud pneumokoki vaktsiin?"
@@ -4515,7 +4515,7 @@ Usage: #example
 // * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.pneumococcus.pneumococcus-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.pneumococcus.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -4546,7 +4546,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.pneumococcus.pneumococcus-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.pneumococcus.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -4560,7 +4560,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "immunization.a-hepatitis.hepatitis-A-vac"
+* item[=].item[=].item[0].linkId = "immunization.a-hepatitis.vac-done"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #hepatitis-A-vac
 * item[=].item[=].item[=].code.display = "Kas Teile on tehtud A-hepatiidi vaktsiin?"
@@ -4574,7 +4574,7 @@ Usage: #example
 // * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.a-hepatitis.hepatitis-A-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.a-hepatitis.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -4605,7 +4605,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.a-hepatitis.hepatitis-A-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.a-hepatitis.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -4619,7 +4619,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "immunization.varicella.varicella-vac"
+* item[=].item[=].item[0].linkId = "immunization.varicella.vac-done"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #varicella-vac
 * item[=].item[=].item[=].code.display = "Kas Teile on tehtud tuulerõugete vaktsiin?"
@@ -4633,7 +4633,7 @@ Usage: #example
 // * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.varicella.varicella-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.varicella.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -4664,7 +4664,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.varicella.varicella-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.varicella.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -4678,7 +4678,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "immunization.shingles.herpes-zoster-vac"
+* item[=].item[=].item[0].linkId = "immunization.shingles.vac-done"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #herpes-zoster-vac
 * item[=].item[=].item[=].code.display = "Kas Teile on tehtud vöötohatise vaktsiin?"
@@ -4692,7 +4692,7 @@ Usage: #example
 // * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.shingles.herpes-zoster-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.shingles.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -4723,7 +4723,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.shingles.herpes-zoster-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.shingles.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -4737,7 +4737,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "immunization.meningococcus.meningococcus-vac"
+* item[=].item[=].item[0].linkId = "immunization.meningococcus.vac-done"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #meningococcus-vac
 * item[=].item[=].item[=].code.display = "Kas Teile on tehtud meningokokk-nakkuse vaktsiin?"
@@ -4751,7 +4751,7 @@ Usage: #example
 // * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.meningococcus.meningococcus-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.meningococcus.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -4782,7 +4782,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.meningococcus.meningococcus-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.meningococcus.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -4796,7 +4796,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "immunization.yellow-fever.yellow-fever-vac"
+* item[=].item[=].item[0].linkId = "immunization.yellow-fever.vac-done"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #yellow-fever-vac
 * item[=].item[=].item[=].code.display = "Kas Teile on tehtud kollapalaviku vaktsiin?"
@@ -4810,7 +4810,7 @@ Usage: #example
 // * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.yellow-fever.yellow-fever-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.yellow-fever.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -4841,7 +4841,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.yellow-fever.yellow-fever-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.yellow-fever.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -4855,7 +4855,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "immunization.typhoid-fever.typhoid-vac"
+* item[=].item[=].item[0].linkId = "immunization.typhoid-fever.vac-done"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #typhoid-vac
 * item[=].item[=].item[=].code.display = "Kas Teile on tehtud kõhutüüfuse vaktsiin?"
@@ -4869,7 +4869,7 @@ Usage: #example
 // * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.typhoid-fever.typhoid-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.typhoid-fever.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -4900,7 +4900,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.typhoid-fever.typhoid-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.typhoid-fever.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -4914,7 +4914,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "immunization.tick-encephalitis.tick-borne-encephalitis-vac"
+* item[=].item[=].item[0].linkId = "immunization.tick-encephalitis.vac-done"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #tick-borne-encephalitis-vac
 * item[=].item[=].item[=].code.display = "Kas Teile on tehtud puukentsefaliidi vaktsiin?"
@@ -4928,7 +4928,7 @@ Usage: #example
 // * item[=].item[=].item[=].code.display = "Immuniseerimine"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.tick-encephalitis.tick-borne-encephalitis-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.tick-encephalitis.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
@@ -4959,7 +4959,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Kuupäev"
 * item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.tick-encephalitis.tick-borne-encephalitis-vac"
+* item[=].item[=].item[=].enableWhen.question = "immunization.tick-encephalitis.vac-done"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
