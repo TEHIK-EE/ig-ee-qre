@@ -3563,6 +3563,7 @@ Usage: #example
 * item[=].item[=].item[=].text = "Osaline töövõimetus (andmed Sotsiaalkindlustusametist)"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].repeats = true
 
 * item[=].item[=].item[=].item[0].linkId = "health-assessment.partial-work-capacity-loss.partial-work-disability.from"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
@@ -3626,6 +3627,7 @@ Usage: #example
 * item[=].item[=].item[=].text = "Puue (andmed Sotsiaalkindlustusametist)"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].repeats = true
 
 * item[=].item[=].item[=].item[0].linkId = "health-assessment.disability.disability-data.from"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
