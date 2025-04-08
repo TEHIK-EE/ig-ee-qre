@@ -249,50 +249,50 @@ Usage: #example
 * item[=].type = #group
 * item[=].required = true
 
-* item[=].item[0].linkId = "allergies.diagnoses-group"
-* item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #previous-diagnoses
-* item[=].item[=].code.display = "Varasemad diagnoosid"
-* item[=].item[=].text = "Varasemad diagnoosid"
-* item[=].item[=].type = #group
-* item[=].item[=].required = false
+// * item[=].item[0].linkId = "allergies.diagnoses-group"
+// * item[=].item[=].code.system = $HDQ
+// * item[=].item[=].code.code = #previous-diagnoses
+// * item[=].item[=].code.display = "Varasemad diagnoosid"
+// * item[=].item[=].text = "Varasemad diagnoosid"
+// * item[=].item[=].type = #group
+// * item[=].item[=].required = false
 
-* item[=].item[=].item[0].linkId = "allergies.diagnoses-group.previous-diagnosis"
+* item[=].item[0].linkId = "allergies.previous-diagnosis"
 // * item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
-* item[=].item[=].item[=].text = "Varasem diagnoos"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
+* item[=].item[=].text = "Varasem diagnoos"
+* item[=].item[=].type = #group
+* item[=].item[=].required = false
+* item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "allergies.diagnoses-group.previous-diagnosis.diagnosis"
+* item[=].item[=].item[0].linkId = "allergies.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
-* item[=].item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].item[=].type = #coding
-* item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-allergia"
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].type = #coding
+* item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-allergia"
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "allergies.diagnoses-group.previous-diagnosis.written-diagnosis"
+* item[=].item[=].item[+].linkId = "allergies.previous-diagnosis.written-diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].type = #string
-* item[=].item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Sõnaline diagnoos"
+* item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "allergies.diagnoses-group.previous-diagnosis.source-reference"
+* item[=].item[=].item[+].linkId = "allergies.previous-diagnosis.source-reference"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #source-reference
 // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
-* item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].type = #reference
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].type = #reference
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].readOnly = true
 
 * item[=].item[+].linkId = "allergies.no-complaints"
 * item[=].item[=].code.system = $HDQ
@@ -421,50 +421,50 @@ Usage: #example
 * item[=].type = #group
 * item[=].required = true
 
-* item[=].item[0].linkId = "mental-health.diagnoses-group"
-* item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #previous-diagnoses
-* item[=].item[=].code.display = "Varasemad diagnoosid"
-* item[=].item[=].text = "Varasemad diagnoosid"
-* item[=].item[=].type = #group
-* item[=].item[=].required = false
+// * item[=].item[0].linkId = "mental-health.diagnoses-group"
+// * item[=].item[=].code.system = $HDQ
+// * item[=].item[=].code.code = #previous-diagnoses
+// * item[=].item[=].code.display = "Varasemad diagnoosid"
+// * item[=].item[=].text = "Varasemad diagnoosid"
+// * item[=].item[=].type = #group
+// * item[=].item[=].required = false
 
-* item[=].item[=].item[0].linkId = "mental-health.diagnoses-group.previous-diagnosis"
+* item[=].item[0].linkId = "mental-health.previous-diagnosis"
 // * item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
-* item[=].item[=].item[=].text = "Varasem diagnoos"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
+* item[=].item[=].text = "Varasem diagnoos"
+* item[=].item[=].type = #group
+* item[=].item[=].required = false
+* item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "mental-health.diagnoses-group.previous-diagnosis.diagnosis"
+* item[=].item[=].item[0].linkId = "mental-health.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
-* item[=].item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].item[=].type = #coding
-* item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-psyyhika"
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].type = #coding
+* item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-psyyhika"
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "mental-health.diagnoses-group.previous-diagnosis.written-diagnosis"
+* item[=].item[=].item[+].linkId = "mental-health.previous-diagnosis.written-diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].type = #string
-* item[=].item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Sõnaline diagnoos"
+* item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "mental-health.diagnoses-group.previous-diagnosis.source-reference"
+* item[=].item[=].item[+].linkId = "mental-health.previous-diagnosis.source-reference"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #source-reference
 // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
-* item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].type = #reference
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].type = #reference
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].readOnly = true
 
 * item[=].item[+].linkId = "mental-health.no-complaints"
 * item[=].item[=].code.system = $HDQ
@@ -637,50 +637,50 @@ Usage: #example
 * item[=].type = #group
 * item[=].required = true
 
-* item[=].item[0].linkId = "nervous-system.diagnoses-group"
-* item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #previous-diagnoses
-* item[=].item[=].code.display = "Varasemad diagnoosid"
-* item[=].item[=].text = "Varasemad diagnoosid"
-* item[=].item[=].type = #group
-* item[=].item[=].required = false
+// * item[=].item[0].linkId = "nervous-system.diagnoses-group"
+// * item[=].item[=].code.system = $HDQ
+// * item[=].item[=].code.code = #previous-diagnoses
+// * item[=].item[=].code.display = "Varasemad diagnoosid"
+// * item[=].item[=].text = "Varasemad diagnoosid"
+// * item[=].item[=].type = #group
+// * item[=].item[=].required = false
 
-* item[=].item[=].item[0].linkId = "nervous-system.diagnoses-group.previous-diagnosis"
+* item[=].item[0].linkId = "nervous-system.previous-diagnosis"
 // * item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
-* item[=].item[=].item[=].text = "Varasem diagnoos"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
+* item[=].item[=].text = "Varasem diagnoos"
+* item[=].item[=].type = #group
+* item[=].item[=].required = false
+* item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "nervous-system.diagnoses-group.previous-diagnosis.diagnosis"
+* item[=].item[=].item[0].linkId = "nervous-system.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
-* item[=].item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].item[=].type = #coding
-* item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-narvisusteem"
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].type = #coding
+* item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-narvisusteem"
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "nervous-system.diagnoses-group.previous-diagnosis.written-diagnosis"
+* item[=].item[=].item[+].linkId = "nervous-system.previous-diagnosis.written-diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].type = #string
-* item[=].item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Sõnaline diagnoos"
+* item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "nervous-system.diagnoses-group.previous-diagnosis.source-reference"
+* item[=].item[=].item[+].linkId = "nervous-system.previous-diagnosis.source-reference"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #source-reference
 // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
-* item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].type = #reference
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].type = #reference
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].readOnly = true
 
 * item[=].item[+].linkId = "nervous-system.no-complaints"
 * item[=].item[=].code.system = $HDQ
@@ -857,50 +857,50 @@ Usage: #example
 * item[=].type = #group
 * item[=].required = true
 
-* item[=].item[0].linkId = "eyes-vision.diagnoses-group"
-* item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #previous-diagnoses
-* item[=].item[=].code.display = "Varasemad diagnoosid"
-* item[=].item[=].text = "Varasemad diagnoosid"
-* item[=].item[=].type = #group
-* item[=].item[=].required = false
+// * item[=].item[0].linkId = "eyes-vision.diagnoses-group"
+// * item[=].item[=].code.system = $HDQ
+// * item[=].item[=].code.code = #previous-diagnoses
+// * item[=].item[=].code.display = "Varasemad diagnoosid"
+// * item[=].item[=].text = "Varasemad diagnoosid"
+// * item[=].item[=].type = #group
+// * item[=].item[=].required = false
 
-* item[=].item[=].item[0].linkId = "eyes-vision.diagnoses-group.previous-diagnosis"
+* item[=].item[0].linkId = "eyes-vision.previous-diagnosis"
 // * item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
-* item[=].item[=].item[=].text = "Varasem diagnoos"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
+* item[=].item[=].text = "Varasem diagnoos"
+* item[=].item[=].type = #group
+* item[=].item[=].required = false
+* item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "eyes-vision.diagnoses-group.previous-diagnosis.diagnosis"
+* item[=].item[=].item[0].linkId = "eyes-vision.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
-* item[=].item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].item[=].type = #coding
-* item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-silmad-ja-nagemine"
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].type = #coding
+* item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-silmad-ja-nagemine"
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "eyes-vision.diagnoses-group.previous-diagnosis.written-diagnosis"
+* item[=].item[=].item[+].linkId = "eyes-vision.previous-diagnosis.written-diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].type = #string
-* item[=].item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Sõnaline diagnoos"
+* item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "eyes-vision.diagnoses-group.previous-diagnosis.source-reference"
+* item[=].item[=].item[+].linkId = "eyes-vision.previous-diagnosis.source-reference"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #source-reference
 // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
-* item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].type = #reference
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].type = #reference
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].readOnly = true
 
 * item[=].item[+].linkId = "eyes-vision.no-complaints"
 * item[=].item[=].code.system = $HDQ
@@ -1051,51 +1051,51 @@ Usage: #example
 * item[=].type = #group
 * item[=].required = true
 
-//continue
-* item[=].item[0].linkId = "ear-nose-throat.diagnoses-group"
-* item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #previous-diagnoses
-* item[=].item[=].code.display = "Varasemad diagnoosid"
-* item[=].item[=].text = "Varasemad diagnoosid"
-* item[=].item[=].type = #group
-* item[=].item[=].required = false
+// //continue
+// * item[=].item[0].linkId = "ear-nose-throat.diagnoses-group"
+// * item[=].item[=].code.system = $HDQ
+// * item[=].item[=].code.code = #previous-diagnoses
+// * item[=].item[=].code.display = "Varasemad diagnoosid"
+// * item[=].item[=].text = "Varasemad diagnoosid"
+// * item[=].item[=].type = #group
+// * item[=].item[=].required = false
 
-* item[=].item[=].item[0].linkId = "ear-nose-throat.diagnoses-group.previous-diagnosis"
+* item[=].item[0].linkId = "ear-nose-throat.previous-diagnosis"
 // * item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
-* item[=].item[=].item[=].text = "Varasem diagnoos"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
+* item[=].item[=].text = "Varasem diagnoos"
+* item[=].item[=].type = #group
+* item[=].item[=].required = false
+* item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "ear-nose-throat.diagnoses-group.previous-diagnosis.diagnosis"
+* item[=].item[=].item[0].linkId = "ear-nose-throat.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
-* item[=].item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].item[=].type = #coding
-* item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-korv-nina-neel"
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].type = #coding
+* item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-korv-nina-neel"
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "ear-nose-throat.diagnoses-group.previous-diagnosis.written-diagnosis"
+* item[=].item[=].item[+].linkId = "ear-nose-throat.previous-diagnosis.written-diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].type = #string
-* item[=].item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Sõnaline diagnoos"
+* item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "ear-nose-throat.diagnoses-group.previous-diagnosis.source-reference"
+* item[=].item[=].item[+].linkId = "ear-nose-throat.previous-diagnosis.source-reference"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #source-reference
 // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
-* item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].type = #reference
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].type = #reference
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].readOnly = true
 
 * item[=].item[+].linkId = "ear-nose-throat.no-complaints"
 * item[=].item[=].code.system = $HDQ
@@ -1246,50 +1246,50 @@ Usage: #example
 * item[=].type = #group
 * item[=].required = true
 
-* item[=].item[0].linkId = "respiratory-system.diagnoses-group"
-* item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #previous-diagnoses
-* item[=].item[=].code.display = "Varasemad diagnoosid"
-* item[=].item[=].text = "Varasemad diagnoosid"
-* item[=].item[=].type = #group
-* item[=].item[=].required = false
+// * item[=].item[0].linkId = "respiratory-system.diagnoses-group"
+// * item[=].item[=].code.system = $HDQ
+// * item[=].item[=].code.code = #previous-diagnoses
+// * item[=].item[=].code.display = "Varasemad diagnoosid"
+// * item[=].item[=].text = "Varasemad diagnoosid"
+// * item[=].item[=].type = #group
+// * item[=].item[=].required = false
 
-* item[=].item[=].item[0].linkId = "respiratory-system.diagnoses-group.previous-diagnosis"
+* item[=].item[0].linkId = "respiratory-system.previous-diagnosis"
 // * item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
-* item[=].item[=].item[=].text = "Varasem diagnoos"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
+* item[=].item[=].text = "Varasem diagnoos"
+* item[=].item[=].type = #group
+* item[=].item[=].required = false
+* item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "respiratory-system.diagnoses-group.previous-diagnosis.diagnosis"
+* item[=].item[=].item[0].linkId = "respiratory-system.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
-* item[=].item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].item[=].type = #coding
-* item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-hingamissusteem"
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].type = #coding
+* item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-hingamissusteem"
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "respiratory-system.diagnoses-group.previous-diagnosis.written-diagnosis"
+* item[=].item[=].item[+].linkId = "respiratory-system.previous-diagnosis.written-diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].type = #string
-* item[=].item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Sõnaline diagnoos"
+* item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "respiratory-system.diagnoses-group.previous-diagnosis.source-reference"
+* item[=].item[=].item[+].linkId = "respiratory-system.previous-diagnosis.source-reference"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #source-reference
 // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
-* item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].type = #reference
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].type = #reference
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].readOnly = true
 
 * item[=].item[+].linkId = "respiratory-system.no-complaints"
 * item[=].item[=].code.system = $HDQ
@@ -1396,50 +1396,50 @@ Usage: #example
 * item[=].type = #group
 * item[=].required = true
 
-* item[=].item[0].linkId = "metabolic-disorder.diagnoses-group"
-* item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #previous-diagnoses
-* item[=].item[=].code.display = "Varasemad diagnoosid"
-* item[=].item[=].text = "Varasemad diagnoosid"
-* item[=].item[=].type = #group
-* item[=].item[=].required = false
+// * item[=].item[0].linkId = "metabolic-disorder.diagnoses-group"
+// * item[=].item[=].code.system = $HDQ
+// * item[=].item[=].code.code = #previous-diagnoses
+// * item[=].item[=].code.display = "Varasemad diagnoosid"
+// * item[=].item[=].text = "Varasemad diagnoosid"
+// * item[=].item[=].type = #group
+// * item[=].item[=].required = false
 
-* item[=].item[=].item[0].linkId = "metabolic-disorder.diagnoses-group.previous-diagnosis"
+* item[=].item[0].linkId = "metabolic-disorder.previous-diagnosis"
 // * item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
-* item[=].item[=].item[=].text = "Varasem diagnoos"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
+* item[=].item[=].text = "Varasem diagnoos"
+* item[=].item[=].type = #group
+* item[=].item[=].required = false
+* item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "metabolic-disorder.diagnoses-group.previous-diagnosis.diagnosis"
+* item[=].item[=].item[0].linkId = "metabolic-disorder.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
-* item[=].item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].item[=].type = #coding
-* item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-ainevahetuse-haired"
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].type = #coding
+* item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-ainevahetuse-haired"
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "metabolic-disorder.diagnoses-group.previous-diagnosis.written-description"
+* item[=].item[=].item[+].linkId = "metabolic-disorder.previous-diagnosis.written-description"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].type = #string
-* item[=].item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Sõnaline diagnoos"
+* item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "metabolic-disorder.diagnoses-group.previous-diagnosis.source-reference"
+* item[=].item[=].item[+].linkId = "metabolic-disorder.previous-diagnosis.source-reference"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #source-reference
 // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
-* item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].type = #reference
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].type = #reference
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].readOnly = true
 
 * item[=].item[+].linkId = "metabolic-disorder.no-complaints"
 * item[=].item[=].code.system = $HDQ
@@ -1502,50 +1502,50 @@ Usage: #example
 * item[=].type = #group
 * item[=].required = true
 
-* item[=].item[0].linkId = "cardiovascular-system.diagnoses-group"
-* item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #previous-diagnoses
-* item[=].item[=].code.display = "Varasemad diagnoosid"
-* item[=].item[=].text = "Varasemad diagnoosid"
-* item[=].item[=].type = #group
-* item[=].item[=].required = false
+// * item[=].item[0].linkId = "cardiovascular-system.diagnoses-group"
+// * item[=].item[=].code.system = $HDQ
+// * item[=].item[=].code.code = #previous-diagnoses
+// * item[=].item[=].code.display = "Varasemad diagnoosid"
+// * item[=].item[=].text = "Varasemad diagnoosid"
+// * item[=].item[=].type = #group
+// * item[=].item[=].required = false
 
-* item[=].item[=].item[0].linkId = "cardiovascular-system.diagnoses-group.previous-diagnosis"
+* item[=].item[0].linkId = "cardiovascular-system.previous-diagnosis"
 // * item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
-* item[=].item[=].item[=].text = "Varasem diagnoos"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
+* item[=].item[=].text = "Varasem diagnoos"
+* item[=].item[=].type = #group
+* item[=].item[=].required = false
+* item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "cardiovascular-system.diagnoses-group.previous-diagnosis.diagnosis"
+* item[=].item[=].item[0].linkId = "cardiovascular-system.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
-* item[=].item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].item[=].type = #coding
-* item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-suda-ja-veresoonkond"
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].type = #coding
+* item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-suda-ja-veresoonkond"
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "cardiovascular-system.diagnoses-group.previous-diagnosis.written-diagnosis"
+* item[=].item[=].item[+].linkId = "cardiovascular-system.previous-diagnosis.written-diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].type = #string
-* item[=].item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Sõnaline diagnoos"
+* item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "cardiovascular-system.diagnoses-group.previous-diagnosis.source-reference"
+* item[=].item[=].item[+].linkId = "cardiovascular-system.previous-diagnosis.source-reference"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #source-reference
 // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
-* item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].type = #reference
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].type = #reference
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].readOnly = true
 
 * item[=].item[+].linkId = "cardiovascular-system.no-complaints"
 * item[=].item[=].code.system = $HDQ
@@ -1740,50 +1740,50 @@ Usage: #example
 * item[=].type = #group
 * item[=].required = true
 
-* item[=].item[0].linkId = "bones-joints-muscles.diagnoses-group"
-* item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #previous-diagnoses
-* item[=].item[=].code.display = "Varasemad diagnoosid"
-* item[=].item[=].text = "Varasemad diagnoosid"
-* item[=].item[=].type = #group
-* item[=].item[=].required = false
+// * item[=].item[0].linkId = "bones-joints-muscles.diagnoses-group"
+// * item[=].item[=].code.system = $HDQ
+// * item[=].item[=].code.code = #previous-diagnoses
+// * item[=].item[=].code.display = "Varasemad diagnoosid"
+// * item[=].item[=].text = "Varasemad diagnoosid"
+// * item[=].item[=].type = #group
+// * item[=].item[=].required = false
 
-* item[=].item[=].item[0].linkId = "bones-joints-muscles.diagnoses-group.previous-diagnosis"
+* item[=].item[0].linkId = "bones-joints-muscles.previous-diagnosis"
 // * item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
-* item[=].item[=].item[=].text = "Varasem diagnoos"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
+* item[=].item[=].text = "Varasem diagnoos"
+* item[=].item[=].type = #group
+* item[=].item[=].required = false
+* item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "bones-joints-muscles.diagnoses-group.previous-diagnosis.diagnosis"
+* item[=].item[=].item[0].linkId = "bones-joints-muscles.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
-* item[=].item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].item[=].type = #coding
-* item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-luud-liigesed-ja-lihased"
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].type = #coding
+* item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-luud-liigesed-ja-lihased"
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "bones-joints-muscles.diagnoses-group.previous-diagnosis.written-diagnosis"
+* item[=].item[=].item[+].linkId = "bones-joints-muscles.previous-diagnosis.written-diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].type = #string
-* item[=].item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Sõnaline diagnoos"
+* item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "bones-joints-muscles.diagnoses-group.previous-diagnosis.source-reference"
+* item[=].item[=].item[+].linkId = "bones-joints-muscles.previous-diagnosis.source-reference"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #source-reference
 // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
-* item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].type = #reference
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].type = #reference
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].readOnly = true
 
 * item[=].item[+].linkId = "bones-joints-muscles.no-complaints"
 * item[=].item[=].code.system = $HDQ
@@ -2000,50 +2000,50 @@ Usage: #example
 * item[=].type = #group
 * item[=].required = true
 
-* item[=].item[0].linkId = "infections.diagnoses-group"
-* item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #previous-diagnoses
-* item[=].item[=].code.display = "Varasemad diagnoosid"
-* item[=].item[=].text = "Varasemad diagnoosid"
-* item[=].item[=].type = #group
-* item[=].item[=].required = false
+// * item[=].item[0].linkId = "infections.diagnoses-group"
+// * item[=].item[=].code.system = $HDQ
+// * item[=].item[=].code.code = #previous-diagnoses
+// * item[=].item[=].code.display = "Varasemad diagnoosid"
+// * item[=].item[=].text = "Varasemad diagnoosid"
+// * item[=].item[=].type = #group
+// * item[=].item[=].required = false
 
-* item[=].item[=].item[0].linkId = "infections.diagnoses-group.previous-diagnosis"
+* item[=].item[0].linkId = "infections.previous-diagnosis"
 // * item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
-* item[=].item[=].item[=].text = "Varasem diagnoos"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
+* item[=].item[=].text = "Varasem diagnoos"
+* item[=].item[=].type = #group
+* item[=].item[=].required = false
+* item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "infections.diagnoses-group.previous-diagnosis.diagnosis"
+* item[=].item[=].item[0].linkId = "infections.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
-* item[=].item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].item[=].type = #coding
-* item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-nakkushaigused"
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].type = #coding
+* item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-nakkushaigused"
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "infections.diagnoses-group.previous-diagnosis.written-diagnosis"
+* item[=].item[=].item[+].linkId = "infections.previous-diagnosis.written-diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].type = #string
-* item[=].item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Sõnaline diagnoos"
+* item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "infections.diagnoses-group.previous-diagnosis.source-reference"
+* item[=].item[=].item[+].linkId = "infections.previous-diagnosis.source-reference"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #source-reference
 // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
-* item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].type = #reference
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].type = #reference
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].readOnly = true
 
 * item[=].item[+].linkId = "infections.no-known-illness"
 * item[=].item[=].code.system = $HDQ
@@ -2491,50 +2491,50 @@ Usage: #example
 * item[=].type = #group
 * item[=].required = true
 
-* item[=].item[0].linkId = "traumas.diagnoses-group"
-* item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #previous-diagnoses
-* item[=].item[=].code.display = "Varasemad diagnoosid"
-* item[=].item[=].text = "Varasemad diagnoosid"
-* item[=].item[=].type = #group
-* item[=].item[=].required = false
+// * item[=].item[0].linkId = "traumas.diagnoses-group"
+// * item[=].item[=].code.system = $HDQ
+// * item[=].item[=].code.code = #previous-diagnoses
+// * item[=].item[=].code.display = "Varasemad diagnoosid"
+// * item[=].item[=].text = "Varasemad diagnoosid"
+// * item[=].item[=].type = #group
+// * item[=].item[=].required = false
 
-* item[=].item[=].item[0].linkId = "traumas.diagnoses-group.previous-diagnosis"
+* item[=].item[0].linkId = "traumas.previous-diagnosis"
 // * item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
-* item[=].item[=].item[=].text = "Varasem diagnoos"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].repeats = true
+* item[=].item[=].text = "Varasem diagnoos"
+* item[=].item[=].type = #group
+* item[=].item[=].required = true
+* item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "traumas.diagnoses-group.previous-diagnosis.diagnosis"
+* item[=].item[=].item[0].linkId = "traumas.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
-* item[=].item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].item[=].type = #coding
-* item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-traumad"
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].type = #coding
+* item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-traumad"
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "traumas.diagnoses-group.previous-diagnosis.written-diagnosis"
+* item[=].item[=].item[+].linkId = "traumas.previous-diagnosis.written-diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].type = #string
-* item[=].item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Sõnaline diagnoos"
+* item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "traumas.diagnoses-group.previous-diagnosis.source-reference"
+* item[=].item[=].item[+].linkId = "traumas.previous-diagnosis.source-reference"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #source-reference
 // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
-* item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].type = #reference
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].type = #reference
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].readOnly = true
 
 * item[=].item[+].linkId = "traumas.none"
 * item[=].item[=].code.system = $HDQ
@@ -2635,50 +2635,50 @@ Usage: #example
 * item[=].type = #group
 * item[=].required = true
 
-* item[=].item[0].linkId = "skin-disorders.diagnoses-group"
-* item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #previous-diagnoses
-* item[=].item[=].code.display = "Varasemad diagnoosid"
-* item[=].item[=].text = "Varasemad diagnoosid"
-* item[=].item[=].type = #group
-* item[=].item[=].required = false
+// * item[=].item[0].linkId = "skin-disorders.diagnoses-group"
+// * item[=].item[=].code.system = $HDQ
+// * item[=].item[=].code.code = #previous-diagnoses
+// * item[=].item[=].code.display = "Varasemad diagnoosid"
+// * item[=].item[=].text = "Varasemad diagnoosid"
+// * item[=].item[=].type = #group
+// * item[=].item[=].required = false
 
-* item[=].item[=].item[0].linkId = "skin-disorders.diagnoses-group.previous-diagnosis"
+* item[=].item[0].linkId = "skin-disorders.previous-diagnosis"
 // * item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
-* item[=].item[=].item[=].text = "Varasem diagnoos"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
+* item[=].item[=].text = "Varasem diagnoos"
+* item[=].item[=].type = #group
+* item[=].item[=].required = false
+* item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "skin-disorders.diagnoses-group.previous-diagnosis.diagnosis"
+* item[=].item[=].item[0].linkId = "skin-disorders.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
-* item[=].item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].item[=].type = #coding
-* item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-nahahaigused"
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].type = #coding
+* item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-nahahaigused"
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "skin-disorders.diagnoses-group.previous-diagnosis.written-diagnosis"
+* item[=].item[=].item[+].linkId = "skin-disorders.previous-diagnosis.written-diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].type = #string
-* item[=].item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Sõnaline diagnoos"
+* item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "skin-disorders.diagnoses-group.previous-diagnosis.source-reference"
+* item[=].item[=].item[+].linkId = "skin-disorders.previous-diagnosis.source-reference"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #source-reference
 // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
-* item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].type = #reference
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].type = #reference
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].readOnly = true
 
 * item[=].item[+].linkId = "skin-disorders.skin-conditions"
 * item[=].item[=].code.system = $HDQ
@@ -2708,50 +2708,50 @@ Usage: #example
 * item[=].type = #group
 * item[=].required = true
 
-* item[=].item[0].linkId = "digestive-organs.diagnoses-group"
-* item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #previous-diagnoses
-* item[=].item[=].code.display = "Varasemad diagnoosid"
-* item[=].item[=].text = "Varasemad diagnoosid"
-* item[=].item[=].type = #group
-* item[=].item[=].required = false
+// * item[=].item[0].linkId = "digestive-organs.diagnoses-group"
+// * item[=].item[=].code.system = $HDQ
+// * item[=].item[=].code.code = #previous-diagnoses
+// * item[=].item[=].code.display = "Varasemad diagnoosid"
+// * item[=].item[=].text = "Varasemad diagnoosid"
+// * item[=].item[=].type = #group
+// * item[=].item[=].required = false
 
-* item[=].item[=].item[0].linkId = "digestive-organs.diagnoses-group.previous-diagnosis"
+* item[=].item[0].linkId = "digestive-organs.previous-diagnosis"
 // * item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
-* item[=].item[=].item[=].text = "Varasem diagnoos"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].repeats = true
+* item[=].item[=].text = "Varasem diagnoos"
+* item[=].item[=].type = #group
+* item[=].item[=].required = true
+* item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "digestive-organs.diagnoses-group.previous-diagnosis.diagnosis"
+* item[=].item[=].item[0].linkId = "digestive-organs.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
-* item[=].item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].item[=].type = #coding
-* item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-seedeelundid"
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].type = #coding
+* item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-seedeelundid"
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "digestive-organs.diagnoses-group.previous-diagnosis.written-diagnosis"
+* item[=].item[=].item[+].linkId = "digestive-organs.previous-diagnosis.written-diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].type = #string
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Sõnaline diagnoos"
+* item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "digestive-organs.diagnoses-group.previous-diagnosis.source-reference"
+* item[=].item[=].item[+].linkId = "digestive-organs.previous-diagnosis.source-reference"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #source-reference
 // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
-* item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].type = #reference
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].type = #reference
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].readOnly = true
 
 * item[=].item[+].linkId = "digestive-organs.no-complaints"
 * item[=].item[=].code.system = $HDQ
@@ -2880,50 +2880,50 @@ Usage: #example
 * item[=].type = #group
 * item[=].required = true
 
-* item[=].item[0].linkId = "urogenital-system.diagnoses-group"
-* item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #previous-diagnoses
-* item[=].item[=].code.display = "Varasemad diagnoosid"
-* item[=].item[=].text = "Varasemad diagnoosid"
-* item[=].item[=].type = #group
-* item[=].item[=].required = false
+// * item[=].item[0].linkId = "urogenital-system.diagnoses-group"
+// * item[=].item[=].code.system = $HDQ
+// * item[=].item[=].code.code = #previous-diagnoses
+// * item[=].item[=].code.display = "Varasemad diagnoosid"
+// * item[=].item[=].text = "Varasemad diagnoosid"
+// * item[=].item[=].type = #group
+// * item[=].item[=].required = false
 
-* item[=].item[=].item[0].linkId = "urogenital-system.diagnoses-group.previous-diagnosis"
+* item[=].item[0].linkId = "urogenital-system.previous-diagnosis"
 // * item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
-* item[=].item[=].item[=].text = "Varasem diagnoos"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].repeats = true
+* item[=].item[=].text = "Varasem diagnoos"
+* item[=].item[=].type = #group
+* item[=].item[=].required = true
+* item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "urogenital-system.diagnoses-group.previous-diagnosis.diagnosis"
+* item[=].item[=].item[0].linkId = "urogenital-system.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
-* item[=].item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].item[=].type = #coding
-* item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-kuse-ja-suguelundid"
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].type = #coding
+* item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-kuse-ja-suguelundid"
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "urogenital-system.diagnoses-group.previous-diagnosis.written-diagnosis"
+* item[=].item[=].item[+].linkId = "urogenital-system.previous-diagnosis.written-diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].type = #string
-* item[=].item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Sõnaline diagnoos"
+* item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "urogenital-system.diagnoses-group.previous-diagnosis.source-reference"
+* item[=].item[=].item[+].linkId = "urogenital-system.previous-diagnosis.source-reference"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #source-reference
 // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
-* item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].type = #reference
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].type = #reference
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].readOnly = true
 
 * item[=].item[+].linkId = "urogenital-system.no-complaints"
 * item[=].item[=].code.system = $HDQ
@@ -3013,50 +3013,50 @@ Usage: #example
 * item[=].type = #group
 * item[=].required = true
 
-* item[=].item[0].linkId = "blood-problems.diagnoses-group"
-* item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #previous-diagnoses
-* item[=].item[=].code.display = "Varasemad diagnoosid"
-* item[=].item[=].text = "Varasemad diagnoosid"
-* item[=].item[=].type = #group
-* item[=].item[=].required = false
+// * item[=].item[0].linkId = "blood-problems.diagnoses-group"
+// * item[=].item[=].code.system = $HDQ
+// * item[=].item[=].code.code = #previous-diagnoses
+// * item[=].item[=].code.display = "Varasemad diagnoosid"
+// * item[=].item[=].text = "Varasemad diagnoosid"
+// * item[=].item[=].type = #group
+// * item[=].item[=].required = false
 
-* item[=].item[=].item[0].linkId = "blood-problems.diagnoses-group.previous-diagnosis"
+* item[=].item[0].linkId = "blood-problems.previous-diagnosis"
 // * item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
-* item[=].item[=].item[=].text = "Varasem diagnoos"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
+* item[=].item[=].text = "Varasem diagnoos"
+* item[=].item[=].type = #group
+* item[=].item[=].required = false
+* item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "blood-problems.diagnoses-group.previous-diagnosis.diagnosis"
+* item[=].item[=].item[0].linkId = "blood-problems.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
-* item[=].item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].item[=].type = #coding
-* item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-verehaigused"
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].type = #coding
+* item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-verehaigused"
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "blood-problems.diagnoses-group.previous-diagnosis.written-diagnosis"
+* item[=].item[=].item[+].linkId = "blood-problems.previous-diagnosis.written-diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].type = #string
-* item[=].item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Sõnaline diagnoos"
+* item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "blood-problems.diagnoses-group.previous-diagnosis.source-reference"
+* item[=].item[=].item[+].linkId = "blood-problems.previous-diagnosis.source-reference"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #source-reference
 // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
-* item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].type = #reference
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].type = #reference
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].readOnly = true
 
 * item[=].item[+].linkId = "blood-problems.no-complaints"
 * item[=].item[=].code.system = $HDQ
@@ -3320,50 +3320,50 @@ Usage: #example
 * item[=].type = #group
 * item[=].required = true
 
-* item[=].item[0].linkId = "sleep.diagnoses-group"
-* item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #previous-diagnoses
-* item[=].item[=].code.display = "Varasemad diagnoosid"
-* item[=].item[=].text = "Varasemad diagnoosid"
-* item[=].item[=].type = #group
-* item[=].item[=].required = false
+// * item[=].item[0].linkId = "sleep.diagnoses-group"
+// * item[=].item[=].code.system = $HDQ
+// * item[=].item[=].code.code = #previous-diagnoses
+// * item[=].item[=].code.display = "Varasemad diagnoosid"
+// * item[=].item[=].text = "Varasemad diagnoosid"
+// * item[=].item[=].type = #group
+// * item[=].item[=].required = false
 
-* item[=].item[=].item[0].linkId = "sleep.diagnoses-group.previous-diagnosis"
+* item[=].item[0].linkId = "sleep.previous-diagnosis"
 // * item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
-* item[=].item[=].item[=].text = "Varasem diagnoos"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
+* item[=].item[=].text = "Varasem diagnoos"
+* item[=].item[=].type = #group
+* item[=].item[=].required = false
+* item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "sleep.diagnoses-group.previous-diagnosis.diagnosis"
+* item[=].item[=].item[0].linkId = "sleep.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
-* item[=].item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].item[=].type = #coding
-* item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-uni"
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].type = #coding
+* item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-uni"
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "sleep.diagnoses-group.previous-diagnosis.written-diagnosis"
+* item[=].item[=].item[+].linkId = "sleep.previous-diagnosis.written-diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].type = #string
-* item[=].item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Sõnaline diagnoos"
+* item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "sleep.diagnoses-group.previous-diagnosis.source-reference"
+* item[=].item[=].item[+].linkId = "sleep.previous-diagnosis.source-reference"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #source-reference
 // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
-* item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].type = #reference
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+* item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].type = #reference
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].readOnly = true
 
 * item[=].item[+].linkId = "sleep.loud-snoring"
 * item[=].item[=].code.system = $HDQ
@@ -3563,6 +3563,7 @@ Usage: #example
 * item[=].item[=].item[=].text = "Osaline töövõimetus (andmed Sotsiaalkindlustusametist)"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].repeats = true
 
 * item[=].item[=].item[=].item[0].linkId = "health-assessment.partial-work-capacity-loss.partial-work-disability.from"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
@@ -3626,6 +3627,7 @@ Usage: #example
 * item[=].item[=].item[=].text = "Puue (andmed Sotsiaalkindlustusametist)"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].repeats = true
 
 * item[=].item[=].item[=].item[0].linkId = "health-assessment.disability.disability-data.from"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
