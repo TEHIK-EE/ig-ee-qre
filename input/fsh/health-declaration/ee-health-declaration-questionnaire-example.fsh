@@ -3670,9 +3670,8 @@ Usage: #example
 * item[=].required = true
 
 * item[=].item[0].linkId = "immunization.b-hepatitis"
-// * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #b-hepatitis
-// * item[=].item[=].code.display = "B-viirushepatiit"
+* item[=].item[=].code.system = $VVH
+* item[=].item[=].code.code = #101
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
 * item[=].item[=].text = "B-viirushepatiit"
@@ -3729,9 +3728,8 @@ Usage: #example
 * item[=].item[=].item[=].repeats = true
 
 * item[=].item[+].linkId = "immunization.tuberculosis"
-// * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #tuberculosis
-// * item[=].item[=].code.display = "Tuberkuloos"
+* item[=].item[=].code.system = $VVH
+* item[=].item[=].code.code = #110
 * item[=].item[=].text = "Tuberkuloos"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
@@ -3788,9 +3786,8 @@ Usage: #example
 * item[=].item[=].item[=].repeats = true
 
 * item[=].item[+].linkId = "immunization.rotavirus"
-// * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #rotavirus
-// * item[=].item[=].code.display = "Rotaviirus"
+* item[=].item[=].code.system = $VVH
+* item[=].item[=].code.code = #111
 * item[=].item[=].text = "Rotaviirus"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
@@ -3847,9 +3844,8 @@ Usage: #example
 * item[=].item[=].item[=].repeats = true
 
 * item[=].item[+].linkId = "immunization.diphteria"
-// * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #diphteria
-// * item[=].item[=].code.display = "Difteeria"
+* item[=].item[=].code.system = $VVH
+* item[=].item[=].code.code = #102
 * item[=].item[=].text = "Difteeria"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
@@ -3906,9 +3902,8 @@ Usage: #example
 * item[=].item[=].item[=].repeats = true
 
 * item[=].item[+].linkId = "immunization.tetanus"
-// * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #tetanus
-// * item[=].item[=].code.display = "Teetanus"
+* item[=].item[=].code.system = $VVH
+* item[=].item[=].code.code = #109
 * item[=].item[=].text = "Teetanus"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
@@ -3965,9 +3960,8 @@ Usage: #example
 * item[=].item[=].item[=].repeats = true
 
 * item[=].item[+].linkId = "immunization.pertussis"
-// * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #pertussis
-// * item[=].item[=].code.display = "Läkaköha"
+* item[=].item[=].code.system = $VVH
+* item[=].item[=].code.code = #105
 * item[=].item[=].text = "Läkaköha"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
@@ -4024,9 +4018,8 @@ Usage: #example
 * item[=].item[=].item[=].repeats = true
 
 * item[=].item[+].linkId = "immunization.polio"
-// * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #polio
-// * item[=].item[=].code.display = "Poliomüeliit"
+* item[=].item[=].code.system = $VVH
+* item[=].item[=].code.code = #107
 * item[=].item[=].text = "Poliomüeliit"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
@@ -4083,9 +4076,8 @@ Usage: #example
 * item[=].item[=].item[=].repeats = true
 
 * item[=].item[+].linkId = "immunization.hemo-influenza"
-// * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #influenza
-// * item[=].item[=].code.display = "Influensa"
+* item[=].item[=].code.system = $VVH
+* item[=].item[=].code.code = #103
 * item[=].item[=].text = "Influensa"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
@@ -4142,9 +4134,8 @@ Usage: #example
 * item[=].item[=].item[=].repeats = true
 
 * item[=].item[+].linkId = "immunization.measles"
-// * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #measles
-// * item[=].item[=].code.display = "Leetrid"
+* item[=].item[=].code.system = $VVH
+* item[=].item[=].code.code = #104
 * item[=].item[=].text = "Leetrid"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
@@ -4201,9 +4192,8 @@ Usage: #example
 * item[=].item[=].item[=].repeats = true
 
 * item[=].item[+].linkId = "immunization.mumps"
-// * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #mumps
-// * item[=].item[=].code.display = "Mumps"
+* item[=].item[=].code.system = $VVH
+* item[=].item[=].code.code = #106
 * item[=].item[=].text = "Mumps"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
@@ -4260,9 +4250,8 @@ Usage: #example
 * item[=].item[=].item[=].repeats = true
 
 * item[=].item[+].linkId = "immunization.rubella"
-// * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #rubella
-// * item[=].item[=].code.display = "Punetised"
+* item[=].item[=].code.system = $VVH
+* item[=].item[=].code.code = #108
 * item[=].item[=].text = "Punetised"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
@@ -4319,9 +4308,8 @@ Usage: #example
 * item[=].item[=].item[=].repeats = true
 
 * item[=].item[+].linkId = "immunization.hpv"
-// * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #hpv
-// * item[=].item[=].code.display = "HPV"
+* item[=].item[=].code.system = $VVH
+* item[=].item[=].code.code = #203
 * item[=].item[=].text = "HPV"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
@@ -4378,9 +4366,8 @@ Usage: #example
 * item[=].item[=].item[=].repeats = true
 
 * item[=].item[+].linkId = "immunization.covid"
-// * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #covid
-// * item[=].item[=].code.display = "COVID"
+* item[=].item[=].code.system = $VVH
+* item[=].item[=].code.code = #219
 * item[=].item[=].text = "COVID"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
@@ -4437,9 +4424,8 @@ Usage: #example
 * item[=].item[=].item[=].repeats = true
 
 * item[=].item[+].linkId = "immunization.flu"
-// * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #flu
-// * item[=].item[=].code.display = "Gripiviirus"
+* item[=].item[=].code.system = $VVH
+* item[=].item[=].code.code = #202
 * item[=].item[=].text = "Gripiviirus"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
@@ -4496,9 +4482,8 @@ Usage: #example
 * item[=].item[=].item[=].repeats = true
 
 * item[=].item[+].linkId = "immunization.pneumococcus"
-// * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #pneumococcus
-// * item[=].item[=].code.display = "Pneumokokk"
+* item[=].item[=].code.system = $VVH
+* item[=].item[=].code.code = #210
 * item[=].item[=].text = "Pneumokokk"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
@@ -4555,9 +4540,8 @@ Usage: #example
 * item[=].item[=].item[=].repeats = true
 
 * item[=].item[+].linkId = "immunization.a-hepatitis"
-// * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #a-hepatitis
-// * item[=].item[=].code.display = "A-hepatiit"
+* item[=].item[=].code.system = $VVH
+* item[=].item[=].code.code = #201
 * item[=].item[=].text = "A-hepatiit"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
@@ -4614,9 +4598,8 @@ Usage: #example
 * item[=].item[=].item[=].repeats = true
 
 * item[=].item[+].linkId = "immunization.varicella"
-// * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #varicella
-// * item[=].item[=].code.display = "Tuulerõuged"
+* item[=].item[=].code.system = $VVH
+* item[=].item[=].code.code = #213
 * item[=].item[=].text = "Tuulerõuged"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
@@ -4673,9 +4656,8 @@ Usage: #example
 * item[=].item[=].item[=].repeats = true
 
 * item[=].item[+].linkId = "immunization.shingles"
-// * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #shingles
-// * item[=].item[=].code.display = "Vöötohatis"
+* item[=].item[=].code.system = $VVH
+* item[=].item[=].code.code = #216
 * item[=].item[=].text = "Vöötohatis"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
@@ -4732,9 +4714,8 @@ Usage: #example
 * item[=].item[=].item[=].repeats = true
 
 * item[=].item[+].linkId = "immunization.meningococcus"
-// * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #meningococcus
-// * item[=].item[=].code.display = "Meningokokk"
+* item[=].item[=].code.system = $VVH
+* item[=].item[=].code.code = #209
 * item[=].item[=].text = "Meningokokk"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
@@ -4791,9 +4772,8 @@ Usage: #example
 * item[=].item[=].item[=].repeats = true
 
 * item[=].item[+].linkId = "immunization.yellow-fever"
-// * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #yellow-fever
-// * item[=].item[=].code.display = "Kollapalavik"
+* item[=].item[=].code.system = $VVH
+* item[=].item[=].code.code = #205
 * item[=].item[=].text = "Kollapalavik"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
@@ -4850,9 +4830,8 @@ Usage: #example
 * item[=].item[=].item[=].repeats = true
 
 * item[=].item[+].linkId = "immunization.typhoid-fever"
-// * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #typhoid-fever
-// * item[=].item[=].code.display = "Kõhutüüfus"
+* item[=].item[=].code.system = $VVH
+* item[=].item[=].code.code = #207
 * item[=].item[=].text = "Kõhutüüfus"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
@@ -4909,9 +4888,8 @@ Usage: #example
 * item[=].item[=].item[=].repeats = true
 
 * item[=].item[+].linkId = "immunization.tick-encephalitis"
-// * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #tick-encephalitis
-// * item[=].item[=].code.display = "Puukentsefaliit"
+* item[=].item[=].code.system = $VVH
+* item[=].item[=].code.code = #211
 * item[=].item[=].text = "Puukentsefaliit"
 * item[=].item[=].type = #group
 * item[=].item[=].required = true
