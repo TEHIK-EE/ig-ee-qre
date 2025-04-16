@@ -272,7 +272,7 @@ Usage: #example
 // * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
 * item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].type = #coding
-* item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-allergia"
+* item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-allergiad"
 * item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].readOnly = true
 
@@ -3437,7 +3437,7 @@ Usage: #example
 * item[=].item[=].code.display = "Milline on Teie hinnang oma tervisele?"
 * item[=].item[=].text = "Milline on Teie hinnang oma tervisele?"
 * item[=].item[=].type = #coding
-* item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-hinnang-tervisele"
+* item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/hinnang-terviseseisundile"
 * item[=].item[=].required = true
 
 * item[=].item[=].item[0].linkId = "health-assessment.patient-health-assessment.specification"
@@ -3591,7 +3591,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].type = #coding
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
-* item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/CodeSystem/toovoime-liik"
+* item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/toovoime-liik"
 
 * item[=].item[+].linkId = "health-assessment.disability"
 * item[=].item[=].code.system = $HDQ
@@ -3655,7 +3655,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].type = #coding
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
-* item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/CodeSystem/puude-raskusaste"
+* item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/puude-raskusaste"
 
 * item[+].linkId = "immunization"
 * item[=].prefix = "24"
