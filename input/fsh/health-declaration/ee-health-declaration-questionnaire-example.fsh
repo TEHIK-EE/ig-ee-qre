@@ -12,7 +12,8 @@ Usage: #example
 * status = #draft
 * date = "2023-12-12"
 * approvalDate = "2024-01-01"
-* effectivePeriod = "2024-03-16"
+* effectivePeriod.start = "2024-03-16"
+* effectivePeriod.end = "2026-03-16"
 * code.system = "http://fhir.ee/CodeSystem/dokumendi-tyyp"
 * code.code = #81
 * code.display = "Tervisedeklaratsioon"
