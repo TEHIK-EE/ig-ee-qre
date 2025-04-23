@@ -12,6 +12,7 @@ Usage: #example
 * status = #draft
 * date = "2023-12-12"
 * approvalDate = "2024-01-01"
+* effectivePeriod = "2024-03-16"
 * code.system = "http://fhir.ee/CodeSystem/dokumendi-tyyp"
 * code.code = #81
 * code.display = "Tervisedeklaratsioon"
@@ -32,6 +33,7 @@ Usage: #example
 * item[=].answerOption[3].valueCoding.display = "Kaitseväeteenistuse tervisekontroll"
 * item[=].required = true
 * item[=].readOnly = true
+* item[=].repeats = true
 * item[=].text = "Kasutusala"
 
 * item[+].linkId = "patient-gender"
@@ -660,7 +662,7 @@ Usage: #example
 // * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
 * item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].type = #coding
-* item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-narvisusteem"
+* item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-narvisysteem"
 * item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].readOnly = true
 
@@ -1269,7 +1271,7 @@ Usage: #example
 // * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
 * item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].type = #coding
-* item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-hingamissusteem"
+* item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-hingamissysteem"
 * item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].readOnly = true
 
@@ -1525,7 +1527,7 @@ Usage: #example
 // * item[=].item[=].item[=].item[=].code.display = "Diagnoos"
 * item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].type = #coding
-* item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-suda-ja-veresoonkond"
+* item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-syda-ja-veresoonkond"
 * item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].readOnly = true
 
@@ -2505,7 +2507,7 @@ Usage: #example
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
 * item[=].item[=].text = "Varasem diagnoos"
 * item[=].item[=].type = #group
-* item[=].item[=].required = true
+* item[=].item[=].required = false
 * item[=].item[=].repeats = true
 
 * item[=].item[=].item[0].linkId = "traumas.previous-diagnosis.diagnosis"
@@ -2722,7 +2724,7 @@ Usage: #example
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
 * item[=].item[=].text = "Varasem diagnoos"
 * item[=].item[=].type = #group
-* item[=].item[=].required = true
+* item[=].item[=].required = false
 * item[=].item[=].repeats = true
 
 * item[=].item[=].item[0].linkId = "digestive-organs.previous-diagnosis.diagnosis"
@@ -2894,7 +2896,7 @@ Usage: #example
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
 * item[=].item[=].text = "Varasem diagnoos"
 * item[=].item[=].type = #group
-* item[=].item[=].required = true
+* item[=].item[=].required = false
 * item[=].item[=].repeats = true
 
 * item[=].item[=].item[0].linkId = "urogenital-system.previous-diagnosis.diagnosis"
@@ -3508,7 +3510,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Haigusleht"
 * item[=].item[=].item[=].text = "Haigusleht"
 * item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].repeats = true
 
 * item[=].item[=].item[=].item[0].linkId = "health-assessment.sick-leave-certs.sick-leave-cert.from"
@@ -5029,7 +5031,7 @@ Usage: #example
 * item[=].item[=].code.code = #risk-factor
 * item[=].item[=].code.display = "Ohutegur"
 * item[=].item[=].type = #coding
-* item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-ohutegurid"
+* item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/ohutegurid"
 * item[=].item[=].required = false
 * item[=].item[=].repeats = true
 * item[=].item[=].text = "Ohutegur"
