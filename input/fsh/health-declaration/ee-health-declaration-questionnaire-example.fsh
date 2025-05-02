@@ -2,18 +2,18 @@ Instance: Questionnaire-health-declaration
 InstanceOf: EEHealthDeclarationQuestionnaire
 Description: "Näidis tervisedeklaratsiooni andmestik"
 Usage: #example
-* meta.versionId = "1"
+* meta.versionId = "3.0.0"
 * name = "HDECL"
 * title = "Tervisedeklaratsioon"
 * version = "1.0.1"
 * subjectType = #Patient
 // vaja lisada code element
 * url = "https://fhir.ee/qre/Questionnaire-health-declaration"
-* status = #draft
+* status = #active
 * date = "2023-12-12"
 * approvalDate = "2024-01-01"
 * effectivePeriod.start = "2024-03-16"
-* effectivePeriod.end = "2026-03-16"
+// * effectivePeriod.end = "2026-03-16"
 * code.system = "http://fhir.ee/CodeSystem/dokumendi-tyyp"
 * code.code = #81
 * code.display = "Tervisedeklaratsioon"
@@ -268,6 +268,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 * item[=].item[=].repeats = true
+* item[=].item[=].readOnly = true
 
 * item[=].item[=].item[0].linkId = "allergies.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
@@ -440,6 +441,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 * item[=].item[=].repeats = true
+* item[=].item[=].readOnly = true
 
 * item[=].item[=].item[0].linkId = "mental-health.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
@@ -656,6 +658,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 * item[=].item[=].repeats = true
+* item[=].item[=].readOnly = true
 
 * item[=].item[=].item[0].linkId = "nervous-system.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
@@ -876,6 +879,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 * item[=].item[=].repeats = true
+* item[=].item[=].readOnly = true
 
 * item[=].item[=].item[0].linkId = "eyes-vision.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
@@ -1071,6 +1075,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 * item[=].item[=].repeats = true
+* item[=].item[=].readOnly = true
 
 * item[=].item[=].item[0].linkId = "ear-nose-throat.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
@@ -1265,6 +1270,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 * item[=].item[=].repeats = true
+* item[=].item[=].readOnly = true
 
 * item[=].item[=].item[0].linkId = "respiratory-system.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
@@ -1415,6 +1421,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 * item[=].item[=].repeats = true
+* item[=].item[=].readOnly = true
 
 * item[=].item[=].item[0].linkId = "metabolic-disorder.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
@@ -1521,6 +1528,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 * item[=].item[=].repeats = true
+* item[=].item[=].readOnly = true
 
 * item[=].item[=].item[0].linkId = "cardiovascular-system.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
@@ -1759,6 +1767,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 * item[=].item[=].repeats = true
+* item[=].item[=].readOnly = true
 
 * item[=].item[=].item[0].linkId = "bones-joints-muscles.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
@@ -2019,6 +2028,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 * item[=].item[=].repeats = true
+* item[=].item[=].readOnly = true
 
 * item[=].item[=].item[0].linkId = "infections.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
@@ -2360,6 +2370,7 @@ Usage: #example
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].repeats = true
+* item[=].item[=].item[=].readOnly = true
 
 * item[=].item[=].item[=].item[0].linkId = "previous-treatment.regular-medication.current-prescriptions.date"
 * item[=].item[=].item[=].item[=].text = "Kuupäev"
@@ -2409,6 +2420,7 @@ Usage: #example
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].repeats = true
+* item[=].item[=].item[=].readOnly = true
 
 * item[=].item[=].item[=].item[0].linkId = "previous-treatment.hospitalization.inpatient-case.from"
 * item[=].item[=].item[=].item[=].text = "Alates"
@@ -2459,6 +2471,7 @@ Usage: #example
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].repeats = true
+* item[=].item[=].item[=].readOnly = true
 
 * item[=].item[=].item[=].item[0].linkId = "previous-treatment.surgeries.surgery.surgery-date"
 * item[=].item[=].item[=].item[=].text = "Kuupäev"
@@ -2510,6 +2523,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 * item[=].item[=].repeats = true
+* item[=].item[=].readOnly = true
 
 * item[=].item[=].item[0].linkId = "traumas.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
@@ -2654,6 +2668,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 * item[=].item[=].repeats = true
+* item[=].item[=].readOnly = true
 
 * item[=].item[=].item[0].linkId = "skin-disorders.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
@@ -2727,6 +2742,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 * item[=].item[=].repeats = true
+* item[=].item[=].readOnly = true
 
 * item[=].item[=].item[0].linkId = "digestive-organs.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
@@ -2899,6 +2915,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 * item[=].item[=].repeats = true
+* item[=].item[=].readOnly = true
 
 * item[=].item[=].item[0].linkId = "urogenital-system.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
@@ -3032,6 +3049,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 * item[=].item[=].repeats = true
+* item[=].item[=].readOnly = true
 
 * item[=].item[=].item[0].linkId = "blood-problems.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
@@ -3339,6 +3357,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 * item[=].item[=].repeats = true
+* item[=].item[=].readOnly = true
 
 * item[=].item[=].item[0].linkId = "sleep.previous-diagnosis.diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
@@ -3513,6 +3532,7 @@ Usage: #example
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].repeats = true
+* item[=].item[=].item[=].readOnly = true
 
 * item[=].item[=].item[=].item[0].linkId = "health-assessment.sick-leave-certs.sick-leave-cert.from"
 * item[=].item[=].item[=].item[=].text = "Alates"
@@ -3567,6 +3587,7 @@ Usage: #example
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].repeats = true
+* item[=].item[=].item[=].readOnly = true
 
 * item[=].item[=].item[=].item[0].linkId = "health-assessment.partial-work-capacity-loss.partial-work-disability.from"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
@@ -3631,6 +3652,7 @@ Usage: #example
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].repeats = true
+* item[=].item[=].item[=].readOnly = true
 
 * item[=].item[=].item[=].item[0].linkId = "health-assessment.disability.disability-data.from"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
