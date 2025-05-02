@@ -589,28 +589,6 @@ Usage: #example
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
 
-* item[=].item[+].linkId = "mental-health.other-disease-condition-symptom"
-* item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #other-disease-condition-symptom
-* item[=].item[=].code.display = "Muu haigus/seisund/sümptom (palun täpsustage)"
-* item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
-* item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "mental-health.no-complaints"
-* item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].enableWhen.answerBoolean = false
-* item[=].item[=].required = true
-
-* item[=].item[=].item[0].linkId = "mental-health.other-disease-condition-symptom.specification"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
-* item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "mental-health.other-disease-condition-symptom"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = true
-
 * item[=].item[+].linkId = "mental-health.frequent-stress"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #frequent-stress
@@ -629,6 +607,28 @@ Usage: #example
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "mental-health.frequent-stress"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerBoolean = true
+* item[=].item[=].item[=].required = true
+
+* item[=].item[+].linkId = "mental-health.other-disease-condition-symptom"
+* item[=].item[=].code.system = $HDQ
+* item[=].item[=].code.code = #other-disease-condition-symptom
+* item[=].item[=].code.display = "Muu haigus/seisund/sümptom (palun täpsustage)"
+* item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
+* item[=].item[=].type = #boolean
+* item[=].item[=].enableWhen.question = "mental-health.no-complaints"
+* item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].enableWhen.answerBoolean = false
+* item[=].item[=].required = true
+
+* item[=].item[=].item[0].linkId = "mental-health.other-disease-condition-symptom.specification"
+* item[=].item[=].item[=].code.system = $HDQ
+* item[=].item[=].item[=].code.code = #specification
+* item[=].item[=].item[=].code.display = "Täpsustus"
+* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].type = #text
+* item[=].item[=].item[=].enableWhen.question = "mental-health.other-disease-condition-symptom"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -1352,28 +1352,6 @@ Usage: #example
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
 
-* item[=].item[+].linkId = "respiratory-system.other-disease-condition-symptom"
-* item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #other-disease-condition-symptom
-* item[=].item[=].code.display = "Muu haigus/seisund/sümptom (palun täpsustage)"
-* item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
-* item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "respiratory-system.no-complaints"
-* item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].enableWhen.answerBoolean = false
-* item[=].item[=].required = true
-
-* item[=].item[=].item[0].linkId = "respiratory-system.other-disease-condition-symptom.specification"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
-* item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "respiratory-system.other-disease-condition-symptom"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = true
-
 * item[=].item[+].linkId = "respiratory-system.sleep-apnoea"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #sleep-apnoea
@@ -1392,6 +1370,28 @@ Usage: #example
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "respiratory-system.sleep-apnoea"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerBoolean = true
+* item[=].item[=].item[=].required = true
+
+* item[=].item[+].linkId = "respiratory-system.other-disease-condition-symptom"
+* item[=].item[=].code.system = $HDQ
+* item[=].item[=].code.code = #other-disease-condition-symptom
+* item[=].item[=].code.display = "Muu haigus/seisund/sümptom (palun täpsustage)"
+* item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
+* item[=].item[=].type = #boolean
+* item[=].item[=].enableWhen.question = "respiratory-system.no-complaints"
+* item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].enableWhen.answerBoolean = false
+* item[=].item[=].required = true
+
+* item[=].item[=].item[0].linkId = "respiratory-system.other-disease-condition-symptom.specification"
+* item[=].item[=].item[=].code.system = $HDQ
+* item[=].item[=].item[=].code.code = #specification
+* item[=].item[=].item[=].code.display = "Täpsustus"
+* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].type = #text
+* item[=].item[=].item[=].enableWhen.question = "respiratory-system.other-disease-condition-symptom"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
