@@ -29,6 +29,8 @@ Description: "Tervisedeklaratsiooni küsimustiku profiil"
 * approvalDate 0..1
 * lastReviewDate 0..0
 * effectivePeriod 0..1
+* effectivePeriod.start 1..1
+* effectivePeriod.end 0..1
 * name 1..1
 * name = "HDECL"
 * title = "Tervisedeklaratsioon"
