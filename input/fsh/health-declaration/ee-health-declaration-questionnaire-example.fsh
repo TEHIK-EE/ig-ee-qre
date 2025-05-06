@@ -2700,9 +2700,9 @@ Usage: #example
 
 * item[=].item[+].linkId = "skin-disorders.skin-conditions"
 * item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #skin-disorders
-* item[=].item[=].code.display = "Nahahaigused: millal põdenud, milliseid?"
-* item[=].item[=].text = "Nahahaigused: millal põdenud, milliseid?"
+* item[=].item[=].code.code = #skin-disorders-five-years
+* item[=].item[=].code.display = "Nahahaigused viimase 5 aasta jooksul: millal põdenud, milliseid?"
+* item[=].item[=].text = "Nahahaigused viimase 5 aasta jooksul: millal põdenud, milliseid?"
 * item[=].item[=].type = #boolean
 * item[=].item[=].required = true
 
@@ -3288,28 +3288,6 @@ Usage: #example
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
 
-* item[=].item[+].linkId = "medical-devices.other-device"
-* item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #other-device
-* item[=].item[=].code.display = "Muu abivahend"
-* item[=].item[=].text = "Muu abivahend"
-* item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "medical-devices.no-devices"
-* item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].enableWhen.answerBoolean = false
-* item[=].item[=].required = true
-
-* item[=].item[=].item[0].linkId = "medical-devices.other-device.specification"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
-* item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "medical-devices.other-device"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = true
-
 * item[=].item[+].linkId = "medical-devices.cpap"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #cpap
@@ -3331,6 +3309,28 @@ Usage: #example
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
+
+* item[=].item[+].linkId = "medical-devices.other-device"
+* item[=].item[=].code.system = $HDQ
+* item[=].item[=].code.code = #other-device
+* item[=].item[=].code.display = "Muu abivahend"
+* item[=].item[=].text = "Muu abivahend"
+* item[=].item[=].type = #boolean
+* item[=].item[=].enableWhen.question = "medical-devices.no-devices"
+* item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].enableWhen.answerBoolean = false
+* item[=].item[=].required = true
+
+* item[=].item[=].item[0].linkId = "medical-devices.other-device.specification"
+* item[=].item[=].item[=].code.system = $HDQ
+* item[=].item[=].item[=].code.code = #specification
+* item[=].item[=].item[=].code.display = "Täpsustus"
+* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].type = #text
+* item[=].item[=].item[=].enableWhen.question = "medical-devices.other-device"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerBoolean = true
+* item[=].item[=].item[=].required = true
 
 * item[+].linkId = "sleep"
 * item[=].prefix = "22"
