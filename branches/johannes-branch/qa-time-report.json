@@ -1,0 +1,250 @@
+{
+  "date" : "Fri, 09 May, 2025 07:52:50 +0000",
+  "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
+  "files" : [
+    {
+      "name" : "/fsh-generated/resources/ImplementationGuide-ee.fhir.qre.json",
+      "size" : 2805,
+      "processes" : [
+        {
+          "activity" : "load",
+          "start" : 55,
+          "length" : 17
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 56,
+          "length" : 2
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 56,
+          "length" : 62
+        },
+        {
+          "activity" : "validate",
+          "start" : 62,
+          "length" : 5301
+        },
+        {
+          "activity" : "generate1",
+          "start" : 70,
+          "length" : 43
+        },
+        {
+          "activity" : "generate2",
+          "start" : 74,
+          "length" : 66
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 85,
+          "length" : 1
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 91,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Questionnaire-Questionnaire-health-declaration-cda.json",
+      "size" : 212334,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 55,
+          "length" : 111
+        },
+        {
+          "activity" : "load",
+          "start" : 55,
+          "length" : 68
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 56,
+          "length" : 19
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 56,
+          "length" : 4774
+        },
+        {
+          "activity" : "validate",
+          "start" : 67,
+          "length" : 1705
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 70,
+          "length" : 3
+        },
+        {
+          "activity" : "generate1",
+          "start" : 70,
+          "length" : 1479
+        },
+        {
+          "activity" : "generate2",
+          "start" : 74,
+          "length" : 1230
+        },
+        {
+          "activity" : "makeDependencies",
+          "start" : 80,
+          "length" : 1
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 85,
+          "length" : 46
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 91,
+          "length" : 11
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Questionnaire-Questionnaire-health-declaration.json",
+      "size" : 253048,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 55,
+          "length" : 93
+        },
+        {
+          "activity" : "load",
+          "start" : 55,
+          "length" : 63
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 56,
+          "length" : 15
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 60,
+          "length" : 208
+        },
+        {
+          "activity" : "validate",
+          "start" : 69,
+          "length" : 1277
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 70,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 72,
+          "length" : 1377
+        },
+        {
+          "activity" : "generate2",
+          "start" : 76,
+          "length" : 335
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 85,
+          "length" : 53
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 91,
+          "length" : 8
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-ee-health-declaration-questionnaire.json",
+      "size" : 5439,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 55,
+          "length" : 27
+        },
+        {
+          "activity" : "load",
+          "start" : 55,
+          "length" : 19
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 55,
+          "length" : 75
+        },
+        {
+          "activity" : "load-configure",
+          "start" : 56,
+          "length" : 1
+        },
+        {
+          "activity" : "loadDepInfo",
+          "start" : 56,
+          "length" : 1
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 61,
+          "length" : 56
+        },
+        {
+          "activity" : "validate",
+          "start" : 61,
+          "length" : 1168
+        },
+        {
+          "activity" : "checkConformanceResources",
+          "start" : 70,
+          "length" : 1
+        },
+        {
+          "activity" : "generateLogicalMaps",
+          "start" : 70,
+          "length" : 1
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 70,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 73,
+          "length" : 235
+        },
+        {
+          "activity" : "generate2",
+          "start" : 76,
+          "length" : 1049
+        },
+        {
+          "activity" : "generate2",
+          "start" : 77,
+          "length" : 1591
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 85,
+          "length" : 13
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 91,
+          "length" : 1
+        }
+      ]
+    }
+  ]
+}
