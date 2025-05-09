@@ -33,7 +33,7 @@ Description: "Tervisedeklaratsiooni küsimustiku profiil"
 * effectivePeriod.end 0..1
 * name 1..1
 * name = "HDECL"
-* title = "Tervisedeklaratsioon"
+* title 1..1
 * description 0..0
 * code 1..1
 * item 1..*
