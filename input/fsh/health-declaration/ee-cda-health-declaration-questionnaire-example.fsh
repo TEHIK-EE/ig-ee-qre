@@ -2,7 +2,7 @@ Instance: Questionnaire-health-declaration-cda
 InstanceOf: EEHealthDeclarationQuestionnaire
 Description: "Näidis töötervishoiu tervisedeklaratsiooni küsimustikust CDA andmete migreerimiseks"
 Usage: #example
-* meta.versionId = "2.0.0"
+* meta.versionId = "1.0.0"
 * name = "HDECL"
 * title = "Tervisedeklaratsioon CDA-st"
 * version = "1.0.1"
