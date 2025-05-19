@@ -1433,7 +1433,7 @@ Usage: #example
 * item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[+].linkId = "metabolic-disorder.previous-diagnosis.written-description"
+* item[=].item[=].item[+].linkId = "metabolic-disorder.previous-diagnosis.written-diagnosis"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #written-diagnosis
 // * item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
