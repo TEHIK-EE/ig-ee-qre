@@ -22,27 +22,27 @@ Usage: #example
 * item[=].type = #coding
 * item[=].answerOption[0].valueCoding.system = $HDC
 * item[=].answerOption[0].valueCoding.code = #driver-group-I
-* item[=].answerOption[0].valueCoding.display = "I grupi mootorsõidukijuhi tervisekontroll"
+// * item[=].answerOption[0].valueCoding.display = "I grupi mootorsõidukijuhi tervisekontroll"
 * item[=].answerOption[1].valueCoding.system = $HDC
 * item[=].answerOption[1].valueCoding.code = #driver-group-II
-* item[=].answerOption[1].valueCoding.display = "II grupi mootorsõidukijuhi tervisekontroll"
+// * item[=].answerOption[1].valueCoding.display = "II grupi mootorsõidukijuhi tervisekontroll"
+// * item[=].answerOption[2].valueCoding.system = $HDC
+// * item[=].answerOption[2].valueCoding.code = #occupational
+// * item[=].answerOption[2].valueCoding.display = "Töötervishoiu tervisekontroll"
 * item[=].answerOption[2].valueCoding.system = $HDC
-* item[=].answerOption[2].valueCoding.code = #occupational
-* item[=].answerOption[2].valueCoding.display = "Töötervishoiu tervisekontroll"
-* item[=].answerOption[3].valueCoding.system = $HDC
-* item[=].answerOption[3].valueCoding.code = #military-service
-* item[=].answerOption[3].valueCoding.display = "Kaitseväeteenistuse tervisekontroll"
+* item[=].answerOption[2].valueCoding.code = #military-service
+// * item[=].answerOption[3].valueCoding.display = "Kaitseväeteenistuse tervisekontroll"
 * item[=].required = true
 * item[=].readOnly = true
 * item[=].repeats = true
 // * item[=].text = "Kasutusala"
 
-* item[+].linkId = "patient-gender"
-// * item[=].text = "Sugu"
-* item[=].type = #coding
-* item[=].answerValueSet = "http://hl7.org/fhir/ValueSet/administrative-gender"
-* item[=].required = true
-* item[=].readOnly = true
+// * item[+].linkId = "patient-gender"
+// // * item[=].text = "Sugu"
+// * item[=].type = #coding
+// * item[=].answerValueSet = "http://hl7.org/fhir/ValueSet/administrative-gender"
+// * item[=].required = true
+// * item[=].readOnly = true
 
 * item[+].linkId = "lifestyle"
 * item[=].prefix = "1"
@@ -151,6 +151,12 @@ Usage: #example
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
 
+* item[=].item[+].linkId = "lifestyle.sleep"
+* item[=].item[=].code.system = $HDQ
+* item[=].item[=].code.code = #sleep-mode
+* item[=].item[=].type = #text
+* item[=].item[=].required = false
+
 * item[+].linkId = "work-environment"
 * item[=].prefix = "2"
 * item[=].code.system = $HDQ
@@ -170,9 +176,7 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "work-environment.work-restrictions.specification"
 * item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #specification
-// * item[=].item[=].item[=].code.display = "Täpsustus"
-// * item[=].item[=].item[=].text = "Täpsustus"
+* item[=].item[=].item[=].code.code = #specification-why
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "work-environment.work-restrictions"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -194,50 +198,6 @@ Usage: #example
 // * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "work-environment.work-health-problems"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = true
-
-* item[=].item[+].linkId = "work-environment.occupational-disease"
-* item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #occupational-disease
-// * item[=].item[=].code.display = "Kas Teil on diagnoositud kutsehaigus?"
-// * item[=].item[=].text = "Kas Teil on diagnoositud kutsehaigus?"
-* item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "category"
-* item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].enableWhen.answerCoding = #occupational
-* item[=].item[=].required = true
-
-* item[=].item[+].linkId = "work-environment.work-related-disease"
-* item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #work-related-disease
-// * item[=].item[=].code.display = "Kas Teil on diagnoositud tööst põhjustatud haigus?"
-// * item[=].item[=].text = "Kas Teil on diagnoositud tööst põhjustatud haigus?"
-* item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "category"
-* item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].enableWhen.answerCoding = #occupational
-* item[=].item[=].required = true
-
-* item[=].item[+].linkId = "work-environment.ppe-problems"
-* item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #ppe-problems
-// * item[=].item[=].code.display = "Kas tööl kasutatavad isikukaitsevahendid põhjustavad Teile terviseprobleeme?"
-// * item[=].item[=].text = "Kas tööl kasutatavad isikukaitsevahendid põhjustavad Teile terviseprobleeme?"
-* item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "category"
-* item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].enableWhen.answerCoding = #occupational
-* item[=].item[=].required = true
-
-* item[=].item[=].item[0].linkId = "work-environment.ppe-problems.specification"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #specification
-// * item[=].item[=].item[=].code.display = "Täpsustus"
-// * item[=].item[=].item[=].text = "Täpsutus"
-* item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "work-environment.ppe-problems"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -300,7 +260,7 @@ Usage: #example
 
 * item[=].item[+].linkId = "allergies.no-complaints"
 * item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #no-complaints
+* item[=].item[=].code.code = #none
 // * item[=].item[=].code.display = "Kaebused hetkel puuduvad"
 // * item[=].item[=].text = "Kaebused hetkel puuduvad"
 * item[=].item[=].type = #boolean
@@ -589,28 +549,6 @@ Usage: #example
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
 
-* item[=].item[+].linkId = "mental-health.frequent-stress"
-* item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #frequent-stress
-// * item[=].item[=].code.display = "Sagedane stress"
-// * item[=].item[=].text = "Sagedane stress"
-* item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "mental-health.no-complaints"
-* item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].enableWhen.answerBoolean = false
-* item[=].item[=].required = true
-
-* item[=].item[=].item[0].linkId = "mental-health.frequent-stress.specification"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #specification
-// * item[=].item[=].item[=].code.display = "Täpsustus"
-// * item[=].item[=].item[=].text = "Täpsutus"
-* item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "mental-health.frequent-stress"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = true
-
 * item[=].item[+].linkId = "mental-health.other-disease-condition-symptom"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #other-disease-condition-symptom
@@ -806,32 +744,6 @@ Usage: #example
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
 
-* item[=].item[+].linkId = "nervous-system.coordination-disorder"
-* item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #coordination-disorder
-// * item[=].item[=].code.display = "Koordinatsioonihäired (sh. kätega seonduvad)"
-// * item[=].item[=].text = "Koordinatsioonihäired (sh. kätega seonduvad)"
-* item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen[0].question = "nervous-system.no-complaints"
-* item[=].item[=].enableWhen[0].operator = #=
-* item[=].item[=].enableWhen[0].answerBoolean = false
-* item[=].item[=].enableWhen[1].question = "category"
-* item[=].item[=].enableWhen[1].operator = #=
-* item[=].item[=].enableWhen[1].answerCoding = #occupational
-* item[=].item[=].enableBehavior = #all
-* item[=].item[=].required = true
-
-* item[=].item[=].item[0].linkId = "nervous-system.coordination-disorder.specification"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #specification
-// * item[=].item[=].item[=].code.display = "Täpsustus"
-// * item[=].item[=].item[=].text = "Täpsutus"
-* item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "nervous-system.coordination-disorder"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = true
-
 * item[=].item[+].linkId = "nervous-system.other-disease-condition-symptom"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #other-disease-condition-symptom
@@ -939,27 +851,27 @@ Usage: #example
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
 
-* item[=].item[+].linkId = "eyes-vision.hyperopia"
-* item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #hyperopia
-// * item[=].item[=].code.display = "Kaugnägelikkus (hüperoopia)"
-// * item[=].item[=].text = "Kaugnägelikkus (hüperoopia)"
-* item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "eyes-vision.no-complaints"
-* item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].enableWhen.answerBoolean = false
-* item[=].item[=].required = true
+// * item[=].item[+].linkId = "eyes-vision.hyperopia"
+// * item[=].item[=].code.system = $HDQ
+// * item[=].item[=].code.code = #hyperopia
+// // * item[=].item[=].code.display = "Kaugnägelikkus (hüperoopia)"
+// // * item[=].item[=].text = "Kaugnägelikkus (hüperoopia)"
+// * item[=].item[=].type = #boolean
+// * item[=].item[=].enableWhen.question = "eyes-vision.no-complaints"
+// * item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].enableWhen.answerBoolean = false
+// * item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "eyes-vision.hyperopia.specification"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #specification
-// * item[=].item[=].item[=].code.display = "Täpsustus"
-// * item[=].item[=].item[=].text = "Täpsutus"
-* item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "eyes-vision.hyperopia"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = true
+// * item[=].item[=].item[0].linkId = "eyes-vision.hyperopia.specification"
+// * item[=].item[=].item[=].code.system = $HDQ
+// * item[=].item[=].item[=].code.code = #specification
+// // * item[=].item[=].item[=].code.display = "Täpsustus"
+// // * item[=].item[=].item[=].text = "Täpsutus"
+// * item[=].item[=].item[=].type = #text
+// * item[=].item[=].item[=].enableWhen.question = "eyes-vision.hyperopia"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = true
 
 * item[=].item[+].linkId = "eyes-vision.limited-view"
 * item[=].item[=].code.system = $HDQ
@@ -1405,14 +1317,6 @@ Usage: #example
 * item[=].type = #group
 * item[=].required = true
 
-// * item[=].item[0].linkId = "metabolic-disorder.diagnoses-group"
-// * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #previous-diagnoses
-// * item[=].item[=].code.display = "Varasemad diagnoosid"
-// * item[=].item[=].text = "Varasemad diagnoosid"
-// * item[=].item[=].type = #group
-// * item[=].item[=].required = false
-
 * item[=].item[0].linkId = "metabolic-disorder.previous-diagnosis"
 // * item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
@@ -1656,7 +1560,7 @@ Usage: #example
 
 * item[=].item[+].linkId = "cardiovascular-system.angioplasty-stenting"
 * item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #angioplasty-stenting
+* item[=].item[=].code.code = #angioplasty
 // * item[=].item[=].code.display = "On tehtud südamesondeerimine või stentimine"
 // * item[=].item[=].text = "On tehtud südamesondeerimine või stentimine"
 * item[=].item[=].type = #boolean
@@ -2154,71 +2058,71 @@ Usage: #example
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
 
-* item[=].item[+].linkId = "infections.intestinal-infection"
-* item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #intestinal-infection
-// * item[=].item[=].code.display = "Soolenakkused (salmonelloos, kampülobakterioos, shigelloos, jersinioos ja rotaviirusenteriit, E. coli soolenakkus, Koolera, kõhutüüfus, paratüüfused, Noroviiruse tekkene äge enteropaatia, giardiaas (lambliaas), krüptosporidioos, amöbiaas, listerioos, helmintiaasid ehk nugiusshaigused, muud toidu- ja joogiveevahenduslikud nakkused)"
-// * item[=].item[=].text = "Soolenakkused (salmonelloos, kampülobakterioos, shigelloos, jersinioos ja rotaviirusenteriit, E. coli soolenakkus, Koolera, kõhutüüfus, paratüüfused, Noroviiruse tekkene äge enteropaatia, giardiaas (lambliaas), krüptosporidioos, amöbiaas, listerioos, helmintiaasid ehk nugiusshaigused, muud toidu- ja joogiveevahenduslikud nakkused)"
-* item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "infections.no-known-illness"
-* item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].enableWhen.answerBoolean = false
-* item[=].item[=].required = true
+// * item[=].item[+].linkId = "infections.intestinal-infection"
+// * item[=].item[=].code.system = $HDQ
+// * item[=].item[=].code.code = #intestinal-infection
+// // * item[=].item[=].code.display = "Soolenakkused (salmonelloos, kampülobakterioos, shigelloos, jersinioos ja rotaviirusenteriit, E. coli soolenakkus, Koolera, kõhutüüfus, paratüüfused, Noroviiruse tekkene äge enteropaatia, giardiaas (lambliaas), krüptosporidioos, amöbiaas, listerioos, helmintiaasid ehk nugiusshaigused, muud toidu- ja joogiveevahenduslikud nakkused)"
+// // * item[=].item[=].text = "Soolenakkused (salmonelloos, kampülobakterioos, shigelloos, jersinioos ja rotaviirusenteriit, E. coli soolenakkus, Koolera, kõhutüüfus, paratüüfused, Noroviiruse tekkene äge enteropaatia, giardiaas (lambliaas), krüptosporidioos, amöbiaas, listerioos, helmintiaasid ehk nugiusshaigused, muud toidu- ja joogiveevahenduslikud nakkused)"
+// * item[=].item[=].type = #boolean
+// * item[=].item[=].enableWhen.question = "infections.no-known-illness"
+// * item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].enableWhen.answerBoolean = false
+// * item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "infections.intestinal-infection.specification"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #specification
-// * item[=].item[=].item[=].code.display = "Täpsustus"
-// * item[=].item[=].item[=].text = "Täpsutus"
-* item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "infections.intestinal-infection"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = true
+// * item[=].item[=].item[0].linkId = "infections.intestinal-infection.specification"
+// * item[=].item[=].item[=].code.system = $HDQ
+// * item[=].item[=].item[=].code.code = #specification
+// // * item[=].item[=].item[=].code.display = "Täpsustus"
+// // * item[=].item[=].item[=].text = "Täpsutus"
+// * item[=].item[=].item[=].type = #text
+// * item[=].item[=].item[=].enableWhen.question = "infections.intestinal-infection"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = true
 
-* item[=].item[+].linkId = "infections.respiratory-infection"
-* item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #respiratory-infection
-// * item[=].item[=].code.display = "Hingamisteede nakkused (difteeria, läkaköha, leetrid, punetised, mumps)"
-// * item[=].item[=].text = "Hingamisteede nakkused (difteeria, läkaköha, leetrid, punetised, mumps)"
-* item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "infections.no-known-illness"
-* item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].enableWhen.answerBoolean = false
-* item[=].item[=].required = true
+// * item[=].item[+].linkId = "infections.respiratory-infection"
+// * item[=].item[=].code.system = $HDQ
+// * item[=].item[=].code.code = #respiratory-infection
+// // * item[=].item[=].code.display = "Hingamisteede nakkused (difteeria, läkaköha, leetrid, punetised, mumps)"
+// // * item[=].item[=].text = "Hingamisteede nakkused (difteeria, läkaköha, leetrid, punetised, mumps)"
+// * item[=].item[=].type = #boolean
+// * item[=].item[=].enableWhen.question = "infections.no-known-illness"
+// * item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].enableWhen.answerBoolean = false
+// * item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "infections.respiratory-infection.specification"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #specification
-// * item[=].item[=].item[=].code.display = "Täpsustus"
-// * item[=].item[=].item[=].text = "Täpsutus"
-* item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "infections.respiratory-infection"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = true
+// * item[=].item[=].item[0].linkId = "infections.respiratory-infection.specification"
+// * item[=].item[=].item[=].code.system = $HDQ
+// * item[=].item[=].item[=].code.code = #specification
+// // * item[=].item[=].item[=].code.display = "Täpsustus"
+// // * item[=].item[=].item[=].text = "Täpsutus"
+// * item[=].item[=].item[=].type = #text
+// * item[=].item[=].item[=].enableWhen.question = "infections.respiratory-infection"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = true
 
-* item[=].item[+].linkId = "infections.skin-infection"
-* item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #skin-infection
-// * item[=].item[=].code.display = "Nahainfektsioonid (MRSA kandlus, käte nahamädanikud, seenhaigused)"
-// * item[=].item[=].text = "Nahainfektsioonid (MRSA kandlus, käte nahamädanikud, seenhaigused)"
-* item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "infections.no-known-illness"
-* item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].enableWhen.answerBoolean = false
-* item[=].item[=].required = true
+// * item[=].item[+].linkId = "infections.skin-infection"
+// * item[=].item[=].code.system = $HDQ
+// * item[=].item[=].code.code = #skin-infection
+// // * item[=].item[=].code.display = "Nahainfektsioonid (MRSA kandlus, käte nahamädanikud, seenhaigused)"
+// // * item[=].item[=].text = "Nahainfektsioonid (MRSA kandlus, käte nahamädanikud, seenhaigused)"
+// * item[=].item[=].type = #boolean
+// * item[=].item[=].enableWhen.question = "infections.no-known-illness"
+// * item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].enableWhen.answerBoolean = false
+// * item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "infections.skin-infection.specification"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #specification
-// * item[=].item[=].item[=].code.display = "Täpsustus"
-// * item[=].item[=].item[=].text = "Täpsutus"
-* item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "infections.skin-infection"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = true
+// * item[=].item[=].item[0].linkId = "infections.skin-infection.specification"
+// * item[=].item[=].item[=].code.system = $HDQ
+// * item[=].item[=].item[=].code.code = #specification
+// // * item[=].item[=].item[=].code.display = "Täpsustus"
+// // * item[=].item[=].item[=].text = "Täpsutus"
+// * item[=].item[=].item[=].type = #text
+// * item[=].item[=].item[=].enableWhen.question = "infections.skin-infection"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = true
 
 * item[=].item[+].linkId = "infections.other-disease"
 * item[=].item[=].code.system = $HDQ
@@ -2233,7 +2137,7 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "infections.other-disease.specification"
 * item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #specification
+* item[=].item[=].item[=].code.code = #specification-when-what
 // * item[=].item[=].item[=].code.display = "Täpsustus"
 // * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
@@ -2292,7 +2196,7 @@ Usage: #example
 
 * item[=].item[0].linkId = "previous-treatment.treatment-abroad"
 * item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #treatment-abroad-five-years
+* item[=].item[=].code.code = #treatment-abroad
 // * item[=].item[=].code.display = "Kas olete viimase 5 aasta jooksul saanud välismaal haiglaravi või käinud arsti vastuvõtul? Palun täpsustage millal, kus, ja millega seoses"
 // * item[=].item[=].text = "Kas olete viimase 5 aasta jooksul saanud välismaal haiglaravi või käinud arsti vastuvõtul? Palun täpsustage millal, kus, ja millega seoses"
 * item[=].item[=].type = #boolean
@@ -2300,7 +2204,7 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "previous-treatment.treatment-abroad.specification"
 * item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #specification
+* item[=].item[=].item[=].code.code = #specification-why-where
 // * item[=].item[=].item[=].code.display = "Täpsustus"
 // * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
@@ -2323,14 +2227,14 @@ Usage: #example
 // * item[=].item[=].item[=].code.display = "Kas tarvitate regulaarselt mingeid ravimeid (sh rasestumisvastaseid vahendeid)? Palun loetlege, milliseid olete tarvitanud viimase 9 kuu jooksul."
 // * item[=].item[=].item[=].text = "Kas tarvitate regulaarselt mingeid ravimeid (sh rasestumisvastaseid vahendeid)? Palun loetlege, milliseid olete tarvitanud viimase 9 kuu jooksul."
 * item[=].item[=].item[=].type = #boolean
-* item[=].item[=].item[=].enableWhen.question = "patient-gender"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerCoding = #female
-* item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].enableWhen.question = "patient-gender"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerCoding = #female
+* item[=].item[=].item[=].required = false
 
 * item[=].item[=].item[=].item[0].linkId = "previous-treatment.regular-medication.regular-medication-women.specification"
 * item[=].item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].item[=].code.code = #specification
+* item[=].item[=].item[=].item[=].code.code = #specification-what
 // * item[=].item[=].item[=].item[=].code.display = "Täpsustus"
 // * item[=].item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].item[=].type = #text
@@ -2346,14 +2250,14 @@ Usage: #example
 // * item[=].item[=].item[=].code.display = "Kas tarvitate regulaarselt mingeid ravimeid? Palun loetlege, milliseid olete tarvitanud viimase 9 kuu jooksul."
 // * item[=].item[=].item[=].text = "Kas tarvitate regulaarselt mingeid ravimeid? Palun loetlege, milliseid olete tarvitanud viimase 9 kuu jooksul."
 * item[=].item[=].item[=].type = #boolean
-* item[=].item[=].item[=].enableWhen.question = "patient-gender"
-* item[=].item[=].item[=].enableWhen.operator = #!=
-* item[=].item[=].item[=].enableWhen.answerCoding = #female
-* item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].enableWhen.question = "patient-gender"
+// * item[=].item[=].item[=].enableWhen.operator = #!=
+// * item[=].item[=].item[=].enableWhen.answerCoding = #female
+* item[=].item[=].item[=].required = false
 
 * item[=].item[=].item[=].item[0].linkId = "previous-treatment.regular-medication.regular-medication-men.specification"
 * item[=].item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].item[=].code.code = #specification
+* item[=].item[=].item[=].item[=].code.code = #specification-what
 // * item[=].item[=].item[=].item[=].code.display = "Täpsustus"
 // * item[=].item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].item[=].type = #text
@@ -2398,7 +2302,7 @@ Usage: #example
 
 * item[=].item[+].linkId = "previous-treatment.hospitalization"
 * item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #hospitalization-five-years
+* item[=].item[=].code.code = #hospitalization
 // * item[=].item[=].code.display = "Kas olete viimase 5 aasta jooksul viibinud haiglaravil? "
 // * item[=].item[=].text = "Kas olete viimase 5 aasta jooksul viibinud haiglaravil? "
 * item[=].item[=].type = #boolean
@@ -2448,7 +2352,7 @@ Usage: #example
 
 * item[=].item[+].linkId = "previous-treatment.surgeries"
 * item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #operations-five-years
+* item[=].item[=].code.code = #operations
 // * item[=].item[=].code.display = "Kas teid on viimase 5 aasta jooksul opereeritud? Palun täpsustage, millal, mille tõttu"
 // * item[=].item[=].text = "Kas teid on viimase 5 aasta jooksul opereeritud? Palun täpsustage, millal, mille tõttu"
 * item[=].item[=].type = #boolean
@@ -2456,7 +2360,7 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "previous-treatment.surgeries.specification"
 * item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #specification
+* item[=].item[=].item[=].code.code = #specification-why-when
 // * item[=].item[=].item[=].code.display = "Täpsustus"
 // * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
@@ -2574,7 +2478,7 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "traumas.fractures.specification"
 * item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #specification
+* item[=].item[=].item[=].code.code = #specification-when-what
 // * item[=].item[=].item[=].code.display = "Täpsustus"
 // * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
@@ -2583,31 +2487,31 @@ Usage: #example
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
 
-* item[=].item[+].linkId = "traumas.head-traumas"
-* item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #head-traumas
-// * item[=].item[=].code.display = "Rasked peavigastused"
-// * item[=].item[=].text = "Rasked peavigastused"
-* item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen[0].question = "traumas.none"
-* item[=].item[=].enableWhen[0].operator = #=
-* item[=].item[=].enableWhen[0].answerBoolean = false
-* item[=].item[=].enableWhen[1].question = "category"
-* item[=].item[=].enableWhen[1].operator = #=
-* item[=].item[=].enableWhen[1].answerCoding = #occupational
-* item[=].item[=].enableBehavior = #all
-* item[=].item[=].required = true
+// * item[=].item[+].linkId = "traumas.head-traumas"
+// * item[=].item[=].code.system = $HDQ
+// * item[=].item[=].code.code = #head-traumas
+// // * item[=].item[=].code.display = "Rasked peavigastused"
+// // * item[=].item[=].text = "Rasked peavigastused"
+// * item[=].item[=].type = #boolean
+// * item[=].item[=].enableWhen[0].question = "traumas.none"
+// * item[=].item[=].enableWhen[0].operator = #=
+// * item[=].item[=].enableWhen[0].answerBoolean = false
+// * item[=].item[=].enableWhen[1].question = "category"
+// * item[=].item[=].enableWhen[1].operator = #=
+// * item[=].item[=].enableWhen[1].answerCoding = #occupational
+// * item[=].item[=].enableBehavior = #all
+// * item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "traumas.head-traumas.specification"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #specification
-// * item[=].item[=].item[=].code.display = "Täpsustus"
-// * item[=].item[=].item[=].text = "Täpsutus"
-* item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "traumas.head-traumas"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = true
+// * item[=].item[=].item[0].linkId = "traumas.head-traumas.specification"
+// * item[=].item[=].item[=].code.system = $HDQ
+// * item[=].item[=].item[=].code.code = #specification
+// // * item[=].item[=].item[=].code.display = "Täpsustus"
+// // * item[=].item[=].item[=].text = "Täpsutus"
+// * item[=].item[=].item[=].type = #text
+// * item[=].item[=].item[=].enableWhen.question = "traumas.head-traumas"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = true
 
 * item[=].item[+].linkId = "traumas.other-injuries"
 * item[=].item[=].code.system = $HDQ
@@ -2622,7 +2526,7 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "traumas.other-injuries.specification"
 * item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #specification
+* item[=].item[=].item[=].code.code = #specification-when-what
 // * item[=].item[=].item[=].code.display = "Täpsustus"
 // * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
@@ -2638,10 +2542,10 @@ Usage: #example
 // * item[=].code.display = "Kas olete praegu rase?"
 // * item[=].text = "Kas olete praegu rase?"
 * item[=].type = #boolean
-* item[=].enableWhen.question = "patient-gender"
-* item[=].enableWhen.operator = #=
-* item[=].enableWhen.answerCoding = #female
-* item[=].required = true
+// * item[=].enableWhen.question = "patient-gender"
+// * item[=].enableWhen.operator = #=
+// * item[=].enableWhen.answerCoding = #female
+* item[=].required = false
 
 * item[+].linkId = "skin-disorders"
 * item[=].prefix = "17"
@@ -2700,7 +2604,7 @@ Usage: #example
 
 * item[=].item[+].linkId = "skin-disorders.skin-conditions"
 * item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #skin-disorders-five-years
+* item[=].item[=].code.code = #skin-disorders
 // * item[=].item[=].code.display = "Nahahaigused viimase 5 aasta jooksul: millal põdenud, milliseid?"
 // * item[=].item[=].text = "Nahahaigused viimase 5 aasta jooksul: millal põdenud, milliseid?"
 * item[=].item[=].type = #boolean
@@ -2881,7 +2785,7 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "digestive-organs.other-disease-condition-symptom.specification"
 * item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #specification
+* item[=].item[=].item[=].code.code = #specification-when-what
 // * item[=].item[=].item[=].code.display = "Täpsustus"
 // * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
@@ -3015,7 +2919,7 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "urogenital-system.other-disease-condition-symptom.specification"
 * item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #specification
+* item[=].item[=].item[=].code.code = #specification-when-what
 // * item[=].item[=].item[=].code.display = "Täpsustus"
 // * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
@@ -3130,7 +3034,7 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "blood-problems.other-disease-condition-symptom.specification"
 * item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #specification
+* item[=].item[=].item[=].code.code = #specification-when-what
 // * item[=].item[=].item[=].code.display = "Täpsustus"
 // * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
@@ -3297,7 +3201,7 @@ Usage: #example
 * item[=].item[=].enableWhen.question = "medical-devices.no-devices"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
-* item[=].item[=].required = true
+* item[=].item[=].required = false
 
 * item[=].item[+].linkId = "medical-devices.mandibular-splint"
 * item[=].item[=].code.system = $HDQ
@@ -3308,7 +3212,7 @@ Usage: #example
 * item[=].item[=].enableWhen.question = "medical-devices.no-devices"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
-* item[=].item[=].required = true
+* item[=].item[=].required = false
 
 * item[=].item[+].linkId = "medical-devices.other-device"
 * item[=].item[=].code.system = $HDQ
@@ -3444,1625 +3348,1625 @@ Usage: #example
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
 
-* item[+].linkId = "health-assessment"
-* item[=].prefix = "23"
-* item[=].code.system = $HDQ
-* item[=].code.code = #health-assessment
-// * item[=].code.display = "Hinnang enda terviseseisundile"
-// * item[=].text = "Hinnang enda terviseseisundile"
-* item[=].type = #group
-* item[=].required = true
+// * item[+].linkId = "health-assessment"
+// * item[=].prefix = "23"
+// * item[=].code.system = $HDQ
+// * item[=].code.code = #health-assessment
+// // * item[=].code.display = "Hinnang enda terviseseisundile"
+// // * item[=].text = "Hinnang enda terviseseisundile"
+// * item[=].type = #group
+// * item[=].required = true
 
-* item[=].item[0].linkId = "health-assessment.patient-health-assessment"
-* item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #patient-health-assessment
-// * item[=].item[=].code.display = "Milline on Teie hinnang oma tervisele?"
-// * item[=].item[=].text = "Milline on Teie hinnang oma tervisele?"
-* item[=].item[=].type = #coding
-* item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/hinnang-terviseseisundile"
-* item[=].item[=].required = true
+// * item[=].item[0].linkId = "health-assessment.patient-health-assessment"
+// * item[=].item[=].code.system = $HDQ
+// * item[=].item[=].code.code = #patient-health-assessment
+// // * item[=].item[=].code.display = "Milline on Teie hinnang oma tervisele?"
+// // * item[=].item[=].text = "Milline on Teie hinnang oma tervisele?"
+// * item[=].item[=].type = #coding
+// * item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/hinnang-terviseseisundile"
+// * item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "health-assessment.patient-health-assessment.specification"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #specification
-// * item[=].item[=].item[=].code.display = "Täpsustus"
-// * item[=].item[=].item[=].text = "Täpsutus"
-* item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].required = false
-
-* item[=].item[+].linkId = "health-assessment.illness-past-year"
-* item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #illness-past-year
-// * item[=].item[=].code.display = "Kas olete viimase aasta jooksul olnud haige?"
-// * item[=].item[=].text = "Kas olete viimase aasta jooksul olnud haige?"
-* item[=].item[=].type = #boolean
-* item[=].item[=].required = true
-
-* item[=].item[=].item[0].linkId = "health-assessment.illness-past-year.specification"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #specification
-// * item[=].item[=].item[=].code.display = "Täpsustus"
-// * item[=].item[=].item[=].text = "Täpsutus"
-* item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "health-assessment.illness-past-year"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = true
-
-* item[=].item[+].linkId = "health-assessment.complaints"
-* item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #complaints
-// * item[=].item[=].code.display = "Kas Teil on enda tervise osas kaebusi?"
-// * item[=].item[=].text = "Kas Teil on enda tervise osas kaebusi?"
-* item[=].item[=].type = #boolean
-* item[=].item[=].required = true
-
-* item[=].item[=].item[0].linkId = "health-assessment.complaints.specification"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #specification
-// * item[=].item[=].item[=].code.display = "Täpsustus"
-// * item[=].item[=].item[=].text = "Täpsutus"
-* item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "health-assessment.complaints"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = true
-
-* item[=].item[+].linkId = "health-assessment.sick-leave-certs"
-* item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #sick-leave-certs
-// * item[=].item[=].code.display = "Haiguslehed"
-// * item[=].item[=].text = "Haiguslehed"
-* item[=].item[=].type = #group
-* item[=].item[=].required = true
-
-* item[=].item[=].item[0].linkId = "health-assessment.sick-leave-certs.foreign-sick-leave-cert-length"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #foreign-sick-leave-cert-length
-// * item[=].item[=].item[=].code.display = "Viimase 5 aasta jooksul välisriigis väljastatud haiguslehtede alguse kuupäev ja kestvus päevades"
-// * item[=].item[=].item[=].text = "Viimase 5 aasta jooksul välisriigis väljastatud haiguslehtede alguse kuupäev ja kestvus päevades"
-* item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].required = false
-
-* item[=].item[=].item[+].linkId = "health-assessment.sick-leave-certs.sick-leave-cert"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #sick-leave
-// * item[=].item[=].item[=].code.display = "Haigusleht"
-// * item[=].item[=].item[=].text = "Haigusleht"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
-* item[=].item[=].item[=].readOnly = true
-
-* item[=].item[=].item[=].item[0].linkId = "health-assessment.sick-leave-certs.sick-leave-cert.from"
-// * item[=].item[=].item[=].item[=].text = "Alates"
-* item[=].item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
-
-* item[=].item[=].item[=].item[+].linkId = "health-assessment.sick-leave-certs.sick-leave-cert.duration"
-// * item[=].item[=].item[=].item[=].text = "Kestus päevades"
-* item[=].item[=].item[=].item[=].type = #integer
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
-
-* item[=].item[=].item[=].item[+].linkId = "health-assessment.sick-leave-certs.sick-leave-cert.diagnosis"
-// * item[=].item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].item[=].type = #coding
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
-
-* item[=].item[+].linkId = "health-assessment.partial-work-capacity-loss"
-* item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #partial-work-capacity-loss
-// * item[=].item[=].code.display = "Osaline töövõime"
-// * item[=].item[=].text = "Osaline töövõime"
-* item[=].item[=].type = #group
-* item[=].item[=].required = true
-
-* item[=].item[=].item[0].linkId = "health-assessment.partial-work-capacity-loss.partial-work-capacity-loss-abroad"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #partial-work-capacity-loss-abroad
-// * item[=].item[=].item[=].code.display = "Kas Teile on välisriigis määratud töövõime osaline kaotus?"
-// * item[=].item[=].item[=].text = "Kas Teile on välisriigis määratud töövõime osaline kaotus?"
-* item[=].item[=].item[=].type = #boolean
-* item[=].item[=].item[=].required = true
-
-* item[=].item[=].item[=].item[0].linkId = "health-assessment.partial-work-capacity-loss.partial-work-capacity-loss-abroad.specification"
-* item[=].item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].item[=].code.code = #specification
-// * item[=].item[=].item[=].item[=].code.display = "Täpsusta"
-// * item[=].item[=].item[=].item[=].text = "Täpsusta"
-* item[=].item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].enableWhen.question = "health-assessment.partial-work-capacity-loss.partial-work-capacity-loss-abroad"
-* item[=].item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
-
-* item[=].item[=].item[+].linkId = "health-assessment.partial-work-capacity-loss.partial-work-disability"
+// * item[=].item[=].item[0].linkId = "health-assessment.patient-health-assessment.specification"
 // * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #partial-work-disability
-// * item[=].item[=].item[=].code.display = "Osaline töövõimetus (andmed Sotsiaalkindlustusametist)"
-// * item[=].item[=].item[=].text = "Osaline töövõimetus (andmed Sotsiaalkindlustusametist)"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
-* item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[=].code.code = #specification
+// // * item[=].item[=].item[=].code.display = "Täpsustus"
+// // * item[=].item[=].item[=].text = "Täpsutus"
+// * item[=].item[=].item[=].type = #text
+// * item[=].item[=].item[=].required = false
 
-* item[=].item[=].item[=].item[0].linkId = "health-assessment.partial-work-capacity-loss.partial-work-disability.from"
+// * item[=].item[+].linkId = "health-assessment.illness-past-year"
+// * item[=].item[=].code.system = $HDQ
+// * item[=].item[=].code.code = #illness-past-year
+// // * item[=].item[=].code.display = "Kas olete viimase aasta jooksul olnud haige?"
+// // * item[=].item[=].text = "Kas olete viimase aasta jooksul olnud haige?"
+// * item[=].item[=].type = #boolean
+// * item[=].item[=].required = true
+
+// * item[=].item[=].item[0].linkId = "health-assessment.illness-past-year.specification"
+// * item[=].item[=].item[=].code.system = $HDQ
+// * item[=].item[=].item[=].code.code = #specification
+// // * item[=].item[=].item[=].code.display = "Täpsustus"
+// // * item[=].item[=].item[=].text = "Täpsutus"
+// * item[=].item[=].item[=].type = #text
+// * item[=].item[=].item[=].enableWhen.question = "health-assessment.illness-past-year"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = true
+
+// * item[=].item[+].linkId = "health-assessment.complaints"
+// * item[=].item[=].code.system = $HDQ
+// * item[=].item[=].code.code = #complaints
+// // * item[=].item[=].code.display = "Kas Teil on enda tervise osas kaebusi?"
+// // * item[=].item[=].text = "Kas Teil on enda tervise osas kaebusi?"
+// * item[=].item[=].type = #boolean
+// * item[=].item[=].required = true
+
+// * item[=].item[=].item[0].linkId = "health-assessment.complaints.specification"
+// * item[=].item[=].item[=].code.system = $HDQ
+// * item[=].item[=].item[=].code.code = #specification
+// // * item[=].item[=].item[=].code.display = "Täpsustus"
+// // * item[=].item[=].item[=].text = "Täpsutus"
+// * item[=].item[=].item[=].type = #text
+// * item[=].item[=].item[=].enableWhen.question = "health-assessment.complaints"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = true
+
+// * item[=].item[+].linkId = "health-assessment.sick-leave-certs"
+// * item[=].item[=].code.system = $HDQ
+// * item[=].item[=].code.code = #sick-leave-certs
+// // * item[=].item[=].code.display = "Haiguslehed"
+// // * item[=].item[=].text = "Haiguslehed"
+// * item[=].item[=].type = #group
+// * item[=].item[=].required = true
+
+// * item[=].item[=].item[0].linkId = "health-assessment.sick-leave-certs.foreign-sick-leave-cert-length"
+// * item[=].item[=].item[=].code.system = $HDQ
+// * item[=].item[=].item[=].code.code = #foreign-sick-leave-cert-length
+// // * item[=].item[=].item[=].code.display = "Viimase 5 aasta jooksul välisriigis väljastatud haiguslehtede alguse kuupäev ja kestvus päevades"
+// // * item[=].item[=].item[=].text = "Viimase 5 aasta jooksul välisriigis väljastatud haiguslehtede alguse kuupäev ja kestvus päevades"
+// * item[=].item[=].item[=].type = #text
+// * item[=].item[=].item[=].required = false
+
+// * item[=].item[=].item[+].linkId = "health-assessment.sick-leave-certs.sick-leave-cert"
+// * item[=].item[=].item[=].code.system = $HDQ
+// * item[=].item[=].item[=].code.code = #sick-leave
+// // * item[=].item[=].item[=].code.display = "Haigusleht"
+// // * item[=].item[=].item[=].text = "Haigusleht"
+// * item[=].item[=].item[=].type = #group
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
+// * item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[=].item[0].linkId = "health-assessment.sick-leave-certs.sick-leave-cert.from"
+// // * item[=].item[=].item[=].item[=].text = "Alates"
+// * item[=].item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[=].item[+].linkId = "health-assessment.sick-leave-certs.sick-leave-cert.duration"
+// // * item[=].item[=].item[=].item[=].text = "Kestus päevades"
+// * item[=].item[=].item[=].item[=].type = #integer
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[=].item[+].linkId = "health-assessment.sick-leave-certs.sick-leave-cert.diagnosis"
+// // * item[=].item[=].item[=].item[=].text = "Diagnoos"
+// * item[=].item[=].item[=].item[=].type = #coding
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[+].linkId = "health-assessment.partial-work-capacity-loss"
+// * item[=].item[=].code.system = $HDQ
+// * item[=].item[=].code.code = #partial-work-capacity-loss
+// // * item[=].item[=].code.display = "Osaline töövõime"
+// // * item[=].item[=].text = "Osaline töövõime"
+// * item[=].item[=].type = #group
+// * item[=].item[=].required = true
+
+// * item[=].item[=].item[0].linkId = "health-assessment.partial-work-capacity-loss.partial-work-capacity-loss-abroad"
+// * item[=].item[=].item[=].code.system = $HDQ
+// * item[=].item[=].item[=].code.code = #partial-work-capacity-loss-abroad
+// // * item[=].item[=].item[=].code.display = "Kas Teile on välisriigis määratud töövõime osaline kaotus?"
+// // * item[=].item[=].item[=].text = "Kas Teile on välisriigis määratud töövõime osaline kaotus?"
+// * item[=].item[=].item[=].type = #boolean
+// * item[=].item[=].item[=].required = true
+
+// * item[=].item[=].item[=].item[0].linkId = "health-assessment.partial-work-capacity-loss.partial-work-capacity-loss-abroad.specification"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #from
-// * item[=].item[=].item[=].item[=].code.display = "Alates"
-// * item[=].item[=].item[=].item[=].text = "Alates"
-* item[=].item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[=].item[=].code.code = #specification
+// // * item[=].item[=].item[=].item[=].code.display = "Täpsusta"
+// // * item[=].item[=].item[=].item[=].text = "Täpsusta"
+// * item[=].item[=].item[=].item[=].type = #text
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].enableWhen.question = "health-assessment.partial-work-capacity-loss.partial-work-capacity-loss-abroad"
+// * item[=].item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
 
-* item[=].item[=].item[=].item[+].linkId = "health-assessment.partial-work-capacity-loss.partial-work-disability.to"
+// * item[=].item[=].item[+].linkId = "health-assessment.partial-work-capacity-loss.partial-work-disability"
+// // * item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].code.code = #partial-work-disability
+// // * item[=].item[=].item[=].code.display = "Osaline töövõimetus (andmed Sotsiaalkindlustusametist)"
+// // * item[=].item[=].item[=].text = "Osaline töövõimetus (andmed Sotsiaalkindlustusametist)"
+// * item[=].item[=].item[=].type = #group
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
+// * item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[=].item[0].linkId = "health-assessment.partial-work-capacity-loss.partial-work-disability.from"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #from
+// // * item[=].item[=].item[=].item[=].code.display = "Alates"
+// // * item[=].item[=].item[=].item[=].text = "Alates"
+// * item[=].item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[=].item[+].linkId = "health-assessment.partial-work-capacity-loss.partial-work-disability.to"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #to
+// // * item[=].item[=].item[=].item[=].code.display = "kuni"
+// // * item[=].item[=].item[=].item[=].text = "kuni"
+// * item[=].item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[=].item[+].linkId = "health-assessment.partial-work-capacity-loss.partial-work-disability.work-capacity-type"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #to
-// * item[=].item[=].item[=].item[=].code.display = "kuni"
-// * item[=].item[=].item[=].item[=].text = "kuni"
-* item[=].item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[=].item[=].code.code = #work-capacity-type
+// // * item[=].item[=].item[=].item[=].code.display = "Töövõimeliik"
+// // * item[=].item[=].item[=].item[=].text = "Töövõimeliik"
+// * item[=].item[=].item[=].item[=].type = #coding
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/toovoime-liik"
 
-* item[=].item[=].item[=].item[+].linkId = "health-assessment.partial-work-capacity-loss.partial-work-disability.work-capacity-type"
-* item[=].item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].item[=].code.code = #work-capacity-type
-// * item[=].item[=].item[=].item[=].code.display = "Töövõimeliik"
-// * item[=].item[=].item[=].item[=].text = "Töövõimeliik"
-* item[=].item[=].item[=].item[=].type = #coding
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
-* item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/toovoime-liik"
+// * item[=].item[+].linkId = "health-assessment.disability"
+// * item[=].item[=].code.system = $HDQ
+// * item[=].item[=].code.code = #disability
+// // * item[=].item[=].code.display = "Puue"
+// // * item[=].item[=].text = "Puue"
+// * item[=].item[=].type = #group
+// * item[=].item[=].required = true
 
-* item[=].item[+].linkId = "health-assessment.disability"
-* item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #disability
-// * item[=].item[=].code.display = "Puue"
-// * item[=].item[=].text = "Puue"
-* item[=].item[=].type = #group
-* item[=].item[=].required = true
+// * item[=].item[=].item[0].linkId = "health-assessment.disability.disability-abroad"
+// * item[=].item[=].item[=].code.system = $HDQ
+// * item[=].item[=].item[=].code.code = #disability-abroad
+// // * item[=].item[=].item[=].code.display = "Kas Teil on välisriigis tuvastatud puue?"
+// // * item[=].item[=].item[=].text = "Kas Teil on välisriigis tuvastatud puue?"
+// * item[=].item[=].item[=].type = #boolean
+// * item[=].item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "health-assessment.disability.disability-abroad"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #disability-abroad
-// * item[=].item[=].item[=].code.display = "Kas Teil on välisriigis tuvastatud puue?"
-// * item[=].item[=].item[=].text = "Kas Teil on välisriigis tuvastatud puue?"
-* item[=].item[=].item[=].type = #boolean
-* item[=].item[=].item[=].required = true
-
-* item[=].item[=].item[=].item[0].linkId = "health-assessment.disability.disability-abroad.disability-severity"
-* item[=].item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].item[=].code.code = #disability-severity
-// * item[=].item[=].item[=].item[=].code.display = "Puude raskusaste"
-// * item[=].item[=].item[=].item[=].text = "Puude raskusaste"
-* item[=].item[=].item[=].item[=].type = #string
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].enableWhen.question = "health-assessment.disability.disability-abroad"
-* item[=].item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
-
-* item[=].item[=].item[+].linkId = "health-assessment.disability.disability-data"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #disability-data
-// * item[=].item[=].item[=].code.display = "Puue (andmed Sotsiaalkindlustusametist)"
-// * item[=].item[=].item[=].text = "Puue (andmed Sotsiaalkindlustusametist)"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
-* item[=].item[=].item[=].readOnly = true
-
-* item[=].item[=].item[=].item[0].linkId = "health-assessment.disability.disability-data.from"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #from
-// * item[=].item[=].item[=].item[=].code.display = "Alates"
-// * item[=].item[=].item[=].item[=].text = "Alates"
-* item[=].item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].item[=].readOnly = true
-
-* item[=].item[=].item[=].item[+].linkId = "health-assessment.disability.disability-data.to"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #to
-// * item[=].item[=].item[=].item[=].code.display = "kuni"
-// * item[=].item[=].item[=].item[=].text = "kuni"
-* item[=].item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].item[=].readOnly = true
-
-* item[=].item[=].item[=].item[+].linkId = "health-assessment.disability.disability-data.disability-severity"
+// * item[=].item[=].item[=].item[0].linkId = "health-assessment.disability.disability-abroad.disability-severity"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].item[=].code.code = #disability-severity
-// * item[=].item[=].item[=].item[=].code.display = "Puude raskusaste"
-// * item[=].item[=].item[=].item[=].text = "Puude raskusaste"
-* item[=].item[=].item[=].item[=].type = #coding
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
-* item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/puude-raskusaste"
+// // * item[=].item[=].item[=].item[=].code.display = "Puude raskusaste"
+// // * item[=].item[=].item[=].item[=].text = "Puude raskusaste"
+// * item[=].item[=].item[=].item[=].type = #string
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].enableWhen.question = "health-assessment.disability.disability-abroad"
+// * item[=].item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
 
-* item[+].linkId = "immunization"
-* item[=].prefix = "24"
-* item[=].code.system = $HDQ
-* item[=].code.code = #immunization
-// * item[=].code.display = "Immuniseerimine"
-// * item[=].text = "Immuniseerimine"
-* item[=].type = #group
-* item[=].enableWhen.question = "category"
-* item[=].enableWhen.operator = #=
-* item[=].enableWhen.answerCoding = #occupational
-* item[=].required = true
-
-* item[=].item[0].linkId = "immunization.b-hepatitis"
-* item[=].item[=].code.system = $VVH
-* item[=].item[=].code.code = #101
-* item[=].item[=].type = #group
-* item[=].item[=].required = true
-// * item[=].item[=].text = "B-viirushepatiit"
-
-* item[=].item[=].item[0].linkId = "immunization.b-hepatitis.vac-done"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #heptatitis-B-vac
-// * item[=].item[=].item[=].code.display = "Kas Teile on tehtud B-viirushepatiidi vaktsiin?"
-// * item[=].item[=].item[=].text = "Kas Teile on tehtud B-viirushepatiidi vaktsiin?"
-* item[=].item[=].item[=].type = #boolean
-* item[=].item[=].item[=].required = true
-
-* item[=].item[=].item[+].linkId = "immunization.b-hepatitis.immunization-his-data"
+// * item[=].item[=].item[+].linkId = "health-assessment.disability.disability-data"
 // * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #immunization
-// * item[=].item[=].item[=].code.display = "Immuniseerimine"
-// * item[=].item[=].item[=].text = "Immuniseerimine"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.b-hepatitis.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
-* item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[=].code.code = #disability-data
+// // * item[=].item[=].item[=].code.display = "Puue (andmed Sotsiaalkindlustusametist)"
+// // * item[=].item[=].item[=].text = "Puue (andmed Sotsiaalkindlustusametist)"
+// * item[=].item[=].item[=].type = #group
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
+// * item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[0].linkId = "immunization.b-hepatitis.immunization-his-data.date"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[=].item[0].linkId = "health-assessment.disability.disability-data.from"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #from
+// // * item[=].item[=].item[=].item[=].code.display = "Alates"
+// // * item[=].item[=].item[=].item[=].text = "Alates"
+// * item[=].item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "immunization.b-hepatitis.immunization-his-data.source-reference"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #source-reference
-// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
-// * item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].type = #reference
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[=].item[+].linkId = "health-assessment.disability.disability-data.to"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #to
+// // * item[=].item[=].item[=].item[=].code.display = "kuni"
+// // * item[=].item[=].item[=].item[=].text = "kuni"
+// * item[=].item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[+].linkId = "immunization.b-hepatitis.date"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.b-hepatitis.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
+// * item[=].item[=].item[=].item[+].linkId = "health-assessment.disability.disability-data.disability-severity"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #disability-severity
+// // * item[=].item[=].item[=].item[=].code.display = "Puude raskusaste"
+// // * item[=].item[=].item[=].item[=].text = "Puude raskusaste"
+// * item[=].item[=].item[=].item[=].type = #coding
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/puude-raskusaste"
 
-* item[=].item[+].linkId = "immunization.tuberculosis"
-* item[=].item[=].code.system = $VVH
-* item[=].item[=].code.code = #110
-// * item[=].item[=].text = "Tuberkuloos"
-* item[=].item[=].type = #group
-* item[=].item[=].required = true
+// * item[+].linkId = "immunization"
+// * item[=].prefix = "24"
+// * item[=].code.system = $HDQ
+// * item[=].code.code = #immunization
+// // * item[=].code.display = "Immuniseerimine"
+// // * item[=].text = "Immuniseerimine"
+// * item[=].type = #group
+// * item[=].enableWhen.question = "category"
+// * item[=].enableWhen.operator = #=
+// * item[=].enableWhen.answerCoding = #occupational
+// * item[=].required = true
 
-* item[=].item[=].item[0].linkId = "immunization.tuberculosis.vac-done"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #tuberculosis-vac
-// * item[=].item[=].item[=].code.display = "Kas Teile on tehtud tuberkuloosi vaktsiin?"
-// * item[=].item[=].item[=].text = "Kas Teile on tehtud tuberkuloosi vaktsiin?"
-* item[=].item[=].item[=].type = #boolean
-* item[=].item[=].item[=].required = true
+// * item[=].item[0].linkId = "immunization.b-hepatitis"
+// * item[=].item[=].code.system = $VVH
+// * item[=].item[=].code.code = #101
+// * item[=].item[=].type = #group
+// * item[=].item[=].required = true
+// // * item[=].item[=].text = "B-viirushepatiit"
 
-* item[=].item[=].item[+].linkId = "immunization.tuberculosis.immunization-his-data"
+// * item[=].item[=].item[0].linkId = "immunization.b-hepatitis.vac-done"
 // * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #immunization
-// * item[=].item[=].item[=].code.display = "Immuniseerimine"
-// * item[=].item[=].item[=].text = "Immuniseerimine"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.tuberculosis.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
-* item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[=].code.code = #heptatitis-B-vac
+// // * item[=].item[=].item[=].code.display = "Kas Teile on tehtud B-viirushepatiidi vaktsiin?"
+// // * item[=].item[=].item[=].text = "Kas Teile on tehtud B-viirushepatiidi vaktsiin?"
+// * item[=].item[=].item[=].type = #boolean
+// * item[=].item[=].item[=].required = true
 
-* item[=].item[=].item[=].item[0].linkId = "immunization.tuberculosis.immunization-his-data.date"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[+].linkId = "immunization.b-hepatitis.immunization-his-data"
+// // * item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].code.code = #immunization
+// // * item[=].item[=].item[=].code.display = "Immuniseerimine"
+// // * item[=].item[=].item[=].text = "Immuniseerimine"
+// * item[=].item[=].item[=].type = #group
+// * item[=].item[=].item[=].enableWhen.question = "immunization.b-hepatitis.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
+// * item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "immunization.tuberculosis.immunization-his-data.source-reference"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #source-reference
-// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
-// * item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].type = #reference
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[=].item[0].linkId = "immunization.b-hepatitis.immunization-his-data.date"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[+].linkId = "immunization.tuberculosis.date"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.tuberculosis.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
+// * item[=].item[=].item[=].item[+].linkId = "immunization.b-hepatitis.immunization-his-data.source-reference"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #source-reference
+// // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// // * item[=].item[=].item[=].item[=].text = "Allika viide"
+// * item[=].item[=].item[=].item[=].type = #reference
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[+].linkId = "immunization.rotavirus"
-* item[=].item[=].code.system = $VVH
-* item[=].item[=].code.code = #111
-// * item[=].item[=].text = "Rotaviirus"
-* item[=].item[=].type = #group
-* item[=].item[=].required = true
-
-* item[=].item[=].item[0].linkId = "immunization.rotavirus.vac-done"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #rotavirus-vac
-// * item[=].item[=].item[=].code.display = "Kas Teile on tehtud rotaviirusnakkuse vaktsiin?"
-// * item[=].item[=].item[=].text = "Kas Teile on tehtud rotaviirusnakkuse vaktsiin?"
-* item[=].item[=].item[=].type = #boolean
-* item[=].item[=].item[=].required = true
-
-* item[=].item[=].item[+].linkId = "immunization.rotavirus.immunization-his-data"
+// * item[=].item[=].item[+].linkId = "immunization.b-hepatitis.date"
 // * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #immunization
-// * item[=].item[=].item[=].code.display = "Immuniseerimine"
-// * item[=].item[=].item[=].text = "Immuniseerimine"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.rotavirus.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
-* item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].enableWhen.question = "immunization.b-hepatitis.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "immunization.rotavirus.immunization-his-data.date"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+// * item[=].item[+].linkId = "immunization.tuberculosis"
+// * item[=].item[=].code.system = $VVH
+// * item[=].item[=].code.code = #110
+// // * item[=].item[=].text = "Tuberkuloos"
+// * item[=].item[=].type = #group
+// * item[=].item[=].required = true
 
-* item[=].item[=].item[=].item[+].linkId = "immunization.rotavirus.immunization-his-data.source-reference"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #source-reference
-// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
-// * item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].type = #reference
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
-
-* item[=].item[=].item[+].linkId = "immunization.rotavirus.date"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.rotavirus.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
-
-* item[=].item[+].linkId = "immunization.diphteria"
-* item[=].item[=].code.system = $VVH
-* item[=].item[=].code.code = #102
-// * item[=].item[=].text = "Difteeria"
-* item[=].item[=].type = #group
-* item[=].item[=].required = true
-
-* item[=].item[=].item[0].linkId = "immunization.diphteria.vac-done"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #diphtheria-vac
-// * item[=].item[=].item[=].code.display = "Kas Teile on tehtud difteeria vaktsiin?"
-// * item[=].item[=].item[=].text = "Kas Teile on tehtud difteeria vaktsiin?"
-* item[=].item[=].item[=].type = #boolean
-* item[=].item[=].item[=].required = true
-
-* item[=].item[=].item[+].linkId = "immunization.diphteria.immunization-his-data"
+// * item[=].item[=].item[0].linkId = "immunization.tuberculosis.vac-done"
 // * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #immunization
-// * item[=].item[=].item[=].code.display = "Immuniseerimine"
-// * item[=].item[=].item[=].text = "Immuniseerimine"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.diphteria.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
-* item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[=].code.code = #tuberculosis-vac
+// // * item[=].item[=].item[=].code.display = "Kas Teile on tehtud tuberkuloosi vaktsiin?"
+// // * item[=].item[=].item[=].text = "Kas Teile on tehtud tuberkuloosi vaktsiin?"
+// * item[=].item[=].item[=].type = #boolean
+// * item[=].item[=].item[=].required = true
 
-* item[=].item[=].item[=].item[0].linkId = "immunization.diphteria.immunization-his-data.date"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[+].linkId = "immunization.tuberculosis.immunization-his-data"
+// // * item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].code.code = #immunization
+// // * item[=].item[=].item[=].code.display = "Immuniseerimine"
+// // * item[=].item[=].item[=].text = "Immuniseerimine"
+// * item[=].item[=].item[=].type = #group
+// * item[=].item[=].item[=].enableWhen.question = "immunization.tuberculosis.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
+// * item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "immunization.diphteria.immunization-his-data.source-reference"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #source-reference
-// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
-// * item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].type = #reference
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[=].item[0].linkId = "immunization.tuberculosis.immunization-his-data.date"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[+].linkId = "immunization.diphteria.date"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.diphteria.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
+// * item[=].item[=].item[=].item[+].linkId = "immunization.tuberculosis.immunization-his-data.source-reference"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #source-reference
+// // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// // * item[=].item[=].item[=].item[=].text = "Allika viide"
+// * item[=].item[=].item[=].item[=].type = #reference
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[+].linkId = "immunization.tetanus"
-* item[=].item[=].code.system = $VVH
-* item[=].item[=].code.code = #109
-// * item[=].item[=].text = "Teetanus"
-* item[=].item[=].type = #group
-* item[=].item[=].required = true
-
-* item[=].item[=].item[0].linkId = "immunization.tetanus.vac-done"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #tetanus-vac
-// * item[=].item[=].item[=].code.display = "Kas Teile on tehtud teetanuse vaktsiin?"
-// * item[=].item[=].item[=].text = "Kas Teile on tehtud teetanuse vaktsiin?"
-* item[=].item[=].item[=].type = #boolean
-* item[=].item[=].item[=].required = true
-
-* item[=].item[=].item[+].linkId = "immunization.tetanus.immunization-his-data"
+// * item[=].item[=].item[+].linkId = "immunization.tuberculosis.date"
 // * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #immunization
-// * item[=].item[=].item[=].code.display = "Immuniseerimine"
-// * item[=].item[=].item[=].text = "Immuniseerimine"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.tetanus.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
-* item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].enableWhen.question = "immunization.tuberculosis.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "immunization.tetanus.immunization-his-data.date"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+// * item[=].item[+].linkId = "immunization.rotavirus"
+// * item[=].item[=].code.system = $VVH
+// * item[=].item[=].code.code = #111
+// // * item[=].item[=].text = "Rotaviirus"
+// * item[=].item[=].type = #group
+// * item[=].item[=].required = true
 
-* item[=].item[=].item[=].item[+].linkId = "immunization.tetanus.immunization-his-data.source-reference"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #source-reference
-// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
-// * item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].type = #reference
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
-
-* item[=].item[=].item[+].linkId = "immunization.tetanus.date"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.tetanus.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
-
-* item[=].item[+].linkId = "immunization.pertussis"
-* item[=].item[=].code.system = $VVH
-* item[=].item[=].code.code = #105
-// * item[=].item[=].text = "Läkaköha"
-* item[=].item[=].type = #group
-* item[=].item[=].required = true
-
-* item[=].item[=].item[0].linkId = "immunization.pertussis.vac-done"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #pertussis-vac
-// * item[=].item[=].item[=].code.display = "Kas Teile on tehtud atsellulaarse läkaköha vaktsiin?"
-// * item[=].item[=].item[=].text = "Kas Teile on tehtud atsellulaarse läkaköha vaktsiin?"
-* item[=].item[=].item[=].type = #boolean
-* item[=].item[=].item[=].required = true
-
-* item[=].item[=].item[+].linkId = "immunization.pertussis.immunization-his-data"
+// * item[=].item[=].item[0].linkId = "immunization.rotavirus.vac-done"
 // * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #immunization
-// * item[=].item[=].item[=].code.display = "Immuniseerimine"
-// * item[=].item[=].item[=].text = "Immuniseerimine"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.pertussis.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
-* item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[=].code.code = #rotavirus-vac
+// // * item[=].item[=].item[=].code.display = "Kas Teile on tehtud rotaviirusnakkuse vaktsiin?"
+// // * item[=].item[=].item[=].text = "Kas Teile on tehtud rotaviirusnakkuse vaktsiin?"
+// * item[=].item[=].item[=].type = #boolean
+// * item[=].item[=].item[=].required = true
 
-* item[=].item[=].item[=].item[0].linkId = "immunization.pertussis.immunization-his-data.date"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[+].linkId = "immunization.rotavirus.immunization-his-data"
+// // * item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].code.code = #immunization
+// // * item[=].item[=].item[=].code.display = "Immuniseerimine"
+// // * item[=].item[=].item[=].text = "Immuniseerimine"
+// * item[=].item[=].item[=].type = #group
+// * item[=].item[=].item[=].enableWhen.question = "immunization.rotavirus.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
+// * item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "immunization.pertussis.immunization-his-data.source-reference"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #source-reference
-// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
-// * item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].type = #reference
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[=].item[0].linkId = "immunization.rotavirus.immunization-his-data.date"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[+].linkId = "immunization.pertussis.date"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.pertussis.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
+// * item[=].item[=].item[=].item[+].linkId = "immunization.rotavirus.immunization-his-data.source-reference"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #source-reference
+// // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// // * item[=].item[=].item[=].item[=].text = "Allika viide"
+// * item[=].item[=].item[=].item[=].type = #reference
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[+].linkId = "immunization.polio"
-* item[=].item[=].code.system = $VVH
-* item[=].item[=].code.code = #107
-// * item[=].item[=].text = "Poliomüeliit"
-* item[=].item[=].type = #group
-* item[=].item[=].required = true
-
-* item[=].item[=].item[0].linkId = "immunization.polio.vac-done"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #poliovirus-vac
-// * item[=].item[=].item[=].code.display = "Kas Teile on tehtud inaktiveeritud poliomüeliidi vaktsiin?"
-// * item[=].item[=].item[=].text = "Kas Teile on tehtud inaktiveeritud poliomüeliidi vaktsiin?"
-* item[=].item[=].item[=].type = #boolean
-* item[=].item[=].item[=].required = true
-
-* item[=].item[=].item[+].linkId = "immunization.polio.immunization-his-data"
+// * item[=].item[=].item[+].linkId = "immunization.rotavirus.date"
 // * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #immunization
-// * item[=].item[=].item[=].code.display = "Immuniseerimine"
-// * item[=].item[=].item[=].text = "Immuniseerimine"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.polio.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
-* item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].enableWhen.question = "immunization.rotavirus.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "immunization.polio.immunization-his-data.date"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+// * item[=].item[+].linkId = "immunization.diphteria"
+// * item[=].item[=].code.system = $VVH
+// * item[=].item[=].code.code = #102
+// // * item[=].item[=].text = "Difteeria"
+// * item[=].item[=].type = #group
+// * item[=].item[=].required = true
 
-* item[=].item[=].item[=].item[+].linkId = "immunization.polio.immunization-his-data.source-reference"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #source-reference
-// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
-// * item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].type = #reference
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
-
-* item[=].item[=].item[+].linkId = "immunization.polio.date"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.polio.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
-
-* item[=].item[+].linkId = "immunization.hemo-influenza"
-* item[=].item[=].code.system = $VVH
-* item[=].item[=].code.code = #103
-// * item[=].item[=].text = "Influensa"
-* item[=].item[=].type = #group
-* item[=].item[=].required = true
-
-* item[=].item[=].item[0].linkId = "immunization.hemo-influenza.vac-done"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #haemophilus-influenza-vac
-// * item[=].item[=].item[=].code.display = "Kas Teile on tehtud Haemophilus influenzae tüüp b nakkuse vaktsiin?"
-// * item[=].item[=].item[=].text = "Kas Teile on tehtud Haemophilus influenzae tüüp b nakkuse vaktsiin?"
-* item[=].item[=].item[=].type = #boolean
-* item[=].item[=].item[=].required = true
-
-* item[=].item[=].item[+].linkId = "immunization.hemo-influenza.immunization-his-data"
+// * item[=].item[=].item[0].linkId = "immunization.diphteria.vac-done"
 // * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #immunization
-// * item[=].item[=].item[=].code.display = "Immuniseerimine"
-// * item[=].item[=].item[=].text = "Immuniseerimine"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.hemo-influenza.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
-* item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[=].code.code = #diphtheria-vac
+// // * item[=].item[=].item[=].code.display = "Kas Teile on tehtud difteeria vaktsiin?"
+// // * item[=].item[=].item[=].text = "Kas Teile on tehtud difteeria vaktsiin?"
+// * item[=].item[=].item[=].type = #boolean
+// * item[=].item[=].item[=].required = true
 
-* item[=].item[=].item[=].item[0].linkId = "immunization.hemo-influenza.immunization-his-data.date"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[+].linkId = "immunization.diphteria.immunization-his-data"
+// // * item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].code.code = #immunization
+// // * item[=].item[=].item[=].code.display = "Immuniseerimine"
+// // * item[=].item[=].item[=].text = "Immuniseerimine"
+// * item[=].item[=].item[=].type = #group
+// * item[=].item[=].item[=].enableWhen.question = "immunization.diphteria.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
+// * item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "immunization.hemo-influenza.immunization-his-data.source-reference"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #source-reference
-// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
-// * item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].type = #reference
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[=].item[0].linkId = "immunization.diphteria.immunization-his-data.date"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[+].linkId = "immunization.hemo-influenza.date"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.hemo-influenza.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
+// * item[=].item[=].item[=].item[+].linkId = "immunization.diphteria.immunization-his-data.source-reference"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #source-reference
+// // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// // * item[=].item[=].item[=].item[=].text = "Allika viide"
+// * item[=].item[=].item[=].item[=].type = #reference
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[+].linkId = "immunization.measles"
-* item[=].item[=].code.system = $VVH
-* item[=].item[=].code.code = #104
-// * item[=].item[=].text = "Leetrid"
-* item[=].item[=].type = #group
-* item[=].item[=].required = true
-
-* item[=].item[=].item[0].linkId = "immunization.measles.vac-done"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #measles-vac
-// * item[=].item[=].item[=].code.display = "Kas Teile on tehtud leetrite vaktsiin?"
-// * item[=].item[=].item[=].text = "Kas Teile on tehtud leetrite vaktsiin?"
-* item[=].item[=].item[=].type = #boolean
-* item[=].item[=].item[=].required = true
-
-* item[=].item[=].item[+].linkId = "immunization.measles.immunization-his-data"
+// * item[=].item[=].item[+].linkId = "immunization.diphteria.date"
 // * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #immunization
-// * item[=].item[=].item[=].code.display = "Immuniseerimine"
-// * item[=].item[=].item[=].text = "Immuniseerimine"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.measles.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
-* item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].enableWhen.question = "immunization.diphteria.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "immunization.measles.immunization-his-data.date"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+// * item[=].item[+].linkId = "immunization.tetanus"
+// * item[=].item[=].code.system = $VVH
+// * item[=].item[=].code.code = #109
+// // * item[=].item[=].text = "Teetanus"
+// * item[=].item[=].type = #group
+// * item[=].item[=].required = true
 
-* item[=].item[=].item[=].item[+].linkId = "immunization.measles.immunization-his-data.source-reference"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #source-reference
-// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
-// * item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].type = #reference
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
-
-* item[=].item[=].item[+].linkId = "immunization.measles.date"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.measles.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
-
-* item[=].item[+].linkId = "immunization.mumps"
-* item[=].item[=].code.system = $VVH
-* item[=].item[=].code.code = #106
-// * item[=].item[=].text = "Mumps"
-* item[=].item[=].type = #group
-* item[=].item[=].required = true
-
-* item[=].item[=].item[0].linkId = "immunization.mumps.vac-done"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #mumps-vac
-// * item[=].item[=].item[=].code.display = "Kas Teile on tehtud mumpsi vaktsiin?"
-// * item[=].item[=].item[=].text = "Kas Teile on tehtud mumpsi vaktsiin?"
-* item[=].item[=].item[=].type = #boolean
-* item[=].item[=].item[=].required = true
-
-* item[=].item[=].item[+].linkId = "immunization.mumps.immunization-his-data"
+// * item[=].item[=].item[0].linkId = "immunization.tetanus.vac-done"
 // * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #immunization
-// * item[=].item[=].item[=].code.display = "Immuniseerimine"
-// * item[=].item[=].item[=].text = "Immuniseerimine"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.mumps.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
-* item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[=].code.code = #tetanus-vac
+// // * item[=].item[=].item[=].code.display = "Kas Teile on tehtud teetanuse vaktsiin?"
+// // * item[=].item[=].item[=].text = "Kas Teile on tehtud teetanuse vaktsiin?"
+// * item[=].item[=].item[=].type = #boolean
+// * item[=].item[=].item[=].required = true
 
-* item[=].item[=].item[=].item[0].linkId = "immunization.mumps.immunization-his-data.date"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[+].linkId = "immunization.tetanus.immunization-his-data"
+// // * item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].code.code = #immunization
+// // * item[=].item[=].item[=].code.display = "Immuniseerimine"
+// // * item[=].item[=].item[=].text = "Immuniseerimine"
+// * item[=].item[=].item[=].type = #group
+// * item[=].item[=].item[=].enableWhen.question = "immunization.tetanus.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
+// * item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "immunization.mumps.immunization-his-data.source-reference"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #source-reference
-// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
-// * item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].type = #reference
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[=].item[0].linkId = "immunization.tetanus.immunization-his-data.date"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[+].linkId = "immunization.mumps.date"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.mumps.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
+// * item[=].item[=].item[=].item[+].linkId = "immunization.tetanus.immunization-his-data.source-reference"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #source-reference
+// // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// // * item[=].item[=].item[=].item[=].text = "Allika viide"
+// * item[=].item[=].item[=].item[=].type = #reference
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[+].linkId = "immunization.rubella"
-* item[=].item[=].code.system = $VVH
-* item[=].item[=].code.code = #108
-// * item[=].item[=].text = "Punetised"
-* item[=].item[=].type = #group
-* item[=].item[=].required = true
-
-* item[=].item[=].item[0].linkId = "immunization.rubella.vac-done"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #rubella-vac
-// * item[=].item[=].item[=].code.display = "Kas Teile on tehtud punetiste vaktsiin?"
-// * item[=].item[=].item[=].text = "Kas Teile on tehtud punetiste vaktsiin?"
-* item[=].item[=].item[=].type = #boolean
-* item[=].item[=].item[=].required = true
-
-* item[=].item[=].item[+].linkId = "immunization.rubella.immunization-his-data"
+// * item[=].item[=].item[+].linkId = "immunization.tetanus.date"
 // * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #immunization
-// * item[=].item[=].item[=].code.display = "Immuniseerimine"
-// * item[=].item[=].item[=].text = "Immuniseerimine"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.rubella.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
-* item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].enableWhen.question = "immunization.tetanus.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "immunization.rubella.immunization-his-data.date"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+// * item[=].item[+].linkId = "immunization.pertussis"
+// * item[=].item[=].code.system = $VVH
+// * item[=].item[=].code.code = #105
+// // * item[=].item[=].text = "Läkaköha"
+// * item[=].item[=].type = #group
+// * item[=].item[=].required = true
 
-* item[=].item[=].item[=].item[+].linkId = "immunization.rubella.immunization-his-data.source-reference"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #source-reference
-// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
-// * item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].type = #reference
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
-
-* item[=].item[=].item[+].linkId = "immunization.rubella.date"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.rubella.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
-
-* item[=].item[+].linkId = "immunization.hpv"
-* item[=].item[=].code.system = $VVH
-* item[=].item[=].code.code = #203
-// * item[=].item[=].text = "HPV"
-* item[=].item[=].type = #group
-* item[=].item[=].required = true
-
-* item[=].item[=].item[0].linkId = "immunization.hpv.vac-done"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #hpv-vac
-// * item[=].item[=].item[=].code.display = "Kas Teile on tehtud papilloomiviirusnakkuse vaktsiin?"
-// * item[=].item[=].item[=].text = "Kas Teile on tehtud papilloomiviirusnakkuse vaktsiin?"
-* item[=].item[=].item[=].type = #boolean
-* item[=].item[=].item[=].required = true
-
-* item[=].item[=].item[+].linkId = "immunization.hpv.immunization-his-data"
+// * item[=].item[=].item[0].linkId = "immunization.pertussis.vac-done"
 // * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #immunization
-// * item[=].item[=].item[=].code.display = "Immuniseerimine"
-// * item[=].item[=].item[=].text = "Immuniseerimine"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.hpv.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
-* item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[=].code.code = #pertussis-vac
+// // * item[=].item[=].item[=].code.display = "Kas Teile on tehtud atsellulaarse läkaköha vaktsiin?"
+// // * item[=].item[=].item[=].text = "Kas Teile on tehtud atsellulaarse läkaköha vaktsiin?"
+// * item[=].item[=].item[=].type = #boolean
+// * item[=].item[=].item[=].required = true
 
-* item[=].item[=].item[=].item[0].linkId = "immunization.hpv.immunization-his-data.date"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[+].linkId = "immunization.pertussis.immunization-his-data"
+// // * item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].code.code = #immunization
+// // * item[=].item[=].item[=].code.display = "Immuniseerimine"
+// // * item[=].item[=].item[=].text = "Immuniseerimine"
+// * item[=].item[=].item[=].type = #group
+// * item[=].item[=].item[=].enableWhen.question = "immunization.pertussis.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
+// * item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "immunization.hpv.immunization-his-data.source-reference"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #source-reference
-// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
-// * item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].type = #reference
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[=].item[0].linkId = "immunization.pertussis.immunization-his-data.date"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[+].linkId = "immunization.hpv.date"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.hpv.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
+// * item[=].item[=].item[=].item[+].linkId = "immunization.pertussis.immunization-his-data.source-reference"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #source-reference
+// // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// // * item[=].item[=].item[=].item[=].text = "Allika viide"
+// * item[=].item[=].item[=].item[=].type = #reference
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[+].linkId = "immunization.covid"
-* item[=].item[=].code.system = $VVH
-* item[=].item[=].code.code = #219
-// * item[=].item[=].text = "COVID"
-* item[=].item[=].type = #group
-* item[=].item[=].required = true
-
-* item[=].item[=].item[0].linkId = "immunization.covid.vac-done"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #covid-vac
-// * item[=].item[=].item[=].code.display = "Kas Teile on tehtud COVID vaktsiin?"
-// * item[=].item[=].item[=].text = "Kas Teile on tehtud COVID vaktsiin?"
-* item[=].item[=].item[=].type = #boolean
-* item[=].item[=].item[=].required = true
-
-* item[=].item[=].item[+].linkId = "immunization.covid.immunization-his-data"
+// * item[=].item[=].item[+].linkId = "immunization.pertussis.date"
 // * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #immunization
-// * item[=].item[=].item[=].code.display = "Immuniseerimine"
-// * item[=].item[=].item[=].text = "Immuniseerimine"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.covid.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
-* item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].enableWhen.question = "immunization.pertussis.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "immunization.covid.immunization-his-data.date"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+// * item[=].item[+].linkId = "immunization.polio"
+// * item[=].item[=].code.system = $VVH
+// * item[=].item[=].code.code = #107
+// // * item[=].item[=].text = "Poliomüeliit"
+// * item[=].item[=].type = #group
+// * item[=].item[=].required = true
 
-* item[=].item[=].item[=].item[+].linkId = "immunization.covid.immunization-his-data.source-reference"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #source-reference
-// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
-// * item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].type = #reference
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
-
-* item[=].item[=].item[+].linkId = "immunization.covid.date"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.covid.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
-
-* item[=].item[+].linkId = "immunization.flu"
-* item[=].item[=].code.system = $VVH
-* item[=].item[=].code.code = #202
-// * item[=].item[=].text = "Gripiviirus"
-* item[=].item[=].type = #group
-* item[=].item[=].required = true
-
-* item[=].item[=].item[0].linkId = "immunization.flu.vac-done"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #influenza-vac
-// * item[=].item[=].item[=].code.display = "Kas Teile on tehtud gripivaktsiin?"
-// * item[=].item[=].item[=].text = "Kas Teile on tehtud gripivaktsiin?"
-* item[=].item[=].item[=].type = #boolean
-* item[=].item[=].item[=].required = true
-
-* item[=].item[=].item[+].linkId = "immunization.flu.immunization-his-data"
+// * item[=].item[=].item[0].linkId = "immunization.polio.vac-done"
 // * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #immunization
-// * item[=].item[=].item[=].code.display = "Immuniseerimine"
-// * item[=].item[=].item[=].text = "Immuniseerimine"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.flu.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
-* item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[=].code.code = #poliovirus-vac
+// // * item[=].item[=].item[=].code.display = "Kas Teile on tehtud inaktiveeritud poliomüeliidi vaktsiin?"
+// // * item[=].item[=].item[=].text = "Kas Teile on tehtud inaktiveeritud poliomüeliidi vaktsiin?"
+// * item[=].item[=].item[=].type = #boolean
+// * item[=].item[=].item[=].required = true
 
-* item[=].item[=].item[=].item[0].linkId = "immunization.flu.immunization-his-data.date"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[+].linkId = "immunization.polio.immunization-his-data"
+// // * item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].code.code = #immunization
+// // * item[=].item[=].item[=].code.display = "Immuniseerimine"
+// // * item[=].item[=].item[=].text = "Immuniseerimine"
+// * item[=].item[=].item[=].type = #group
+// * item[=].item[=].item[=].enableWhen.question = "immunization.polio.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
+// * item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "immunization.flu.immunization-his-data.source-reference"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #source-reference
-// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
-// * item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].type = #reference
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[=].item[0].linkId = "immunization.polio.immunization-his-data.date"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[+].linkId = "immunization.flu.date"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.flu.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
+// * item[=].item[=].item[=].item[+].linkId = "immunization.polio.immunization-his-data.source-reference"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #source-reference
+// // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// // * item[=].item[=].item[=].item[=].text = "Allika viide"
+// * item[=].item[=].item[=].item[=].type = #reference
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[+].linkId = "immunization.pneumococcus"
-* item[=].item[=].code.system = $VVH
-* item[=].item[=].code.code = #210
-// * item[=].item[=].text = "Pneumokokk"
-* item[=].item[=].type = #group
-* item[=].item[=].required = true
-
-* item[=].item[=].item[0].linkId = "immunization.pneumococcus.vac-done"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #pneumococcus-vac
-// * item[=].item[=].item[=].code.display = "Kas Teile on tehtud pneumokoki vaktsiin?"
-// * item[=].item[=].item[=].text = "Kas Teile on tehtud pneumokoki vaktsiin?"
-* item[=].item[=].item[=].type = #boolean
-* item[=].item[=].item[=].required = true
-
-* item[=].item[=].item[+].linkId = "immunization.pneumococcus.immunization-his-data"
+// * item[=].item[=].item[+].linkId = "immunization.polio.date"
 // * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #immunization
-// * item[=].item[=].item[=].code.display = "Immuniseerimine"
-// * item[=].item[=].item[=].text = "Immuniseerimine"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.pneumococcus.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
-* item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].enableWhen.question = "immunization.polio.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "immunization.pneumococcus.immunization-his-data.date"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+// * item[=].item[+].linkId = "immunization.hemo-influenza"
+// * item[=].item[=].code.system = $VVH
+// * item[=].item[=].code.code = #103
+// // * item[=].item[=].text = "Influensa"
+// * item[=].item[=].type = #group
+// * item[=].item[=].required = true
 
-* item[=].item[=].item[=].item[+].linkId = "immunization.pneumococcus.immunization-his-data.source-reference"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #source-reference
-// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
-// * item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].type = #reference
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
-
-* item[=].item[=].item[+].linkId = "immunization.pneumococcus.date"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.pneumococcus.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
-
-* item[=].item[+].linkId = "immunization.a-hepatitis"
-* item[=].item[=].code.system = $VVH
-* item[=].item[=].code.code = #201
-// * item[=].item[=].text = "A-hepatiit"
-* item[=].item[=].type = #group
-* item[=].item[=].required = true
-
-* item[=].item[=].item[0].linkId = "immunization.a-hepatitis.vac-done"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #hepatitis-A-vac
-// * item[=].item[=].item[=].code.display = "Kas Teile on tehtud A-hepatiidi vaktsiin?"
-// * item[=].item[=].item[=].text = "Kas Teile on tehtud A-hepatiidi vaktsiin?"
-* item[=].item[=].item[=].type = #boolean
-* item[=].item[=].item[=].required = true
-
-* item[=].item[=].item[+].linkId = "immunization.a-hepatitis.immunization-his-data"
+// * item[=].item[=].item[0].linkId = "immunization.hemo-influenza.vac-done"
 // * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #immunization
-// * item[=].item[=].item[=].code.display = "Immuniseerimine"
-// * item[=].item[=].item[=].text = "Immuniseerimine"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.a-hepatitis.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
-* item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[=].code.code = #haemophilus-influenza-vac
+// // * item[=].item[=].item[=].code.display = "Kas Teile on tehtud Haemophilus influenzae tüüp b nakkuse vaktsiin?"
+// // * item[=].item[=].item[=].text = "Kas Teile on tehtud Haemophilus influenzae tüüp b nakkuse vaktsiin?"
+// * item[=].item[=].item[=].type = #boolean
+// * item[=].item[=].item[=].required = true
 
-* item[=].item[=].item[=].item[0].linkId = "immunization.a-hepatitis.immunization-his-data.date"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[+].linkId = "immunization.hemo-influenza.immunization-his-data"
+// // * item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].code.code = #immunization
+// // * item[=].item[=].item[=].code.display = "Immuniseerimine"
+// // * item[=].item[=].item[=].text = "Immuniseerimine"
+// * item[=].item[=].item[=].type = #group
+// * item[=].item[=].item[=].enableWhen.question = "immunization.hemo-influenza.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
+// * item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "immunization.a-hepatitis.immunization-his-data.source-reference"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #source-reference
-// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
-// * item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].type = #reference
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[=].item[0].linkId = "immunization.hemo-influenza.immunization-his-data.date"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[+].linkId = "immunization.a-hepatitis.date"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.a-hepatitis.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
+// * item[=].item[=].item[=].item[+].linkId = "immunization.hemo-influenza.immunization-his-data.source-reference"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #source-reference
+// // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// // * item[=].item[=].item[=].item[=].text = "Allika viide"
+// * item[=].item[=].item[=].item[=].type = #reference
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[+].linkId = "immunization.varicella"
-* item[=].item[=].code.system = $VVH
-* item[=].item[=].code.code = #213
-// * item[=].item[=].text = "Tuulerõuged"
-* item[=].item[=].type = #group
-* item[=].item[=].required = true
-
-* item[=].item[=].item[0].linkId = "immunization.varicella.vac-done"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #varicella-vac
-// * item[=].item[=].item[=].code.display = "Kas Teile on tehtud tuulerõugete vaktsiin?"
-// * item[=].item[=].item[=].text = "Kas Teile on tehtud tuulerõugete vaktsiin?"
-* item[=].item[=].item[=].type = #boolean
-* item[=].item[=].item[=].required = true
-
-* item[=].item[=].item[+].linkId = "immunization.varicella.immunization-his-data"
+// * item[=].item[=].item[+].linkId = "immunization.hemo-influenza.date"
 // * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #immunization
-// * item[=].item[=].item[=].code.display = "Immuniseerimine"
-// * item[=].item[=].item[=].text = "Immuniseerimine"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.varicella.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
-* item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].enableWhen.question = "immunization.hemo-influenza.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "immunization.varicella.immunization-his-data.date"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+// * item[=].item[+].linkId = "immunization.measles"
+// * item[=].item[=].code.system = $VVH
+// * item[=].item[=].code.code = #104
+// // * item[=].item[=].text = "Leetrid"
+// * item[=].item[=].type = #group
+// * item[=].item[=].required = true
 
-* item[=].item[=].item[=].item[+].linkId = "immunization.varicella.immunization-his-data.source-reference"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #source-reference
-// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
-// * item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].type = #reference
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
-
-* item[=].item[=].item[+].linkId = "immunization.varicella.date"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.varicella.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
-
-* item[=].item[+].linkId = "immunization.shingles"
-* item[=].item[=].code.system = $VVH
-* item[=].item[=].code.code = #216
-// * item[=].item[=].text = "Vöötohatis"
-* item[=].item[=].type = #group
-* item[=].item[=].required = true
-
-* item[=].item[=].item[0].linkId = "immunization.shingles.vac-done"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #herpes-zoster-vac
-// * item[=].item[=].item[=].code.display = "Kas Teile on tehtud vöötohatise vaktsiin?"
-// * item[=].item[=].item[=].text = "Kas Teile on tehtud vöötohatise vaktsiin?"
-* item[=].item[=].item[=].type = #boolean
-* item[=].item[=].item[=].required = true
-
-* item[=].item[=].item[+].linkId = "immunization.shingles.immunization-his-data"
+// * item[=].item[=].item[0].linkId = "immunization.measles.vac-done"
 // * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #immunization
-// * item[=].item[=].item[=].code.display = "Immuniseerimine"
-// * item[=].item[=].item[=].text = "Immuniseerimine"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.shingles.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
-* item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[=].code.code = #measles-vac
+// // * item[=].item[=].item[=].code.display = "Kas Teile on tehtud leetrite vaktsiin?"
+// // * item[=].item[=].item[=].text = "Kas Teile on tehtud leetrite vaktsiin?"
+// * item[=].item[=].item[=].type = #boolean
+// * item[=].item[=].item[=].required = true
 
-* item[=].item[=].item[=].item[0].linkId = "immunization.shingles.immunization-his-data.date"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[+].linkId = "immunization.measles.immunization-his-data"
+// // * item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].code.code = #immunization
+// // * item[=].item[=].item[=].code.display = "Immuniseerimine"
+// // * item[=].item[=].item[=].text = "Immuniseerimine"
+// * item[=].item[=].item[=].type = #group
+// * item[=].item[=].item[=].enableWhen.question = "immunization.measles.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
+// * item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "immunization.shingles.immunization-his-data.source-reference"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #source-reference
-// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
-// * item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].type = #reference
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[=].item[0].linkId = "immunization.measles.immunization-his-data.date"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[+].linkId = "immunization.shingles.date"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.shingles.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
+// * item[=].item[=].item[=].item[+].linkId = "immunization.measles.immunization-his-data.source-reference"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #source-reference
+// // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// // * item[=].item[=].item[=].item[=].text = "Allika viide"
+// * item[=].item[=].item[=].item[=].type = #reference
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[+].linkId = "immunization.meningococcus"
-* item[=].item[=].code.system = $VVH
-* item[=].item[=].code.code = #209
-// * item[=].item[=].text = "Meningokokk"
-* item[=].item[=].type = #group
-* item[=].item[=].required = true
-
-* item[=].item[=].item[0].linkId = "immunization.meningococcus.vac-done"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #meningococcus-vac
-// * item[=].item[=].item[=].code.display = "Kas Teile on tehtud meningokokk-nakkuse vaktsiin?"
-// * item[=].item[=].item[=].text = "Kas Teile on tehtud meningokokk-nakkuse vaktsiin?"
-* item[=].item[=].item[=].type = #boolean
-* item[=].item[=].item[=].required = true
-
-* item[=].item[=].item[+].linkId = "immunization.meningococcus.immunization-his-data"
+// * item[=].item[=].item[+].linkId = "immunization.measles.date"
 // * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #immunization
-// * item[=].item[=].item[=].code.display = "Immuniseerimine"
-// * item[=].item[=].item[=].text = "Immuniseerimine"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.meningococcus.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
-* item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].enableWhen.question = "immunization.measles.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "immunization.meningococcus.immunization-his-data.date"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+// * item[=].item[+].linkId = "immunization.mumps"
+// * item[=].item[=].code.system = $VVH
+// * item[=].item[=].code.code = #106
+// // * item[=].item[=].text = "Mumps"
+// * item[=].item[=].type = #group
+// * item[=].item[=].required = true
 
-* item[=].item[=].item[=].item[+].linkId = "immunization.meningococcus.immunization-his-data.source-reference"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #source-reference
-// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
-// * item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].type = #reference
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
-
-* item[=].item[=].item[+].linkId = "immunization.meningococcus.date"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.meningococcus.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
-
-* item[=].item[+].linkId = "immunization.yellow-fever"
-* item[=].item[=].code.system = $VVH
-* item[=].item[=].code.code = #205
-// * item[=].item[=].text = "Kollapalavik"
-* item[=].item[=].type = #group
-* item[=].item[=].required = true
-
-* item[=].item[=].item[0].linkId = "immunization.yellow-fever.vac-done"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #yellow-fever-vac
-// * item[=].item[=].item[=].code.display = "Kas Teile on tehtud kollapalaviku vaktsiin?"
-// * item[=].item[=].item[=].text = "Kas Teile on tehtud kollapalaviku vaktsiin?"
-* item[=].item[=].item[=].type = #boolean
-* item[=].item[=].item[=].required = true
-
-* item[=].item[=].item[+].linkId = "immunization.yellow-fever.immunization-his-data"
+// * item[=].item[=].item[0].linkId = "immunization.mumps.vac-done"
 // * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #immunization
-// * item[=].item[=].item[=].code.display = "Immuniseerimine"
-// * item[=].item[=].item[=].text = "Immuniseerimine"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.yellow-fever.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
-* item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[=].code.code = #mumps-vac
+// // * item[=].item[=].item[=].code.display = "Kas Teile on tehtud mumpsi vaktsiin?"
+// // * item[=].item[=].item[=].text = "Kas Teile on tehtud mumpsi vaktsiin?"
+// * item[=].item[=].item[=].type = #boolean
+// * item[=].item[=].item[=].required = true
 
-* item[=].item[=].item[=].item[0].linkId = "immunization.yellow-fever.immunization-his-data.date"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[+].linkId = "immunization.mumps.immunization-his-data"
+// // * item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].code.code = #immunization
+// // * item[=].item[=].item[=].code.display = "Immuniseerimine"
+// // * item[=].item[=].item[=].text = "Immuniseerimine"
+// * item[=].item[=].item[=].type = #group
+// * item[=].item[=].item[=].enableWhen.question = "immunization.mumps.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
+// * item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "immunization.yellow-fever.immunization-his-data.source-reference"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #source-reference
-// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
-// * item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].type = #reference
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[=].item[0].linkId = "immunization.mumps.immunization-his-data.date"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[+].linkId = "immunization.yellow-fever.date"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.yellow-fever.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
+// * item[=].item[=].item[=].item[+].linkId = "immunization.mumps.immunization-his-data.source-reference"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #source-reference
+// // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// // * item[=].item[=].item[=].item[=].text = "Allika viide"
+// * item[=].item[=].item[=].item[=].type = #reference
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[+].linkId = "immunization.typhoid-fever"
-* item[=].item[=].code.system = $VVH
-* item[=].item[=].code.code = #207
-// * item[=].item[=].text = "Kõhutüüfus"
-* item[=].item[=].type = #group
-* item[=].item[=].required = true
-
-* item[=].item[=].item[0].linkId = "immunization.typhoid-fever.vac-done"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #typhoid-vac
-// * item[=].item[=].item[=].code.display = "Kas Teile on tehtud kõhutüüfuse vaktsiin?"
-// * item[=].item[=].item[=].text = "Kas Teile on tehtud kõhutüüfuse vaktsiin?"
-* item[=].item[=].item[=].type = #boolean
-* item[=].item[=].item[=].required = true
-
-* item[=].item[=].item[+].linkId = "immunization.typhoid-fever.immunization-his-data"
+// * item[=].item[=].item[+].linkId = "immunization.mumps.date"
 // * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #immunization
-// * item[=].item[=].item[=].code.display = "Immuniseerimine"
-// * item[=].item[=].item[=].text = "Immuniseerimine"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.typhoid-fever.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
-* item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].enableWhen.question = "immunization.mumps.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "immunization.typhoid-fever.immunization-his-data.date"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+// * item[=].item[+].linkId = "immunization.rubella"
+// * item[=].item[=].code.system = $VVH
+// * item[=].item[=].code.code = #108
+// // * item[=].item[=].text = "Punetised"
+// * item[=].item[=].type = #group
+// * item[=].item[=].required = true
 
-* item[=].item[=].item[=].item[+].linkId = "immunization.typhoid-fever.immunization-his-data.source-reference"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #source-reference
-// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
-// * item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].type = #reference
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
-
-* item[=].item[=].item[+].linkId = "immunization.typhoid-fever.date"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.typhoid-fever.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
-
-* item[=].item[+].linkId = "immunization.tick-encephalitis"
-* item[=].item[=].code.system = $VVH
-* item[=].item[=].code.code = #211
-// * item[=].item[=].text = "Puukentsefaliit"
-* item[=].item[=].type = #group
-* item[=].item[=].required = true
-
-* item[=].item[=].item[0].linkId = "immunization.tick-encephalitis.vac-done"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #tick-borne-encephalitis-vac
-// * item[=].item[=].item[=].code.display = "Kas Teile on tehtud puukentsefaliidi vaktsiin?"
-// * item[=].item[=].item[=].text = "Kas Teile on tehtud puukentsefaliidi vaktsiin?"
-* item[=].item[=].item[=].type = #boolean
-* item[=].item[=].item[=].required = true
-
-* item[=].item[=].item[+].linkId = "immunization.tick-encephalitis.immunization-his-data"
+// * item[=].item[=].item[0].linkId = "immunization.rubella.vac-done"
 // * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #immunization
-// * item[=].item[=].item[=].code.display = "Immuniseerimine"
-// * item[=].item[=].item[=].text = "Immuniseerimine"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.tick-encephalitis.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
-* item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[=].code.code = #rubella-vac
+// // * item[=].item[=].item[=].code.display = "Kas Teile on tehtud punetiste vaktsiin?"
+// // * item[=].item[=].item[=].text = "Kas Teile on tehtud punetiste vaktsiin?"
+// * item[=].item[=].item[=].type = #boolean
+// * item[=].item[=].item[=].required = true
 
-* item[=].item[=].item[=].item[0].linkId = "immunization.tick-encephalitis.immunization-his-data.date"
+// * item[=].item[=].item[+].linkId = "immunization.rubella.immunization-his-data"
+// // * item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].code.code = #immunization
+// // * item[=].item[=].item[=].code.display = "Immuniseerimine"
+// // * item[=].item[=].item[=].text = "Immuniseerimine"
+// * item[=].item[=].item[=].type = #group
+// * item[=].item[=].item[=].enableWhen.question = "immunization.rubella.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
+// * item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[=].item[0].linkId = "immunization.rubella.immunization-his-data.date"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[=].item[+].linkId = "immunization.rubella.immunization-his-data.source-reference"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #source-reference
+// // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// // * item[=].item[=].item[=].item[=].text = "Allika viide"
+// * item[=].item[=].item[=].item[=].type = #reference
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[+].linkId = "immunization.rubella.date"
+// * item[=].item[=].item[=].code.system = $HDQ
+// * item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].enableWhen.question = "immunization.rubella.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
+
+// * item[=].item[+].linkId = "immunization.hpv"
+// * item[=].item[=].code.system = $VVH
+// * item[=].item[=].code.code = #203
+// // * item[=].item[=].text = "HPV"
+// * item[=].item[=].type = #group
+// * item[=].item[=].required = true
+
+// * item[=].item[=].item[0].linkId = "immunization.hpv.vac-done"
+// * item[=].item[=].item[=].code.system = $HDQ
+// * item[=].item[=].item[=].code.code = #hpv-vac
+// // * item[=].item[=].item[=].code.display = "Kas Teile on tehtud papilloomiviirusnakkuse vaktsiin?"
+// // * item[=].item[=].item[=].text = "Kas Teile on tehtud papilloomiviirusnakkuse vaktsiin?"
+// * item[=].item[=].item[=].type = #boolean
+// * item[=].item[=].item[=].required = true
+
+// * item[=].item[=].item[+].linkId = "immunization.hpv.immunization-his-data"
+// // * item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].code.code = #immunization
+// // * item[=].item[=].item[=].code.display = "Immuniseerimine"
+// // * item[=].item[=].item[=].text = "Immuniseerimine"
+// * item[=].item[=].item[=].type = #group
+// * item[=].item[=].item[=].enableWhen.question = "immunization.hpv.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
+// * item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[=].item[0].linkId = "immunization.hpv.immunization-his-data.date"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[=].item[+].linkId = "immunization.hpv.immunization-his-data.source-reference"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #source-reference
+// // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// // * item[=].item[=].item[=].item[=].text = "Allika viide"
+// * item[=].item[=].item[=].item[=].type = #reference
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[+].linkId = "immunization.hpv.date"
+// * item[=].item[=].item[=].code.system = $HDQ
+// * item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].enableWhen.question = "immunization.hpv.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
+
+// * item[=].item[+].linkId = "immunization.covid"
+// * item[=].item[=].code.system = $VVH
+// * item[=].item[=].code.code = #219
+// // * item[=].item[=].text = "COVID"
+// * item[=].item[=].type = #group
+// * item[=].item[=].required = true
+
+// * item[=].item[=].item[0].linkId = "immunization.covid.vac-done"
+// * item[=].item[=].item[=].code.system = $HDQ
+// * item[=].item[=].item[=].code.code = #covid-vac
+// // * item[=].item[=].item[=].code.display = "Kas Teile on tehtud COVID vaktsiin?"
+// // * item[=].item[=].item[=].text = "Kas Teile on tehtud COVID vaktsiin?"
+// * item[=].item[=].item[=].type = #boolean
+// * item[=].item[=].item[=].required = true
+
+// * item[=].item[=].item[+].linkId = "immunization.covid.immunization-his-data"
+// // * item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].code.code = #immunization
+// // * item[=].item[=].item[=].code.display = "Immuniseerimine"
+// // * item[=].item[=].item[=].text = "Immuniseerimine"
+// * item[=].item[=].item[=].type = #group
+// * item[=].item[=].item[=].enableWhen.question = "immunization.covid.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
+// * item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[=].item[0].linkId = "immunization.covid.immunization-his-data.date"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[=].item[+].linkId = "immunization.covid.immunization-his-data.source-reference"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #source-reference
+// // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// // * item[=].item[=].item[=].item[=].text = "Allika viide"
+// * item[=].item[=].item[=].item[=].type = #reference
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[+].linkId = "immunization.covid.date"
+// * item[=].item[=].item[=].code.system = $HDQ
+// * item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].enableWhen.question = "immunization.covid.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
+
+// * item[=].item[+].linkId = "immunization.flu"
+// * item[=].item[=].code.system = $VVH
+// * item[=].item[=].code.code = #202
+// // * item[=].item[=].text = "Gripiviirus"
+// * item[=].item[=].type = #group
+// * item[=].item[=].required = true
+
+// * item[=].item[=].item[0].linkId = "immunization.flu.vac-done"
+// * item[=].item[=].item[=].code.system = $HDQ
+// * item[=].item[=].item[=].code.code = #influenza-vac
+// // * item[=].item[=].item[=].code.display = "Kas Teile on tehtud gripivaktsiin?"
+// // * item[=].item[=].item[=].text = "Kas Teile on tehtud gripivaktsiin?"
+// * item[=].item[=].item[=].type = #boolean
+// * item[=].item[=].item[=].required = true
+
+// * item[=].item[=].item[+].linkId = "immunization.flu.immunization-his-data"
+// // * item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].code.code = #immunization
+// // * item[=].item[=].item[=].code.display = "Immuniseerimine"
+// // * item[=].item[=].item[=].text = "Immuniseerimine"
+// * item[=].item[=].item[=].type = #group
+// * item[=].item[=].item[=].enableWhen.question = "immunization.flu.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
+// * item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[=].item[0].linkId = "immunization.flu.immunization-his-data.date"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[=].item[+].linkId = "immunization.flu.immunization-his-data.source-reference"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #source-reference
+// // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// // * item[=].item[=].item[=].item[=].text = "Allika viide"
+// * item[=].item[=].item[=].item[=].type = #reference
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[+].linkId = "immunization.flu.date"
+// * item[=].item[=].item[=].code.system = $HDQ
+// * item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].enableWhen.question = "immunization.flu.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
+
+// * item[=].item[+].linkId = "immunization.pneumococcus"
+// * item[=].item[=].code.system = $VVH
+// * item[=].item[=].code.code = #210
+// // * item[=].item[=].text = "Pneumokokk"
+// * item[=].item[=].type = #group
+// * item[=].item[=].required = true
+
+// * item[=].item[=].item[0].linkId = "immunization.pneumococcus.vac-done"
+// * item[=].item[=].item[=].code.system = $HDQ
+// * item[=].item[=].item[=].code.code = #pneumococcus-vac
+// // * item[=].item[=].item[=].code.display = "Kas Teile on tehtud pneumokoki vaktsiin?"
+// // * item[=].item[=].item[=].text = "Kas Teile on tehtud pneumokoki vaktsiin?"
+// * item[=].item[=].item[=].type = #boolean
+// * item[=].item[=].item[=].required = true
+
+// * item[=].item[=].item[+].linkId = "immunization.pneumococcus.immunization-his-data"
+// // * item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].code.code = #immunization
+// // * item[=].item[=].item[=].code.display = "Immuniseerimine"
+// // * item[=].item[=].item[=].text = "Immuniseerimine"
+// * item[=].item[=].item[=].type = #group
+// * item[=].item[=].item[=].enableWhen.question = "immunization.pneumococcus.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
+// * item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[=].item[0].linkId = "immunization.pneumococcus.immunization-his-data.date"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[=].item[+].linkId = "immunization.pneumococcus.immunization-his-data.source-reference"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #source-reference
+// // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// // * item[=].item[=].item[=].item[=].text = "Allika viide"
+// * item[=].item[=].item[=].item[=].type = #reference
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[+].linkId = "immunization.pneumococcus.date"
+// * item[=].item[=].item[=].code.system = $HDQ
+// * item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].enableWhen.question = "immunization.pneumococcus.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
+
+// * item[=].item[+].linkId = "immunization.a-hepatitis"
+// * item[=].item[=].code.system = $VVH
+// * item[=].item[=].code.code = #201
+// // * item[=].item[=].text = "A-hepatiit"
+// * item[=].item[=].type = #group
+// * item[=].item[=].required = true
+
+// * item[=].item[=].item[0].linkId = "immunization.a-hepatitis.vac-done"
+// * item[=].item[=].item[=].code.system = $HDQ
+// * item[=].item[=].item[=].code.code = #hepatitis-A-vac
+// // * item[=].item[=].item[=].code.display = "Kas Teile on tehtud A-hepatiidi vaktsiin?"
+// // * item[=].item[=].item[=].text = "Kas Teile on tehtud A-hepatiidi vaktsiin?"
+// * item[=].item[=].item[=].type = #boolean
+// * item[=].item[=].item[=].required = true
+
+// * item[=].item[=].item[+].linkId = "immunization.a-hepatitis.immunization-his-data"
+// // * item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].code.code = #immunization
+// // * item[=].item[=].item[=].code.display = "Immuniseerimine"
+// // * item[=].item[=].item[=].text = "Immuniseerimine"
+// * item[=].item[=].item[=].type = #group
+// * item[=].item[=].item[=].enableWhen.question = "immunization.a-hepatitis.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
+// * item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[=].item[0].linkId = "immunization.a-hepatitis.immunization-his-data.date"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[=].item[+].linkId = "immunization.a-hepatitis.immunization-his-data.source-reference"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #source-reference
+// // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// // * item[=].item[=].item[=].item[=].text = "Allika viide"
+// * item[=].item[=].item[=].item[=].type = #reference
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[+].linkId = "immunization.a-hepatitis.date"
+// * item[=].item[=].item[=].code.system = $HDQ
+// * item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].enableWhen.question = "immunization.a-hepatitis.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
+
+// * item[=].item[+].linkId = "immunization.varicella"
+// * item[=].item[=].code.system = $VVH
+// * item[=].item[=].code.code = #213
+// // * item[=].item[=].text = "Tuulerõuged"
+// * item[=].item[=].type = #group
+// * item[=].item[=].required = true
+
+// * item[=].item[=].item[0].linkId = "immunization.varicella.vac-done"
+// * item[=].item[=].item[=].code.system = $HDQ
+// * item[=].item[=].item[=].code.code = #varicella-vac
+// // * item[=].item[=].item[=].code.display = "Kas Teile on tehtud tuulerõugete vaktsiin?"
+// // * item[=].item[=].item[=].text = "Kas Teile on tehtud tuulerõugete vaktsiin?"
+// * item[=].item[=].item[=].type = #boolean
+// * item[=].item[=].item[=].required = true
+
+// * item[=].item[=].item[+].linkId = "immunization.varicella.immunization-his-data"
+// // * item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].code.code = #immunization
+// // * item[=].item[=].item[=].code.display = "Immuniseerimine"
+// // * item[=].item[=].item[=].text = "Immuniseerimine"
+// * item[=].item[=].item[=].type = #group
+// * item[=].item[=].item[=].enableWhen.question = "immunization.varicella.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
+// * item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[=].item[0].linkId = "immunization.varicella.immunization-his-data.date"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[=].item[+].linkId = "immunization.varicella.immunization-his-data.source-reference"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #source-reference
+// // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// // * item[=].item[=].item[=].item[=].text = "Allika viide"
+// * item[=].item[=].item[=].item[=].type = #reference
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[+].linkId = "immunization.varicella.date"
+// * item[=].item[=].item[=].code.system = $HDQ
+// * item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].enableWhen.question = "immunization.varicella.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
+
+// * item[=].item[+].linkId = "immunization.shingles"
+// * item[=].item[=].code.system = $VVH
+// * item[=].item[=].code.code = #216
+// // * item[=].item[=].text = "Vöötohatis"
+// * item[=].item[=].type = #group
+// * item[=].item[=].required = true
+
+// * item[=].item[=].item[0].linkId = "immunization.shingles.vac-done"
+// * item[=].item[=].item[=].code.system = $HDQ
+// * item[=].item[=].item[=].code.code = #herpes-zoster-vac
+// // * item[=].item[=].item[=].code.display = "Kas Teile on tehtud vöötohatise vaktsiin?"
+// // * item[=].item[=].item[=].text = "Kas Teile on tehtud vöötohatise vaktsiin?"
+// * item[=].item[=].item[=].type = #boolean
+// * item[=].item[=].item[=].required = true
+
+// * item[=].item[=].item[+].linkId = "immunization.shingles.immunization-his-data"
+// // * item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].code.code = #immunization
+// // * item[=].item[=].item[=].code.display = "Immuniseerimine"
+// // * item[=].item[=].item[=].text = "Immuniseerimine"
+// * item[=].item[=].item[=].type = #group
+// * item[=].item[=].item[=].enableWhen.question = "immunization.shingles.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
+// * item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[=].item[0].linkId = "immunization.shingles.immunization-his-data.date"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[=].item[+].linkId = "immunization.shingles.immunization-his-data.source-reference"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #source-reference
+// // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// // * item[=].item[=].item[=].item[=].text = "Allika viide"
+// * item[=].item[=].item[=].item[=].type = #reference
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[+].linkId = "immunization.shingles.date"
+// * item[=].item[=].item[=].code.system = $HDQ
+// * item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].enableWhen.question = "immunization.shingles.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
+
+// * item[=].item[+].linkId = "immunization.meningococcus"
+// * item[=].item[=].code.system = $VVH
+// * item[=].item[=].code.code = #209
+// // * item[=].item[=].text = "Meningokokk"
+// * item[=].item[=].type = #group
+// * item[=].item[=].required = true
+
+// * item[=].item[=].item[0].linkId = "immunization.meningococcus.vac-done"
+// * item[=].item[=].item[=].code.system = $HDQ
+// * item[=].item[=].item[=].code.code = #meningococcus-vac
+// // * item[=].item[=].item[=].code.display = "Kas Teile on tehtud meningokokk-nakkuse vaktsiin?"
+// // * item[=].item[=].item[=].text = "Kas Teile on tehtud meningokokk-nakkuse vaktsiin?"
+// * item[=].item[=].item[=].type = #boolean
+// * item[=].item[=].item[=].required = true
+
+// * item[=].item[=].item[+].linkId = "immunization.meningococcus.immunization-his-data"
+// // * item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].code.code = #immunization
+// // * item[=].item[=].item[=].code.display = "Immuniseerimine"
+// // * item[=].item[=].item[=].text = "Immuniseerimine"
+// * item[=].item[=].item[=].type = #group
+// * item[=].item[=].item[=].enableWhen.question = "immunization.meningococcus.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
+// * item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[=].item[0].linkId = "immunization.meningococcus.immunization-his-data.date"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[=].item[+].linkId = "immunization.meningococcus.immunization-his-data.source-reference"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #source-reference
+// // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// // * item[=].item[=].item[=].item[=].text = "Allika viide"
+// * item[=].item[=].item[=].item[=].type = #reference
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[+].linkId = "immunization.meningococcus.date"
+// * item[=].item[=].item[=].code.system = $HDQ
+// * item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].enableWhen.question = "immunization.meningococcus.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
+
+// * item[=].item[+].linkId = "immunization.yellow-fever"
+// * item[=].item[=].code.system = $VVH
+// * item[=].item[=].code.code = #205
+// // * item[=].item[=].text = "Kollapalavik"
+// * item[=].item[=].type = #group
+// * item[=].item[=].required = true
+
+// * item[=].item[=].item[0].linkId = "immunization.yellow-fever.vac-done"
+// * item[=].item[=].item[=].code.system = $HDQ
+// * item[=].item[=].item[=].code.code = #yellow-fever-vac
+// // * item[=].item[=].item[=].code.display = "Kas Teile on tehtud kollapalaviku vaktsiin?"
+// // * item[=].item[=].item[=].text = "Kas Teile on tehtud kollapalaviku vaktsiin?"
+// * item[=].item[=].item[=].type = #boolean
+// * item[=].item[=].item[=].required = true
+
+// * item[=].item[=].item[+].linkId = "immunization.yellow-fever.immunization-his-data"
+// // * item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].code.code = #immunization
+// // * item[=].item[=].item[=].code.display = "Immuniseerimine"
+// // * item[=].item[=].item[=].text = "Immuniseerimine"
+// * item[=].item[=].item[=].type = #group
+// * item[=].item[=].item[=].enableWhen.question = "immunization.yellow-fever.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
+// * item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[=].item[0].linkId = "immunization.yellow-fever.immunization-his-data.date"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[=].item[+].linkId = "immunization.yellow-fever.immunization-his-data.source-reference"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #source-reference
+// // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// // * item[=].item[=].item[=].item[=].text = "Allika viide"
+// * item[=].item[=].item[=].item[=].type = #reference
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[+].linkId = "immunization.yellow-fever.date"
+// * item[=].item[=].item[=].code.system = $HDQ
+// * item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].enableWhen.question = "immunization.yellow-fever.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
+
+// * item[=].item[+].linkId = "immunization.typhoid-fever"
+// * item[=].item[=].code.system = $VVH
+// * item[=].item[=].code.code = #207
+// // * item[=].item[=].text = "Kõhutüüfus"
+// * item[=].item[=].type = #group
+// * item[=].item[=].required = true
+
+// * item[=].item[=].item[0].linkId = "immunization.typhoid-fever.vac-done"
+// * item[=].item[=].item[=].code.system = $HDQ
+// * item[=].item[=].item[=].code.code = #typhoid-vac
+// // * item[=].item[=].item[=].code.display = "Kas Teile on tehtud kõhutüüfuse vaktsiin?"
+// // * item[=].item[=].item[=].text = "Kas Teile on tehtud kõhutüüfuse vaktsiin?"
+// * item[=].item[=].item[=].type = #boolean
+// * item[=].item[=].item[=].required = true
+
+// * item[=].item[=].item[+].linkId = "immunization.typhoid-fever.immunization-his-data"
+// // * item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].code.code = #immunization
+// // * item[=].item[=].item[=].code.display = "Immuniseerimine"
+// // * item[=].item[=].item[=].text = "Immuniseerimine"
+// * item[=].item[=].item[=].type = #group
+// * item[=].item[=].item[=].enableWhen.question = "immunization.typhoid-fever.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
+// * item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[=].item[0].linkId = "immunization.typhoid-fever.immunization-his-data.date"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[=].item[+].linkId = "immunization.typhoid-fever.immunization-his-data.source-reference"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #source-reference
+// // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// // * item[=].item[=].item[=].item[=].text = "Allika viide"
+// * item[=].item[=].item[=].item[=].type = #reference
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[+].linkId = "immunization.typhoid-fever.date"
+// * item[=].item[=].item[=].code.system = $HDQ
+// * item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].enableWhen.question = "immunization.typhoid-fever.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
+
+// * item[=].item[+].linkId = "immunization.tick-encephalitis"
+// * item[=].item[=].code.system = $VVH
+// * item[=].item[=].code.code = #211
+// // * item[=].item[=].text = "Puukentsefaliit"
+// * item[=].item[=].type = #group
+// * item[=].item[=].required = true
+
+// * item[=].item[=].item[0].linkId = "immunization.tick-encephalitis.vac-done"
+// * item[=].item[=].item[=].code.system = $HDQ
+// * item[=].item[=].item[=].code.code = #tick-borne-encephalitis-vac
+// // * item[=].item[=].item[=].code.display = "Kas Teile on tehtud puukentsefaliidi vaktsiin?"
+// // * item[=].item[=].item[=].text = "Kas Teile on tehtud puukentsefaliidi vaktsiin?"
+// * item[=].item[=].item[=].type = #boolean
+// * item[=].item[=].item[=].required = true
+
+// * item[=].item[=].item[+].linkId = "immunization.tick-encephalitis.immunization-his-data"
+// // * item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].code.code = #immunization
+// // * item[=].item[=].item[=].code.display = "Immuniseerimine"
+// // * item[=].item[=].item[=].text = "Immuniseerimine"
+// * item[=].item[=].item[=].type = #group
+// * item[=].item[=].item[=].enableWhen.question = "immunization.tick-encephalitis.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
+// * item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[=].item[0].linkId = "immunization.tick-encephalitis.immunization-his-data.date"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[=].item[+].linkId = "immunization.tick-encephalitis.immunization-his-data.source-reference"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #source-reference
+// // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// // * item[=].item[=].item[=].item[=].text = "Allika viide"
+// * item[=].item[=].item[=].item[=].type = #reference
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[+].linkId = "immunization.tick-encephalitis.date"
+// * item[=].item[=].item[=].code.system = $HDQ
+// * item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].enableWhen.question = "immunization.tick-encephalitis.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
+
+// * item[=].item[+].linkId = "immunization.other-vac"
+// // * item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].code.code = #other-vac
+// // * item[=].item[=].code.display = "Muud vaktsiinid"
+// // * item[=].item[=].text = "Muud vaktsiinid"
+// * item[=].item[=].type = #group
+// * item[=].item[=].required = true
+
+// * item[=].item[=].item[0].linkId = "immunization.other-vac.vac-done"
+// * item[=].item[=].item[=].code.system = $HDQ
+// * item[=].item[=].item[=].code.code = #other-vaccines-vaccinated
+// // * item[=].item[=].item[=].code.display = "Kas Teile on tehtud muid vaktsiine?"
+// // * item[=].item[=].item[=].text = "Kas Teile on tehtud muid vaktsiine?"
+// * item[=].item[=].item[=].type = #boolean
+// * item[=].item[=].item[=].required = true
+
+// * item[=].item[=].item[=].item[0].linkId = "immunization.other-vac.vac-done.specification"
 // * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[=].item[=].code.code = #specification
+// // * item[=].item[=].item[=].item[=].code.display = "Täpsustus"
+// // * item[=].item[=].item[=].item[=].text = "Täpsustus"
+// * item[=].item[=].item[=].item[=].type = #text
+// * item[=].item[=].item[=].item[=].enableWhen.question = "immunization.other-vac.vac-done"
+// * item[=].item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].item[=].required = false
 
-* item[=].item[=].item[=].item[+].linkId = "immunization.tick-encephalitis.immunization-his-data.source-reference"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #source-reference
-// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
-// * item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].type = #reference
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
+// * item[=].item[=].item[+].linkId = "immunization.other-vac.immunization-his-data"
+// // * item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].code.code = #immunization
+// // * item[=].item[=].item[=].code.display = "Immuniseerimine"
+// // * item[=].item[=].item[=].text = "Immuniseerimine"
+// * item[=].item[=].item[=].type = #group
+// * item[=].item[=].item[=].enableWhen.question = "immunization.other-vac.vac-done"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].repeats = true
+// * item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[+].linkId = "immunization.tick-encephalitis.date"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "immunization.tick-encephalitis.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
+// * item[=].item[=].item[=].item[0].linkId = "immunization.other-vac.immunization-his-data.preventable-disease"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #vaccine-preventable-disease
+// // * item[=].item[=].item[=].item[=].code.display = "vaktsiinvälditav haigus või haigustekitaja"
+// // * item[=].item[=].item[=].item[=].text = "vaktsiinvälditav haigus või haigustekitaja"
+// * item[=].item[=].item[=].item[=].type = #coding
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[+].linkId = "immunization.other-vac"
+// * item[=].item[=].item[=].item[+].linkId = "immunization.other-vac.immunization-his-data.date"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #date
+// // * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+// // * item[=].item[=].item[=].item[=].text = "Kuupäev"
+// * item[=].item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
+
+// * item[=].item[=].item[=].item[+].linkId = "immunization.other-vac.immunization-his-data.source-reference"
+// // * item[=].item[=].item[=].item[=].code.system = $HDQ
+// // * item[=].item[=].item[=].item[=].code.code = #source-reference
+// // * item[=].item[=].item[=].item[=].code.display = "Allika viide"
+// // * item[=].item[=].item[=].item[=].text = "Allika viide"
+// * item[=].item[=].item[=].item[=].type = #reference
+// * item[=].item[=].item[=].item[=].required = true
+// * item[=].item[=].item[=].item[=].readOnly = true
+
+// * item[+].linkId = "work-risk-factors"
+// * item[=].prefix = "25"
+// * item[=].code.system = $HDQ
+// * item[=].code.code = #work-risk-factors
+// // * item[=].code.display = "Töökohal esinevad ohutegurid"
+// // * item[=].text = "Töökohal esinevad ohutegurid"
+// * item[=].type = #group
+// * item[=].enableWhen.question = "category"
+// * item[=].enableWhen.operator = #=
+// * item[=].enableWhen.answerCoding = #occupational
+// * item[=].required = true
+
+// * item[=].item[0].linkId = "work-risk-factors.risk-factor"
 // * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #other-vac
-// * item[=].item[=].code.display = "Muud vaktsiinid"
-// * item[=].item[=].text = "Muud vaktsiinid"
-* item[=].item[=].type = #group
-* item[=].item[=].required = true
+// * item[=].item[=].code.code = #risk-factor
+// // * item[=].item[=].code.display = "Ohutegur"
+// * item[=].item[=].type = #coding
+// * item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/ohutegurid"
+// * item[=].item[=].required = false
+// * item[=].item[=].repeats = true
+// // * item[=].item[=].text = "Ohutegur"
 
-* item[=].item[=].item[0].linkId = "immunization.other-vac.vac-done"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #other-vaccines-vaccinated
-// * item[=].item[=].item[=].code.display = "Kas Teile on tehtud muid vaktsiine?"
-// * item[=].item[=].item[=].text = "Kas Teile on tehtud muid vaktsiine?"
-* item[=].item[=].item[=].type = #boolean
-* item[=].item[=].item[=].required = true
-
-* item[=].item[=].item[=].item[0].linkId = "immunization.other-vac.vac-done.specification"
-* item[=].item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].item[=].code.code = #specification
-// * item[=].item[=].item[=].item[=].code.display = "Täpsustus"
-// * item[=].item[=].item[=].item[=].text = "Täpsustus"
-* item[=].item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].item[=].enableWhen.question = "immunization.other-vac.vac-done"
-* item[=].item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].item[=].required = false
-
-* item[=].item[=].item[+].linkId = "immunization.other-vac.immunization-his-data"
+// * item[=].item[=].item[0].linkId = "work-risk-factors.risk-factor.specification"
 // * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #immunization
-// * item[=].item[=].item[=].code.display = "Immuniseerimine"
-// * item[=].item[=].item[=].text = "Immuniseerimine"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].enableWhen.question = "immunization.other-vac.vac-done"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
-* item[=].item[=].item[=].readOnly = true
-
-* item[=].item[=].item[=].item[0].linkId = "immunization.other-vac.immunization-his-data.preventable-disease"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #vaccine-preventable-disease
-// * item[=].item[=].item[=].item[=].code.display = "vaktsiinvälditav haigus või haigustekitaja"
-// * item[=].item[=].item[=].item[=].text = "vaktsiinvälditav haigus või haigustekitaja"
-* item[=].item[=].item[=].item[=].type = #coding
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
-
-* item[=].item[=].item[=].item[+].linkId = "immunization.other-vac.immunization-his-data.date"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #date
-// * item[=].item[=].item[=].item[=].code.display = "Kuupäev"
-// * item[=].item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
-
-* item[=].item[=].item[=].item[+].linkId = "immunization.other-vac.immunization-his-data.source-reference"
-// * item[=].item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].item[=].code.code = #source-reference
-// * item[=].item[=].item[=].item[=].code.display = "Allika viide"
-// * item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].type = #reference
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].readOnly = true
-
-* item[+].linkId = "work-risk-factors"
-* item[=].prefix = "25"
-* item[=].code.system = $HDQ
-* item[=].code.code = #work-risk-factors
-// * item[=].code.display = "Töökohal esinevad ohutegurid"
-// * item[=].text = "Töökohal esinevad ohutegurid"
-* item[=].type = #group
-* item[=].enableWhen.question = "category"
-* item[=].enableWhen.operator = #=
-* item[=].enableWhen.answerCoding = #occupational
-* item[=].required = true
-
-* item[=].item[0].linkId = "work-risk-factors.risk-factor"
-* item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #risk-factor
-// * item[=].item[=].code.display = "Ohutegur"
-* item[=].item[=].type = #coding
-* item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/ohutegurid"
-* item[=].item[=].required = false
-* item[=].item[=].repeats = true
-// * item[=].item[=].text = "Ohutegur"
-
-* item[=].item[=].item[0].linkId = "work-risk-factors.risk-factor.specification"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #specification
-// * item[=].item[=].item[=].code.display = "Täpsustus"
-// * item[=].item[=].item[=].text = "Täpsustus"
-* item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].required = false
+// * item[=].item[=].item[=].code.code = #specification
+// // * item[=].item[=].item[=].code.display = "Täpsustus"
+// // * item[=].item[=].item[=].text = "Täpsustus"
+// * item[=].item[=].item[=].type = #text
+// * item[=].item[=].item[=].required = false
