@@ -1317,14 +1317,6 @@ Usage: #example
 * item[=].type = #group
 * item[=].required = true
 
-// * item[=].item[0].linkId = "metabolic-disorder.diagnoses-group"
-// * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #previous-diagnoses
-// * item[=].item[=].code.display = "Varasemad diagnoosid"
-// * item[=].item[=].text = "Varasemad diagnoosid"
-// * item[=].item[=].type = #group
-// * item[=].item[=].required = false
-
 * item[=].item[0].linkId = "metabolic-disorder.previous-diagnosis"
 // * item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
