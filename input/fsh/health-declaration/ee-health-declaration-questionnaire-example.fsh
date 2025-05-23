@@ -209,6 +209,43 @@ Usage: #example
 * item[=].item[=].enableWhen.answerCoding = #occupational
 * item[=].item[=].required = true
 
+* item[=].item[=].item[0].linkId = "work-environment.occupational-disease.specification"
+* item[=].item[=].item[=].code.system = $HDQ
+* item[=].item[=].item[=].code.code = #specification
+* item[=].item[=].item[=].code.display = "Täpsustus"
+* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].type = #text
+* item[=].item[=].item[=].enableWhen.question = "work-environment.occupational-disease"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerBoolean = true
+* item[=].item[=].item[=].required = true
+
+* item[=].item[=].item[+].linkId = "work-environment.occupational-disease.previous-diagnosis"
+* item[=].item[=].item[=].text = "Varasem diagnoos"
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].repeats = true
+* item[=].item[=].item[=].readOnly = true
+
+* item[=].item[=].item[=].item[0].linkId = "work-environment.occupational-disease.previous-diagnosis.diagnosis"
+* item[=].item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].item[=].type = #coding
+* item[=].item[=].item[=].item[=].answerValueSet = "https://term.test.tehik.ee/fhir/ValueSet/rhk10"
+* item[=].item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].item[=].readOnly = true
+
+* item[=].item[=].item[=].item[+].linkId = "work-environment.occupational-disease.previous-diagnosis.written-diagnosis"
+* item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
+* item[=].item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].item[=].readOnly = true
+
+* item[=].item[=].item[=].item[+].linkId = "work-environment.occupational-disease.previous-diagnosis.source-reference"
+* item[=].item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].item[=].type = #reference
+* item[=].item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].item[=].readOnly = true
+
 * item[=].item[+].linkId = "work-environment.work-related-disease"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #work-related-disease
@@ -219,6 +256,43 @@ Usage: #example
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerCoding = #occupational
 * item[=].item[=].required = true
+
+* item[=].item[=].item[0].linkId = "work-environment.work-related-disease.specification"
+* item[=].item[=].item[=].code.system = $HDQ
+* item[=].item[=].item[=].code.code = #specification
+* item[=].item[=].item[=].code.display = "Täpsustus"
+* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].type = #text
+* item[=].item[=].item[=].enableWhen.question = "work-environment.work-related-disease"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerBoolean = true
+* item[=].item[=].item[=].required = true
+
+* item[=].item[=].item[+].linkId = "work-environment.work-related-disease.previous-diagnosis"
+* item[=].item[=].item[=].text = "Varasem diagnoos"
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].repeats = true
+* item[=].item[=].item[=].readOnly = true
+
+* item[=].item[=].item[=].item[0].linkId = "work-environment.work-related-disease.previous-diagnosis.diagnosis"
+* item[=].item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].item[=].type = #coding
+* item[=].item[=].item[=].item[=].answerValueSet = "https://term.test.tehik.ee/fhir/ValueSet/rhk10"
+* item[=].item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].item[=].readOnly = true
+
+* item[=].item[=].item[=].item[+].linkId = "work-environment.work-related-disease.previous-diagnosis.written-diagnosis"
+* item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
+* item[=].item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].item[=].readOnly = true
+
+* item[=].item[=].item[=].item[+].linkId = "work-environment.work-related-disease.previous-diagnosis.source-reference"
+* item[=].item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].item[=].type = #reference
+* item[=].item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].item[=].readOnly = true
 
 * item[=].item[+].linkId = "work-environment.ppe-problems"
 * item[=].item[=].code.system = $HDQ
