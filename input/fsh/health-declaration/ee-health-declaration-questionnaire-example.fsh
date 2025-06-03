@@ -201,8 +201,8 @@ Usage: #example
 * item[=].item[+].linkId = "work-environment.occupational-disease"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #occupational-disease
-* item[=].item[=].code.display = "Kas Teil on diagnoositud kutsehaigus?"
-* item[=].item[=].text = "Kas Teil on diagnoositud kutsehaigus?"
+* item[=].item[=].code.display = "Kas Sul on diagnoositud kutsehaigus?"
+* item[=].item[=].text = "Kas Sul on diagnoositud kutsehaigus?"
 * item[=].item[=].type = #boolean
 * item[=].item[=].enableWhen.question = "category"
 * item[=].item[=].enableWhen.operator = #=
@@ -212,13 +212,13 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "work-environment.occupational-disease.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "work-environment.occupational-disease"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].required = false
 
 * item[=].item[=].item[+].linkId = "work-environment.occupational-disease.previous-diagnosis"
 * item[=].item[=].item[=].text = "Varasem diagnoos"
@@ -230,7 +230,7 @@ Usage: #example
 * item[=].item[=].item[=].item[0].linkId = "work-environment.occupational-disease.previous-diagnosis.diagnosis"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].type = #coding
-* item[=].item[=].item[=].item[=].answerValueSet = "https://term.test.tehik.ee/fhir/ValueSet/rhk10"
+* item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-kutsehaigused"
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
 
@@ -249,8 +249,8 @@ Usage: #example
 * item[=].item[+].linkId = "work-environment.work-related-disease"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #work-related-disease
-* item[=].item[=].code.display = "Kas Teil on diagnoositud tööst põhjustatud haigus?"
-* item[=].item[=].text = "Kas Teil on diagnoositud tööst põhjustatud haigus?"
+* item[=].item[=].code.display = "Kas Sul on diagnoositud tööst põhjustatud haigus?"
+* item[=].item[=].text = "Kas Sul on diagnoositud tööst põhjustatud haigus?"
 * item[=].item[=].type = #boolean
 * item[=].item[=].enableWhen.question = "category"
 * item[=].item[=].enableWhen.operator = #=
@@ -260,13 +260,13 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "work-environment.work-related-disease.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "work-environment.work-related-disease"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
-* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].required = false
 
 * item[=].item[=].item[+].linkId = "work-environment.work-related-disease.previous-diagnosis"
 * item[=].item[=].item[=].text = "Varasem diagnoos"
@@ -278,7 +278,7 @@ Usage: #example
 * item[=].item[=].item[=].item[0].linkId = "work-environment.work-related-disease.previous-diagnosis.diagnosis"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].type = #coding
-* item[=].item[=].item[=].item[=].answerValueSet = "https://term.test.tehik.ee/fhir/ValueSet/rhk10"
+* item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-toost-pohjustatud-haigused"
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
 
