@@ -1,0 +1,255 @@
+{
+  "date" : "Thu, 05 Jun, 2025 07:14:11 +0000",
+  "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
+  "files" : [
+    {
+      "name" : "/fsh-generated/resources/ImplementationGuide-ee.fhir.qre.json",
+      "size" : 2805,
+      "processes" : [
+        {
+          "activity" : "load",
+          "start" : 52,
+          "length" : 13
+        },
+        {
+          "activity" : "load",
+          "start" : 52,
+          "length" : 1
+        },
+        {
+          "activity" : "load-configure",
+          "start" : 53,
+          "length" : 1
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 53,
+          "length" : 1
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 53,
+          "length" : 73
+        },
+        {
+          "activity" : "validate",
+          "start" : 77,
+          "length" : 6183
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 100,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 100,
+          "length" : 41
+        },
+        {
+          "activity" : "generate2",
+          "start" : 104,
+          "length" : 73
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 193,
+          "length" : 1
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 200,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Questionnaire-Questionnaire-health-declaration-cda.json",
+      "size" : 136475,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 52,
+          "length" : 82
+        },
+        {
+          "activity" : "load",
+          "start" : 52,
+          "length" : 34
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 53,
+          "length" : 8
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 53,
+          "length" : 17460
+        },
+        {
+          "activity" : "validate",
+          "start" : 83,
+          "length" : 2821
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 100,
+          "length" : 2
+        },
+        {
+          "activity" : "generate1",
+          "start" : 100,
+          "length" : 928
+        },
+        {
+          "activity" : "generate2",
+          "start" : 104,
+          "length" : 72622
+        },
+        {
+          "activity" : "makeDependencies",
+          "start" : 188,
+          "length" : 1
+        },
+        {
+          "activity" : "generateExampleZip",
+          "start" : 193,
+          "length" : 1
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 193,
+          "length" : 33
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 200,
+          "length" : 5
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Questionnaire-Questionnaire-health-declaration.json",
+      "size" : 256015,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 52,
+          "length" : 134
+        },
+        {
+          "activity" : "load",
+          "start" : 52,
+          "length" : 47
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 53,
+          "length" : 11
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 71,
+          "length" : 4829
+        },
+        {
+          "activity" : "validate",
+          "start" : 86,
+          "length" : 14013
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 100,
+          "length" : 2
+        },
+        {
+          "activity" : "generate1",
+          "start" : 101,
+          "length" : 1441
+        },
+        {
+          "activity" : "generate2",
+          "start" : 177,
+          "length" : 7164
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 193,
+          "length" : 56
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 200,
+          "length" : 7
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-ee-health-declaration-questionnaire.json",
+      "size" : 5439,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 52,
+          "length" : 20
+        },
+        {
+          "activity" : "load",
+          "start" : 52,
+          "length" : 17
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 52,
+          "length" : 66
+        },
+        {
+          "activity" : "loadDepInfo",
+          "start" : 53,
+          "length" : 1
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 76,
+          "length" : 51
+        },
+        {
+          "activity" : "validate",
+          "start" : 76,
+          "length" : 1649
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 100,
+          "length" : 2
+        },
+        {
+          "activity" : "generate1",
+          "start" : 103,
+          "length" : 270
+        },
+        {
+          "activity" : "generate2",
+          "start" : 184,
+          "length" : 1030
+        },
+        {
+          "activity" : "generate2",
+          "start" : 185,
+          "length" : 1643
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 193,
+          "length" : 12
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 200,
+          "length" : 1
+        }
+      ]
+    }
+  ]
+}

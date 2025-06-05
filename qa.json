@@ -1,0 +1,19 @@
+{
+  "url" : "https://fhir.ee/qre/ImplementationGuide/ee.fhir.qre",
+  "name" : "QRE",
+  "title" : "Küsimustike teenus",
+  "description" : null,
+  "status" : "active",
+  "package-id" : "ee.fhir.qre",
+  "ig-ver" : "1.0.0",
+  "date" : "Thu, 05 Jun, 2025 07:15:39 +0000",
+  "dateISO8601" : "2025-06-05T07:15:39+00:00",
+  "errs" : 0,
+  "warnings" : 600,
+  "hints" : 552,
+  "suppressed-hints" : 4,
+  "suppressed-warnings" : 0,
+  "version" : "5.0.0",
+  "tool" : "5.0.0 (3)",
+  "maxMemory" : 978848064
+}
