@@ -2266,9 +2266,9 @@ Usage: #example
 * item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].item[=].required = true
 
-* item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.current-prescriptions"
+* item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.current-prescription"
 * item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #current-prescriptions
+* item[=].item[=].item[=].code.code = #current-prescription
 // * item[=].item[=].item[=].code.display = "Viimase 9 kuu jooksul välja kirjutatud retseptid"
 // * item[=].item[=].item[=].text = "Viimase 9 kuu jooksul välja kirjutatud retseptid"
 * item[=].item[=].item[=].type = #group
@@ -2276,25 +2276,25 @@ Usage: #example
 * item[=].item[=].item[=].repeats = true
 * item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[0].linkId = "previous-treatment.regular-medication.current-prescriptions.date"
+* item[=].item[=].item[=].item[0].linkId = "previous-treatment.regular-medication.current-prescription.date"
 // * item[=].item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.current-prescriptions.atc"
+* item[=].item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.current-prescription.atc"
 // * item[=].item[=].item[=].item[=].text = "ATC"
 * item[=].item[=].item[=].item[=].type = #coding
 * item[=].item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.current-prescriptions.package"
+* item[=].item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.current-prescription.package"
 // * item[=].item[=].item[=].item[=].text = "Pakend"
 * item[=].item[=].item[=].item[=].type = #coding
 * item[=].item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.current-prescriptions.source-reference"
+* item[=].item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.current-prescription.source-reference"
 // * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].type = #reference
 * item[=].item[=].item[=].item[=].required = true
