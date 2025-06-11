@@ -2,10 +2,10 @@ Instance: Questionnaire-health-declaration
 InstanceOf: EEHealthDeclarationQuestionnaire
 Description: "Näidis töötervishoiu tervisedeklaratsiooni küsimustikust"
 Usage: #example
-* meta.versionId = "2.0.0"
+// * meta.versionId = "2.0.0"
 * name = "HDECL"
 * title = "Tervisedeklaratsioon"
-* version = "1.0.1"
+* version = "2.0.0"
 * subjectType = #Patient
 // vaja lisada code element
 * url = "https://fhir.ee/qre/Questionnaire-health-declaration"
@@ -170,7 +170,7 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "work-environment.work-restrictions.specification"
 * item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #specification
+* item[=].item[=].item[=].code.code = #specification-why
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsustus"
 * item[=].item[=].item[=].type = #text
@@ -206,7 +206,8 @@ Usage: #example
 * item[=].item[=].type = #boolean
 * item[=].item[=].enableWhen.question = "category"
 * item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].enableWhen.answerCoding = #occupational
+* item[=].item[=].enableWhen.answerCoding.system = "https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala"
+* item[=].item[=].enableWhen.answerCoding.code = #occupational
 * item[=].item[=].required = true
 
 * item[=].item[=].item[0].linkId = "work-environment.occupational-disease.specification"
@@ -221,6 +222,8 @@ Usage: #example
 * item[=].item[=].item[=].required = false
 
 * item[=].item[=].item[+].linkId = "work-environment.occupational-disease.previous-diagnosis"
+* item[=].item[=].item[=].code.system = $HDQ
+* item[=].item[=].item[=].code.code = #previous-diagnosis
 * item[=].item[=].item[=].text = "Varasem diagnoos"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].required = false
@@ -254,7 +257,8 @@ Usage: #example
 * item[=].item[=].type = #boolean
 * item[=].item[=].enableWhen.question = "category"
 * item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].enableWhen.answerCoding = #occupational
+* item[=].item[=].enableWhen.answerCoding.system = "https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala"
+* item[=].item[=].enableWhen.answerCoding.code = #occupational
 * item[=].item[=].required = true
 
 * item[=].item[=].item[0].linkId = "work-environment.work-related-disease.specification"
@@ -269,6 +273,8 @@ Usage: #example
 * item[=].item[=].item[=].required = false
 
 * item[=].item[=].item[+].linkId = "work-environment.work-related-disease.previous-diagnosis"
+* item[=].item[=].item[=].code.system = $HDQ
+* item[=].item[=].item[=].code.code = #previous-diagnosis
 * item[=].item[=].item[=].text = "Varasem diagnoos"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].required = false
@@ -302,7 +308,8 @@ Usage: #example
 * item[=].item[=].type = #boolean
 * item[=].item[=].enableWhen.question = "category"
 * item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].enableWhen.answerCoding = #occupational
+* item[=].item[=].enableWhen.answerCoding.system = "https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala"
+* item[=].item[=].enableWhen.answerCoding.code = #occupational
 * item[=].item[=].required = true
 
 * item[=].item[=].item[0].linkId = "work-environment.ppe-problems.specification"
@@ -335,8 +342,8 @@ Usage: #example
 // * item[=].item[=].required = false
 
 * item[=].item[0].linkId = "allergies.previous-diagnosis"
-// * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
+* item[=].item[=].code.system = $HDQ
+* item[=].item[=].code.code = #previous-diagnosis
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
 * item[=].item[=].text = "Varasem diagnoos"
 * item[=].item[=].type = #group
@@ -374,7 +381,7 @@ Usage: #example
 
 * item[=].item[+].linkId = "allergies.no-complaints"
 * item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #no-complaints
+* item[=].item[=].code.code = #no-current-complaints
 * item[=].item[=].code.display = "Kaebused hetkel puuduvad"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
 * item[=].item[=].type = #boolean
@@ -508,8 +515,8 @@ Usage: #example
 // * item[=].item[=].required = false
 
 * item[=].item[0].linkId = "mental-health.previous-diagnosis"
-// * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
+* item[=].item[=].code.system = $HDQ
+* item[=].item[=].code.code = #previous-diagnosis
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
 * item[=].item[=].text = "Varasem diagnoos"
 * item[=].item[=].type = #group
@@ -547,7 +554,7 @@ Usage: #example
 
 * item[=].item[+].linkId = "mental-health.no-complaints"
 * item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #no-complaints
+* item[=].item[=].code.code = #no-current-complaints
 * item[=].item[=].code.display = "Kaebused hetkel puuduvad"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
 * item[=].item[=].type = #boolean
@@ -725,8 +732,8 @@ Usage: #example
 // * item[=].item[=].required = false
 
 * item[=].item[0].linkId = "nervous-system.previous-diagnosis"
-// * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
+* item[=].item[=].code.system = $HDQ
+* item[=].item[=].code.code = #previous-diagnosis
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
 * item[=].item[=].text = "Varasem diagnoos"
 * item[=].item[=].type = #group
@@ -764,7 +771,7 @@ Usage: #example
 
 * item[=].item[+].linkId = "nervous-system.no-complaints"
 * item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #no-complaints
+* item[=].item[=].code.code = #no-current-complaints
 * item[=].item[=].code.display = "Kaebused hetkel puuduvad"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
 * item[=].item[=].type = #boolean
@@ -891,7 +898,8 @@ Usage: #example
 * item[=].item[=].enableWhen[0].answerBoolean = false
 * item[=].item[=].enableWhen[1].question = "category"
 * item[=].item[=].enableWhen[1].operator = #=
-* item[=].item[=].enableWhen[1].answerCoding = #occupational
+* item[=].item[=].enableWhen[1].answerCoding.system = "https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala"
+* item[=].item[=].enableWhen[1].answerCoding.code = #occupational
 * item[=].item[=].enableBehavior = #all
 * item[=].item[=].required = true
 
@@ -946,8 +954,8 @@ Usage: #example
 // * item[=].item[=].required = false
 
 * item[=].item[0].linkId = "eyes-vision.previous-diagnosis"
-// * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
+* item[=].item[=].code.system = $HDQ
+* item[=].item[=].code.code = #previous-diagnosis
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
 * item[=].item[=].text = "Varasem diagnoos"
 * item[=].item[=].type = #group
@@ -985,7 +993,7 @@ Usage: #example
 
 * item[=].item[+].linkId = "eyes-vision.no-complaints"
 * item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #no-complaints
+* item[=].item[=].code.code = #no-current-complaints
 * item[=].item[=].code.display = "Kaebused hetkel puuduvad"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
 * item[=].item[=].type = #boolean
@@ -1142,8 +1150,8 @@ Usage: #example
 // * item[=].item[=].required = false
 
 * item[=].item[0].linkId = "ear-nose-throat.previous-diagnosis"
-// * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
+* item[=].item[=].code.system = $HDQ
+* item[=].item[=].code.code = #previous-diagnosis
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
 * item[=].item[=].text = "Varasem diagnoos"
 * item[=].item[=].type = #group
@@ -1181,7 +1189,7 @@ Usage: #example
 
 * item[=].item[+].linkId = "ear-nose-throat.no-complaints"
 * item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #no-complaints
+* item[=].item[=].code.code = #no-current-complaints
 * item[=].item[=].code.display = "Kaebused hetkel puuduvad"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
 * item[=].item[=].type = #boolean
@@ -1337,8 +1345,8 @@ Usage: #example
 // * item[=].item[=].required = false
 
 * item[=].item[0].linkId = "respiratory-system.previous-diagnosis"
-// * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
+* item[=].item[=].code.system = $HDQ
+* item[=].item[=].code.code = #previous-diagnosis
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
 * item[=].item[=].text = "Varasem diagnoos"
 * item[=].item[=].type = #group
@@ -1376,7 +1384,7 @@ Usage: #example
 
 * item[=].item[+].linkId = "respiratory-system.no-complaints"
 * item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #no-complaints
+* item[=].item[=].code.code = #no-current-complaints
 * item[=].item[=].code.display = "Kaebused hetkel puuduvad"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
 * item[=].item[=].type = #boolean
@@ -1488,8 +1496,8 @@ Usage: #example
 // * item[=].item[=].required = false
 
 * item[=].item[0].linkId = "metabolic-disorder.previous-diagnosis"
-// * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
+* item[=].item[=].code.system = $HDQ
+* item[=].item[=].code.code = #previous-diagnosis
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
 * item[=].item[=].text = "Varasem diagnoos"
 * item[=].item[=].type = #group
@@ -1527,7 +1535,7 @@ Usage: #example
 
 * item[=].item[+].linkId = "metabolic-disorder.no-complaints"
 * item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #no-complaints
+* item[=].item[=].code.code = #no-current-complaints
 * item[=].item[=].code.display = "Kaebused hetkel puuduvad"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
 * item[=].item[=].type = #boolean
@@ -1595,8 +1603,8 @@ Usage: #example
 // * item[=].item[=].required = false
 
 * item[=].item[0].linkId = "cardiovascular-system.previous-diagnosis"
-// * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
+* item[=].item[=].code.system = $HDQ
+* item[=].item[=].code.code = #previous-diagnosis
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
 * item[=].item[=].text = "Varasem diagnoos"
 * item[=].item[=].type = #group
@@ -1634,7 +1642,7 @@ Usage: #example
 
 * item[=].item[+].linkId = "cardiovascular-system.no-complaints"
 * item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #no-complaints
+* item[=].item[=].code.code = #no-current-complaints
 * item[=].item[=].code.display = "Kaebused hetkel puuduvad"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
 * item[=].item[=].type = #boolean
@@ -1834,8 +1842,8 @@ Usage: #example
 // * item[=].item[=].required = false
 
 * item[=].item[0].linkId = "bones-joints-muscles.previous-diagnosis"
-// * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
+* item[=].item[=].code.system = $HDQ
+* item[=].item[=].code.code = #previous-diagnosis
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
 * item[=].item[=].text = "Varasem diagnoos"
 * item[=].item[=].type = #group
@@ -1873,7 +1881,7 @@ Usage: #example
 
 * item[=].item[+].linkId = "bones-joints-muscles.no-complaints"
 * item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #no-complaints
+* item[=].item[=].code.code = #no-current-complaints
 * item[=].item[=].code.display = "Kaebused hetkel puuduvad"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
 * item[=].item[=].type = #boolean
@@ -2095,8 +2103,8 @@ Usage: #example
 // * item[=].item[=].required = false
 
 * item[=].item[0].linkId = "infections.previous-diagnosis"
-// * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
+* item[=].item[=].code.system = $HDQ
+* item[=].item[=].code.code = #previous-diagnosis
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
 * item[=].item[=].text = "Varasem diagnoos"
 * item[=].item[=].type = #group
@@ -2307,7 +2315,7 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "infections.other-disease.specification"
 * item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #specification
+* item[=].item[=].item[=].code.code = #specification-when-what
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
@@ -2327,7 +2335,7 @@ Usage: #example
 
 * item[=].item[0].linkId = "other-chronic-disorders.none"
 * item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #none
+* item[=].item[=].code.code = #none-current
 * item[=].item[=].code.display = "Hetkel puuduvad"
 * item[=].item[=].text = "Hetkel puuduvad"
 * item[=].item[=].type = #boolean
@@ -2346,7 +2354,7 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "other-chronic-disorders.disease-condition-symptom.specification"
 * item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #specification
+* item[=].item[=].item[=].code.code = #specification-when-what
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
@@ -2374,7 +2382,7 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "previous-treatment.treatment-abroad.specification"
 * item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #specification
+* item[=].item[=].item[=].code.code = #specification-why-where
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
@@ -2393,18 +2401,19 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "previous-treatment.regular-medication.regular-medication-women"
 * item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #regular-medication-women
+* item[=].item[=].item[=].code.code = #regular-medication-women-nine-months
 * item[=].item[=].item[=].code.display = "Kas tarvitate regulaarselt mingeid ravimeid (sh rasestumisvastaseid vahendeid)? Palun loetlege, milliseid olete tarvitanud viimase 9 kuu jooksul."
 * item[=].item[=].item[=].text = "Kas tarvitate regulaarselt mingeid ravimeid (sh rasestumisvastaseid vahendeid)? Palun loetlege, milliseid olete tarvitanud viimase 9 kuu jooksul."
 * item[=].item[=].item[=].type = #boolean
 * item[=].item[=].item[=].enableWhen.question = "patient-gender"
 * item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerCoding = #female
+* item[=].item[=].item[=].enableWhen.answerCoding.system = "http://hl7.org/fhir/administrative-gender"
+* item[=].item[=].item[=].enableWhen.answerCoding.code = #female
 * item[=].item[=].item[=].required = true
 
 * item[=].item[=].item[=].item[0].linkId = "previous-treatment.regular-medication.regular-medication-women.specification"
 * item[=].item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].item[=].code.code = #specification
+* item[=].item[=].item[=].item[=].code.code = #specification-what
 * item[=].item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].item[=].type = #text
@@ -2416,18 +2425,19 @@ Usage: #example
 
 * item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.regular-medication-men"
 * item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #regular-medication-men
+* item[=].item[=].item[=].code.code = #regular-medication-men-nine-months
 * item[=].item[=].item[=].code.display = "Kas tarvitate regulaarselt mingeid ravimeid? Palun loetlege, milliseid olete tarvitanud viimase 9 kuu jooksul."
 * item[=].item[=].item[=].text = "Kas tarvitate regulaarselt mingeid ravimeid? Palun loetlege, milliseid olete tarvitanud viimase 9 kuu jooksul."
 * item[=].item[=].item[=].type = #boolean
 * item[=].item[=].item[=].enableWhen.question = "patient-gender"
 * item[=].item[=].item[=].enableWhen.operator = #!=
-* item[=].item[=].item[=].enableWhen.answerCoding = #female
+* item[=].item[=].item[=].enableWhen.answerCoding.system = "http://hl7.org/fhir/administrative-gender"
+* item[=].item[=].item[=].enableWhen.answerCoding.code = #female
 * item[=].item[=].item[=].required = true
 
 * item[=].item[=].item[=].item[0].linkId = "previous-treatment.regular-medication.regular-medication-men.specification"
 * item[=].item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].item[=].code.code = #specification
+* item[=].item[=].item[=].item[=].code.code = #specification-what
 * item[=].item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].item[=].type = #text
@@ -2530,7 +2540,7 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "previous-treatment.surgeries.specification"
 * item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #specification
+* item[=].item[=].item[=].code.code = #specification-why-when
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
@@ -2590,8 +2600,8 @@ Usage: #example
 // * item[=].item[=].required = false
 
 * item[=].item[0].linkId = "traumas.previous-diagnosis"
-// * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
+* item[=].item[=].code.system = $HDQ
+* item[=].item[=].code.code = #previous-diagnosis
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
 * item[=].item[=].text = "Varasem diagnoos"
 * item[=].item[=].type = #group
@@ -2629,7 +2639,7 @@ Usage: #example
 
 * item[=].item[+].linkId = "traumas.none"
 * item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #none
+* item[=].item[=].code.code = #none-current
 * item[=].item[=].code.display = "Hetkel puuduvad"
 * item[=].item[=].text = "Hetkel puuduvad"
 * item[=].item[=].type = #boolean
@@ -2648,7 +2658,7 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "traumas.fractures.specification"
 * item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #specification
+* item[=].item[=].item[=].code.code = #specification-when-what
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
@@ -2668,7 +2678,8 @@ Usage: #example
 * item[=].item[=].enableWhen[0].answerBoolean = false
 * item[=].item[=].enableWhen[1].question = "category"
 * item[=].item[=].enableWhen[1].operator = #=
-* item[=].item[=].enableWhen[1].answerCoding = #occupational
+* item[=].item[=].enableWhen[1].answerCoding.system = "https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala"
+* item[=].item[=].enableWhen[1].answerCoding.code = #occupational
 * item[=].item[=].enableBehavior = #all
 * item[=].item[=].required = true
 
@@ -2696,7 +2707,7 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "traumas.other-injuries.specification"
 * item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #specification
+* item[=].item[=].item[=].code.code = #specification-when-what
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
@@ -2714,7 +2725,8 @@ Usage: #example
 * item[=].type = #boolean
 * item[=].enableWhen.question = "patient-gender"
 * item[=].enableWhen.operator = #=
-* item[=].enableWhen.answerCoding = #female
+* item[=].enableWhen.answerCoding.system = "http://hl7.org/fhir/administrative-gender"
+* item[=].enableWhen.answerCoding.code = #female
 * item[=].required = true
 
 * item[+].linkId = "skin-disorders"
@@ -2735,8 +2747,8 @@ Usage: #example
 // * item[=].item[=].required = false
 
 * item[=].item[0].linkId = "skin-disorders.previous-diagnosis"
-// * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
+* item[=].item[=].code.system = $HDQ
+* item[=].item[=].code.code = #previous-diagnosis
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
 * item[=].item[=].text = "Varasem diagnoos"
 * item[=].item[=].type = #group
@@ -2809,8 +2821,8 @@ Usage: #example
 // * item[=].item[=].required = false
 
 * item[=].item[0].linkId = "digestive-organs.previous-diagnosis"
-// * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
+* item[=].item[=].code.system = $HDQ
+* item[=].item[=].code.code = #previous-diagnosis
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
 * item[=].item[=].text = "Varasem diagnoos"
 * item[=].item[=].type = #group
@@ -2848,7 +2860,7 @@ Usage: #example
 
 * item[=].item[+].linkId = "digestive-organs.no-complaints"
 * item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #no-complaints
+* item[=].item[=].code.code = #no-current-complaints
 * item[=].item[=].code.display = "Kaebused hetkel puuduvad"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
 * item[=].item[=].type = #boolean
@@ -2955,7 +2967,7 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "digestive-organs.other-disease-condition-symptom.specification"
 * item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #specification
+* item[=].item[=].item[=].code.code = #specification-when-what
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
@@ -2982,8 +2994,8 @@ Usage: #example
 // * item[=].item[=].required = false
 
 * item[=].item[0].linkId = "urogenital-system.previous-diagnosis"
-// * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
+* item[=].item[=].code.system = $HDQ
+* item[=].item[=].code.code = #previous-diagnosis
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
 * item[=].item[=].text = "Varasem diagnoos"
 * item[=].item[=].type = #group
@@ -3021,7 +3033,7 @@ Usage: #example
 
 * item[=].item[+].linkId = "urogenital-system.no-complaints"
 * item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #no-complaints
+* item[=].item[=].code.code = #no-current-complaints
 * item[=].item[=].code.display = "Kaebused hetkel puuduvad"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
 * item[=].item[=].type = #boolean
@@ -3089,7 +3101,7 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "urogenital-system.other-disease-condition-symptom.specification"
 * item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #specification
+* item[=].item[=].item[=].code.code = #specification-when-what
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
@@ -3116,8 +3128,8 @@ Usage: #example
 // * item[=].item[=].required = false
 
 * item[=].item[0].linkId = "blood-problems.previous-diagnosis"
-// * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
+* item[=].item[=].code.system = $HDQ
+* item[=].item[=].code.code = #previous-diagnosis
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
 * item[=].item[=].text = "Varasem diagnoos"
 * item[=].item[=].type = #group
@@ -3155,7 +3167,7 @@ Usage: #example
 
 * item[=].item[+].linkId = "blood-problems.no-complaints"
 * item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #no-complaints
+* item[=].item[=].code.code = #no-current-complaints
 * item[=].item[=].code.display = "Kaebused hetkel puuduvad"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
 * item[=].item[=].type = #boolean
@@ -3204,7 +3216,7 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "blood-problems.other-disease-condition-symptom.specification"
 * item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #specification
+* item[=].item[=].item[=].code.code = #specification-when-what
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
@@ -3424,8 +3436,8 @@ Usage: #example
 // * item[=].item[=].required = false
 
 * item[=].item[0].linkId = "sleep.previous-diagnosis"
-// * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #previous-diagnosis-singular
+* item[=].item[=].code.system = $HDQ
+* item[=].item[=].code.code = #previous-diagnosis
 // * item[=].item[=].item[=].code.display = "Varasem diagnoos"
 * item[=].item[=].text = "Varasem diagnoos"
 * item[=].item[=].type = #group
@@ -3765,7 +3777,8 @@ Usage: #example
 * item[=].type = #group
 * item[=].enableWhen.question = "category"
 * item[=].enableWhen.operator = #=
-* item[=].enableWhen.answerCoding = #occupational
+* item[=].enableWhen.answerCoding.system = "https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala"
+* item[=].enableWhen.answerCoding.code = #occupational
 * item[=].required = true
 
 * item[=].item[0].linkId = "immunization.b-hepatitis"
@@ -3777,7 +3790,7 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "immunization.b-hepatitis.vac-done"
 * item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #heptatitis-B-vac
+* item[=].item[=].item[=].code.code = #hepatitis-B-vac
 * item[=].item[=].item[=].code.display = "Kas Teile on tehtud B-viirushepatiidi vaktsiin?"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud B-viirushepatiidi vaktsiin?"
 * item[=].item[=].item[=].type = #boolean
@@ -4183,7 +4196,7 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "immunization.hemo-influenza.vac-done"
 * item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #haemophilus-influenza-vac
+* item[=].item[=].item[=].code.code = #haemophilus-influenzae-vac
 * item[=].item[=].item[=].code.display = "Kas Teile on tehtud Haemophilus influenzae tüüp b nakkuse vaktsiin?"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud Haemophilus influenzae tüüp b nakkuse vaktsiin?"
 * item[=].item[=].item[=].type = #boolean
@@ -5054,7 +5067,7 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "immunization.other-vac.vac-done"
 * item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #other-vaccines-vaccinated
+* item[=].item[=].item[=].code.code = #other-vac
 * item[=].item[=].item[=].code.display = "Kas Teile on tehtud muid vaktsiine?"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud muid vaktsiine?"
 * item[=].item[=].item[=].type = #boolean
@@ -5120,7 +5133,8 @@ Usage: #example
 * item[=].type = #group
 * item[=].enableWhen.question = "category"
 * item[=].enableWhen.operator = #=
-* item[=].enableWhen.answerCoding = #occupational
+* item[=].enableWhen.answerCoding.system = "https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala"
+* item[=].enableWhen.answerCoding.code = #occupational
 * item[=].required = true
 
 * item[=].item[0].linkId = "work-risk-factors.risk-factor"

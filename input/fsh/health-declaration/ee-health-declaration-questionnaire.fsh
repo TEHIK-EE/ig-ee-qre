@@ -2,7 +2,7 @@ Profile: EEHealthDeclarationQuestionnaire
 Parent: Questionnaire
 Id: ee-health-declaration-questionnaire
 Description: "Tervisedeklaratsiooni küsimustiku profiil"
-* ^version = "1.0.0"
+// * ^version = "1.0.0"
 * ^status = #draft
 * ^date = "2024-01-01"
 * url 1..1
