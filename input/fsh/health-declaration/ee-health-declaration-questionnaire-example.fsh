@@ -8,6 +8,7 @@ Usage: #example
 * version = "2.0.0"
 * subjectType = #Patient
 // vaja lisada code element
+* id = "Questionnaire-health-declaration"
 * url = "https://fhir.ee/qre/Questionnaire-health-declaration"
 * status = #active
 * date = "2023-12-12"
