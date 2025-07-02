@@ -1,0 +1,37 @@
+[
+  {
+    "id" : "ee.fhir.qre",
+    "type" : "ImplementationGuide",
+    "url" : "https://fhir.ee/qre/ImplementationGuide/ee.fhir.qre",
+    "version" : "1.0.0",
+    "name" : "QRE"
+  },
+  {
+    "id" : "Questionnaire-health-declaration-with-text",
+    "type" : "Questionnaire",
+    "url" : "https://fhir.ee/qre/Questionnaire-health-declaration",
+    "version" : "1.0.0",
+    "name" : "HDECL"
+  },
+  {
+    "id" : "Questionnaire-health-declaration",
+    "type" : "Questionnaire",
+    "url" : "https://fhir.ee/qre/Questionnaire-health-declaration",
+    "version" : "1.0.0",
+    "name" : "HDECL"
+  },
+  {
+    "id" : "Questionnaire-health-declaration-cda",
+    "type" : "Questionnaire",
+    "url" : "https://fhir.ee/qre/Questionnaire-health-declaration-cda",
+    "version" : "1.0.0",
+    "name" : "HDECL"
+  },
+  {
+    "id" : "ee-health-declaration-questionnaire",
+    "type" : "StructureDefinition",
+    "url" : "https://fhir.ee/qre/StructureDefinition/ee-health-declaration-questionnaire",
+    "version" : "1.0.0",
+    "name" : "EEHealthDeclarationQuestionnaire"
+  }
+]

@@ -1,0 +1,6 @@
+Source File	Size	loadResources	load	generateSnapshots	load-configure	scan	loadDepInfo	loadInfo	checkR4R4B	generateNarratives	validate	loadLists	checkConformanceResources	checkConformanceResources2	checkConformanceResources3	generateLogicalMaps	validateExpressions	scanForUsageStats	checkURLsUnique	processProvenanceDetails	generate1	generate2	responsesForQuestionnaire	generateLogicals	makeDependencies	generateExampleZip	generateValidationPack	scanProfilesForR5	scanExamplesForR5
+/fsh-generated/resources/ImplementationGuide-ee.fhir.qre.json	3092	-	0	0	0	0	1	0	7	78	0	0	0	0	0	0	0	1	0	0	43	70	0	0	0	0	1	0	1
+fsh-generated/resources/Questionnaire-Questionnaire-health-declaration-cda.json	136475	81	0	0	0	0	0	0	19	15342	0	0	0	0	0	0	0	2	0	0	918	50438	0	0	0	0	34	0	1
+fsh-generated/resources/Questionnaire-Questionnaire-health-declaration-with-text.json	260505	93	0	0	0	0	0	0	27	3603	0	0	0	0	0	0	0	1	0	0	1460	5325	0	0	1	0	62	0	3
+fsh-generated/resources/Questionnaire-Questionnaire-health-declaration.json	219237	84	0	0	1	0	0	0	19	168	0	0	0	0	0	0	0	1	1	0	1368	72689	0	0	0	0	46	0	2
+fsh-generated/resources/StructureDefinition-ee-health-declaration-questionnaire.json	5417	26	0	73	0	0	0	0	0	68	0	0	0	0	0	0	0	1	0	0	258	1015	0	0	0	0	10	0	1
