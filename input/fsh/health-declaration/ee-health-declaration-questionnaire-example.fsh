@@ -15,28 +15,26 @@ Usage: #example
 * approvalDate = "2024-01-01"
 * effectivePeriod.start = "2024-03-16"
 // * effectivePeriod.end = "2026-03-16"
-* code.system = "http://fhir.ee/CodeSystem/dokumendi-tyyp"
-* code.code = #81
-* code.display = "Tervisedeklaratsioon"
+
 
 * item[0].linkId = "category"
 * item[=].type = #coding
 * item[=].answerOption[0].valueCoding.system = $HDC
 * item[=].answerOption[0].valueCoding.code = #driver-group-I
-* item[=].answerOption[0].valueCoding.display = "I grupi mootorsõidukijuhi tervisekontroll"
+* item[=].answerOption[0].valueCoding.display = "Läbivaatus juhiloa saamiseks või pikendamiseks (A-, AM-, B- ja BE-kategooria)"
 * item[=].answerOption[1].valueCoding.system = $HDC
 * item[=].answerOption[1].valueCoding.code = #driver-group-II
-* item[=].answerOption[1].valueCoding.display = "II grupi mootorsõidukijuhi tervisekontroll"
+* item[=].answerOption[1].valueCoding.display = "Läbivaatus juhiloa saamiseks või pikendamiseks (C-, CE-, D- ja DE-kategooria)"
 * item[=].answerOption[2].valueCoding.system = $HDC
 * item[=].answerOption[2].valueCoding.code = #occupational
-* item[=].answerOption[2].valueCoding.display = "Töötervishoiu tervisekontroll"
+* item[=].answerOption[2].valueCoding.display = "Töötervishoiualane läbivaatus"
 * item[=].answerOption[3].valueCoding.system = $HDC
 * item[=].answerOption[3].valueCoding.code = #military-service
-* item[=].answerOption[3].valueCoding.display = "Kaitseväeteenistuse tervisekontroll"
+* item[=].answerOption[3].valueCoding.display = "Kaitseväeteenistuses olija tervise läbivaatus"
 * item[=].required = true
 * item[=].readOnly = true
 * item[=].repeats = true
-* item[=].text = "Kasutusala"
+* item[=].text = "Läbivaatuse tüüp"
 
 * item[+].linkId = "patient-gender"
 * item[=].text = "Sugu"
@@ -57,76 +55,180 @@ Usage: #example
 * item[=].item[0].linkId = "lifestyle.alcohol"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #alcohol
-* item[=].item[=].code.display = "Kas te tarbite alkoholi?"
+* item[=].item[=].code.display = "Kas sa tarvitad alkoholi?"
 * item[=].item[=].type = #boolean
 * item[=].item[=].required = true
-* item[=].item[=].text = "Kas te tarbite alkoholi?"
+* item[=].item[=].text = "Kas sa tarvitad alkoholi?"
 
 * item[=].item[=].item[0].linkId = "lifestyle.alcohol.alcohol-units"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #alcohol-units
-* item[=].item[=].item[=].code.display = "Mitu ühikut nädalas? (1 ühik = 40 ml 40% kanget alkoholi või 120 ml 12% veini või 250 ml 5,2% õlut)"
+* item[=].item[=].item[=].code.display = "Mitu ühikut nädalas?  (1 ühik = 40 ml 40% kanget alkoholi või 120 ml 12% veini või 250 ml 5,2% õlut)"
 * item[=].item[=].item[=].type = #decimal
 * item[=].item[=].item[=].enableWhen.question = "lifestyle.alcohol"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].text = "Mitu ühikut nädalas?"
+* item[=].item[=].item[=].text = "Mitu ühikut nädalas?  (1 ühik = 40 ml 40% kanget alkoholi või 120 ml 12% veini või 250 ml 5,2% õlut)"
 
-* item[=].item[+].linkId = "lifestyle.smoking"
+* item[=].item[+].linkId = "lifestyle.smoking-tobacco"
 * item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #smoking
-* item[=].item[=].code.display = "Kas te suitsetate?"
-* item[=].item[=].text = "Kas te suitsetate?"
-* item[=].item[=].type = #boolean
+* item[=].item[=].code.code = #smoking-tobacco
+* item[=].item[=].code.display = "Kas sa tarvitad tubakatooteid regulaarselt? Regulaarse tarvitamise all mõeldakse kindla sagedusega järjepidevat tarvitamist näiteks iga päev või paar korda nädalas."
+* item[=].item[=].text = "Kas sa tarvitad tubakatooteid regulaarselt? Regulaarse tarvitamise all mõeldakse kindla sagedusega järjepidevat tarvitamist näiteks iga päev või paar korda nädalas."
+* item[=].item[=].type = #coding
+* item[=].item[=].answerOption[0].valueCoding.system = $SH
+* item[=].item[=].answerOption[0].valueCoding.code = #266919005
+* item[=].item[=].answerOption[0].valueCoding.display = "Ei ole kunagi tubakatooteid tarvitanud"
+* item[=].item[=].answerOption[1].valueCoding.system = $SH
+* item[=].item[=].answerOption[1].valueCoding.code = #160617001
+* item[=].item[=].answerOption[1].valueCoding.display = "Tubakatoodete tarvitamisest loobunud"
+* item[=].item[=].answerOption[2].valueCoding.system = $SH
+* item[=].item[=].answerOption[2].valueCoding.code = #428041000124106
+* item[=].item[=].answerOption[2].valueCoding.display = "Aeg-ajalt tubakatoodete tarvitaja"
+* item[=].item[=].answerOption[3].valueCoding.system = $SH
+* item[=].item[=].answerOption[3].valueCoding.code = #449868002
+* item[=].item[=].answerOption[3].valueCoding.display = "Igapäevaselt tubakatoodete tarvitaja"
 * item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "lifestyle.smoking.smoking-amount"
+* item[=].item[=].item[0].linkId = "lifestyle.smoking-tobacco.which"
 * item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #smoking-amount
-* item[=].item[=].item[=].code.display = "Mitu sigaretti päevas?"
-* item[=].item[=].item[=].text = "Mitu sigaretti päevas?"
+* item[=].item[=].item[=].code.code = #smoking-tobacco-which
+* item[=].item[=].item[=].code.display = "Milliseid tubakatooteid Sa põhiliselt tarvitad(sid)?"
+* item[=].item[=].item[=].text = "Milliseid tubakatooteid Sa põhiliselt tarvitad(sid)?"
+* item[=].item[=].item[=].type = #coding
+* item[=].item[=].item[=].answerOption[0].valueCoding.system = $TT
+* item[=].item[=].item[=].answerOption[0].valueCoding.code = #smoking-tobacco
+* item[=].item[=].item[=].answerOption[0].valueCoding.display = "Suitsetatav tubakatoode (sigaret, sigar, sigarillo, vesipiibutubakas)"
+* item[=].item[=].item[=].answerOption[1].valueCoding.system = $TT
+* item[=].item[=].item[=].answerOption[1].valueCoding.code = #smokeless-tobacco
+* item[=].item[=].item[=].answerOption[1].valueCoding.display = "Suitsuvaba tubakatoode (närimistubakas, nuusktubakas, nikotiinipadi, suukaudseks kasutamiseks mõeldud tubakas)"
+* item[=].item[=].item[=].answerOption[2].valueCoding.system = $TT
+* item[=].item[=].item[=].answerOption[2].valueCoding.code = #novel-tobacco
+* item[=].item[=].item[=].answerOption[2].valueCoding.display = "Uudne tubakatoode (elektrooniline sigaret, kuumutatav tubakatoode)"
+* item[=].item[=].item[=].enableWhen.question = "lifestyle.smoking-tobacco"
+* item[=].item[=].item[=].enableWhen.operator = #!=
+* item[=].item[=].item[=].enableWhen.answerCoding = #266919005
+* item[=].item[=].item[=].required = true
+
+* item[=].item[=].item[+].linkId = "lifestyle.smoking-tobacco.tobacco-amount"
+* item[=].item[=].item[=].code.system = $HDQ
+* item[=].item[=].item[=].code.code = #smoking-tobacco-amount
+* item[=].item[=].item[=].code.display = "Mitu sigaretti (sigarit, sigarillot) sa päevas  keskmiselt tarvita(si)d?"
+* item[=].item[=].item[=].text = "Mitu sigaretti (sigarit, sigarillot) sa päevas  keskmiselt tarvita(si)d?"
 * item[=].item[=].item[=].type = #integer
-* item[=].item[=].item[=].enableWhen.question = "lifestyle.smoking"
+* item[=].item[=].item[=].enableWhen.question = "lifestyle.smoking-tobacco.which"
 * item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
+* item[=].item[=].item[=].enableWhen.answerCoding = #smoking-tobacco
 * item[=].item[=].item[=].required = true
 
-* item[=].item[=].item[+].linkId = "lifestyle.smoking.smoking-period"
+* item[=].item[=].item[+].linkId = "lifestyle.smoking-tobacco.smokeless-novel-tobacco-amount"
 * item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #smoking-period
-* item[=].item[=].item[=].code.display = "Mitu aastat olete järjest suitsetanud"
-* item[=].item[=].item[=].text = "Mitu aastat olete järjest suitsetanud?"
-* item[=].item[=].item[=].type = #decimal
-* item[=].item[=].item[=].enableWhen.question = "lifestyle.smoking"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
+* item[=].item[=].item[=].code.code = #smokeless-novel-tobacco-amount
+* item[=].item[=].item[=].code.display = "Mitu korda päevas sa keskmiselt suitsuvabu või uudseid tubakatooteid tarvita(si)d?"
+* item[=].item[=].item[=].text = "Mitu korda päevas sa keskmiselt suitsuvabu või uudseid tubakatooteid tarvita(si)d?"
+* item[=].item[=].item[=].type = #integer
+* item[=].item[=].item[=].enableBehavior = #any
+* item[=].item[=].item[=].enableWhen[0].question = "lifestyle.smoking-tobacco.which"
+* item[=].item[=].item[=].enableWhen[0].operator = #=
+* item[=].item[=].item[=].enableWhen[0].answerCoding = #smokeless-tobacco
+* item[=].item[=].item[=].enableWhen[1].question = "lifestyle.smoking-tobacco.which"
+* item[=].item[=].item[=].enableWhen[1].operator = #=
+* item[=].item[=].item[=].enableWhen[1].answerCoding = #novel-tobacco
 * item[=].item[=].item[=].required = true
 
-* item[=].item[=].item[+].linkId = "lifestyle.smoking.smoking-quit"
+* item[=].item[=].item[+].linkId = "lifestyle.smoking-tobacco.period"
 * item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #smoking-quit
-* item[=].item[=].item[=].code.display = "Kui olete loobunud suitsetamisest, siis millal loobusite?"
-* item[=].item[=].item[=].text = "Kui olete loobunud suitsetamisest, siis millal loobusite?"
+* item[=].item[=].item[=].code.code = #smoking-tobacco-period
+* item[=].item[=].item[=].code.display = "Mitu aastat kokku sa oled tubakatooteid tarvitanud? Arvestage kokku kõik aastad, mil te olete tubakatooteid tarvitanud, isegi kui vahepeal on olnud pause."
+* item[=].item[=].item[=].text = "Mitu aastat kokku sa oled tubakatooteid tarvitanud? Arvestage kokku kõik aastad, mil te olete tubakatooteid tarvitanud, isegi kui vahepeal on olnud pause."
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].enableWhen.question = "lifestyle.smoking-tobacco"
+* item[=].item[=].item[=].enableWhen.operator = #!=
+* item[=].item[=].item[=].enableWhen.answerCoding = #266919005
+* item[=].item[=].item[=].required = true
+
+* item[=].item[=].item[=].item[0].linkId = "lifestyle.smoking-tobacco.period.years"
+* item[=].item[=].item[=].item[=].code.system = $HDQ
+* item[=].item[=].item[=].item[=].code.code = #smoking-tobacco-period-years
+* item[=].item[=].item[=].item[=].code.display = "Mitu aastat?"
+* item[=].item[=].item[=].item[=].text = "Mitu aastat?"
+* item[=].item[=].item[=].item[=].type = #integer
+* item[=].item[=].item[=].item[=].required = true
+
+* item[=].item[=].item[=].item[+].linkId = "lifestyle.smoking-tobacco.period.months"
+* item[=].item[=].item[=].item[=].code.system = $HDQ
+* item[=].item[=].item[=].item[=].code.code = #smoking-tobacco-period-months
+* item[=].item[=].item[=].item[=].code.display = "Mitu kuud?"
+* item[=].item[=].item[=].item[=].text = "Mitu kuud?"
+* item[=].item[=].item[=].item[=].type = #integer
+* item[=].item[=].item[=].item[=].required = true
+
+* item[=].item[=].item[+].linkId = "lifestyle.smoking-tobacco.quit-year"
+* item[=].item[=].item[=].code.system = $HDQ
+* item[=].item[=].item[=].code.code = #smoking-tobacco-quit-year
+* item[=].item[=].item[=].code.display = "Mis aastal Sa viimati tubakatooteid tarvitasid?"
+* item[=].item[=].item[=].text = "Mis aastal Sa viimati tubakatooteid tarvitasid?"
 * item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "lifestyle.smoking"
+* item[=].item[=].item[=].enableWhen.question = "lifestyle.smoking-tobacco"
 * item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = false
-* item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].enableWhen.answerCoding = #160617001
+* item[=].item[=].item[=].required = true
+
+// * item[=].item[+].linkId = "lifestyle.smoking"
+// * item[=].item[=].code.system = $HDQ
+// * item[=].item[=].code.code = #smoking
+// * item[=].item[=].code.display = "Kas sa suitsetad?"
+// * item[=].item[=].text = "Kas sa suitsetad?"
+// * item[=].item[=].type = #boolean
+// * item[=].item[=].required = true
+
+// * item[=].item[=].item[0].linkId = "lifestyle.smoking.smoking-amount"
+// * item[=].item[=].item[=].code.system = $HDQ
+// * item[=].item[=].item[=].code.code = #smoking-amount
+// * item[=].item[=].item[=].code.display = "Mitu sigaretti päevas?"
+// * item[=].item[=].item[=].text = "Mitu sigaretti päevas?"
+// * item[=].item[=].item[=].type = #integer
+// * item[=].item[=].item[=].enableWhen.question = "lifestyle.smoking"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = true
+
+// * item[=].item[=].item[+].linkId = "lifestyle.smoking.smoking-period"
+// * item[=].item[=].item[=].code.system = $HDQ
+// * item[=].item[=].item[=].code.code = #smoking-period
+// * item[=].item[=].item[=].code.display = "Mitu aastat oled järjest suitsetanud?"
+// * item[=].item[=].item[=].text = "Mitu aastat oled järjest suitsetanud?"
+// * item[=].item[=].item[=].type = #decimal
+// * item[=].item[=].item[=].enableWhen.question = "lifestyle.smoking"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = true
+
+// * item[=].item[=].item[+].linkId = "lifestyle.smoking.smoking-quit"
+// * item[=].item[=].item[=].code.system = $HDQ
+// * item[=].item[=].item[=].code.code = #smoking-quit
+// * item[=].item[=].item[=].code.display = "Kui oled loobunud suitsetamisest, siis millal loobusid?"
+// * item[=].item[=].item[=].text = "Kui oled loobunud suitsetamisest, siis millal loobusid?"
+// * item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].enableWhen.question = "lifestyle.smoking"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = false
+// * item[=].item[=].item[=].required = false
 
 * item[=].item[+].linkId = "lifestyle.narcotics"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #narcotics
-* item[=].item[=].code.display = "Kas tarvitate narkootilisi/psühhotroopseid aineid?"
-* item[=].item[=].text = "Kas tarvitate narkootilisi/psühhotroopseid aineid?"
+* item[=].item[=].code.display = "Kas sa tarvitad narkootilisi või psühhotroopseid aineid?"
+* item[=].item[=].text = "Kas sa tarvitad narkootilisi või psühhotroopseid aineid?"
 * item[=].item[=].type = #boolean
 * item[=].item[=].required = true
 
 * item[=].item[=].item[0].linkId = "lifestyle.narcotics.narcotics-frequency"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #narcotics-frequency
-* item[=].item[=].item[=].code.display = "Kirjeldage kui sageli"
-* item[=].item[=].item[=].text = "Kirjeldage, kui sageli"
+* item[=].item[=].item[=].code.display = "Kirjelda, kui sageli"
+* item[=].item[=].item[=].text = "Kirjelda, kui sageli"
 * item[=].item[=].item[=].type = #string
 * item[=].item[=].item[=].enableWhen.question = "lifestyle.narcotics"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -136,16 +238,16 @@ Usage: #example
 * item[=].item[+].linkId = "lifestyle.medication"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #medication-influence
-* item[=].item[=].code.display = "Kas kasutate ravimeid, mis võivad Teie arvates mõjutada Teie keskendumisvõimet ja koordinatsiooni?"
-* item[=].item[=].text = "Kas kasutate ravimeid, mis võivad Teie arvates mõjutada Teie keskendumisvõimet ja koordinatsiooni?"
+* item[=].item[=].code.display = "Kas kasutad ravimeid, mis võivad sinu arvates mõjutada sinu keskendumisvõimet ja koordinatsiooni?"
+* item[=].item[=].text = "Kas kasutad ravimeid, mis võivad sinu arvates mõjutada sinu keskendumisvõimet ja koordinatsiooni?"
 * item[=].item[=].type = #boolean
 * item[=].item[=].required = true
 
 * item[=].item[=].item[0].linkId = "lifestyle.medication.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "lifestyle.medication"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -164,16 +266,16 @@ Usage: #example
 * item[=].item[0].linkId = "work-environment.work-restrictions"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #work-restrictions
-* item[=].item[=].code.display = "Kas Teile on tervisekontrolli põhjal varem seatud tööpiiranguid? Kui jah, mille tõttu?"
-* item[=].item[=].text = "Kas Teile on tervisekontrolli põhjal varem seatud tööpiiranguid? Kui jah, mille tõttu?"
+* item[=].item[=].code.display = "Kas Sulle on tervisekontrolli põhjal varem seatud tööpiiranguid?"
+* item[=].item[=].text = "Kas Sulle on tervisekontrolli põhjal varem seatud tööpiiranguid?"
 * item[=].item[=].type = #boolean
 * item[=].item[=].required = true
 
 * item[=].item[=].item[0].linkId = "work-environment.work-restrictions.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification-why
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsustus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta, mille tõttu"
+* item[=].item[=].item[=].text = "Palun täpsusta, mille tõttu"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "work-environment.work-restrictions"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -183,16 +285,16 @@ Usage: #example
 * item[=].item[+].linkId = "work-environment.work-health-problems"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #work-health-problems
-* item[=].item[=].code.display = "Kas Teil esineb või on esinenud tervisehäireid, mida seostate oma tööülesannete täitmise või töökeskkonnaga?"
-* item[=].item[=].text = "Kas Teil esineb või on esinenud tervisehäireid, mida seostate oma tööülesannete täitmise või töökeskkonnaga?"
+* item[=].item[=].code.display = "Kas sul esineb või on esinenud tervisehäireid, mida seostad oma tööülesannete täitmise või töökeskkonnaga?"
+* item[=].item[=].text = "Kas sul esineb või on esinenud tervisehäireid, mida seostad oma tööülesannete täitmise või töökeskkonnaga?"
 * item[=].item[=].type = #boolean
 * item[=].item[=].required = true
 
 * item[=].item[=].item[0].linkId = "work-environment.work-health-problems.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "work-environment.work-health-problems"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -304,8 +406,8 @@ Usage: #example
 * item[=].item[+].linkId = "work-environment.ppe-problems"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #ppe-problems
-* item[=].item[=].code.display = "Kas tööl kasutatavad isikukaitsevahendid põhjustavad Teile terviseprobleeme?"
-* item[=].item[=].text = "Kas tööl kasutatavad isikukaitsevahendid põhjustavad Teile terviseprobleeme?"
+* item[=].item[=].code.display = "Kas tööl kasutatavad isikukaitsevahendid põhjustavad sulle terviseprobleeme?"
+* item[=].item[=].text = "Kas tööl kasutatavad isikukaitsevahendid põhjustavad sulle terviseprobleeme?"
 * item[=].item[=].type = #boolean
 * item[=].item[=].enableWhen.question = "category"
 * item[=].item[=].enableWhen.operator = #=
@@ -316,8 +418,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "work-environment.ppe-problems.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "work-environment.ppe-problems"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -391,8 +493,8 @@ Usage: #example
 * item[=].item[+].linkId = "allergies.medication-allergy"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #medication-allergy
-* item[=].item[=].code.display = "Allergia ravimitele (palun täpsustage)"
-* item[=].item[=].text = "Allergia ravimitele (palun täpsustage)"
+* item[=].item[=].code.display = "Ravimitele"
+* item[=].item[=].text = "Ravimitele"
 * item[=].item[=].type = #boolean
 * item[=].item[=].enableWhen.question = "allergies.no-complaints"
 * item[=].item[=].enableWhen.operator = #=
@@ -402,8 +504,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "allergies.medication-allergy.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "allergies.medication-allergy"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -413,8 +515,8 @@ Usage: #example
 * item[=].item[+].linkId = "allergies.food-allergy"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #food-allergy
-* item[=].item[=].code.display = "Allergia toiduainetele (palun täpsustage)"
-* item[=].item[=].text = "Allergia toiduainetele (palun täpsustage)"
+* item[=].item[=].code.display = "Toiduainetele"
+* item[=].item[=].text = "Toiduainetele"
 * item[=].item[=].type = #boolean
 * item[=].item[=].enableWhen.question = "allergies.no-complaints"
 * item[=].item[=].enableWhen.operator = #=
@@ -424,8 +526,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "allergies.food-allergy.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "allergies.food-allergy"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -435,8 +537,8 @@ Usage: #example
 * item[=].item[+].linkId = "allergies.pollen-allergy"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #pollen-allergy
-* item[=].item[=].code.display = "Allergia õietolmule (palun täpsustage)"
-* item[=].item[=].text = "Allergia õietolmule (palun täpsustage)"
+* item[=].item[=].code.display = "Õietolmule"
+* item[=].item[=].text = "Õietolmule"
 * item[=].item[=].type = #boolean
 * item[=].item[=].enableWhen.question = "allergies.no-complaints"
 * item[=].item[=].enableWhen.operator = #=
@@ -446,8 +548,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "allergies.pollen-allergy.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "allergies.pollen-allergy"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -457,8 +559,8 @@ Usage: #example
 * item[=].item[+].linkId = "allergies.pets-allergy"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #pets-allergy
-* item[=].item[=].code.display = "Allergia koduloomadele või -lindudele (palun täpsustage)"
-* item[=].item[=].text = "Allergia koduloomadele või -lindudele (palun täpsustage)"
+* item[=].item[=].code.display = "Koduloomadele või -lindudele"
+* item[=].item[=].text = "Koduloomadele või -lindudele"
 * item[=].item[=].type = #boolean
 * item[=].item[=].enableWhen.question = "allergies.no-complaints"
 * item[=].item[=].enableWhen.operator = #=
@@ -468,8 +570,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "allergies.pets-allergy.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "allergies.pets-allergy"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -479,8 +581,8 @@ Usage: #example
 * item[=].item[+].linkId = "allergies.other-allergies"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #other-allergies
-* item[=].item[=].code.display = "Allergia muudele ainetele (palun täpsustage)"
-* item[=].item[=].text = "Allergia muudele ainetele (palun täpsustage)"
+* item[=].item[=].code.display = "Muudele ainetele"
+* item[=].item[=].text = "Muudele ainetele"
 * item[=].item[=].type = #boolean
 * item[=].item[=].enableWhen.question = "allergies.no-complaints"
 * item[=].item[=].enableWhen.operator = #=
@@ -490,8 +592,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "allergies.other-allergies.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "allergies.other-allergies"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -575,8 +677,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "mental-health.depression.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "mental-health.depression"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -597,8 +699,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "mental-health.schizophrenia.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "mental-health.schizophrenia"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -619,8 +721,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "mental-health.fear-working-alone.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "mental-health.fear-working-alone"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -641,8 +743,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "mental-health.fear-closed-spaces.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "mental-health.fear-closed-spaces"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -663,8 +765,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "mental-health.fear-heights.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "mental-health.fear-heights"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -685,8 +787,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "mental-health.frequent-stress.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "mental-health.frequent-stress"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -696,8 +798,8 @@ Usage: #example
 * item[=].item[+].linkId = "mental-health.other-disease-condition-symptom"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #other-disease-condition-symptom
-* item[=].item[=].code.display = "Muu haigus/seisund/sümptom (palun täpsustage)"
-* item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
+* item[=].item[=].code.display = "Muu haigus, seisund, sümptom"
+* item[=].item[=].text = "Muu haigus, seisund, sümptom"
 * item[=].item[=].type = #boolean
 * item[=].item[=].enableWhen.question = "mental-health.no-complaints"
 * item[=].item[=].enableWhen.operator = #=
@@ -707,8 +809,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "mental-health.other-disease-condition-symptom.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "mental-health.other-disease-condition-symptom"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -792,8 +894,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "nervous-system.syncope.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "nervous-system.syncope"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -814,8 +916,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "nervous-system.seizures.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "nervous-system.seizures"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -836,8 +938,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "nervous-system.balance-disorder.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "nervous-system.balance-disorder"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -858,8 +960,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "nervous-system.stroke.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "nervous-system.stroke"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -880,8 +982,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "nervous-system.seasickness.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "nervous-system.seasickness"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -907,8 +1009,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "nervous-system.coordination-disorder.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "nervous-system.coordination-disorder"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -918,8 +1020,8 @@ Usage: #example
 * item[=].item[+].linkId = "nervous-system.other-disease-condition-symptom"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #other-disease-condition-symptom
-* item[=].item[=].code.display = "Muu haigus/seisund/sümptom (palun täpsustage)"
-* item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
+* item[=].item[=].code.display = "Muu haigus, seisund, sümptom"
+* item[=].item[=].text = "Muu haigus, seisund, sümptom"
 * item[=].item[=].type = #boolean
 * item[=].item[=].enableWhen.question = "nervous-system.no-complaints"
 * item[=].item[=].enableWhen.operator = #=
@@ -929,8 +1031,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "nervous-system.other-disease-condition-symptom.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "nervous-system.other-disease-condition-symptom"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -1003,8 +1105,8 @@ Usage: #example
 * item[=].item[+].linkId = "eyes-vision.myopia"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #myopia
-* item[=].item[=].code.display = "Lühinägevus"
-* item[=].item[=].text = "Lühinägevus"
+* item[=].item[=].code.display = "Lühinägelikkus (müoopia)"
+* item[=].item[=].text = "Lühinägelikkus (müoopia)"
 * item[=].item[=].type = #boolean
 * item[=].item[=].enableWhen.question = "eyes-vision.no-complaints"
 * item[=].item[=].enableWhen.operator = #=
@@ -1014,8 +1116,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "eyes-vision.myopia.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "eyes-vision.myopia"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -1036,8 +1138,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "eyes-vision.hyperopia.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "eyes-vision.hyperopia"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -1058,8 +1160,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "eyes-vision.limited-view.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "eyes-vision.limited-view"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -1080,8 +1182,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "eyes-vision.double-vision.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "eyes-vision.double-vision"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -1102,8 +1204,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "eyes-vision.colour-vision-disorder.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "eyes-vision.colour-vision-disorder"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -1113,8 +1215,8 @@ Usage: #example
 * item[=].item[+].linkId = "eyes-vision.other-disease-condition-symptom"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #other-disease-condition-symptom
-* item[=].item[=].code.display = "Muu haigus/seisund/sümptom (palun täpsustage)"
-* item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
+* item[=].item[=].code.display = "Muu haigus, seisund, sümptom"
+* item[=].item[=].text = "Muu haigus, seisund, sümptom"
 * item[=].item[=].type = #boolean
 * item[=].item[=].enableWhen.question = "eyes-vision.no-complaints"
 * item[=].item[=].enableWhen.operator = #=
@@ -1124,8 +1226,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "eyes-vision.other-disease-condition-symptom.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "eyes-vision.other-disease-condition-symptom"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -1210,8 +1312,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "ear-nose-throat.hearing-loss.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "ear-nose-throat.hearing-loss"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -1232,8 +1334,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "ear-nose-throat.allergic-rhinitis.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "ear-nose-throat.allergic-rhinitis"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -1254,8 +1356,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "ear-nose-throat.chronic-sinusitis.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "ear-nose-throat.chronic-sinusitis"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -1276,8 +1378,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "ear-nose-throat.nasal-obstruction.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "ear-nose-throat.nasal-obstruction"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -1298,8 +1400,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "ear-nose-throat.frequent-throat-infection.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "ear-nose-throat.frequent-throat-infection"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -1309,8 +1411,8 @@ Usage: #example
 * item[=].item[+].linkId = "ear-nose-throat.other-disease-condition-symptom"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #other-disease-condition-symptom
-* item[=].item[=].code.display = "Muu haigus/seisund/sümptom (palun täpsustage)"
-* item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
+* item[=].item[=].code.display = "Muu haigus, seisund, sümptom"
+* item[=].item[=].text = "Muu haigus, seisund, sümptom"
 * item[=].item[=].type = #boolean
 * item[=].item[=].enableWhen.question = "ear-nose-throat.no-complaints"
 * item[=].item[=].enableWhen.operator = #=
@@ -1320,8 +1422,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "ear-nose-throat.other-disease-condition-symptom.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "ear-nose-throat.other-disease-condition-symptom"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -1405,8 +1507,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "respiratory-system.asthma.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "respiratory-system.asthma"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -1427,8 +1529,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "respiratory-system.copd.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "respiratory-system.copd"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -1449,8 +1551,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "respiratory-system.sleep-apnoea.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "respiratory-system.sleep-apnoea"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -1460,8 +1562,8 @@ Usage: #example
 * item[=].item[+].linkId = "respiratory-system.other-disease-condition-symptom"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #other-disease-condition-symptom
-* item[=].item[=].code.display = "Muu haigus/seisund/sümptom (palun täpsustage)"
-* item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
+* item[=].item[=].code.display = "Muu haigus, seisund, sümptom"
+* item[=].item[=].text = "Muu haigus, seisund, sümptom"
 * item[=].item[=].type = #boolean
 * item[=].item[=].enableWhen.question = "respiratory-system.no-complaints"
 * item[=].item[=].enableWhen.operator = #=
@@ -1471,8 +1573,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "respiratory-system.other-disease-condition-symptom.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "respiratory-system.other-disease-condition-symptom"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -1556,8 +1658,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "metabolic-disorder.diabetes.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "metabolic-disorder.diabetes"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -1567,8 +1669,8 @@ Usage: #example
 * item[=].item[+].linkId = "metabolic-disorder.other-disease-condition-symptom"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #other-disease-condition-symptom
-* item[=].item[=].code.display = "Muu haigus/seisund/sümptom (palun täpsustage)"
-* item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
+* item[=].item[=].code.display = "Muu haigus, seisund, sümptom"
+* item[=].item[=].text = "Muu haigus, seisund, sümptom"
 * item[=].item[=].type = #boolean
 * item[=].item[=].enableWhen.question = "metabolic-disorder.no-complaints"
 * item[=].item[=].enableWhen.operator = #=
@@ -1578,8 +1680,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "metabolic-disorder.other-disease-condition-symptom.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "metabolic-disorder.other-disease-condition-symptom"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -1663,8 +1765,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "cardiovascular-system.chest-pain-activity.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "cardiovascular-system.chest-pain-activity"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -1685,8 +1787,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "cardiovascular-system.high-blood-pressure.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "cardiovascular-system.high-blood-pressure"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -1707,8 +1809,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "cardiovascular-system.heart-attack.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "cardiovascular-system.heart-attack"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -1729,8 +1831,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "cardiovascular-system.arrhythmia.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "cardiovascular-system.arrhythmia"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -1751,8 +1853,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "cardiovascular-system.angioplasty-stenting.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "cardiovascular-system.angioplasty-stenting"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -1773,8 +1875,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "cardiovascular-system.pacer.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "cardiovascular-system.pacer"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -1795,8 +1897,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "cardiovascular-system.heart-surgery.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "cardiovascular-system.heart-surgery"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -1806,8 +1908,8 @@ Usage: #example
 * item[=].item[+].linkId = "cardiovascular-system.other-disease-condition-symptom"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #other-disease-condition-symptom
-* item[=].item[=].code.display = "Muu haigus/seisund/sümptom (palun täpsustage)"
-* item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
+* item[=].item[=].code.display = "Muu haigus, seisund, sümptom"
+* item[=].item[=].text = "Muu haigus, seisund, sümptom"
 * item[=].item[=].type = #boolean
 * item[=].item[=].enableWhen.question = "cardiovascular-system.no-complaints"
 * item[=].item[=].enableWhen.operator = #=
@@ -1817,8 +1919,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "cardiovascular-system.other-disease-condition-symptom.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "cardiovascular-system.other-disease-condition-symptom"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -1902,8 +2004,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "bones-joints-muscles.joint-stiffness.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "bones-joints-muscles.joint-stiffness"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -1913,8 +2015,8 @@ Usage: #example
 * item[=].item[+].linkId = "bones-joints-muscles.limb-paralysis"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #limb-paralysis
-* item[=].item[=].code.display = "Jäseme osaline või täielik halvatus (palun täpsustage)"
-* item[=].item[=].text = "Jäseme osaline või täielik halvatus (palun täpsustage)"
+* item[=].item[=].code.display = "Jäseme osaline või täielik halvatus"
+* item[=].item[=].text = "Jäseme osaline või täielik halvatus"
 * item[=].item[=].type = #boolean
 * item[=].item[=].enableWhen.question = "bones-joints-muscles.no-complaints"
 * item[=].item[=].enableWhen.operator = #=
@@ -1924,8 +2026,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "bones-joints-muscles.limb-paralysis.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "bones-joints-muscles.limb-paralysis"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -1935,8 +2037,8 @@ Usage: #example
 * item[=].item[+].linkId = "bones-joints-muscles.missing-limb"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #missing-limb
-* item[=].item[=].code.display = "Jäseme või selle osa puudumine (palun täpsustage)"
-* item[=].item[=].text = "Jäseme või selle osa puudumine (palun täpsustage)"
+* item[=].item[=].code.display = "Jäseme või selle osa puudumine"
+* item[=].item[=].text = "Jäseme või selle osa puudumine"
 * item[=].item[=].type = #boolean
 * item[=].item[=].enableWhen.question = "bones-joints-muscles.no-complaints"
 * item[=].item[=].enableWhen.operator = #=
@@ -1946,8 +2048,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "bones-joints-muscles.missing-limb.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "bones-joints-muscles.missing-limb"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -1968,8 +2070,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "bones-joints-muscles.tremor.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "bones-joints-muscles.tremor"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -1990,8 +2092,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "bones-joints-muscles.joint-pain.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "bones-joints-muscles.joint-pain"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -2012,8 +2114,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "bones-joints-muscles.neck-pain.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "bones-joints-muscles.neck-pain"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -2034,8 +2136,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "bones-joints-muscles.shoulder-pain.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "bones-joints-muscles.shoulder-pain"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -2056,8 +2158,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "bones-joints-muscles.lower-back-pain.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "bones-joints-muscles.lower-back-pain"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -2067,8 +2169,8 @@ Usage: #example
 * item[=].item[+].linkId = "bones-joints-muscles.other-disease-condition-symptom"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #other-disease-condition-symptom
-* item[=].item[=].code.display = "Muu haigus/seisund/sümptom (palun täpsustage)"
-* item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
+* item[=].item[=].code.display = "Muu haigus, seisund, sümptom"
+* item[=].item[=].text = "Muu haigus, seisund, sümptom"
 * item[=].item[=].type = #boolean
 * item[=].item[=].enableWhen.question = "bones-joints-muscles.no-complaints"
 * item[=].item[=].enableWhen.operator = #=
@@ -2078,8 +2180,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "bones-joints-muscles.other-disease-condition-symptom.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "bones-joints-muscles.other-disease-condition-symptom"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -2163,8 +2265,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "infections.tuberculosis.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "infections.tuberculosis"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -2185,8 +2287,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "infections.hepatitis.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "infections.hepatitis"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -2207,8 +2309,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "infections.hiv.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "infections.hiv"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -2229,8 +2331,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "infections.aids.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "infections.aids"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -2251,8 +2353,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "infections.intestinal-infection.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "infections.intestinal-infection"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -2273,8 +2375,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "infections.respiratory-infection.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "infections.respiratory-infection"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -2295,8 +2397,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "infections.skin-infection.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "infections.skin-infection"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -2306,8 +2408,8 @@ Usage: #example
 * item[=].item[+].linkId = "infections.other-disease"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #other-disease
-* item[=].item[=].code.display = "Muu haigus (palun täpsustage, millised ja millal)"
-* item[=].item[=].text = "Muu haigus (palun täpsustage, millised ja millal)"
+* item[=].item[=].code.display = "Muu haigus"
+* item[=].item[=].text = "Muu haigus"
 * item[=].item[=].type = #boolean
 * item[=].item[=].enableWhen.question = "infections.no-known-illness"
 * item[=].item[=].enableWhen.operator = #=
@@ -2317,8 +2419,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "infections.other-disease.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification-when-what
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta, millised ja millal"
+* item[=].item[=].item[=].text = "Palun täpsusta, millised ja millal"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "infections.other-disease"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -2345,8 +2447,8 @@ Usage: #example
 * item[=].item[+].linkId = "other-chronic-disorders.disease-condition-symptom"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #disease-condition-symptom
-* item[=].item[=].code.display = "Haigus/seisund/sümptom (palun täpsustage, millised ja millal)"
-* item[=].item[=].text = "Haigus/seisund/sümptom (palun täpsustage, millised ja millal)"
+* item[=].item[=].code.display = "Haigus, seisund, sümptom"
+* item[=].item[=].text = "Haigus, seisund, sümptom"
 * item[=].item[=].type = #boolean
 * item[=].item[=].enableWhen.question = "other-chronic-disorders.none"
 * item[=].item[=].enableWhen.operator = #=
@@ -2356,8 +2458,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "other-chronic-disorders.disease-condition-symptom.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification-when-what
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta, millised ja millal"
+* item[=].item[=].item[=].text = "Palun täpsusta, millised ja millal"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "other-chronic-disorders.disease-condition-symptom"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -2384,8 +2486,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "previous-treatment.treatment-abroad.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification-why-where
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta millal, kus, ja millega seoses"
+* item[=].item[=].item[=].text = "Palun täpsusta millal, kus, ja millega seoses"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "previous-treatment.treatment-abroad"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -2415,8 +2517,8 @@ Usage: #example
 * item[=].item[=].item[=].item[0].linkId = "previous-treatment.regular-medication.regular-medication-women.specification"
 * item[=].item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].item[=].code.code = #specification-what
-* item[=].item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].item[=].code.display = "Palun loetle, milliseid"
+* item[=].item[=].item[=].item[=].text = "Palun loetle, milliseid"
 * item[=].item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].item[=].enableWhen.question = "previous-treatment.regular-medication.regular-medication-women"
 * item[=].item[=].item[=].item[=].enableWhen.operator = #=
@@ -2439,8 +2541,8 @@ Usage: #example
 * item[=].item[=].item[=].item[0].linkId = "previous-treatment.regular-medication.regular-medication-men.specification"
 * item[=].item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].item[=].code.code = #specification-what
-* item[=].item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].item[=].code.display = "Palun loetle, milliseid"
+* item[=].item[=].item[=].item[=].text = "Palun loetle, milliseid"
 * item[=].item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].item[=].enableWhen.question = "previous-treatment.regular-medication.regular-medication-men"
 * item[=].item[=].item[=].item[=].enableWhen.operator = #=
@@ -2492,8 +2594,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "previous-treatment.hospitalization.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "previous-treatment.hospitalization"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -2542,8 +2644,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "previous-treatment.surgeries.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification-why-when
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta, millal, mille tõttu"
+* item[=].item[=].item[=].text = "Palun täpsusta, millal, mille tõttu"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "previous-treatment.surgeries"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -2649,8 +2751,8 @@ Usage: #example
 * item[=].item[+].linkId = "traumas.fractures"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #fractures
-* item[=].item[=].code.display = "Luumurrud (palun täpsustage, millised ja millal)"
-* item[=].item[=].text = "Luumurrud (palun täpsustage, millised ja millal)"
+* item[=].item[=].code.display = "Luumurrud"
+* item[=].item[=].text = "Luumurrud"
 * item[=].item[=].type = #boolean
 * item[=].item[=].enableWhen.question = "traumas.none"
 * item[=].item[=].enableWhen.operator = #=
@@ -2660,8 +2762,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "traumas.fractures.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification-when-what
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta, millised ja millal"
+* item[=].item[=].item[=].text = "Palun täpsusta, millised ja millal"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "traumas.fractures"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -2687,8 +2789,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "traumas.head-traumas.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "traumas.head-traumas"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -2698,8 +2800,8 @@ Usage: #example
 * item[=].item[+].linkId = "traumas.other-injuries"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #other-injuries
-* item[=].item[=].code.display = "Muud olulised vigastused (palun täpsustage, millised ja millal)"
-* item[=].item[=].text = "Muud olulised vigastused (palun täpsustage, millised ja millal)"
+* item[=].item[=].code.display = "Muud olulised vigastused"
+* item[=].item[=].text = "Muud olulised vigastused"
 * item[=].item[=].type = #boolean
 * item[=].item[=].enableWhen.question = "traumas.none"
 * item[=].item[=].enableWhen.operator = #=
@@ -2709,8 +2811,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "traumas.other-injuries.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification-when-what
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta, millised ja millal"
+* item[=].item[=].item[=].text = "Palun täpsusta, millised ja millal"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "traumas.other-injuries"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -2796,8 +2898,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "skin-disorders.skin-conditions.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "skin-disorders.skin-conditions"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -2881,8 +2983,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "digestive-organs.liver-disease.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "digestive-organs.liver-disease"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -2903,8 +3005,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "digestive-organs.gallstones.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "digestive-organs.gallstones"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -2925,8 +3027,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "digestive-organs.gastric-duodenal-ulcers.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "digestive-organs.gastric-duodenal-ulcers"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -2947,8 +3049,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "digestive-organs.colitis-crohns-disease.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "digestive-organs.colitis-crohns-disease"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -2958,8 +3060,8 @@ Usage: #example
 * item[=].item[+].linkId = "digestive-organs.other-disease-condition-symptom"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #other-disease-condition-symptom
-* item[=].item[=].code.display = "Muu haigus/seisund/sümptom (palun täpsustage)"
-* item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
+* item[=].item[=].code.display = "Muu haigus, seisund, sümptom"
+* item[=].item[=].text = "Muu haigus, seisund, sümptom"
 * item[=].item[=].type = #boolean
 * item[=].item[=].enableWhen.question = "digestive-organs.no-complaints"
 * item[=].item[=].enableWhen.operator = #=
@@ -2969,8 +3071,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "digestive-organs.other-disease-condition-symptom.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification-when-what
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta, millised ja millal"
+* item[=].item[=].item[=].text = "Palun täpsusta, millised ja millal"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "digestive-organs.other-disease-condition-symptom"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -3062,8 +3164,8 @@ Usage: #example
 * item[=].item[=].item[=].item[0].linkId = "urogenital-system.kidney-diseases.kidney-stones.specification"
 * item[=].item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].item[=].text = "Täpsustus"
+* item[=].item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].item[=].enableWhen.question = "urogenital-system.kidney-diseases.kidney-stones"
 * item[=].item[=].item[=].item[=].enableWhen.operator = #=
@@ -3081,8 +3183,8 @@ Usage: #example
 * item[=].item[=].item[=].item[0].linkId = "urogenital-system.kidney-diseases.renal-insufficiency.specification"
 * item[=].item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].item[=].text = "Täpsustus"
+* item[=].item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].item[=].enableWhen.question = "urogenital-system.kidney-diseases.renal-insufficiency"
 * item[=].item[=].item[=].item[=].enableWhen.operator = #=
@@ -3092,8 +3194,8 @@ Usage: #example
 * item[=].item[+].linkId = "urogenital-system.other-disease-condition-symptom"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #other-disease-condition-symptom
-* item[=].item[=].code.display = "Muu haigus/seisund/sümptom (palun täpsustage)"
-* item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
+* item[=].item[=].code.display = "Muu haigus, seisund, sümptom"
+* item[=].item[=].text = "Muu haigus, seisund, sümptom"
 * item[=].item[=].type = #group
 * item[=].item[=].enableWhen.question = "urogenital-system.no-complaints"
 * item[=].item[=].enableWhen.operator = #=
@@ -3103,8 +3205,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "urogenital-system.other-disease-condition-symptom.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification-when-what
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta, millised ja millal"
+* item[=].item[=].item[=].text = "Palun täpsusta, millised ja millal"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "urogenital-system.other-disease-condition-symptom"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -3177,8 +3279,8 @@ Usage: #example
 * item[=].item[+].linkId = "blood-problems.blood-disease"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #blood-disease
-* item[=].item[=].code.display = "Verehaigused (palun täpsustage, millised)"
-* item[=].item[=].text = "Verehaigused (palun täpsustage, millised)"
+* item[=].item[=].code.display = "Verehaigused"
+* item[=].item[=].text = "Verehaigused"
 * item[=].item[=].type = #group
 * item[=].item[=].enableWhen.question = "blood-problems.no-complaints"
 * item[=].item[=].enableWhen.operator = #=
@@ -3196,8 +3298,8 @@ Usage: #example
 * item[=].item[=].item[=].item[0].linkId = "blood-problems.blood-disease.anemia.specification"
 * item[=].item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].item[=].text = "Täpsustus"
+* item[=].item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].item[=].enableWhen.question = "blood-problems.blood-disease.anemia"
 * item[=].item[=].item[=].item[=].enableWhen.operator = #=
@@ -3207,8 +3309,8 @@ Usage: #example
 * item[=].item[+].linkId = "blood-problems.other-disease-condition-symptom"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #other-disease-condition-symptom
-* item[=].item[=].code.display = "Muu haigus/seisund/sümptom (palun täpsustage)"
-* item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
+* item[=].item[=].code.display = "Muu haigus, seisund, sümptom"
+* item[=].item[=].text = "Muu haigus, seisund, sümptom"
 * item[=].item[=].type = #group
 * item[=].item[=].enableWhen.question = "blood-problems.no-complaints"
 * item[=].item[=].enableWhen.operator = #=
@@ -3218,8 +3320,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "blood-problems.other-disease-condition-symptom.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification-when-what
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta, millised ja millal"
+* item[=].item[=].item[=].text = "Palun täpsusta, millised ja millal"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "blood-problems.other-disease-condition-symptom"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -3257,8 +3359,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "medical-devices.glasses.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "medical-devices.glasses"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -3279,8 +3381,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "medical-devices.contact-lenses.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "medical-devices.contact-lenses"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -3301,8 +3403,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "medical-devices.hearing-aid.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "medical-devices.hearing-aid"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -3323,8 +3425,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "medical-devices.arm-prosthesis.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "medical-devices.arm-prosthesis"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -3345,8 +3447,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "medical-devices.leg-prosthesis.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "medical-devices.leg-prosthesis"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -3367,8 +3469,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "medical-devices.mobility-device.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "medical-devices.mobility-device"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -3411,8 +3513,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "medical-devices.other-device.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "medical-devices.other-device"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -3485,8 +3587,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "sleep.loud-snoring.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "sleep.loud-snoring"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -3504,8 +3606,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "sleep.fatigue.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "sleep.fatigue"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -3523,8 +3625,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "sleep.breath-stop-sleep.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "sleep.breath-stop-sleep"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -3552,8 +3654,8 @@ Usage: #example
 // * item[=].item[=].item[0].linkId = "health-assessment.patient-health-assessment.specification"
 // * item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].code.code = #specification
-// * item[=].item[=].item[=].code.display = "Täpsustus"
-// * item[=].item[=].item[=].text = "Täpsutus"
+// * item[=].item[=].item[=].code.display = "Palun täpsusta"
+// * item[=].item[=].item[=].text = "Palun täpsusta"
 // * item[=].item[=].item[=].type = #text
 // * item[=].item[=].item[=].required = false
 
@@ -3568,8 +3670,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "health-assessment.illness-past-year.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "health-assessment.illness-past-year"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -3587,8 +3689,8 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "health-assessment.complaints.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "health-assessment.complaints"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -5077,8 +5179,8 @@ Usage: #example
 * item[=].item[=].item[=].item[0].linkId = "immunization.other-vac.vac-done.specification"
 * item[=].item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].item[=].text = "Täpsustus"
+* item[=].item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].item[=].enableWhen.question = "immunization.other-vac.vac-done"
 * item[=].item[=].item[=].item[=].enableWhen.operator = #=
@@ -5143,7 +5245,7 @@ Usage: #example
 * item[=].item[=].code.code = #risk-factor
 * item[=].item[=].code.display = "Ohutegur"
 * item[=].item[=].type = #coding
-* item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/ohutegurid"
+* item[=].item[=].answerValueSet = "https://fhir.ee/CodeSystem/toolaadi-ja-tookeskkonnaga-seotud-ohutegurid"
 * item[=].item[=].required = false
 * item[=].item[=].repeats = true
 * item[=].item[=].text = "Ohutegur"
@@ -5151,7 +5253,7 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "work-risk-factors.risk-factor.specification"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].item[=].text = "Täpsustus"
+* item[=].item[=].item[=].code.display = "Palun täpsusta"
+* item[=].item[=].item[=].text = "Palun täpsusta"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].required = false
