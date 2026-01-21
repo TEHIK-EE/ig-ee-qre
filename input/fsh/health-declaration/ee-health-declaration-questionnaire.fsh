@@ -35,10 +35,12 @@ Description: "Tervisedeklaratsiooni küsimustiku profiil"
 * name = "HDECL"
 * title 1..1
 * description 0..0
-* code 1..1
+* code.code = #156871000181103
+* code.system = "http://fhir.ee/CodeSystem/kysimustikud"
+* code.display = "Tervisedeklaratsiooni küsimustik"
 * item 1..*
   * id 0..0
-  * extension 0..0
+  * extension 0..*
   * modifierExtension 0..0
   * linkId 1..1
   * definition 0..0

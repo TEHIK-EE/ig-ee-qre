@@ -7,6 +7,7 @@ Usage: #definition
 * title = "Tervisedeklaratsioon"
 * version = "2.0.0"
 * subjectType = #Patient
+
 * id = "Questionnaire-health-declaration"
 * url = "https://fhir.ee/qre/Questionnaire-health-declaration"
 * status = #active
@@ -14,8 +15,6 @@ Usage: #definition
 * approvalDate = "2024-01-01"
 * effectivePeriod.start = "2024-03-16"
 // * effectivePeriod.end = "2026-03-16"
-* code.system = "http://fhir.ee/CodeSystem/dokumendi-tyyp"
-* code.code = #81
 
 
 * item[0].linkId = "category"
@@ -72,46 +71,150 @@ Usage: #definition
 * item[=].item[=].item[=].required = true
 
 
-* item[=].item[+].linkId = "lifestyle.smoking"
+* item[=].item[+].linkId = "lifestyle.smoking-tobacco"
 * item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #smoking
+* item[=].item[=].code.code = #smoking-tobacco
 
 
-* item[=].item[=].type = #boolean
+* item[=].item[=].type = #coding
+* item[=].item[=].answerOption[0].valueCoding.system = $SH
+* item[=].item[=].answerOption[0].valueCoding.code = #266919005
+
+* item[=].item[=].answerOption[1].valueCoding.system = $SH
+* item[=].item[=].answerOption[1].valueCoding.code = #160617001
+
+* item[=].item[=].answerOption[2].valueCoding.system = $SH
+* item[=].item[=].answerOption[2].valueCoding.code = #428041000124106
+
+* item[=].item[=].answerOption[3].valueCoding.system = $SH
+* item[=].item[=].answerOption[3].valueCoding.code = #449868002
+
 * item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "lifestyle.smoking.smoking-amount"
+* item[=].item[=].item[0].linkId = "lifestyle.smoking-tobacco.which"
 * item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #smoking-amount
+* item[=].item[=].item[=].code.code = #smoking-tobacco-which
+
+
+* item[=].item[=].item[=].type = #coding
+* item[=].item[=].item[=].answerOption[0].valueCoding.system = $TT
+* item[=].item[=].item[=].answerOption[0].valueCoding.code = #smoking-tobacco
+
+* item[=].item[=].item[=].answerOption[1].valueCoding.system = $TT
+* item[=].item[=].item[=].answerOption[1].valueCoding.code = #smokeless-tobacco
+
+* item[=].item[=].item[=].answerOption[2].valueCoding.system = $TT
+* item[=].item[=].item[=].answerOption[2].valueCoding.code = #novel-tobacco
+
+* item[=].item[=].item[=].enableWhen.question = "lifestyle.smoking-tobacco"
+* item[=].item[=].item[=].enableWhen.operator = #!=
+* item[=].item[=].item[=].enableWhen.answerCoding = #266919005
+* item[=].item[=].item[=].required = true
+
+* item[=].item[=].item[+].linkId = "lifestyle.smoking-tobacco.tobacco-amount"
+* item[=].item[=].item[=].code.system = $HDQ
+* item[=].item[=].item[=].code.code = #smoking-tobacco-amount
 
 
 * item[=].item[=].item[=].type = #integer
-* item[=].item[=].item[=].enableWhen.question = "lifestyle.smoking"
+* item[=].item[=].item[=].enableWhen.question = "lifestyle.smoking-tobacco.which"
 * item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
+* item[=].item[=].item[=].enableWhen.answerCoding = #smoking-tobacco
 * item[=].item[=].item[=].required = true
 
-* item[=].item[=].item[+].linkId = "lifestyle.smoking.smoking-period"
+* item[=].item[=].item[+].linkId = "lifestyle.smoking-tobacco.smokeless-novel-tobacco-amount"
 * item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #smoking-period
+* item[=].item[=].item[=].code.code = #smokeless-novel-tobacco-amount
 
 
-* item[=].item[=].item[=].type = #decimal
-* item[=].item[=].item[=].enableWhen.question = "lifestyle.smoking"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = true
+* item[=].item[=].item[=].type = #integer
+* item[=].item[=].item[=].enableBehavior = #any
+* item[=].item[=].item[=].enableWhen[0].question = "lifestyle.smoking-tobacco.which"
+* item[=].item[=].item[=].enableWhen[0].operator = #=
+* item[=].item[=].item[=].enableWhen[0].answerCoding = #smokeless-tobacco
+* item[=].item[=].item[=].enableWhen[1].question = "lifestyle.smoking-tobacco.which"
+* item[=].item[=].item[=].enableWhen[1].operator = #=
+* item[=].item[=].item[=].enableWhen[1].answerCoding = #novel-tobacco
 * item[=].item[=].item[=].required = true
 
-* item[=].item[=].item[+].linkId = "lifestyle.smoking.smoking-quit"
+* item[=].item[=].item[+].linkId = "lifestyle.smoking-tobacco.period"
 * item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #smoking-quit
+* item[=].item[=].item[=].code.code = #smoking-tobacco-period
+
+
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].enableWhen.question = "lifestyle.smoking-tobacco"
+* item[=].item[=].item[=].enableWhen.operator = #!=
+* item[=].item[=].item[=].enableWhen.answerCoding = #266919005
+* item[=].item[=].item[=].required = true
+
+* item[=].item[=].item[=].item[0].linkId = "lifestyle.smoking-tobacco.period.years"
+* item[=].item[=].item[=].item[=].code.system = $HDQ
+* item[=].item[=].item[=].item[=].code.code = #smoking-tobacco-period-years
+
+
+* item[=].item[=].item[=].item[=].type = #integer
+* item[=].item[=].item[=].item[=].required = true
+
+* item[=].item[=].item[=].item[+].linkId = "lifestyle.smoking-tobacco.period.months"
+* item[=].item[=].item[=].item[=].code.system = $HDQ
+* item[=].item[=].item[=].item[=].code.code = #smoking-tobacco-period-months
+
+
+* item[=].item[=].item[=].item[=].type = #integer
+* item[=].item[=].item[=].item[=].required = true
+
+* item[=].item[=].item[+].linkId = "lifestyle.smoking-tobacco.quit-year"
+* item[=].item[=].item[=].code.system = $HDQ
+* item[=].item[=].item[=].code.code = #smoking-tobacco-quit-year
 
 
 * item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "lifestyle.smoking"
+* item[=].item[=].item[=].enableWhen.question = "lifestyle.smoking-tobacco"
 * item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerBoolean = false
-* item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].enableWhen.answerCoding = #160617001
+* item[=].item[=].item[=].required = true
+
+// * item[=].item[+].linkId = "lifestyle.smoking"
+// * item[=].item[=].code.system = $HDQ
+// * item[=].item[=].code.code = #smoking
+
+// * item[=].item[=].text = "Kas sa suitsetad?"
+// * item[=].item[=].type = #boolean
+// * item[=].item[=].required = true
+
+// * item[=].item[=].item[0].linkId = "lifestyle.smoking.smoking-amount"
+// * item[=].item[=].item[=].code.system = $HDQ
+// * item[=].item[=].item[=].code.code = #smoking-amount
+
+// * item[=].item[=].item[=].text = "Mitu sigaretti päevas?"
+// * item[=].item[=].item[=].type = #integer
+// * item[=].item[=].item[=].enableWhen.question = "lifestyle.smoking"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = true
+
+// * item[=].item[=].item[+].linkId = "lifestyle.smoking.smoking-period"
+// * item[=].item[=].item[=].code.system = $HDQ
+// * item[=].item[=].item[=].code.code = #smoking-period
+
+// * item[=].item[=].item[=].text = "Mitu aastat oled järjest suitsetanud?"
+// * item[=].item[=].item[=].type = #decimal
+// * item[=].item[=].item[=].enableWhen.question = "lifestyle.smoking"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = true
+// * item[=].item[=].item[=].required = true
+
+// * item[=].item[=].item[+].linkId = "lifestyle.smoking.smoking-quit"
+// * item[=].item[=].item[=].code.system = $HDQ
+// * item[=].item[=].item[=].code.code = #smoking-quit
+
+// * item[=].item[=].item[=].text = "Kui oled loobunud suitsetamisest, siis millal loobusid?"
+// * item[=].item[=].item[=].type = #date
+// * item[=].item[=].item[=].enableWhen.question = "lifestyle.smoking"
+// * item[=].item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].item[=].enableWhen.answerBoolean = false
+// * item[=].item[=].item[=].required = false
 
 * item[=].item[+].linkId = "lifestyle.narcotics"
 * item[=].item[=].code.system = $HDQ
@@ -3552,7 +3655,7 @@ Usage: #definition
 // * item[=].item[=].item[=].code.system = $HDQ
 // * item[=].item[=].item[=].code.code = #specification
 
-// * item[=].item[=].item[=].text = "Täpsutus"
+// * item[=].item[=].item[=].text = "Palun täpsusta"
 // * item[=].item[=].item[=].type = #text
 // * item[=].item[=].item[=].required = false
 
@@ -5142,7 +5245,7 @@ Usage: #definition
 * item[=].item[=].code.code = #risk-factor
 
 * item[=].item[=].type = #coding
-* item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/ohutegurid"
+* item[=].item[=].answerValueSet = "https://fhir.ee/CodeSystem/toolaadi-ja-tookeskkonnaga-seotud-ohutegurid"
 * item[=].item[=].required = false
 * item[=].item[=].repeats = true
 

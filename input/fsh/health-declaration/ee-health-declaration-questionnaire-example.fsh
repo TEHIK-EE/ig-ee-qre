@@ -15,9 +15,7 @@ Usage: #example
 * approvalDate = "2024-01-01"
 * effectivePeriod.start = "2024-03-16"
 // * effectivePeriod.end = "2026-03-16"
-* code.system = "http://fhir.ee/CodeSystem/dokumendi-tyyp"
-* code.code = #81
-* code.display = "Tervisedeklaratsioon"
+
 
 * item[0].linkId = "category"
 * item[=].type = #coding
@@ -5247,7 +5245,7 @@ Usage: #example
 * item[=].item[=].code.code = #risk-factor
 * item[=].item[=].code.display = "Ohutegur"
 * item[=].item[=].type = #coding
-* item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/ohutegurid"
+* item[=].item[=].answerValueSet = "https://fhir.ee/CodeSystem/toolaadi-ja-tookeskkonnaga-seotud-ohutegurid"
 * item[=].item[=].required = false
 * item[=].item[=].repeats = true
 * item[=].item[=].text = "Ohutegur"
