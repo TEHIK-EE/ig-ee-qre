@@ -14,7 +14,9 @@ Usage: #example
 * approvalDate = "2024-01-01"
 * effectivePeriod.start = "2024-03-16"
 // * effectivePeriod.end = "2026-03-16"
-
+* code.code = #156871000181103
+* code.system = "http://fhir.ee/CodeSystem/kysimustikud"
+* code.display = "Tervisedeklaratsiooni küsimustik"
 
 * item[0].linkId = "category"
 * item[=].type = #coding
