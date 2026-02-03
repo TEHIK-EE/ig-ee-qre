@@ -11,3 +11,7 @@ Alias: $TT = https://fhir.ee/CodeSystem/tubakatoodete-liik
 Alias: $unitOption = http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption
 
 Alias: $ucum = http://unitsofmeasure.org
+
+Alias: $Sagedus-VS = https://fhir.ee/ValueSet/sagedus-ajas
+
+Alias: $Sagedus = https://fhir.ee/CodeSystem/sagedus-ajas
