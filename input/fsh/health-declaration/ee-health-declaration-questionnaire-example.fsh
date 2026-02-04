@@ -136,15 +136,15 @@ Usage: #example
 * item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/maxValue"
 * item[=].item[=].item[=].extension[=].valueQuantity.value = 6500
 * item[=].item[=].item[=].extension[+].url = $unitOption
-* item[=].item[=].item[=].extension[=].valueCoding.system = $ucum
+* item[=].item[=].item[=].extension[=].valueCoding.system = $Sagedus
 * item[=].item[=].item[=].extension[=].valueCoding.code = #/d
 * item[=].item[=].item[=].extension[=].valueCoding.display = "päevas"
 * item[=].item[=].item[=].extension[+].url = $unitOption
-* item[=].item[=].item[=].extension[=].valueCoding.system = $ucum
+* item[=].item[=].item[=].extension[=].valueCoding.system = $Sagedus
 * item[=].item[=].item[=].extension[=].valueCoding.code = #/wk
 * item[=].item[=].item[=].extension[=].valueCoding.display = "nädalas"
 * item[=].item[=].item[=].extension[+].url = $unitOption
-* item[=].item[=].item[=].extension[=].valueCoding.system = $ucum
+* item[=].item[=].item[=].extension[=].valueCoding.system = $Sagedus
 * item[=].item[=].item[=].extension[=].valueCoding.code = #/mo
 * item[=].item[=].item[=].extension[=].valueCoding.display = "kuus"
 
@@ -171,15 +171,15 @@ Usage: #example
 * item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/maxValue"
 * item[=].item[=].item[=].extension[=].valueQuantity.value = 6500
 * item[=].item[=].item[=].extension[+].url = $unitOption
-* item[=].item[=].item[=].extension[=].valueCoding.system = $ucum
+* item[=].item[=].item[=].extension[=].valueCoding.system = $Sagedus
 * item[=].item[=].item[=].extension[=].valueCoding.code = #/d
 * item[=].item[=].item[=].extension[=].valueCoding.display = "päevas"
 * item[=].item[=].item[=].extension[+].url = $unitOption
-* item[=].item[=].item[=].extension[=].valueCoding.system = $ucum
+* item[=].item[=].item[=].extension[=].valueCoding.system = $Sagedus
 * item[=].item[=].item[=].extension[=].valueCoding.code = #/wk
 * item[=].item[=].item[=].extension[=].valueCoding.display = "nädalas"
 * item[=].item[=].item[=].extension[+].url = $unitOption
-* item[=].item[=].item[=].extension[=].valueCoding.system = $ucum
+* item[=].item[=].item[=].extension[=].valueCoding.system = $Sagedus
 * item[=].item[=].item[=].extension[=].valueCoding.code = #/mo
 * item[=].item[=].item[=].extension[=].valueCoding.display = "kuus"
 
