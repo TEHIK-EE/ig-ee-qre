@@ -9,8 +9,22 @@ Description: "No actual CS in terminology server. Sageduse mõõtühikud UCUM no
 * ^experimental = false
 
 * #/wk "nädalas"
+  * ^designation[+].language = #en
+  * ^designation[=].value = "per week"
+  * ^designation[+].language = #ru
+  * ^designation[=].value = ""
+
 * #/d "päevas"
+  * ^designation[+].language = #en
+  * ^designation[=].value = "per day"
+  * ^designation[+].language = #ru
+  * ^designation[=].value = ""
+
 * #/mo "kuus"
+  * ^designation[+].language = #en
+  * ^designation[=].value = "per month"
+  * ^designation[+].language = #ru
+  * ^designation[=].value = ""
 
 
 ValueSet: Sagedus_VS
