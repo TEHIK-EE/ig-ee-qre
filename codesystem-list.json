@@ -1,0 +1,12 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "https://fhir.ee/CodeSystem/sagedus-ajas",
+      "version" : "1.0.0",
+      "status" : "draft",
+      "name" : "Sagedus_CS",
+      "title" : "Sagedus ajas",
+      "description" : "No actual CS in terminology server. Sageduse mõõtühikud UCUM notatsioonis"
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="e3af6ecb-e102-4c94-a104-57878cb2dc50"/>
+  <meta>
+    <lastUpdated value="2026-02-13T11:20:43.554+00:00"/>
+  </meta>
+  <type value="collection"/>
+  <entry>
+    <fullUrl value="https://fhir.ee/ValueSet/sagedus-ajas"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated">
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #ffcccc; padding: 8px; margin-bottom: 8px">Expansion based on code system fragment 
+              <a href="CodeSystem-sagedus-ajas.html">https://fhir.ee/CodeSystem/sagedus-ajas Sagedus ajas v1.0.0 (CodeSystem)</a>
+              <span class="copy-text-inline">
+                <button data-clipboard-text="https://fhir.ee/CodeSystem/sagedus-ajas|1.0.0" title="Click to Copy URL" class="btn-copy"> </button>
+              </span>
+            </p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
+              <a href="CodeSystem-sagedus-ajas.html">codesystem Sagedus ajas v1.0.0 (CodeSystem)</a>
+              <span class="copy-text-inline">
+                <button data-clipboard-text="https://fhir.ee/CodeSystem/sagedus-ajas|1.0.0" title="Click to Copy URL" class="btn-copy"> </button>
+              </span>
+            </p>
+            <p>This value set contains at least 3 concepts</p>
+            <table class="codes" data-fhir="generated">
+              <tr>
+                <td>
+                  <b>System</b>
+                </td>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display (en)</b>
+                </td>
+                <td>
+                  <b>JSON</b>
+                </td>
+                <td>
+                  <b>XML</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.ee/CodeSystem/sagedus-ajas-/wk"> </a>
+                  <code>https://fhir.ee/CodeSystem/sagedus-ajas</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-sagedus-ajas.html#sagedus-ajas-.47wk">/wk</a>
+                </td>
+                <td>nädalas</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.ee/CodeSystem/sagedus-ajas&quot;, &quot;version&quot;: &quot;1.0.0&quot;, &quot;code&quot;: &quot;/wk&quot;, &quot;display&quot;: &quot;nädalas&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.ee/CodeSystem/sagedus-ajas&quot;&gt;&lt;version value=&quot;1.0.0&quot;&gt;&lt;code value=&quot;/wk&quot;&gt;&lt;display value=&quot;nädalas&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.ee/CodeSystem/sagedus-ajas-/d"> </a>
+                  <code>https://fhir.ee/CodeSystem/sagedus-ajas</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-sagedus-ajas.html#sagedus-ajas-.47d">/d</a>
+                </td>
+                <td>päevas</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.ee/CodeSystem/sagedus-ajas&quot;, &quot;version&quot;: &quot;1.0.0&quot;, &quot;code&quot;: &quot;/d&quot;, &quot;display&quot;: &quot;päevas&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.ee/CodeSystem/sagedus-ajas&quot;&gt;&lt;version value=&quot;1.0.0&quot;&gt;&lt;code value=&quot;/d&quot;&gt;&lt;display value=&quot;päevas&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-https://fhir.ee/CodeSystem/sagedus-ajas-/mo"> </a>
+                  <code>https://fhir.ee/CodeSystem/sagedus-ajas</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-sagedus-ajas.html#sagedus-ajas-.47mo">/mo</a>
+                </td>
+                <td>kuus</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;https://fhir.ee/CodeSystem/sagedus-ajas&quot;, &quot;version&quot;: &quot;1.0.0&quot;, &quot;code&quot;: &quot;/mo&quot;, &quot;display&quot;: &quot;kuus&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://fhir.ee/CodeSystem/sagedus-ajas&quot;&gt;&lt;version value=&quot;1.0.0&quot;&gt;&lt;code value=&quot;/mo&quot;&gt;&lt;display value=&quot;kuus&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="https://fhir.ee/ValueSet/sagedus-ajas"/>
+        <version value="1.0.0"/>
+        <name value="Sagedus_VS"/>
+        <title value="Sagedus ajas loend"/>
+        <status value="active"/>
+        <experimental value="false"/>
+        <date value="2026-02-13T11:20:43+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="EST"/>
+            <display value="Estonia"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:57c9b3ed-21bf-4427-acaa-7c1c89e8122d"/>
+          <timestamp value="2026-02-13T11:27:50+00:00"/>
+          <total value="3"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="en"/>
+          </parameter>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="warning-draft"/>
+            <valueUri value="https://fhir.ee/CodeSystem/sagedus-ajas|1.0.0"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="https://fhir.ee/CodeSystem/sagedus-ajas|1.0.0"/>
+          </parameter>
+          <parameter>
+            <name value="fragment"/>
+            <valueCanonical value="https://fhir.ee/CodeSystem/sagedus-ajas|1.0.0"/>
+          </parameter>
+          <contains>
+            <system value="https://fhir.ee/CodeSystem/sagedus-ajas"/>
+            <code value="/wk"/>
+            <display value="nädalas"/>
+          </contains>
+          <contains>
+            <system value="https://fhir.ee/CodeSystem/sagedus-ajas"/>
+            <code value="/d"/>
+            <display value="päevas"/>
+          </contains>
+          <contains>
+            <system value="https://fhir.ee/CodeSystem/sagedus-ajas"/>
+            <code value="/mo"/>
+            <display value="kuus"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+</Bundle>

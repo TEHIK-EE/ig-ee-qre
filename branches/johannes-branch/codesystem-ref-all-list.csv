@@ -1,0 +1,13 @@
+URL,Version,Status,OIDs,Name,Title,Description,Used
+http://hl7.org/fhir/administrative-gender,5.0.0,active,"2.16.840.1.113883.4.642.4.2",AdministrativeGender,AdministrativeGender,"The gender of a person used for administrative purposes.","ValueSet/administrative-gender"
+http://hl7.org/fhir/fhir-types,5.0.0,active,"2.16.840.1.113883.4.642.4.1802",FHIRTypes,All FHIR Types,"One of the types defined as part of this version of FHIR.","ValueSet/resource-types"
+http://hl7.org/fhir/item-type,5.0.0,active,"2.16.840.1.113883.4.642.1.438,2.16.840.1.113883.4.642.4.445",QuestionnaireItemType,Questionnaire Item Type,"Distinguishes groups from questions and display text and indicates data type for questions.","ValueSet/item-type"
+http://hl7.org/fhir/publication-status,5.0.0,active,"2.16.840.1.113883.4.642.4.4",PublicationStatus,PublicationStatus,"The lifecycle status of an artifact.","ValueSet/publication-status"
+http://hl7.org/fhir/questionnaire-answer-constraint,5.0.0,active,"2.16.840.1.113883.4.642.4.2019",QuestionnaireAnswerConstraint,Questionnaire answer constraint codes,"Codes that describe the types of constraints possible on a question item that has a list of permitted answers","ValueSet/questionnaire-answer-constraint"
+http://hl7.org/fhir/questionnaire-disabled-display,5.0.0,active,"2.16.840.1.113883.4.642.4.2016",QuestionnaireItemDisabledDisplay,Questionnaire Item Disabled Display,"QuestionnaireItemDisabledDisplay","ValueSet/questionnaire-disabled-display"
+http://hl7.org/fhir/questionnaire-enable-behavior,5.0.0,active,"2.16.840.1.113883.4.642.4.1008",EnableWhenBehavior,Enable When Behavior,"Controls how multiple enableWhen values are interpreted -  whether all or any must be true.","ValueSet/questionnaire-enable-behavior"
+http://hl7.org/fhir/questionnaire-enable-operator,5.0.0,active,"2.16.840.1.113883.4.642.4.1006",QuestionnaireItemOperator,Questionnaire Item Operator,"The criteria by which a question is enabled.","ValueSet/questionnaire-enable-operator"
+http://hl7.org/fhir/version-algorithm,5.0.0,active,"2.16.840.1.113883.4.642.4.1989",VersionAlgorithm,Version Algorithm,"Indicates the mechanism used to compare versions to determine which is more current.","ValueSet/version-algorithm"
+https://fhir.ee/CodeSystem/sagedus-ajas,1.0.0,draft,,Sagedus_CS,Sagedus ajas,"No actual CS in terminology server. Sageduse mõõtühikud UCUM notatsioonis","ValueSet/sagedus-ajas"
+urn:iso:std:iso:3166,20210120,draft,,Iso3166,ISO 3166 Country Codes,"","ValueSet/jurisdiction"
+urn:iso:std:iso:3166:-2,2021,draft,,ISO3166_2,Codes for the representation of names of countries and their subdivisions – Part 2: Country subdivision code,"","ValueSet/jurisdiction"

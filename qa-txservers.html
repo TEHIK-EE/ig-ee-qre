@@ -1,0 +1,4550 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>QRE : Terminology Server Report</title>
+  <link href="fhir.css" rel="stylesheet"/>
+  <meta charset="utf-8"/>
+  <style>
+    span.flip  { background-color: #4CAF50; color: white; border: solid 1px #a6d8a8; padding: 2px }
+    span.toggle  { background-color: #e6f2ff; color: black; border: solid 1px #0056b3; padding: 2px; font-size: 10px }
+    span.toggle  { font-size: 10px }
+  </style>
+</head>
+<body style="margin: 20px; background-color: #ffffff">
+ <h1>Terminology Server Report for QRE</h1>
+ <p>Generated Fri Feb 13 11:28:08 UTC 2026, FHIR version 5.0.0 for ee.fhir.qre#1.0.0 (canonical = <a href="https://fhir.ee/qre">https://fhir.ee/qre</a> (<a href="https://fhir.ee/qre/history.html">history</a>))</p>
+<p>This page provides a report on which terminology servers were used while publishing this IG. Note that terminology caching reduces the server hit count - this page only reports content that wasn't cached</p>
+<h2>Terminology Parameters</h2>
+<ul>
+  <li>
+    <b>x-system-cache-id</b>
+:     <code>dc8fd4bc-091a-424a-8a3b-6198ef146891</code>
+  </li>
+  <li>
+    <b>defaultDisplayLanguage</b>
+:     <code>en-US</code>
+  </li>
+</ul>
+<h2>Tx Manager report for 'https://tx.fhir.org/tx-reg'</h2>
+<p>
+  <b>Decisions</b>
+</p>
+<table class="grid">
+  <tr>
+    <td>
+      <b>Message</b>
+    </td>
+    <td>
+      <b>Server</b>
+    </td>
+    <td>
+      <b>ValueSet</b>
+    </td>
+    <td>
+      <b>Systems</b>
+    </td>
+    <td>
+      <b>Choices</b>
+    </td>
+  </tr>
+  <tr>
+    <td>Found candidate server http://tx.fhir.org/r5</td>
+    <td>http://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>urn:iso:std:iso:3166</td>
+    <td>auth = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5</td>
+  </tr>
+  <tr>
+    <td>Found candidate server http://tx.fhir.org/r5</td>
+    <td>http://tx.fhir.org/r5</td>
+    <td>urn:uuid:86661887-b8cd-4dc9-bbc4-53bcc18a4103</td>
+    <td>urn:ietf:bcp:47</td>
+    <td>auth = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://term.tehik.ee/fhir</td>
+  </tr>
+  <tr>
+    <td>Found candidate server http://tx.fhir.org/r5</td>
+    <td>http://tx.fhir.org/r5</td>
+    <td>http://hl7.org/fhir/ValueSet/all-languages|5.0.0</td>
+    <td>urn:ietf:bcp:47</td>
+    <td>auth = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://term.tehik.ee/fhir</td>
+  </tr>
+  <tr>
+    <td>Found candidate server http://tx.fhir.org/r5</td>
+    <td>http://tx.fhir.org/r5</td>
+    <td>urn:uuid:d8fe9e36-668a-4b9b-bb02-3bd9485be4bf</td>
+    <td>urn:ietf:bcp:47</td>
+    <td>auth = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://term.tehik.ee/fhir</td>
+  </tr>
+  <tr>
+    <td>Found candidate server http://tx.fhir.org/r5</td>
+    <td>http://tx.fhir.org/r5</td>
+    <td>http://hl7.org/fhir/ValueSet/all-languages|5.0.0</td>
+    <td>urn:ietf:bcp:47</td>
+    <td>auth = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://term.tehik.ee/fhir</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>http://fhir.ee/CodeSystem/dokumendi-tyyp</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>http://fhir.ee/CodeSystem/dokumendi-tyyp</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>http://fhir.ee/CodeSystem/kysimustikud</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>https://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>http://fhir.ee/CodeSystem/kysimustikud</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/labivaatuse-tyyp</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found candidate server http://tx.fhir.org/r5</td>
+    <td>http://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>http://snomed.info/sct</td>
+    <td>auth = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://term.tehik.ee/fhir</td>
+  </tr>
+  <tr>
+    <td>Found candidate server http://tx.fhir.org/r5</td>
+    <td>http://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>http://snomed.info/sct</td>
+    <td>auth = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://term.tehik.ee/fhir</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tubakatoodete-liik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found candidate server http://tx.fhir.org/r5</td>
+    <td>http://tx.fhir.org/r5</td>
+    <td>null</td>
+    <td>http://snomed.info/sct</td>
+    <td>auth = , candidates=http://tx.fhir.org/r5|http://tx.hl7europe.eu/r5|https://term.tehik.ee/fhir</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/vaktsiinvalditavad-haigused</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/suitsetamisharjumused</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/labivaatuse-tyyp</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/labivaatuse-tyyp</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/labivaatuse-tyyp</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td></td>
+    <td>https://fhir.ee/CodeSystem/toovoime-liik|1.0.0</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td></td>
+    <td>https://fhir.ee/CodeSystem/puude-raskusaste|3.0.0</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/labivaatuse-tyyp</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/labivaatuse-tyyp</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/labivaatuse-tyyp</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/labivaatuse-tyyp</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/suitsetamisharjumused</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/suitsetamisharjumused</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/suitsetamisharjumused</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/suitsetamisharjumused</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tubakatoodete-liik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tubakatoodete-liik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tubakatoodete-liik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server https://term.tehik.ee/fhir</td>
+    <td>https://term.tehik.ee/fhir</td>
+    <td>null</td>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>auth = https://term.tehik.ee/fhir, candidates=</td>
+  </tr>
+</table>
+<h2>Primary Server: https://tx.fhir.org/r5</h2>
+<a href="https://tx.fhir.org/r5"></a>
+<p>Use Count: 54. Code Systems used: </p>
+<table class="grid">
+  <tr>
+    <th>
+      <b>System</b>
+    </th>
+    <th>
+      <b>#Exp.</b>
+    </th>
+    <th>
+      <b>#Val.</b>
+    </th>
+    <th>
+      <b>Details</b>
+    </th>
+  </tr>
+  <tr>
+    <td>http://fhir.ee/CodeSystem/dokumendi-tyyp</td>
+    <td>0</td>
+    <td>1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>http://fhir.ee/CodeSystem/kysimustikud</td>
+    <td>0</td>
+    <td>1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>http://snomed.info/sct</td>
+    <td>0</td>
+    <td>3</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>urn:ietf:bcp:47</td>
+    <td>0</td>
+    <td>4</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>urn:iso:std:iso:3166</td>
+    <td>0</td>
+    <td>1</td>
+    <td>
+      <a href="http://tx.fhir.org/r5/ValueSet/iso-3166">ISO 3166 Country Codes</a>
+    </td>
+  </tr>
+</table>
+<p>ValueSets fetched:</p>
+<ul>
+  <li>http://fhir.ee/CodeSystem/suitsetamisharjumused</li>
+  <li>http://fhir.ee/CodeSystem/toolaadi-ja-tookeskkonnaga-seotud-ohutegurid</li>
+  <li>http://fhir.ee/CodeSystem/tubakatoodete-liik</li>
+  <li>http://fhir.ee/ValueSet/td-ainevahetuse-haired</li>
+  <li>http://fhir.ee/ValueSet/td-allergiad</li>
+  <li>http://fhir.ee/ValueSet/td-hingamissysteem</li>
+  <li>http://fhir.ee/ValueSet/td-korv-nina-neel</li>
+  <li>http://fhir.ee/ValueSet/td-kuse-ja-suguelundid</li>
+  <li>http://fhir.ee/ValueSet/td-kutsehaigused</li>
+  <li>http://fhir.ee/ValueSet/td-luud-liigesed-ja-lihased</li>
+  <li>http://fhir.ee/ValueSet/td-nahahaigused</li>
+  <li>http://fhir.ee/ValueSet/td-nakkushaigused</li>
+  <li>http://fhir.ee/ValueSet/td-narvisysteem</li>
+  <li>http://fhir.ee/ValueSet/td-psyyhika</li>
+  <li>http://fhir.ee/ValueSet/td-seedeelundid</li>
+  <li>http://fhir.ee/ValueSet/td-silmad-ja-nagemine</li>
+  <li>http://fhir.ee/ValueSet/td-syda-ja-veresoonkond</li>
+  <li>http://fhir.ee/ValueSet/td-toost-pohjustatud-haigused</li>
+  <li>http://fhir.ee/ValueSet/td-traumad</li>
+  <li>http://fhir.ee/ValueSet/td-uni</li>
+  <li>http://fhir.ee/ValueSet/td-verehaigused</li>
+  <li>https://fhir.ee/CodeSystem/suitsetamisharjumused</li>
+  <li>https://fhir.ee/CodeSystem/toolaadi-ja-tookeskkonnaga-seotud-ohutegurid</li>
+  <li>https://fhir.ee/CodeSystem/tubakatoodete-liik</li>
+</ul>
+<h2>Server: https://tx.fhir.org/r5</h2>
+<a href="https://tx.fhir.org/r5"></a>
+<p>Use Count: 10. Code Systems used: </p>
+<table class="grid">
+  <tr>
+    <th>
+      <b>System</b>
+    </th>
+    <th>
+      <b>#Exp.</b>
+    </th>
+    <th>
+      <b>#Val.</b>
+    </th>
+    <th>
+      <b>Details</b>
+    </th>
+  </tr>
+</table>
+<h2>Server: https://term.tehik.ee/fhir</h2>
+<a href="https://term.tehik.ee/fhir"></a>
+<p>Use Count: 650. Code Systems used: </p>
+<table class="grid">
+  <tr>
+    <th>
+      <b>System</b>
+    </th>
+    <th>
+      <b>#Exp.</b>
+    </th>
+    <th>
+      <b>#Val.</b>
+    </th>
+    <th>
+      <b>Details</b>
+    </th>
+  </tr>
+  <tr>
+    <td>https://fhir.ee/CodeSystem/labivaatuse-tyyp</td>
+    <td>0</td>
+    <td>8</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>https://fhir.ee/CodeSystem/puude-raskusaste|3.0.0</td>
+    <td>1</td>
+    <td>0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>https://fhir.ee/CodeSystem/suitsetamisharjumused</td>
+    <td>0</td>
+    <td>5</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>https://fhir.ee/CodeSystem/tervisedeklaratsiooni-kysimustik</td>
+    <td>0</td>
+    <td>582</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala</td>
+    <td>0</td>
+    <td>1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>https://fhir.ee/CodeSystem/toovoime-liik|1.0.0</td>
+    <td>1</td>
+    <td>0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>https://fhir.ee/CodeSystem/tubakatoodete-liik</td>
+    <td>0</td>
+    <td>4</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>https://fhir.ee/CodeSystem/vaktsiinvalditavad-haigused</td>
+    <td>0</td>
+    <td>1</td>
+    <td>
+      <a href="https://akk.tehik.ee/classifier/fhir/CodeSystem/vaktsiinvalditavad-haigused">Vaktsiinvälditavad haigused ja haigustekitajad</a>
+    </td>
+  </tr>
+</table>
+<p>ValueSets fetched:</p>
+<ul>
+  <li>
+    <a href="https://akk.tehik.ee/classifier/fhir/ValueSet/puude-raskusaste">https://fhir.ee/ValueSet/puude-raskusaste</a>
+  </li>
+  <li>https://fhir.ee/ValueSet/td-ainevahetuse-haired</li>
+  <li>https://fhir.ee/ValueSet/td-allergiad</li>
+  <li>https://fhir.ee/ValueSet/td-hingamissysteem</li>
+  <li>https://fhir.ee/ValueSet/td-korv-nina-neel</li>
+  <li>https://fhir.ee/ValueSet/td-kuse-ja-suguelundid</li>
+  <li>https://fhir.ee/ValueSet/td-kutsehaigused</li>
+  <li>https://fhir.ee/ValueSet/td-luud-liigesed-ja-lihased</li>
+  <li>https://fhir.ee/ValueSet/td-nahahaigused</li>
+  <li>https://fhir.ee/ValueSet/td-nakkushaigused</li>
+  <li>https://fhir.ee/ValueSet/td-narvisysteem</li>
+  <li>https://fhir.ee/ValueSet/td-psyyhika</li>
+  <li>https://fhir.ee/ValueSet/td-seedeelundid</li>
+  <li>https://fhir.ee/ValueSet/td-silmad-ja-nagemine</li>
+  <li>https://fhir.ee/ValueSet/td-syda-ja-veresoonkond</li>
+  <li>https://fhir.ee/ValueSet/td-toost-pohjustatud-haigused</li>
+  <li>https://fhir.ee/ValueSet/td-traumad</li>
+  <li>https://fhir.ee/ValueSet/td-uni</li>
+  <li>https://fhir.ee/ValueSet/td-verehaigused</li>
+  <li>
+    <a href="https://akk.tehik.ee/classifier/fhir/ValueSet/toovoime-liik">https://fhir.ee/ValueSet/toovoime-liik</a>
+  </li>
+</ul>
+</body>
+</html>

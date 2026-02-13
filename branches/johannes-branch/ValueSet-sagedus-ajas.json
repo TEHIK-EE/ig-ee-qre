@@ -1,0 +1,40 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "sagedus-ajas",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet sagedus-ajas</b></p><a name=\"sagedus-ajas\"> </a><a name=\"hcsagedus-ajas\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-sagedus-ajas.html\"><code>https://fhir.ee/CodeSystem/sagedus-ajas</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;1.0.0</span></li></ul></div>"
+  },
+  "url" : "https://fhir.ee/ValueSet/sagedus-ajas",
+  "version" : "1.0.0",
+  "name" : "Sagedus_VS",
+  "title" : "Sagedus ajas loend",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-02-13T11:17:37+00:00",
+  "publisher" : "TEHIK",
+  "contact" : [{
+    "name" : "TEHIK",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://tehik.ee"
+    },
+    {
+      "system" : "email",
+      "value" : "abi@tehik.ee"
+    }]
+  }],
+  "description" : "No actual VS in terminology server. Sageduse mõõtühikud UCUM notatsioonis",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "EST",
+      "display" : "Estonia"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "https://fhir.ee/CodeSystem/sagedus-ajas"
+    }]
+  }
+}

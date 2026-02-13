@@ -1,0 +1,232 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/administrative-gender",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "AdministrativeGender",
+      "title" : "AdministrativeGender",
+      "description" : "The gender of a person used for administrative purposes.",
+      "systems" : ["http://hl7.org/fhir/administrative-gender"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1"],
+      "uses" : {
+      },
+      "Questionnaire-ee-health-declaration-questionnaire-example.html" : "Questionnaire[https://fhir.ee/qre/Questionnaire-health-declaration|1.0.0]"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/all-languages",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "AllLanguages",
+      "title" : "All Languages",
+      "description" : "This value set includes all possible codes from BCP-47 (see http://tools.ietf.org/html/bcp47)",
+      "systems" : ["urn:ietf:bcp:47"],
+      "oids" : ["2.16.840.1.113883.4.642.3.21"],
+      "sources" : ["2.16.840.1.113883.4.642.3.21"],
+      "uses" : {
+      },
+      "StructureDefinition-ee-health-declaration-questionnaire.html" : "EEHealthDeclarationQuestionnaire"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/item-type",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "QuestionnaireItemType",
+      "title" : "Questionnaire Item Type",
+      "description" : "Distinguishes groups from questions and display text and indicates data type for questions.",
+      "systems" : ["http://hl7.org/fhir/item-type"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.444",
+        "2.16.840.1.113883.4.642.3.437"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.444",
+        "2.16.840.1.113883.4.642.3.437"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-ee-health-declaration-questionnaire.html" : "EEHealthDeclarationQuestionnaire"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/jurisdiction",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "JurisdictionValueSet",
+      "title" : "Jurisdiction ValueSet",
+      "description" : "This value set defines a base set of codes for country, country subdivision and region    for indicating where a resource is intended to be used.   \r\n   \r\n   Note: The codes for countries and country subdivisions are taken from    [ISO 3166](https://www.iso.org/iso-3166-country-codes.html)    while the codes for \"supra-national\" regions are from    [UN Standard country or area codes for statistical use (M49)](http://unstats.un.org/unsd/methods/m49/m49.htm).",
+      "systems" : [
+        "http://unstats.un.org/unsd/methods/m49/m49.htm",
+        "urn:iso:std:iso:3166",
+        "urn:iso:std:iso:3166:-2"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.48"],
+      "sources" : ["2.16.840.1.113883.4.642.3.48"],
+      "uses" : {
+      },
+      "StructureDefinition-ee-health-declaration-questionnaire.html" : "EEHealthDeclarationQuestionnaire"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/languages",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "CommonLanguages",
+      "title" : "Common Languages",
+      "description" : "This value set includes common codes from BCP-47 (see http://tools.ietf.org/html/bcp47)",
+      "systems" : ["urn:ietf:bcp:47"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.891",
+        "2.16.840.1.113883.4.642.3.20"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.891",
+        "2.16.840.1.113883.4.642.3.20"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-ee-health-declaration-questionnaire.html" : "EEHealthDeclarationQuestionnaire"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/publication-status",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "PublicationStatus",
+      "title" : "PublicationStatus",
+      "description" : "The lifecycle status of an artifact.",
+      "systems" : ["http://hl7.org/fhir/publication-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.3"],
+      "sources" : ["2.16.840.1.113883.4.642.3.3"],
+      "uses" : {
+      },
+      "StructureDefinition-ee-health-declaration-questionnaire.html" : "EEHealthDeclarationQuestionnaire"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/questionnaire-answer-constraint",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "QuestionnaireAnswerConstraint",
+      "title" : "Questionnaire answer constraints value set",
+      "description" : "Codes that describe the types of constraints possible on a question item that has a list of permitted answers",
+      "systems" : ["http://hl7.org/fhir/questionnaire-answer-constraint"],
+      "oids" : ["2.16.840.1.113883.4.642.3.3151"],
+      "sources" : ["2.16.840.1.113883.4.642.3.3151"],
+      "uses" : {
+      },
+      "StructureDefinition-ee-health-declaration-questionnaire.html" : "EEHealthDeclarationQuestionnaire"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/questionnaire-answers",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "QuestionnaireAnswerCodes",
+      "title" : "Questionnaire Answer Codes",
+      "description" : "Example list of codes for answers to questions. (Not complete or necessarily appropriate.)",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.446",
+        "2.16.840.1.113883.4.642.2.423",
+        "2.16.840.1.113883.4.642.3.439"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.446",
+        "2.16.840.1.113883.4.642.2.423",
+        "2.16.840.1.113883.4.642.3.439"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-ee-health-declaration-questionnaire.html" : "EEHealthDeclarationQuestionnaire"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/questionnaire-disabled-display",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "QuestionnaireItemDisabledDisplay",
+      "title" : "Questionnaire Item Disabled Display",
+      "description" : "Codes that guide the display of disabled questionnaire items",
+      "systems" : ["http://hl7.org/fhir/questionnaire-disabled-display"],
+      "oids" : ["2.16.840.1.113883.4.642.3.3152"],
+      "sources" : ["2.16.840.1.113883.4.642.3.3152"],
+      "uses" : {
+      },
+      "StructureDefinition-ee-health-declaration-questionnaire.html" : "EEHealthDeclarationQuestionnaire"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/questionnaire-enable-behavior",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "EnableWhenBehavior",
+      "title" : "Enable When Behavior",
+      "description" : "Controls how multiple enableWhen values are interpreted -  whether all or any must be true.",
+      "systems" : ["http://hl7.org/fhir/questionnaire-enable-behavior"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1007"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1007"],
+      "uses" : {
+      },
+      "StructureDefinition-ee-health-declaration-questionnaire.html" : "EEHealthDeclarationQuestionnaire"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/questionnaire-enable-operator",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "QuestionnaireItemOperator",
+      "title" : "Questionnaire Item Operator",
+      "description" : "The criteria by which a question is enabled.",
+      "systems" : ["http://hl7.org/fhir/questionnaire-enable-operator"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1005"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1005"],
+      "uses" : {
+      },
+      "StructureDefinition-ee-health-declaration-questionnaire.html" : "EEHealthDeclarationQuestionnaire"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/questionnaire-questions",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "QuestionnaireQuestionCodes",
+      "title" : "Questionnaire Question Codes",
+      "description" : "Example list of codes for questions and groups of questions. (Not necessarily complete or appropriate.)",
+      "systems" : ["http://loinc.org"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.443",
+        "2.16.840.1.113883.4.642.2.255",
+        "2.16.840.1.113883.4.642.3.434"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.443",
+        "2.16.840.1.113883.4.642.2.255",
+        "2.16.840.1.113883.4.642.3.434"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-ee-health-declaration-questionnaire.html" : "EEHealthDeclarationQuestionnaire"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/resource-types",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "ResourceType",
+      "title" : "Resource Types",
+      "description" : "Concrete FHIR Resource Types",
+      "systems" : ["http://hl7.org/fhir/fhir-types"],
+      "oids" : ["2.16.840.1.113883.4.642.3.27"],
+      "sources" : ["2.16.840.1.113883.4.642.3.27"],
+      "uses" : {
+      },
+      "StructureDefinition-ee-health-declaration-questionnaire.html" : "EEHealthDeclarationQuestionnaire"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/version-algorithm",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "VersionAlgorithm",
+      "title" : "Version Algorithm",
+      "description" : "Indicates the mechanism used to compare versions to determine which is more current.",
+      "systems" : ["http://hl7.org/fhir/version-algorithm"],
+      "oids" : ["2.16.840.1.113883.4.642.3.3103"],
+      "sources" : ["2.16.840.1.113883.4.642.3.3103"],
+      "uses" : {
+      },
+      "StructureDefinition-ee-health-declaration-questionnaire.html" : "EEHealthDeclarationQuestionnaire"
+    }
+  ]
+}

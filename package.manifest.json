@@ -1,0 +1,7 @@
+{
+  "version" : "1.0.0",
+  "fhirVersion" : ["5.0.0"],
+  "date" : "20260213112043",
+  "name" : "ee.fhir.qre",
+  "jurisdiction" : "urn:iso:std:iso:3166#EST"
+}

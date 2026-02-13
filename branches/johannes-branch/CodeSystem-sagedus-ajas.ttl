@@ -1,0 +1,79 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.ee/qre/CodeSystem/sagedus-ajas> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "sagedus-ajas"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem sagedus-ajas</b></p><a name=\"sagedus-ajas\"> </a><a name=\"hcsagedus-ajas\"> </a><p>This  code system <code>https://fhir.ee/CodeSystem/sagedus-ajas</code> provides <b>a fragment</b> that includes following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">/wk<a name=\"sagedus-ajas-.47wk\"> </a></td><td>nädalas</td></tr><tr><td style=\"white-space:nowrap\">/d<a name=\"sagedus-ajas-.47d\"> </a></td><td>päevas</td></tr><tr><td style=\"white-space:nowrap\">/mo<a name=\"sagedus-ajas-.47mo\"> </a></td><td>kuus</td></tr></table><p><b>Additional Language Displays</b></p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>English (English, en)</b></td><td><b>Русский (Russian, ru)</b></td></tr><tr><td>/wk</td><td>per week</td><td/></tr><tr><td>/d</td><td>per day</td><td/></tr><tr><td>/mo</td><td>per month</td><td/></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "https://fhir.ee/CodeSystem/sagedus-ajas"^^xsd:anyURI ;
+     fhir:l <https://fhir.ee/CodeSystem/sagedus-ajas>
+  ] ; # 
+  fhir:version [ fhir:v "1.0.0"] ; # 
+  fhir:name [ fhir:v "Sagedus_CS"] ; # 
+  fhir:title [ fhir:v "Sagedus ajas"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-02-13T11:17:37+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "TEHIK"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "TEHIK" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://tehik.ee" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "abi@tehik.ee" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "No actual CS in terminology server. Sageduse mõõtühikud UCUM notatsioonis"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ;
+         fhir:l <urn:iso:std:iso:3166>
+       ] ;
+       fhir:code [ fhir:v "EST" ] ;
+       fhir:display [ fhir:v "Estonia" ]
+     ] )
+  ] ) ; # 
+  fhir:content [ fhir:v "fragment"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "/wk" ] ;
+     fhir:display [ fhir:v "nädalas" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "per week" ]
+     ] [
+       fhir:language [ fhir:v "ru" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "/d" ] ;
+     fhir:display [ fhir:v "päevas" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "per day" ]
+     ] [
+       fhir:language [ fhir:v "ru" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "/mo" ] ;
+     fhir:display [ fhir:v "kuus" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "en" ] ;
+       fhir:value [ fhir:v "per month" ]
+     ] [
+       fhir:language [ fhir:v "ru" ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

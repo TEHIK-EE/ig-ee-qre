@@ -1,0 +1,148 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://hl7.org/fhir/administrative-gender",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "AdministrativeGender",
+      "title" : "AdministrativeGender",
+      "description" : "The gender of a person used for administrative purposes.",
+      "oids" : ["2.16.840.1.113883.4.642.4.2"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R5/valueset-administrative-gender.html" : "AdministrativeGender"
+    },
+    {
+      "url" : "http://hl7.org/fhir/fhir-types",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "FHIRTypes",
+      "title" : "All FHIR Types",
+      "description" : "One of the types defined as part of this version of FHIR.",
+      "oids" : ["2.16.840.1.113883.4.642.4.1802"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R5/valueset-resource-types.html" : "Resource Types"
+    },
+    {
+      "url" : "http://hl7.org/fhir/item-type",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "QuestionnaireItemType",
+      "title" : "Questionnaire Item Type",
+      "description" : "Distinguishes groups from questions and display text and indicates data type for questions.",
+      "oids" : [
+        "2.16.840.1.113883.4.642.1.438",
+        "2.16.840.1.113883.4.642.4.445"
+      ],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R5/valueset-item-type.html" : "Questionnaire Item Type"
+    },
+    {
+      "url" : "http://hl7.org/fhir/publication-status",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "PublicationStatus",
+      "title" : "PublicationStatus",
+      "description" : "The lifecycle status of an artifact.",
+      "oids" : ["2.16.840.1.113883.4.642.4.4"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R5/valueset-publication-status.html" : "PublicationStatus"
+    },
+    {
+      "url" : "http://hl7.org/fhir/questionnaire-answer-constraint",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "QuestionnaireAnswerConstraint",
+      "title" : "Questionnaire answer constraint codes",
+      "description" : "Codes that describe the types of constraints possible on a question item that has a list of permitted answers",
+      "oids" : ["2.16.840.1.113883.4.642.4.2019"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R5/valueset-questionnaire-answer-constraint.html" : "Questionnaire answer constraints value set"
+    },
+    {
+      "url" : "http://hl7.org/fhir/questionnaire-disabled-display",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "QuestionnaireItemDisabledDisplay",
+      "title" : "Questionnaire Item Disabled Display",
+      "description" : "QuestionnaireItemDisabledDisplay",
+      "oids" : ["2.16.840.1.113883.4.642.4.2016"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R5/valueset-questionnaire-disabled-display.html" : "Questionnaire Item Disabled Display"
+    },
+    {
+      "url" : "http://hl7.org/fhir/questionnaire-enable-behavior",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "EnableWhenBehavior",
+      "title" : "Enable When Behavior",
+      "description" : "Controls how multiple enableWhen values are interpreted -  whether all or any must be true.",
+      "oids" : ["2.16.840.1.113883.4.642.4.1008"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R5/valueset-questionnaire-enable-behavior.html" : "Enable When Behavior"
+    },
+    {
+      "url" : "http://hl7.org/fhir/questionnaire-enable-operator",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "QuestionnaireItemOperator",
+      "title" : "Questionnaire Item Operator",
+      "description" : "The criteria by which a question is enabled.",
+      "oids" : ["2.16.840.1.113883.4.642.4.1006"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R5/valueset-questionnaire-enable-operator.html" : "Questionnaire Item Operator"
+    },
+    {
+      "url" : "http://hl7.org/fhir/version-algorithm",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "VersionAlgorithm",
+      "title" : "Version Algorithm",
+      "description" : "Indicates the mechanism used to compare versions to determine which is more current.",
+      "oids" : ["2.16.840.1.113883.4.642.4.1989"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R5/valueset-version-algorithm.html" : "Version Algorithm"
+    },
+    {
+      "url" : "https://fhir.ee/CodeSystem/sagedus-ajas",
+      "version" : "1.0.0",
+      "status" : "draft",
+      "name" : "Sagedus_CS",
+      "title" : "Sagedus ajas",
+      "description" : "No actual CS in terminology server. Sageduse mõõtühikud UCUM notatsioonis",
+      "uses" : {
+      },
+      "ValueSet-sagedus-ajas.html" : "Sagedus ajas loend"
+    },
+    {
+      "url" : "urn:iso:std:iso:3166",
+      "version" : "20210120",
+      "status" : "draft",
+      "name" : "Iso3166",
+      "title" : "ISO 3166 Country Codes",
+      "description" : "",
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R5/valueset-jurisdiction.html" : "Jurisdiction ValueSet"
+    },
+    {
+      "url" : "urn:iso:std:iso:3166:-2",
+      "version" : "2021",
+      "status" : "draft",
+      "name" : "ISO3166_2",
+      "title" : "Codes for the representation of names of countries and their subdivisions – Part 2: Country subdivision code",
+      "description" : "",
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R5/valueset-jurisdiction.html" : "Jurisdiction ValueSet"
+    }
+  ]
+}

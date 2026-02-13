@@ -1,0 +1,58 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/administrative-gender",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "AdministrativeGender",
+      "title" : "AdministrativeGender",
+      "description" : "The gender of a person used for administrative purposes.",
+      "systems" : ["http://hl7.org/fhir/administrative-gender"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1"],
+      "uses" : {
+      },
+      "Questionnaire-Questionnaire-health-declaration.html" : "Tervisedeklaratsioon",
+      "Questionnaire-Questionnaire-health-declaration-with-text.html" : "Tervisedeklaratsioon"
+    },
+    {
+      "url" : "https://fhir.ee/ValueSet/puude-raskusaste",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "PuudeRaskusaste",
+      "title" : "Puude raskusaste",
+      "description" : "Puude raskusastmed on: keskmine puue; raske puue; sügav puue;",
+      "systems" : ["https://fhir.ee/CodeSystem/puude-raskusaste"],
+      "oids" : ["1.3.6.1.4.1.28284.6.2.3.17.3", "1.3.6.1.4.1.28284.6.2.3.17"],
+      "sources" : ["1.3.6.1.4.1.28284.6.2.3.17.3", "1.3.6.1.4.1.28284.6.2.3.17"],
+      "uses" : {
+      },
+      "Questionnaire-Questionnaire-health-declaration.html" : "Tervisedeklaratsioon",
+      "Questionnaire-Questionnaire-health-declaration-with-text.html" : "Tervisedeklaratsioon"
+    },
+    {
+      "url" : "https://fhir.ee/ValueSet/sagedus-ajas",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "Sagedus_VS",
+      "title" : "Sagedus ajas loend",
+      "description" : "No actual VS in terminology server. Sageduse mõõtühikud UCUM notatsioonis",
+      "systems" : ["https://fhir.ee/CodeSystem/sagedus-ajas"]
+    },
+    {
+      "url" : "https://fhir.ee/ValueSet/toovoime-liik",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "ToovoimeLiik",
+      "title" : "Töövõime liik",
+      "description" : "Töövõime liiki kasutatakse Patsiendi üldandmete teenuses (PÜT) töövõime määramiseks.",
+      "systems" : ["https://fhir.ee/CodeSystem/toovoime-liik"],
+      "oids" : ["1.3.6.1.4.1.28284.6.2.1.379", "1.3.6.1.4.1.28284.6.2.1.379.1"],
+      "sources" : ["1.3.6.1.4.1.28284.6.2.1.379", "1.3.6.1.4.1.28284.6.2.1.379.1"],
+      "uses" : {
+      },
+      "Questionnaire-Questionnaire-health-declaration.html" : "Tervisedeklaratsioon",
+      "Questionnaire-Questionnaire-health-declaration-with-text.html" : "Tervisedeklaratsioon"
+    }
+  ]
+}

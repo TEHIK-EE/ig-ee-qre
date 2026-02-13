@@ -1,0 +1,65 @@
+[
+  {
+    "id" : "sagedus-ajas",
+    "type" : "CodeSystem",
+    "url" : "https://fhir.ee/CodeSystem/sagedus-ajas",
+    "version" : "1.0.0",
+    "name" : "Sagedus_CS"
+  },
+  {
+    "id" : "sagedus-ajas",
+    "type" : "ValueSet",
+    "url" : "https://fhir.ee/ValueSet/sagedus-ajas",
+    "version" : "1.0.0",
+    "name" : "Sagedus_VS"
+  },
+  {
+    "id" : "ee.fhir.qre",
+    "type" : "ImplementationGuide",
+    "url" : "https://fhir.ee/qre/ImplementationGuide/ee.fhir.qre",
+    "version" : "1.0.0",
+    "name" : "QRE"
+  },
+  {
+    "id" : "Questionnaire-PET",
+    "type" : "Questionnaire",
+    "url" : "https://fhir.ee/qre/Questionnaire-PET",
+    "version" : "1.0.0",
+    "name" : "PET"
+  },
+  {
+    "id" : "Questionnaire-health-declaration-with-text",
+    "type" : "Questionnaire",
+    "url" : "https://fhir.ee/qre/Questionnaire-health-declaration",
+    "version" : "1.0.0",
+    "name" : "HDECL"
+  },
+  {
+    "id" : "Questionnaire-health-declaration",
+    "type" : "Questionnaire",
+    "url" : "https://fhir.ee/qre/Questionnaire-health-declaration",
+    "version" : "1.0.0",
+    "name" : "HDECL"
+  },
+  {
+    "id" : "Questionnaire-health-declaration-cda",
+    "type" : "Questionnaire",
+    "url" : "https://fhir.ee/qre/Questionnaire-health-declaration-cda",
+    "version" : "1.0.0",
+    "name" : "HDECL"
+  },
+  {
+    "id" : "ee-health-declaration-questionnaire",
+    "type" : "StructureDefinition",
+    "url" : "https://fhir.ee/qre/StructureDefinition/ee-health-declaration-questionnaire",
+    "version" : "1.0.0",
+    "name" : "EEHealthDeclarationQuestionnaire"
+  },
+  {
+    "id" : "pet-questionnaire",
+    "type" : "StructureDefinition",
+    "url" : "https://fhir.ee/qre/StructureDefinition/pet-questionnaire",
+    "version" : "1.0.0",
+    "name" : "PETQuestionnaire"
+  }
+]

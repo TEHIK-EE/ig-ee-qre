@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Questionnaire xmlns="http://hl7.org/fhir">
+  <id value="Questionnaire-PET"/>
+  <meta>
+    <profile value="https://fhir.ee/qre/StructureDefinition/pet-questionnaire"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Questionnaire Questionnaire-PET</b></p><a name="Questionnaire-PET"> </a><a name="hcQuestionnaire-PET"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-pet-questionnaire.html">PETQuestionnaire</a></p></div><b>Structure</b><table border="1" cellpadding="0" cellspacing="0" style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 2px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top"><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://hl7.org/fhir/R5/formats.html#table" title="The linkID for the item">LinkID</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://hl7.org/fhir/R5/formats.html#table" title="Text for the item">Text</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://hl7.org/fhir/R5/formats.html#table" title="Minimum and Maximum # of times the item can appear in the instance">Cardinality</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://hl7.org/fhir/R5/formats.html#table" title="The type of the item">Type</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://hl7.org/fhir/R5/formats.html#table" title="Other attributes of the item">Flags</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://hl7.org/fhir/R5/formats.html#table" title="Additional information about the item">Description &amp; Constraints</a><span style="float: right"><a href="https://hl7.org/fhir/R5/formats.html#table" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_q_root.gif" alt="." style="background-color: white; background-color: inherit" title="QuestionnaireRoot" class="hierarchy"/> PET</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Questionnaire</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">https://fhir.ee/qre/Questionnaire-PET#1.0.0</td></tr>
+<tr style="border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)" id="item.pet-indication" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="coding" class="hierarchy"/> pet-indication</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Soovin, et minu tahteavaldus rakenduks järgmiselt:</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-coding">coding</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Options: <a href="#opt-item.pet-indication">4 options</a></td></tr>
+<tr style="border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck111.png)" id="item.pet-indication.first-choice" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="." style="background-color: white; background-color: inherit" title="coding" class="hierarchy"/> pet-indication.first-choice</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Kui mu terviseseisund on selline, et mulle vastuvõetava elukvaliteedi saavutamine minu elu säilitamisega ei ole võimalik, siis</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-coding">coding</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Enable When: <span><a href="#item.pet-indication">pet-indication</a> = </span><br/>Options: <a href="#opt-item.pet-indication.first-choice">2 options</a></td></tr>
+<tr style="border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1111.png)" id="item.pet-indication.first-choice.unacceptable-condition" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="coding" class="hierarchy"/> pet-indication.first-choice.unacceptable-condition</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Minu jaoks on elukvaliteet vastuvõetamatu, kui:</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-coding">coding</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Enable When: <span><a href="#item.pet-indication.first-choice">pet-indication.first-choice</a> exists </span><br/>Options: <a href="#opt-item.pet-indication.first-choice.unacceptable-condition">4 options</a></td></tr>
+<tr style="border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11100.png)" id="item.pet-indication.first-choice.unacceptable-condition.other" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon-q-text.png" alt="." style="background-color: white; background-color: inherit" title="text" class="hierarchy"/> pet-indication.first-choice.unacceptable-condition.other</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Muu</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-text">text</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Enable When: <span><a href="#item.pet-indication.first-choice.unacceptable-condition">pet-indication.first-choice.unacceptable-condition</a> = </span></td></tr>
+<tr style="border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1101.png)" id="item.pet-indication.first-choice.unacceptable-treatments" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="coding" class="hierarchy"/> pet-indication.first-choice.unacceptable-treatments</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Ma keeldun järgmistest meditsiinilistest sekkumistest:</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-coding">coding</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Enable When: <span><a href="#item.pet-indication.first-choice">pet-indication.first-choice</a> = </span><br/>Options: <a href="#opt-item.pet-indication.first-choice.unacceptable-treatments">10 options</a></td></tr>
+<tr style="border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11000.png)" id="item.pet-indication.first-choice.unacceptable-treatments.other" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon-q-text.png" alt="." style="background-color: white; background-color: inherit" title="text" class="hierarchy"/> pet-indication.first-choice.unacceptable-treatments.other</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Muu</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-text">text</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Enable When: <span><a href="#item.pet-indication.first-choice.unacceptable-treatments">pet-indication.first-choice.unacceptable-treatments</a> = </span></td></tr>
+<tr style="border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck111.png)" id="item.pet-indication.second-choice" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="coding" class="hierarchy"/> pet-indication.second-choice</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Kui minu terviseseisund halveneb nii, et ellu jäämine ilma elu säilitava ravita ei ole võimalik, siis: (vali üks)</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-coding">coding</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Enable When: <span><a href="#item.pet-indication">pet-indication</a> = </span><br/>Options: <a href="#opt-item.pet-indication.second-choice">2 options</a></td></tr>
+<tr style="border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1101.png)" id="item.pet-indication.second-choice.unacceptable-treatments" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="." style="background-color: white; background-color: inherit" title="coding" class="hierarchy"/> pet-indication.second-choice.unacceptable-treatments</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Ma keeldun järgmistest meditsiinilistest sekkumistest:</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-coding">coding</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Enable When: <span><a href="#item.pet-indication.second-choice">pet-indication.second-choice</a> = </span><br/>Options: <a href="#opt-item.pet-indication.second-choice.unacceptable-treatments">10 options</a></td></tr>
+<tr style="border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11000.png)" id="item.pet-indication.second-choice.unacceptable-treatments.other" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon-q-text.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="text" class="hierarchy"/> pet-indication.second-choice.unacceptable-treatments.other</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Muu</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-text">text</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Enable When: <span><a href="#item.pet-indication.second-choice.unacceptable-treatments">pet-indication.second-choice.unacceptable-treatments</a> = </span></td></tr>
+<tr style="border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck111.png)" id="item.pet-indication.third-choice" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="." style="background-color: white; background-color: inherit" title="coding" class="hierarchy"/> pet-indication.third-choice</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Kui ma olen haigestunud, siis: (vali üks)</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-coding">coding</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Enable When: <span><a href="#item.pet-indication">pet-indication</a> = </span><br/>Options: <a href="#opt-item.pet-indication.third-choice">2 options</a></td></tr>
+<tr style="border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1100.png)" id="item.pet-indication.third-choice.unacceptable-treatment" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon-q-text.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="text" class="hierarchy"/> pet-indication.third-choice.unacceptable-treatment</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Sekkumised, millest keeldun</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-text">text</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Enable When: <span><a href="#item.pet-indication.third-choice">pet-indication.third-choice</a> = </span></td></tr>
+<tr style="border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck100.png)" id="item.pet-indication.fourth-choice" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon-q-text.png" alt="." style="background-color: white; background-color: inherit" title="text" class="hierarchy"/> pet-indication.fourth-choice</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Muu</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-text">text</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Enable When: <span><a href="#item.pet-indication">pet-indication</a> = </span></td></tr>
+<tr style="border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)" id="item.palliative-treatment" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="coding" class="hierarchy"/> palliative-treatment</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Olenemata minu valikutest tahteavalduse eelmises osas, soovin ma, et mulle pakutaks vaevusi leevendavat ravi ja hooldust ehk palliatiivravi: (vali üks)</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-coding">coding</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Options: <a href="#opt-item.palliative-treatment">2 options</a></td></tr>
+<tr style="border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck100.png)" id="item.palliative-treatment.treatments" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon-q-text.png" alt="." style="background-color: white; background-color: inherit" title="text" class="hierarchy"/> palliative-treatment.treatments</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Soovin vältida</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-text">text</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Enable When: <span><a href="#item.palliative-treatment">palliative-treatment</a> = </span></td></tr>
+<tr style="border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)" id="item.preferred-death-location" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="coding" class="hierarchy"/> preferred-death-location</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Ma eelistan surra</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-coding">coding</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Options: <a href="#opt-item.preferred-death-location">3 options</a></td></tr>
+<tr style="border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck100.png)" id="item.preferred-death-location.other" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon-q-text.png" alt="." style="background-color: white; background-color: inherit" title="text" class="hierarchy"/> preferred-death-location.other</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Täpsutus</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-text">text</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Enable When: <span><a href="#item.preferred-death-location">preferred-death-location</a> = </span></td></tr>
+<tr style="border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)" id="item.people-by-side-death" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon-q-text.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="text" class="hierarchy"/> people-by-side-death</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Ma soovin, et minu suremise juures viibivad järgmised isikud:</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-text">text</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck100.png)" id="item.246658268145_helpText" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon-q-display.png" alt="." style="background-color: white; background-color: inherit" title="display" class="hierarchy"/> 246658268145_helpText</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Nimi, seos minuga ja kontaktandmed</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-display">display</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)" id="item.religious-preferences" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon-q-text.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="text" class="hierarchy"/> religious-preferences</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Minu religioossed või muud spirituaalsed eelistused </td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-text">text</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck100.png)" id="item.593162052362_helpText" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon-q-display.png" alt="." style="background-color: white; background-color: inherit" title="display" class="hierarchy"/> 593162052362_helpText</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Lisa siia oma religioossed, spirituaalsed või maailmavaatelised soovid, mis on sinu jaoks elu lõpu ajal olulised. Need aitavad sinu lähedastel ja usaldusisikul paremini mõista, millist tuge või rituaale sa sooviksid (nt vaimuliku kohalolek, palve, vaikus, muusika või muu sümboolne tegevus).</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-display">display</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck01.png)" id="item.other-wishes" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon-q-text.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="text" class="hierarchy"/> other-wishes</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Minu jaoks olulised soovid</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-text">text</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000.png)" id="item.637523866624_helpText" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon-q-display.png" alt="." style="background-color: white; background-color: inherit" title="display" class="hierarchy"/> 637523866624_helpText</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Siia saad kirja panna muud isiklikud soovid, mis on sinu jaoks elu lõpu ajal tähtsad ja mis aitavad lähedastel sind toetada ning sinuga rahulikult hüvasti jätta. Rahaga või pärandiga seotud küsimused ei kuulu sellesse ossa.</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-display">display</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr><td colspan="6" class="hierarchy"><br/><a href="https://hl7.org/fhir/R5/formats.html#table" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table><hr/><p><b>Options Sets</b></p><a name="opt-item.pet-indication"> </a><p><b>Answer options for pet-indication </b></p><ul><li style="font-size: 11px">null#null (&quot;Kui mu terviseseisund on selline, et mulle vastuvõetava elukvaliteedi saavutamine minu elu säilitamisega ei ole võimalik&quot;)</li><li style="font-size: 11px">null#null (&quot;Kui minu terviseseisund halveneb nii, et ellu jäämine ilma elu säilitava ravita ei ole võimalik&quot;)</li><li style="font-size: 11px">null#null (&quot;Kui ma olen haigestunud&quot;)</li><li style="font-size: 11px">null#null (&quot;Muu&quot;)</li></ul><a name="opt-item.pet-indication.first-choice"> </a><p><b>Answer options for pet-indication.first-choice </b></p><ul><li style="font-size: 11px">null#null (&quot;ei soovi ma ühtegi elu säilitav sekkumist&quot;)</li><li style="font-size: 11px">null#null (&quot;ei soovi ma neid elu säilitavaid sekkumisi, mille olen ära märkinud&quot;)</li></ul><a name="opt-item.pet-indication.first-choice.unacceptable-condition"> </a><p><b>Answer options for pet-indication.first-choice.unacceptable-condition </b></p><ul><li style="font-size: 11px">null#null (&quot;Olen püsivalt teadvusetus seisundis.&quot;)</li><li style="font-size: 11px">null#null (&quot;Minu vaimne võimekus on pöördumatult halvenenud nii, et ma ei ole suuteline aru saama, otsuseid tegema ega inimestega suhtlema. &quot;)</li><li style="font-size: 11px">null#null (&quot;Olen igapäevastes toimingutes (nt söömine, joomine, hügieenitoimingud, riietumine jne) täielikult teistest sõltuv.&quot;)</li><li style="font-size: 11px">null#null (&quot;Muu…[vaba tekst]&quot;)</li></ul><a name="opt-item.pet-indication.first-choice.unacceptable-treatments"> </a><p><b>Answer options for pet-indication.first-choice.unacceptable-treatments </b></p><ul><li style="font-size: 11px">null#null (&quot;Elustamine kliinilisest surmast &quot;)</li><li style="font-size: 11px">null#null (&quot;Hingamisaparaadi kasutamine &quot;)</li><li style="font-size: 11px">null#null (&quot;Neeruasendusravi ehk dialüüs &quot;)</li><li style="font-size: 11px">null#null (&quot;Kunstlik vedeliku manustamine ja toitmine&quot;)</li><li style="font-size: 11px">null#null (&quot;Intensiivraviosakonda paigutamine elu pikendava ravi eesmärgil&quot;)</li><li style="font-size: 11px">null#null (&quot;Ravimite manustamine, millel on muu kui vaevusi leevendav eesmärk &quot;)</li><li style="font-size: 11px">null#null (&quot;Vere või verekomponentide manustamine&quot;)</li><li style="font-size: 11px">null#null (&quot;Kirurgiline ravi, millel on muu kui vaevusi leevendav eesmärk&quot;)</li><li style="font-size: 11px">null#null (&quot;Analüüsid ja uuringud, millel on muu eesmärk kui vaevusi leevendava ravi parandamine &quot;)</li><li style="font-size: 11px">null#null (&quot;Muu: …[vaba tekst]&quot;)</li></ul><a name="opt-item.pet-indication.second-choice"> </a><p><b>Answer options for pet-indication.second-choice </b></p><ul><li style="font-size: 11px">null#null (&quot;ei soovi ma ühtegi elu säilitavat sekkumist&quot;)</li><li style="font-size: 11px">null#null (&quot;ei soovi ma neid elu säilitavaid sekkumisi, mille olen ära märkinud (siin peaks avanema med.sekkumiste loetelu (vt edasi)).&quot;)</li></ul><a name="opt-item.pet-indication.second-choice.unacceptable-treatments"> </a><p><b>Answer options for pet-indication.second-choice.unacceptable-treatments </b></p><ul><li style="font-size: 11px">null#null (&quot;Elustamine kliinilisest surmast &quot;)</li><li style="font-size: 11px">null#null (&quot;Hingamisaparaadi kasutamine &quot;)</li><li style="font-size: 11px">null#null (&quot;Neeruasendusravi ehk dialüüs &quot;)</li><li style="font-size: 11px">null#null (&quot;Kunstlik vedeliku manustamine ja toitmine&quot;)</li><li style="font-size: 11px">null#null (&quot;Intensiivraviosakonda paigutamine elu pikendava ravi eesmärgil&quot;)</li><li style="font-size: 11px">null#null (&quot;Ravimite manustamine, millel on muu kui vaevusi leevendav eesmärk &quot;)</li><li style="font-size: 11px">null#null (&quot;Vere või verekomponentide manustamine&quot;)</li><li style="font-size: 11px">null#null (&quot;Kirurgiline ravi, millel on muu kui vaevusi leevendav eesmärk&quot;)</li><li style="font-size: 11px">null#null (&quot;Analüüsid ja uuringud, millel on muu eesmärk kui vaevusi leevendava ravi parandamine &quot;)</li><li style="font-size: 11px">null#null (&quot;Muu&quot;)</li></ul><a name="opt-item.pet-indication.third-choice"> </a><p><b>Answer options for pet-indication.third-choice </b></p><ul><li style="font-size: 11px">null#null (&quot;ei soovi ma mitte ühtegi paranemisele suunatud meditsiinilist sekkumist&quot;)</li><li style="font-size: 11px">null#null (&quot;ei soovi ma järgmisi meditsiinilisi sekkumisi…[vaba tekst]&quot;)</li></ul><a name="opt-item.palliative-treatment"> </a><p><b>Answer options for palliative-treatment </b></p><ul><li style="font-size: 11px">null#null (&quot;Soovin täies mahus palliatiivset ravi, et minu vaevused oleksid igal juhul leevendatud&quot;)</li><li style="font-size: 11px">null#null (&quot;Soovin palliatiivse ravi puhul vältida:....[vaba tekst]&quot;)</li></ul><a name="opt-item.preferred-death-location"> </a><p><b>Answer options for preferred-death-location </b></p><ul><li style="font-size: 11px">null#null (&quot;Haiglas&quot;)</li><li style="font-size: 11px">null#null (&quot;Kodus&quot;)</li><li style="font-size: 11px">null#null (&quot;Mujal&quot;)</li></ul></div>
+  </text>
+  <url value="https://fhir.ee/qre/Questionnaire-PET"/>
+  <version value="1.0.0"/>
+  <name value="PET"/>
+  <title value="Patsiendi elulõpu tahteavaldus"/>
+  <status value="active"/>
+  <subjectType value="Patient"/>
+  <date value="2023-12-12"/>
+  <publisher value="TEHIK"/>
+  <contact>
+    <name value="TEHIK"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://tehik.ee"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="abi@tehik.ee"/>
+    </telecom>
+  </contact>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="EST"/>
+      <display value="Estonia"/>
+    </coding>
+  </jurisdiction>
+  <approvalDate value="2024-01-01"/>
+  <effectivePeriod>
+    <start value="2024-03-16"/>
+  </effectivePeriod>
+  <code>
+    <system value="http://fhir.ee/CodeSystem/dokumendi-tyyp"/>
+    <code value="18"/>
+    <display value="Tahteavaldused"/>
+  </code>
+  <item>
+    <linkId value="pet-indication"/>
+    <text value="Soovin, et minu tahteavaldus rakenduks järgmiselt:"/>
+    <type value="coding"/>
+    <required value="true"/>
+    <repeats value="false"/>
+    <readOnly value="false"/>
+    <answerOption>
+      <valueCoding>
+        <display value="Kui mu terviseseisund on selline, et mulle vastuvõetava elukvaliteedi saavutamine minu elu säilitamisega ei ole võimalik"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <display value="Kui minu terviseseisund halveneb nii, et ellu jäämine ilma elu säilitava ravita ei ole võimalik"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <display value="Kui ma olen haigestunud"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <display value="Muu"/>
+      </valueCoding>
+    </answerOption>
+    <item>
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+            <code value="radio-button"/>
+            <display value="Radio Button"/>
+          </coding>
+        </valueCodeableConcept>
+      </extension>
+      <linkId value="pet-indication.first-choice"/>
+      <text value="Kui mu terviseseisund on selline, et mulle vastuvõetava elukvaliteedi saavutamine minu elu säilitamisega ei ole võimalik, siis"/>
+      <type value="coding"/>
+      <enableWhen>
+        <question value="pet-indication"/>
+        <operator value="="/>
+        <answerCoding>
+          <display value="Kui mu terviseseisund on selline, et mulle vastuvõetava elukvaliteedi saavutamine minu elu säilitamisega ei ole võimalik"/>
+        </answerCoding>
+      </enableWhen>
+      <enableBehavior value="any"/>
+      <required value="true"/>
+      <repeats value="false"/>
+      <readOnly value="false"/>
+      <answerOption>
+        <valueCoding>
+          <display value="ei soovi ma ühtegi elu säilitav sekkumist"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <display value="ei soovi ma neid elu säilitavaid sekkumisi, mille olen ära märkinud"/>
+        </valueCoding>
+      </answerOption>
+      <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+              <code value="radio-button"/>
+              <display value="Radio Button"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <linkId value="pet-indication.first-choice.unacceptable-condition"/>
+        <text value="Minu jaoks on elukvaliteet vastuvõetamatu, kui:"/>
+        <type value="coding"/>
+        <enableWhen>
+          <question value="pet-indication.first-choice"/>
+          <operator value="exists"/>
+          <answerBoolean value="true"/>
+        </enableWhen>
+        <enableBehavior value="any"/>
+        <required value="true"/>
+        <repeats value="false"/>
+        <readOnly value="false"/>
+        <answerOption>
+          <valueCoding>
+            <display value="Olen püsivalt teadvusetus seisundis."/>
+          </valueCoding>
+        </answerOption>
+        <answerOption>
+          <valueCoding>
+            <display value="Minu vaimne võimekus on pöördumatult halvenenud nii, et ma ei ole suuteline aru saama, otsuseid tegema ega inimestega suhtlema. "/>
+          </valueCoding>
+        </answerOption>
+        <answerOption>
+          <valueCoding>
+            <display value="Olen igapäevastes toimingutes (nt söömine, joomine, hügieenitoimingud, riietumine jne) täielikult teistest sõltuv."/>
+          </valueCoding>
+        </answerOption>
+        <answerOption>
+          <valueCoding>
+            <display value="Muu…[vaba tekst]"/>
+          </valueCoding>
+        </answerOption>
+        <item>
+          <linkId value="pet-indication.first-choice.unacceptable-condition.other"/>
+          <text value="Muu"/>
+          <type value="text"/>
+          <enableWhen>
+            <question value="pet-indication.first-choice.unacceptable-condition"/>
+            <operator value="="/>
+            <answerCoding>
+              <display value="Muu…[vaba tekst]"/>
+            </answerCoding>
+          </enableWhen>
+          <enableBehavior value="any"/>
+          <required value="true"/>
+          <repeats value="false"/>
+          <readOnly value="false"/>
+        </item>
+      </item>
+      <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+              <code value="drop-down"/>
+              <display value="Drop down"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <linkId value="pet-indication.first-choice.unacceptable-treatments"/>
+        <text value="Ma keeldun järgmistest meditsiinilistest sekkumistest:"/>
+        <type value="coding"/>
+        <enableWhen>
+          <question value="pet-indication.first-choice"/>
+          <operator value="="/>
+          <answerCoding>
+            <display value="ei soovi ma neid elu säilitavaid sekkumisi, mille olen ära märkinud"/>
+          </answerCoding>
+        </enableWhen>
+        <enableBehavior value="any"/>
+        <required value="true"/>
+        <repeats value="true"/>
+        <readOnly value="false"/>
+        <answerOption>
+          <valueCoding>
+            <display value="Elustamine kliinilisest surmast "/>
+          </valueCoding>
+        </answerOption>
+        <answerOption>
+          <valueCoding>
+            <display value="Hingamisaparaadi kasutamine "/>
+          </valueCoding>
+        </answerOption>
+        <answerOption>
+          <valueCoding>
+            <display value="Neeruasendusravi ehk dialüüs "/>
+          </valueCoding>
+        </answerOption>
+        <answerOption>
+          <valueCoding>
+            <display value="Kunstlik vedeliku manustamine ja toitmine"/>
+          </valueCoding>
+        </answerOption>
+        <answerOption>
+          <valueCoding>
+            <display value="Intensiivraviosakonda paigutamine elu pikendava ravi eesmärgil"/>
+          </valueCoding>
+        </answerOption>
+        <answerOption>
+          <valueCoding>
+            <display value="Ravimite manustamine, millel on muu kui vaevusi leevendav eesmärk "/>
+          </valueCoding>
+        </answerOption>
+        <answerOption>
+          <valueCoding>
+            <display value="Vere või verekomponentide manustamine"/>
+          </valueCoding>
+        </answerOption>
+        <answerOption>
+          <valueCoding>
+            <display value="Kirurgiline ravi, millel on muu kui vaevusi leevendav eesmärk"/>
+          </valueCoding>
+        </answerOption>
+        <answerOption>
+          <valueCoding>
+            <display value="Analüüsid ja uuringud, millel on muu eesmärk kui vaevusi leevendava ravi parandamine "/>
+          </valueCoding>
+        </answerOption>
+        <answerOption>
+          <valueCoding>
+            <display value="Muu: …[vaba tekst]"/>
+          </valueCoding>
+        </answerOption>
+        <item>
+          <linkId value="pet-indication.first-choice.unacceptable-treatments.other"/>
+          <text value="Muu"/>
+          <type value="text"/>
+          <enableWhen>
+            <question value="pet-indication.first-choice.unacceptable-treatments"/>
+            <operator value="="/>
+            <answerCoding>
+              <display value="Muu: …[vaba tekst]"/>
+            </answerCoding>
+          </enableWhen>
+          <required value="true"/>
+          <repeats value="false"/>
+          <readOnly value="false"/>
+        </item>
+      </item>
+    </item>
+    <item>
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+            <code value="radio-button"/>
+            <display value="Radio Button"/>
+          </coding>
+        </valueCodeableConcept>
+      </extension>
+      <linkId value="pet-indication.second-choice"/>
+      <text value="Kui minu terviseseisund halveneb nii, et ellu jäämine ilma elu säilitava ravita ei ole võimalik, siis: (vali üks)"/>
+      <type value="coding"/>
+      <enableWhen>
+        <question value="pet-indication"/>
+        <operator value="="/>
+        <answerCoding>
+          <display value="Kui minu terviseseisund halveneb nii, et ellu jäämine ilma elu säilitava ravita ei ole võimalik"/>
+        </answerCoding>
+      </enableWhen>
+      <enableBehavior value="any"/>
+      <required value="true"/>
+      <repeats value="false"/>
+      <readOnly value="false"/>
+      <answerOption>
+        <valueCoding>
+          <display value="ei soovi ma ühtegi elu säilitavat sekkumist"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <display value="ei soovi ma neid elu säilitavaid sekkumisi, mille olen ära märkinud (siin peaks avanema med.sekkumiste loetelu (vt edasi))."/>
+        </valueCoding>
+      </answerOption>
+      <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+              <code value="drop-down"/>
+              <display value="Drop down"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <linkId value="pet-indication.second-choice.unacceptable-treatments"/>
+        <text value="Ma keeldun järgmistest meditsiinilistest sekkumistest:"/>
+        <type value="coding"/>
+        <enableWhen>
+          <question value="pet-indication.second-choice"/>
+          <operator value="="/>
+          <answerCoding>
+            <display value="ei soovi ma neid elu säilitavaid sekkumisi, mille olen ära märkinud (siin peaks avanema med.sekkumiste loetelu (vt edasi))."/>
+          </answerCoding>
+        </enableWhen>
+        <enableBehavior value="any"/>
+        <required value="true"/>
+        <repeats value="true"/>
+        <readOnly value="false"/>
+        <answerOption>
+          <valueCoding>
+            <display value="Elustamine kliinilisest surmast "/>
+          </valueCoding>
+        </answerOption>
+        <answerOption>
+          <valueCoding>
+            <display value="Hingamisaparaadi kasutamine "/>
+          </valueCoding>
+        </answerOption>
+        <answerOption>
+          <valueCoding>
+            <display value="Neeruasendusravi ehk dialüüs "/>
+          </valueCoding>
+        </answerOption>
+        <answerOption>
+          <valueCoding>
+            <display value="Kunstlik vedeliku manustamine ja toitmine"/>
+          </valueCoding>
+        </answerOption>
+        <answerOption>
+          <valueCoding>
+            <display value="Intensiivraviosakonda paigutamine elu pikendava ravi eesmärgil"/>
+          </valueCoding>
+        </answerOption>
+        <answerOption>
+          <valueCoding>
+            <display value="Ravimite manustamine, millel on muu kui vaevusi leevendav eesmärk "/>
+          </valueCoding>
+        </answerOption>
+        <answerOption>
+          <valueCoding>
+            <display value="Vere või verekomponentide manustamine"/>
+          </valueCoding>
+        </answerOption>
+        <answerOption>
+          <valueCoding>
+            <display value="Kirurgiline ravi, millel on muu kui vaevusi leevendav eesmärk"/>
+          </valueCoding>
+        </answerOption>
+        <answerOption>
+          <valueCoding>
+            <display value="Analüüsid ja uuringud, millel on muu eesmärk kui vaevusi leevendava ravi parandamine "/>
+          </valueCoding>
+        </answerOption>
+        <answerOption>
+          <valueCoding>
+            <display value="Muu"/>
+          </valueCoding>
+        </answerOption>
+        <item>
+          <linkId value="pet-indication.second-choice.unacceptable-treatments.other"/>
+          <text value="Muu"/>
+          <type value="text"/>
+          <enableWhen>
+            <question value="pet-indication.second-choice.unacceptable-treatments"/>
+            <operator value="="/>
+            <answerCoding>
+              <display value="Muu"/>
+            </answerCoding>
+          </enableWhen>
+          <enableBehavior value="any"/>
+          <required value="true"/>
+          <repeats value="false"/>
+          <readOnly value="false"/>
+        </item>
+      </item>
+    </item>
+    <item>
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+            <code value="radio-button"/>
+            <display value="Radio Button"/>
+          </coding>
+        </valueCodeableConcept>
+      </extension>
+      <linkId value="pet-indication.third-choice"/>
+      <text value="Kui ma olen haigestunud, siis: (vali üks)"/>
+      <type value="coding"/>
+      <enableWhen>
+        <question value="pet-indication"/>
+        <operator value="="/>
+        <answerCoding>
+          <display value="Kui ma olen haigestunud"/>
+        </answerCoding>
+      </enableWhen>
+      <enableBehavior value="any"/>
+      <required value="true"/>
+      <repeats value="false"/>
+      <readOnly value="false"/>
+      <answerOption>
+        <valueCoding>
+          <display value="ei soovi ma mitte ühtegi paranemisele suunatud meditsiinilist sekkumist"/>
+        </valueCoding>
+      </answerOption>
+      <answerOption>
+        <valueCoding>
+          <display value="ei soovi ma järgmisi meditsiinilisi sekkumisi…[vaba tekst]"/>
+        </valueCoding>
+      </answerOption>
+      <item>
+        <linkId value="pet-indication.third-choice.unacceptable-treatment"/>
+        <text value="Sekkumised, millest keeldun"/>
+        <type value="text"/>
+        <enableWhen>
+          <question value="pet-indication.third-choice"/>
+          <operator value="="/>
+          <answerCoding>
+            <display value="ei soovi ma järgmisi meditsiinilisi sekkumisi…[vaba tekst]"/>
+          </answerCoding>
+        </enableWhen>
+        <enableBehavior value="any"/>
+        <required value="true"/>
+        <repeats value="false"/>
+        <readOnly value="false"/>
+      </item>
+    </item>
+    <item>
+      <linkId value="pet-indication.fourth-choice"/>
+      <text value="Muu"/>
+      <type value="text"/>
+      <enableWhen>
+        <question value="pet-indication"/>
+        <operator value="="/>
+        <answerCoding>
+          <display value="Muu"/>
+        </answerCoding>
+      </enableWhen>
+      <enableBehavior value="any"/>
+      <required value="true"/>
+      <repeats value="false"/>
+      <readOnly value="false"/>
+    </item>
+  </item>
+  <item>
+    <linkId value="palliative-treatment"/>
+    <text value="Olenemata minu valikutest tahteavalduse eelmises osas, soovin ma, et mulle pakutaks vaevusi leevendavat ravi ja hooldust ehk palliatiivravi: (vali üks)"/>
+    <type value="coding"/>
+    <required value="true"/>
+    <repeats value="false"/>
+    <readOnly value="false"/>
+    <answerOption>
+      <valueCoding>
+        <display value="Soovin täies mahus palliatiivset ravi, et minu vaevused oleksid igal juhul leevendatud"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <display value="Soovin palliatiivse ravi puhul vältida:....[vaba tekst]"/>
+      </valueCoding>
+    </answerOption>
+    <item>
+      <linkId value="palliative-treatment.treatments"/>
+      <text value="Soovin vältida"/>
+      <type value="text"/>
+      <enableWhen>
+        <question value="palliative-treatment"/>
+        <operator value="="/>
+        <answerCoding>
+          <display value="Soovin palliatiivse ravi puhul vältida:....[vaba tekst]"/>
+        </answerCoding>
+      </enableWhen>
+      <enableBehavior value="any"/>
+      <required value="true"/>
+      <repeats value="false"/>
+      <readOnly value="false"/>
+    </item>
+  </item>
+  <item>
+    <linkId value="preferred-death-location"/>
+    <text value="Ma eelistan surra"/>
+    <type value="coding"/>
+    <required value="false"/>
+    <repeats value="false"/>
+    <readOnly value="false"/>
+    <answerOption>
+      <valueCoding>
+        <display value="Haiglas"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <display value="Kodus"/>
+      </valueCoding>
+    </answerOption>
+    <answerOption>
+      <valueCoding>
+        <display value="Mujal"/>
+      </valueCoding>
+    </answerOption>
+    <item>
+      <linkId value="preferred-death-location.other"/>
+      <text value="Täpsutus"/>
+      <type value="text"/>
+      <enableWhen>
+        <question value="preferred-death-location"/>
+        <operator value="="/>
+        <answerCoding>
+          <display value="Mujal"/>
+        </answerCoding>
+      </enableWhen>
+      <enableBehavior value="any"/>
+      <required value="true"/>
+      <repeats value="false"/>
+      <readOnly value="false"/>
+    </item>
+  </item>
+  <item>
+    <linkId value="people-by-side-death"/>
+    <text value="Ma soovin, et minu suremise juures viibivad järgmised isikud:"/>
+    <type value="text"/>
+    <required value="false"/>
+    <readOnly value="false"/>
+    <item>
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+            <code value="help"/>
+            <display value="Help-Button"/>
+          </coding>
+          <text value="Help-Button"/>
+        </valueCodeableConcept>
+      </extension>
+      <linkId value="246658268145_helpText"/>
+      <text value="Nimi, seos minuga ja kontaktandmed"/>
+      <type value="display"/>
+    </item>
+  </item>
+  <item>
+    <linkId value="religious-preferences"/>
+    <text value="Minu religioossed või muud spirituaalsed eelistused "/>
+    <type value="text"/>
+    <required value="false"/>
+    <repeats value="false"/>
+    <readOnly value="false"/>
+    <item>
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+            <code value="help"/>
+            <display value="Help-Button"/>
+          </coding>
+          <text value="Help-Button"/>
+        </valueCodeableConcept>
+      </extension>
+      <linkId value="593162052362_helpText"/>
+      <text value="Lisa siia oma religioossed, spirituaalsed või maailmavaatelised soovid, mis on sinu jaoks elu lõpu ajal olulised. Need aitavad sinu lähedastel ja usaldusisikul paremini mõista, millist tuge või rituaale sa sooviksid (nt vaimuliku kohalolek, palve, vaikus, muusika või muu sümboolne tegevus)."/>
+      <type value="display"/>
+    </item>
+  </item>
+  <item>
+    <linkId value="other-wishes"/>
+    <text value="Minu jaoks olulised soovid"/>
+    <type value="text"/>
+    <required value="false"/>
+    <readOnly value="false"/>
+    <item>
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl">
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://hl7.org/fhir/questionnaire-item-control"/>
+            <code value="help"/>
+            <display value="Help-Button"/>
+          </coding>
+          <text value="Help-Button"/>
+        </valueCodeableConcept>
+      </extension>
+      <linkId value="637523866624_helpText"/>
+      <text value="Siia saad kirja panna muud isiklikud soovid, mis on sinu jaoks elu lõpu ajal tähtsad ja mis aitavad lähedastel sind toetada ning sinuga rahulikult hüvasti jätta. Rahaga või pärandiga seotud küsimused ei kuulu sellesse ossa."/>
+      <type value="display"/>
+    </item>
+  </item>
+</Questionnaire>
