@@ -20,34 +20,33 @@ Usage: #example
 * code.display = "Tahteavaldused"
 
 * item[0].type = #coding
-// * item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
-// * item[=].extension.valueCodeableConcept = $questionnaire-item-control#radio-button "Radio Button"
+* item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].extension.valueCodeableConcept = $questionnaire-item-control#radio-button "Radio Button"
 * item[=].linkId = "pet-indication"
 * item[=].text = "Soovin, et minu tahteavaldus rakenduks järgmiselt:"
 * item[=].required = true
 * item[=].repeats = false
 * item[=].readOnly = false
     // * item[=].answerConstraint = "optionsOnly"
-* item[=].answerOption[0].valueCoding.display = "Kui mu terviseseisund on selline, et mulle vastuvõetava elukvaliteedi saavutamine minu elu säilitamisega ei ole võimalik"
-* item[=].answerOption[+].valueCoding.display = "Kui minu terviseseisund halveneb nii, et ellu jäämine ilma elu säilitava ravita ei ole võimalik"
-* item[=].answerOption[+].valueCoding.display = "Kui ma olen haigestunud"
-* item[=].answerOption[+].valueCoding.display = "Muu"
+* item[=].answerOption[0].valueCoding.display = "Elu säilitamisest keeldumine, kui selle tulemus on sulle vastuvõetamatu"
+* item[=].answerOption[+].valueCoding.display = "Elu säilitamisest keeldumine sõltumata ravitulemustest"
+* item[=].answerOption[+].valueCoding.display = "Kõigist ravisekkumistest keeldumine"
 
 * item[=].item[0].type = #coding
 * item[=].item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
 * item[=].item[=].extension.valueCodeableConcept = $questionnaire-item-control#radio-button "Radio Button"
 * item[=].item[=].linkId = "pet-indication.first-choice"
-* item[=].item[=].text = "Kui mu terviseseisund on selline, et mulle vastuvõetava elukvaliteedi saavutamine minu elu säilitamisega ei ole võimalik, siis"
+* item[=].item[=].text = "Kui mulle vastuvõetava seisundi saavutamine minu elu säilitamisega ei ole võimalik, siis"
 * item[=].item[=].enableWhen.question = "pet-indication"
 * item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].enableWhen.answerCoding.display = "Kui mu terviseseisund on selline, et mulle vastuvõetava elukvaliteedi saavutamine minu elu säilitamisega ei ole võimalik"
+* item[=].item[=].enableWhen.answerCoding.display = "Elu säilitamisest keeldumine, kui selle tulemus on sulle vastuvõetamatu"
 * item[=].item[=].enableBehavior = #any
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
 * item[=].item[=].readOnly = false
     // * item[=].item[=].answerConstraint = "optionsOnly"
-* item[=].item[=].answerOption[0].valueCoding.display = "ei soovi ma ühtegi elu säilitav sekkumist"
-* item[=].item[=].answerOption[+].valueCoding.display = "ei soovi ma neid elu säilitavaid sekkumisi, mille olen ära märkinud"
+* item[=].item[=].answerOption[0].valueCoding.display = "ei soovi ma ühtegi elu säilitavat sekkumist"
+* item[=].item[=].answerOption[+].valueCoding.display = "ei soovi ma järgmisi elu säilitavaid sekkumisi"
 // * item[=].item[=].disabledDisplay = "hidden"
 
 * item[=].item[=].item[0].type = #coding
@@ -60,12 +59,12 @@ Usage: #example
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].enableBehavior = #any
 * item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].repeats = false
+* item[=].item[=].item[=].repeats = true
 * item[=].item[=].item[=].readOnly = false
 // * item[=].item[=].item[=].answerConstraint = "optionsOnly"
-* item[=].item[=].item[=].answerOption[0].valueCoding.display = "Olen püsivalt teadvusetus seisundis."
-* item[=].item[=].item[=].answerOption[+].valueCoding.display = "Minu vaimne võimekus on pöördumatult halvenenud nii, et ma ei ole suuteline aru saama, otsuseid tegema ega inimestega suhtlema. "
-* item[=].item[=].item[=].answerOption[+].valueCoding.display = "Olen igapäevastes toimingutes (nt söömine, joomine, hügieenitoimingud, riietumine jne) täielikult teistest sõltuv."
+* item[=].item[=].item[=].answerOption[0].valueCoding.display = "Ma jään püsivalt teadvusetusse seisundisse ehk koomasse "
+* item[=].item[=].item[=].answerOption[+].valueCoding.display = "Minu vaimne võimekus halveneb pöördumatult, nii et ma ei ole suuteline oma seisundist aru saama, otsuseid tegema ega inimestega suhtlema"
+* item[=].item[=].item[=].answerOption[+].valueCoding.display = "Ma sõltun igapäevatoimingutes (nt söömine, joomine, enesehooldus, riietumine jm) täielikult teistest inimestest"
 * item[=].item[=].item[=].answerOption[+].valueCoding.display = "Muu…[vaba tekst]"
     // * item[=].item[=].item[=].disabledDisplay = "hidden"
 
@@ -88,49 +87,39 @@ Usage: #example
 * item[=].item[=].item[=].text = "Ma keeldun järgmistest meditsiinilistest sekkumistest:"
 * item[=].item[=].item[=].enableWhen.question = "pet-indication.first-choice"
 * item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerCoding.display = "ei soovi ma neid elu säilitavaid sekkumisi, mille olen ära märkinud"
+* item[=].item[=].item[=].enableWhen.answerCoding.display = "ei soovi ma järgmisi elu säilitavaid sekkumisi"
 * item[=].item[=].item[=].enableBehavior = #any
 * item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].repeats = true
 * item[=].item[=].item[=].readOnly = false
 // * item[=].item[=].item[=].answerConstraint = "optionsOnly"
-* item[=].item[=].item[=].answerOption[0].valueCoding.display = "Elustamine kliinilisest surmast "
-* item[=].item[=].item[=].answerOption[+].valueCoding.display = "Hingamisaparaadi kasutamine "
-* item[=].item[=].item[=].answerOption[+].valueCoding.display = "Neeruasendusravi ehk dialüüs "
-* item[=].item[=].item[=].answerOption[+].valueCoding.display = "Kunstlik vedeliku manustamine ja toitmine"
-* item[=].item[=].item[=].answerOption[+].valueCoding.display = "Intensiivraviosakonda paigutamine elu pikendava ravi eesmärgil"
-* item[=].item[=].item[=].answerOption[+].valueCoding.display = "Ravimite manustamine, millel on muu kui vaevusi leevendav eesmärk "
-* item[=].item[=].item[=].answerOption[+].valueCoding.display = "Vere või verekomponentide manustamine"
-* item[=].item[=].item[=].answerOption[+].valueCoding.display = "Kirurgiline ravi, millel on muu kui vaevusi leevendav eesmärk"
-* item[=].item[=].item[=].answerOption[+].valueCoding.display = "Analüüsid ja uuringud, millel on muu eesmärk kui vaevusi leevendava ravi parandamine "
-* item[=].item[=].item[=].answerOption[+].valueCoding.display = "Muu: …[vaba tekst]"
+* item[=].item[=].item[=].answerOption[0].valueCoding.display = "elustamine kliinilisest surmast"
+* item[=].item[=].item[=].answerOption[+].valueCoding.display = "hingamisaparaadi kasutamine"
+* item[=].item[=].item[=].answerOption[+].valueCoding.display = "neeruasendusravi ehk dialüüs"
+* item[=].item[=].item[=].answerOption[+].valueCoding.display = "kunstlik toitmine ja kunstlik vedeliku manustamine"
+* item[=].item[=].item[=].answerOption[+].valueCoding.display = "intensiivraviosakonda paigutamine"
+* item[=].item[=].item[=].answerOption[+].valueCoding.display = "ravimite manustamine"
+* item[=].item[=].item[=].answerOption[+].valueCoding.display = "vere või verekomponentide manustamine"
+* item[=].item[=].item[=].answerOption[+].valueCoding.display = "kirurgiline ravi"
+* item[=].item[=].item[=].answerOption[+].valueCoding.display = "uuringud ja analüüsid"
     // * item[=].item[=].item[=].disabledDisplay = "hidden"
 
-* item[=].item[=].item[=].item[0].type = #text
-* item[=].item[=].item[=].item[=].linkId = "pet-indication.first-choice.unacceptable-treatments.other"
-* item[=].item[=].item[=].item[=].text = "Muu"
-* item[=].item[=].item[=].item[=].enableWhen.question = "pet-indication.first-choice.unacceptable-treatments"
-* item[=].item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].item[=].enableWhen.answerCoding.display = "Muu: …[vaba tekst]"
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].repeats = false
-* item[=].item[=].item[=].item[=].readOnly = false
 
 * item[=].item[+].type = #coding
 * item[=].item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
 * item[=].item[=].extension.valueCodeableConcept = $questionnaire-item-control#radio-button "Radio Button"
 * item[=].item[=].linkId = "pet-indication.second-choice"
-* item[=].item[=].text = "Kui minu terviseseisund halveneb nii, et ellu jäämine ilma elu säilitava ravita ei ole võimalik, siis: (vali üks)"
+* item[=].item[=].text = "Kui minu terviseseisund halveneb nii, et ellu jäämine ilma elu säilitava ravita ei ole võimalik, siis (vali üks)"
 * item[=].item[=].enableWhen.question = "pet-indication"
 * item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].enableWhen.answerCoding.display = "Kui minu terviseseisund halveneb nii, et ellu jäämine ilma elu säilitava ravita ei ole võimalik"
+* item[=].item[=].enableWhen.answerCoding.display = "elu säilitamisest keeldumine sõltumata ravitulemustest"
 * item[=].item[=].enableBehavior = #any
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
 * item[=].item[=].readOnly = false
     // * item[=].item[=].answerConstraint = "optionsOnly"
 * item[=].item[=].answerOption[0].valueCoding.display = "ei soovi ma ühtegi elu säilitavat sekkumist"
-* item[=].item[=].answerOption[+].valueCoding.display = "ei soovi ma neid elu säilitavaid sekkumisi, mille olen ära märkinud (siin peaks avanema med.sekkumiste loetelu (vt edasi))."
+* item[=].item[=].answerOption[+].valueCoding.display = "ei soovi ma järgmisi elu säilitavaid sekkumisi"
     // * item[=].item[=].disabledDisplay = "hidden"
 
 * item[=].item[=].item[0].type = #coding
@@ -140,96 +129,68 @@ Usage: #example
 * item[=].item[=].item[=].text = "Ma keeldun järgmistest meditsiinilistest sekkumistest:"
 * item[=].item[=].item[=].enableWhen.question = "pet-indication.second-choice"
 * item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerCoding.display = "ei soovi ma neid elu säilitavaid sekkumisi, mille olen ära märkinud (siin peaks avanema med.sekkumiste loetelu (vt edasi))."
+* item[=].item[=].item[=].enableWhen.answerCoding.display = "ei soovi ma järgmisi elu säilitavaid sekkumisi"
 * item[=].item[=].item[=].enableBehavior = #any
 * item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].repeats = true
 * item[=].item[=].item[=].readOnly = false
     // * item[=].item[=].item[=].answerConstraint = "optionsOnly"
-* item[=].item[=].item[=].answerOption[0].valueCoding.display = "Elustamine kliinilisest surmast "
-* item[=].item[=].item[=].answerOption[+].valueCoding.display = "Hingamisaparaadi kasutamine "
-* item[=].item[=].item[=].answerOption[+].valueCoding.display = "Neeruasendusravi ehk dialüüs "
-* item[=].item[=].item[=].answerOption[+].valueCoding.display = "Kunstlik vedeliku manustamine ja toitmine"
-* item[=].item[=].item[=].answerOption[+].valueCoding.display = "Intensiivraviosakonda paigutamine elu pikendava ravi eesmärgil"
-* item[=].item[=].item[=].answerOption[+].valueCoding.display = "Ravimite manustamine, millel on muu kui vaevusi leevendav eesmärk "
-* item[=].item[=].item[=].answerOption[+].valueCoding.display = "Vere või verekomponentide manustamine"
-* item[=].item[=].item[=].answerOption[+].valueCoding.display = "Kirurgiline ravi, millel on muu kui vaevusi leevendav eesmärk"
-* item[=].item[=].item[=].answerOption[+].valueCoding.display = "Analüüsid ja uuringud, millel on muu eesmärk kui vaevusi leevendava ravi parandamine "
-* item[=].item[=].item[=].answerOption[+].valueCoding.display = "Muu"
+* item[=].item[=].item[=].answerOption[0].valueCoding.display = "elustamine kliinilisest surmast"
+* item[=].item[=].item[=].answerOption[+].valueCoding.display = "hingamisaparaadi kasutamine"
+* item[=].item[=].item[=].answerOption[+].valueCoding.display = "neeruasendusravi ehk dialüüs"
+* item[=].item[=].item[=].answerOption[+].valueCoding.display = "kunstlik toitmine ja kunstlik vedeliku manustamine"
+* item[=].item[=].item[=].answerOption[+].valueCoding.display = "intensiivraviosakonda paigutamine"
+* item[=].item[=].item[=].answerOption[+].valueCoding.display = "ravimite manustamine"
+* item[=].item[=].item[=].answerOption[+].valueCoding.display = "vere või verekomponentide manustamine"
+* item[=].item[=].item[=].answerOption[+].valueCoding.display = "kirurgiline ravi"
+* item[=].item[=].item[=].answerOption[+].valueCoding.display = "uuringud ja analüüsid"
     // * item[=].item[=].item[=].disabledDisplay = "hidden"
 
-* item[=].item[=].item[=].item[0].type = #text
-* item[=].item[=].item[=].item[=].linkId = "pet-indication.second-choice.unacceptable-treatments.other"
-* item[=].item[=].item[=].item[=].text = "Muu"
-* item[=].item[=].item[=].item[=].enableWhen.question = "pet-indication.second-choice.unacceptable-treatments"
-* item[=].item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].item[=].enableWhen.answerCoding.display = "Muu"
-* item[=].item[=].item[=].item[=].enableBehavior = #any
-* item[=].item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].item[=].repeats = false
-* item[=].item[=].item[=].item[=].readOnly = false
-    // * item[=].item[=].item[=].item[=].disabledDisplay = "hidden"
 
 * item[=].item[+].type = #coding
 * item[=].item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
 * item[=].item[=].extension.valueCodeableConcept = $questionnaire-item-control#radio-button "Radio Button"
 * item[=].item[=].linkId = "pet-indication.third-choice"
-* item[=].item[=].text = "Kui ma olen haigestunud, siis: (vali üks)"
+* item[=].item[=].text = "Kui ma olen haigestunud, siis (vali üks)"
 * item[=].item[=].enableWhen.question = "pet-indication"
 * item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].enableWhen.answerCoding.display = "Kui ma olen haigestunud"
+* item[=].item[=].enableWhen.answerCoding.display = "kõigist ravisekkumistest keeldumine"
 * item[=].item[=].enableBehavior = #any
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
 * item[=].item[=].readOnly = false
     // * item[=].item[=].answerConstraint = "optionsOnly"
-* item[=].item[=].answerOption[0].valueCoding.display = "ei soovi ma mitte ühtegi paranemisele suunatud meditsiinilist sekkumist"
-* item[=].item[=].answerOption[+].valueCoding.display = "ei soovi ma järgmisi meditsiinilisi sekkumisi…[vaba tekst]"
+* item[=].item[=].answerOption[0].valueCoding.display = "ei soovi ma mitte ühtegi haigusest paranemisele suunatud meditsiinilist sekkumist ega elu säilitavat sekkumist"
+* item[=].item[=].answerOption[+].valueCoding.display = "ei soovi ma mitte ühtegi haigusest paranemisele suunatud meditsiinilist sekkumist ega elu säilitavat sekkumist, välja arvatud palliatiivravi sekkumised"
 // * item[=].item[=].disabledDisplay = "hidden"
 
-* item[=].item[=].item[0].type = #text
-* item[=].item[=].item[=].linkId = "pet-indication.third-choice.unacceptable-treatment"
-* item[=].item[=].item[=].text = "Sekkumised, millest keeldun"
-* item[=].item[=].item[=].enableWhen.question = "pet-indication.third-choice"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerCoding.display = "ei soovi ma järgmisi meditsiinilisi sekkumisi…[vaba tekst]"
-* item[=].item[=].item[=].enableBehavior = #any
-* item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].repeats = false
-* item[=].item[=].item[=].readOnly = false
-// * item[=].item[=].item[=].disabledDisplay = "hidden"
-
 * item[=].item[+].type = #text
-* item[=].item[=].linkId = "pet-indication.fourth-choice"
-* item[=].item[=].text = "Muu"
-* item[=].item[=].enableWhen.question = "pet-indication"
-* item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].enableWhen.answerCoding.display = "Muu"
-* item[=].item[=].enableBehavior = #any
-* item[=].item[=].required = true
+* item[=].item[=].linkId = "pet-indication.third-choice.other-wishes"
+* item[=].item[=].text = "Soovin veel lisada"
+* item[=].item[=].required = false
 * item[=].item[=].repeats = false
 * item[=].item[=].readOnly = false
-    // * item[=].item[=].disabledDisplay = "hidden"
+// * item[=].item[=].item[=].disabledDisplay = "hidden"
 
 
 * item[+].type = #coding
-    // * item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
-    // * item[=].extension.valueCodeableConcept = $questionnaire-item-control#radio-button "Radio Button"
+* item[=].extension.url = "http://hl7.org/fhir/SztructureDefinition/questionnaire-itemControl"
+* item[=].extension.valueCodeableConcept = $questionnaire-item-control#radio-button "Radio Button"
 * item[=].linkId = "palliative-treatment"
-* item[=].text = "Olenemata minu valikutest tahteavalduse eelmises osas, soovin ma, et mulle pakutaks vaevusi leevendavat ravi ja hooldust ehk palliatiivravi: (vali üks)"
+* item[=].text = "Soovin palliatiivravi (vali üks)"
 * item[=].required = true
 * item[=].repeats = false
 * item[=].readOnly = false
     // * item[=].answerConstraint = "optionsOnly"
-* item[=].answerOption[0].valueCoding.display = "Soovin täies mahus palliatiivset ravi, et minu vaevused oleksid igal juhul leevendatud"
-* item[=].answerOption[+].valueCoding.display = "Soovin palliatiivse ravi puhul vältida:....[vaba tekst]"
+* item[=].answerOption[0].valueCoding.display = "täies mahus"
+* item[=].answerOption[+].valueCoding.display = "ei soovi selliseid sekkumisi [kirjelda ise]"
 
 * item[=].item[0].type = #text
 * item[=].item[=].linkId = "palliative-treatment.treatments"
 * item[=].item[=].text = "Soovin vältida"
 * item[=].item[=].enableWhen.question = "palliative-treatment"
 * item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].enableWhen.answerCoding.display = "Soovin palliatiivse ravi puhul vältida:....[vaba tekst]"
+* item[=].item[=].enableWhen.answerCoding.display = "ei soovi selliseid sekkumisi [kirjelda ise]"
 * item[=].item[=].enableBehavior = #any
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
@@ -237,8 +198,8 @@ Usage: #example
     // * item[=].item[=].disabledDisplay = "hidden"
 
 * item[+].type = #coding
-    // * item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
-    // * item[=].extension.valueCodeableConcept = $questionnaire-item-control#radio-button "Radio Button"
+* item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].extension.valueCodeableConcept = $questionnaire-item-control#radio-button "Radio Button"
 * item[=].linkId = "preferred-death-location"
 * item[=].text = "Ma eelistan surra"
 * item[=].required = false
@@ -261,18 +222,13 @@ Usage: #example
 * item[=].item[=].readOnly = false
     // * item[=].item[=].disabledDisplay = "hidden"
 
-* item[+].type = #text
-* item[=].linkId = "people-by-side-death"
-* item[=].text = "Ma soovin, et minu suremise juures viibivad järgmised isikud:"
-* item[=].required = false
-* item[=].readOnly = false
 
-* item[=].item[0].linkId = "246658268145_helpText"
-* item[=].item[=].type = #display
-* item[=].item[=].text = "Nimi, seos minuga ja kontaktandmed"
-* item[=].item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
-* item[=].item[=].extension.valueCodeableConcept = $questionnaire-item-control#help "Help-Button"
-* item[=].item[=].extension.valueCodeableConcept.text = "Help-Button"
+* item[+].linkId = "People-by-side-death"
+* item[=].type = #text
+* item[=].text = "Ma soovin, et minu suremise juures viibivad järgmised inimesed"
+* item[=].required = false
+* item[=].repeats = false
+* item[=].readOnly = false
 
 * item[+].type = #text
 * item[=].linkId = "religious-preferences"
@@ -281,12 +237,25 @@ Usage: #example
 * item[=].repeats = false
 * item[=].readOnly = false
 
-* item[=].item[0].linkId = "593162052362_helpText"
-* item[=].item[=].type = #display
-* item[=].item[=].text = "Lisa siia oma religioossed, spirituaalsed või maailmavaatelised soovid, mis on sinu jaoks elu lõpu ajal olulised. Need aitavad sinu lähedastel ja usaldusisikul paremini mõista, millist tuge või rituaale sa sooviksid (nt vaimuliku kohalolek, palve, vaikus, muusika või muu sümboolne tegevus)."
-* item[=].item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
-* item[=].item[=].extension.valueCodeableConcept = $questionnaire-item-control#help "Help-Button"
-* item[=].item[=].extension.valueCodeableConcept.text = "Help-Button"
+* item[+].type = #coding
+* item[=].linkId = "actions-after-death"
+* item[=].text = "Minu matmisviisi eelistus"
+* item[=].required = false
+* item[=].readOnly = false
+* item[=].answerOption[0].valueCoding.display = "kirstuga matmine"
+* item[=].answerOption[+].valueCoding.display = "tuhastamine ja urnimatus"
+* item[=].answerOption[+].valueCoding.display = "mul ei ole eelistust"
+* item[=].answerOption[+].valueCoding.display = "muu: [vaba tekst]"
+
+* item[=].item[+].type = #text
+* item[=].item[=].linkId = "actions-after-death.other"
+* item[=].item[=].text = "Täpsusta"
+* item[=].item[=].enableWhen.question = "actions-after-death"
+* item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].enableWhen.answerCoding.display = "muu: [vaba tekst]"
+* item[=].item[=].required = false
+* item[=].item[=].repeats = false
+* item[=].item[=].readOnly = false
 
 * item[+].type = #text
 * item[=].linkId = "other-wishes"
@@ -294,14 +263,6 @@ Usage: #example
 * item[=].required = false
 * item[=].readOnly = false
 
-* item[=].item[0].linkId = "637523866624_helpText"
-* item[=].item[=].type = #display
-* item[=].item[=].text = "Siia saad kirja panna muud isiklikud soovid, mis on sinu jaoks elu lõpu ajal tähtsad ja mis aitavad lähedastel sind toetada ning sinuga rahulikult hüvasti jätta. Rahaga või pärandiga seotud küsimused ei kuulu sellesse ossa."
-* item[=].item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
-* item[=].item[=].extension.valueCodeableConcept = $questionnaire-item-control#help "Help-Button"
-* item[=].item[=].extension.valueCodeableConcept.text = "Help-Button"
-
-//JÄRJEHOIDJA-------------------------------------------------------------------------------------------
 
 
 
