@@ -20,8 +20,6 @@ Usage: #example
 * code.display = "Tahteavaldused"
 
 * item[0].type = #coding
-* item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
-* item[=].extension.valueCodeableConcept = $questionnaire-item-control#radio-button "Radio Button"
 * item[=].linkId = "pet-indication"
 * item[=].text = "Soovin, et minu tahteavaldus rakenduks järgmiselt:"
 * item[=].required = true
@@ -33,8 +31,6 @@ Usage: #example
 * item[=].answerOption[+].valueCoding.display = "Kõigist ravisekkumistest keeldumine"
 
 * item[=].item[0].type = #coding
-* item[=].item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
-* item[=].item[=].extension.valueCodeableConcept = $questionnaire-item-control#radio-button "Radio Button"
 * item[=].item[=].linkId = "pet-indication.first-choice"
 * item[=].item[=].text = "Kui mulle vastuvõetava seisundi saavutamine minu elu säilitamisega ei ole võimalik, siis"
 * item[=].item[=].enableWhen.question = "pet-indication"
@@ -50,8 +46,6 @@ Usage: #example
 // * item[=].item[=].disabledDisplay = "hidden"
 
 * item[=].item[=].item[0].type = #coding
-* item[=].item[=].item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
-* item[=].item[=].item[=].extension.valueCodeableConcept = $questionnaire-item-control#radio-button "Radio Button"
 * item[=].item[=].item[=].linkId = "pet-indication.first-choice.unacceptable-condition"
 * item[=].item[=].item[=].text = "Minu jaoks on elukvaliteet vastuvõetamatu, kui:"
 * item[=].item[=].item[=].enableWhen.question = "pet-indication.first-choice"
@@ -81,8 +75,6 @@ Usage: #example
 // * item[=].item[=].item[=].item[=].disabledDisplay = "hidden"
 
 * item[=].item[=].item[+].type = #coding
-* item[=].item[=].item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
-* item[=].item[=].item[=].extension.valueCodeableConcept = $questionnaire-item-control#drop-down "Drop down"
 * item[=].item[=].item[=].linkId = "pet-indication.first-choice.unacceptable-treatments"
 * item[=].item[=].item[=].text = "Ma keeldun järgmistest meditsiinilistest sekkumistest:"
 * item[=].item[=].item[=].enableWhen.question = "pet-indication.first-choice"
@@ -106,8 +98,6 @@ Usage: #example
 
 
 * item[=].item[+].type = #coding
-* item[=].item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
-* item[=].item[=].extension.valueCodeableConcept = $questionnaire-item-control#radio-button "Radio Button"
 * item[=].item[=].linkId = "pet-indication.second-choice"
 * item[=].item[=].text = "Kui minu terviseseisund halveneb nii, et ellu jäämine ilma elu säilitava ravita ei ole võimalik, siis (vali üks)"
 * item[=].item[=].enableWhen.question = "pet-indication"
@@ -123,8 +113,6 @@ Usage: #example
     // * item[=].item[=].disabledDisplay = "hidden"
 
 * item[=].item[=].item[0].type = #coding
-* item[=].item[=].item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
-* item[=].item[=].item[=].extension.valueCodeableConcept = $questionnaire-item-control#drop-down "Drop down"
 * item[=].item[=].item[=].linkId = "pet-indication.second-choice.unacceptable-treatments"
 * item[=].item[=].item[=].text = "Ma keeldun järgmistest meditsiinilistest sekkumistest:"
 * item[=].item[=].item[=].enableWhen.question = "pet-indication.second-choice"
@@ -148,8 +136,6 @@ Usage: #example
 
 
 * item[=].item[+].type = #coding
-* item[=].item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
-* item[=].item[=].extension.valueCodeableConcept = $questionnaire-item-control#radio-button "Radio Button"
 * item[=].item[=].linkId = "pet-indication.third-choice"
 * item[=].item[=].text = "Kui ma olen haigestunud, siis (vali üks)"
 * item[=].item[=].enableWhen.question = "pet-indication"
@@ -174,8 +160,6 @@ Usage: #example
 
 
 * item[+].type = #coding
-* item[=].extension.url = "http://hl7.org/fhir/SztructureDefinition/questionnaire-itemControl"
-* item[=].extension.valueCodeableConcept = $questionnaire-item-control#radio-button "Radio Button"
 * item[=].linkId = "palliative-treatment"
 * item[=].text = "Soovin palliatiivravi (vali üks)"
 * item[=].required = true
@@ -198,8 +182,6 @@ Usage: #example
     // * item[=].item[=].disabledDisplay = "hidden"
 
 * item[+].type = #coding
-* item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
-* item[=].extension.valueCodeableConcept = $questionnaire-item-control#radio-button "Radio Button"
 * item[=].linkId = "preferred-death-location"
 * item[=].text = "Ma eelistan surra"
 * item[=].required = false
