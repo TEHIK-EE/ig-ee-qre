@@ -2,7 +2,7 @@ Instance: Questionnaire-health-declaration-with-text
 InstanceOf: EEHealthDeclarationQuestionnaire
 Description: "Näidis töötervishoiu tervisedeklaratsiooni küsimustikust"
 Usage: #example
-// * meta.versionId = "2.0.0"
+* meta.versionId = "2.0.0"
 * name = "HDECL"
 * title = "Tervisedeklaratsioon"
 * version = "2.0.0"
@@ -124,7 +124,7 @@ Usage: #example
 * item[=].item[=].item[=].code.code = #smoking-tobacco-amount
 * item[=].item[=].item[=].code.display = "Mitu sigaretti (sigarit, sigarillot) sa keskmiselt tarvita(si)d päevas/nädalas/kuus?"
 * item[=].item[=].item[=].text = "Mitu sigaretti (sigarit, sigarillot) sa keskmiselt tarvita(si)d päevas/nädalas/kuus?"
-* item[=].item[=].item[=].type = #quantity
+* item[=].item[=].item[=].type = #integer
 * item[=].item[=].item[=].enableWhen.question = "lifestyle.smoking-tobacco.which"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerCoding.code = #smoking-tobacco
@@ -132,9 +132,9 @@ Usage: #example
 * item[=].item[=].item[=].enableWhen.answerCoding.system = $TT
 * item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
-* item[=].item[=].item[=].extension[=].valueQuantity.value = 1
+* item[=].item[=].item[=].extension[=].valueInteger.value = 1
 * item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/maxValue"
-* item[=].item[=].item[=].extension[=].valueQuantity.value = 6500
+* item[=].item[=].item[=].extension[=].valueInteger.value = 6500
 * item[=].item[=].item[=].extension[+].url = $unitOption
 * item[=].item[=].item[=].extension[=].valueCoding.system = $Sagedus
 * item[=].item[=].item[=].extension[=].valueCoding.code = #/d
@@ -153,7 +153,7 @@ Usage: #example
 * item[=].item[=].item[=].code.code = #smokeless-novel-tobacco-amount
 * item[=].item[=].item[=].code.display = "Mitu korda sa keskmiselt suitsuvabu või uudseid tubakatooteid tarvita(si)d päevas/nädalas/kuus?"
 * item[=].item[=].item[=].text = "Mitu korda sa keskmiselt suitsuvabu või uudseid tubakatooteid tarvita(si)d päevas/nädalas/kuus?"
-* item[=].item[=].item[=].type = #quantity
+* item[=].item[=].item[=].type = #integer
 * item[=].item[=].item[=].enableBehavior = #any
 * item[=].item[=].item[=].enableWhen[0].question = "lifestyle.smoking-tobacco.which"
 * item[=].item[=].item[=].enableWhen[0].operator = #=
@@ -167,9 +167,9 @@ Usage: #example
 * item[=].item[=].item[=].enableWhen[1].answerCoding.system = $TT
 * item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
-* item[=].item[=].item[=].extension[=].valueQuantity.value = 1
+* item[=].item[=].item[=].extension[=].valueInteger.value = 1
 * item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/maxValue"
-* item[=].item[=].item[=].extension[=].valueQuantity.value = 6500
+* item[=].item[=].item[=].extension[=].valueInteger.value = 6500
 * item[=].item[=].item[=].extension[+].url = $unitOption
 * item[=].item[=].item[=].extension[=].valueCoding.system = $Sagedus
 * item[=].item[=].item[=].extension[=].valueCoding.code = #/d
@@ -200,17 +200,17 @@ Usage: #example
 * item[=].item[=].item[=].item[=].type = #integer
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
-* item[=].item[=].item[=].item[=].extension[=].valueQuantity.value = 0
+* item[=].item[=].item[=].item[=].extension[=].valueInteger.value = 0
 * item[=].item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/maxValue"
-* item[=].item[=].item[=].item[=].extension[=].valueQuantity.value = 150
+* item[=].item[=].item[=].item[=].extension[=].valueInteger.value = 150
 
 * item[=].item[=].item[=].item[+].linkId = "lifestyle.smoking-tobacco.period.months"
 * item[=].item[=].item[=].item[=].type = #integer
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
-* item[=].item[=].item[=].item[=].extension[=].valueQuantity.value = 0
+* item[=].item[=].item[=].item[=].extension[=].valueInteger.value = 0
 * item[=].item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/maxValue"
-* item[=].item[=].item[=].item[=].extension[=].valueQuantity.value = 11
+* item[=].item[=].item[=].item[=].extension[=].valueInteger.value = 11
 
 * item[=].item[=].item[+].linkId = "lifestyle.smoking-tobacco.quit-year"
 * item[=].item[=].item[=].code.system = $HDQ
@@ -225,9 +225,9 @@ Usage: #example
 * item[=].item[=].item[=].enableWhen.answerCoding.display = "Tubakatoodete tarvitamisest loobunud"
 * item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
-* item[=].item[=].item[=].extension[=].valueQuantity.value = 1900
+* item[=].item[=].item[=].extension[=].valueInteger.value = 1900
 * item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/maxValue"
-* item[=].item[=].item[=].extension[=].valueQuantity.value = 3000
+* item[=].item[=].item[=].extension[=].valueInteger.value = 3000
 
 // * item[=].item[+].linkId = "lifestyle.smoking"
 // * item[=].item[=].code.system = $HDQ
@@ -5299,7 +5299,7 @@ Usage: #example
 * item[=].item[=].code.code = #risk-factor
 * item[=].item[=].code.display = "Ohutegur"
 * item[=].item[=].type = #coding
-* item[=].item[=].answerValueSet = "https://fhir.ee/CodeSystem/toolaadi-ja-tookeskkonnaga-seotud-ohutegurid"
+* item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/toolaadi-ja-tookeskkonnaga-seotud-ohutegurid"
 * item[=].item[=].required = false
 * item[=].item[=].repeats = true
 * item[=].item[=].text = "Ohutegur"
