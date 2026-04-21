@@ -81,18 +81,6 @@ Usage: #example
 * item[=].item[=].text = "Kas sa tarvitad tubakatooteid regulaarselt? Regulaarse tarvitamise all mõeldakse kindla sagedusega järjepidevat tarvitamist näiteks iga päev või paar korda nädalas."
 * item[=].item[=].type = #coding
 * item[=].item[=].answerValueSet = $SH
-// * item[=].item[=].answerOption[0].valueCoding.system = $SH
-// * item[=].item[=].answerOption[0].valueCoding.code = #266919005
-// * item[=].item[=].answerOption[0].valueCoding.display = "Ei ole kunagi tubakatooteid tarvitanud"
-// * item[=].item[=].answerOption[1].valueCoding.system = $SH
-// * item[=].item[=].answerOption[1].valueCoding.code = #160617001
-// * item[=].item[=].answerOption[1].valueCoding.display = "Tubakatoodete tarvitamisest loobunud"
-// * item[=].item[=].answerOption[2].valueCoding.system = $SH
-// * item[=].item[=].answerOption[2].valueCoding.code = #428041000124106
-// * item[=].item[=].answerOption[2].valueCoding.display = "Aeg-ajalt tubakatoodete tarvitaja"
-// * item[=].item[=].answerOption[3].valueCoding.system = $SH
-// * item[=].item[=].answerOption[3].valueCoding.code = #449868002
-// * item[=].item[=].answerOption[3].valueCoding.display = "Igapäevaselt tubakatoodete tarvitaja"
 * item[=].item[=].required = true
 
 * item[=].item[=].item[0].linkId = "lifestyle.smoking-tobacco.which"
@@ -102,15 +90,6 @@ Usage: #example
 * item[=].item[=].item[=].text = "Milliseid tubakatooteid Sa põhiliselt tarvitad(sid)?"
 * item[=].item[=].item[=].type = #coding
 * item[=].item[=].item[=].answerValueSet = $TT
-// * item[=].item[=].item[=].answerOption[0].valueCoding.system = $TT
-// * item[=].item[=].item[=].answerOption[0].valueCoding.code = #smoking-tobacco
-// * item[=].item[=].item[=].answerOption[0].valueCoding.display = "Suitsetatav tubakatoode (sigaret, sigar, sigarillo, vesipiibutubakas)"
-// * item[=].item[=].item[=].answerOption[1].valueCoding.system = $TT
-// * item[=].item[=].item[=].answerOption[1].valueCoding.code = #smokeless-tobacco
-// * item[=].item[=].item[=].answerOption[1].valueCoding.display = "Suitsuvaba tubakatoode (närimistubakas, nuusktubakas, nikotiinipadi, suukaudseks kasutamiseks mõeldud tubakas)"
-// * item[=].item[=].item[=].answerOption[2].valueCoding.system = $TT
-// * item[=].item[=].item[=].answerOption[2].valueCoding.code = #novel-tobacco
-// * item[=].item[=].item[=].answerOption[2].valueCoding.display = "Uudne tubakatoode (elektrooniline sigaret, kuumutatav tubakatoode)"
 * item[=].item[=].item[=].enableWhen.question = "lifestyle.smoking-tobacco"
 * item[=].item[=].item[=].enableWhen.operator = #!=
 * item[=].item[=].item[=].enableWhen.answerCoding.code = #266919005
@@ -229,46 +208,7 @@ Usage: #example
 * item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/maxValue"
 * item[=].item[=].item[=].extension[=].valueInteger = 3000
 
-// * item[=].item[+].linkId = "lifestyle.smoking"
-// * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #smoking
-// * item[=].item[=].code.display = "Kas sa suitsetad?"
-// * item[=].item[=].text = "Kas sa suitsetad?"
-// * item[=].item[=].type = #boolean
-// * item[=].item[=].required = true
 
-// * item[=].item[=].item[0].linkId = "lifestyle.smoking.smoking-amount"
-// * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #smoking-amount
-// * item[=].item[=].item[=].code.display = "Mitu sigaretti päevas?"
-// * item[=].item[=].item[=].text = "Mitu sigaretti päevas?"
-// * item[=].item[=].item[=].type = #integer
-// * item[=].item[=].item[=].enableWhen.question = "lifestyle.smoking"
-// * item[=].item[=].item[=].enableWhen.operator = #=
-// * item[=].item[=].item[=].enableWhen.answerBoolean = true
-// * item[=].item[=].item[=].required = true
-
-// * item[=].item[=].item[+].linkId = "lifestyle.smoking.smoking-period"
-// * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #smoking-period
-// * item[=].item[=].item[=].code.display = "Mitu aastat oled järjest suitsetanud?"
-// * item[=].item[=].item[=].text = "Mitu aastat oled järjest suitsetanud?"
-// * item[=].item[=].item[=].type = #decimal
-// * item[=].item[=].item[=].enableWhen.question = "lifestyle.smoking"
-// * item[=].item[=].item[=].enableWhen.operator = #=
-// * item[=].item[=].item[=].enableWhen.answerBoolean = true
-// * item[=].item[=].item[=].required = true
-
-// * item[=].item[=].item[+].linkId = "lifestyle.smoking.smoking-quit"
-// * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #smoking-quit
-// * item[=].item[=].item[=].code.display = "Kui oled loobunud suitsetamisest, siis millal loobusid?"
-// * item[=].item[=].item[=].text = "Kui oled loobunud suitsetamisest, siis millal loobusid?"
-// * item[=].item[=].item[=].type = #date
-// * item[=].item[=].item[=].enableWhen.question = "lifestyle.smoking"
-// * item[=].item[=].item[=].enableWhen.operator = #=
-// * item[=].item[=].item[=].enableWhen.answerBoolean = false
-// * item[=].item[=].item[=].required = false
 
 * item[=].item[+].linkId = "lifestyle.narcotics"
 * item[=].item[=].code.system = $HDQ
