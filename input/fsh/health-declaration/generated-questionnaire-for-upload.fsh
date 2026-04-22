@@ -13,7 +13,6 @@ Usage: #definition
 * date = "2023-12-12"
 * approvalDate = "2024-01-01"
 * effectivePeriod.start = "2024-03-16"
-// * effectivePeriod.end = "2026-03-16"
 * code.code = #156871000181103
 * code.system = "http://fhir.ee/CodeSystem/kysimustikud"
 
