@@ -91,7 +91,7 @@ Usage: #example
 * item[=].item[=].item[=].code.system = $PETQ
 * item[=].item[=].item[=].code.display = "Muu"
 * item[=].item[=].item[=].code.code = #other
-* item[=].item[=].item[=].enableWhen.question = "pet-indication.first-choice.unacceptable-condition"
+* item[=].item[=].item[=].enableWhen.question = "pet-indication-first.unacceptable-condition"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerCoding.display = "muu"
 * item[=].item[=].item[=].required = true
