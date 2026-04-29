@@ -19,9 +19,22 @@ Usage: #example
 * code.code = #18
 * code.display = "Tahteavaldused"
 
+// PET rakendumine
+
+* item[0].type = #coding
+* item[=].linkId = "pet-indication"
+* item[=].text = "Minu tahteavaldus rakendub valikuga"
+* item[=].code.system = $PETQ
+* item[=].code.display = "Minu tahteavaldus rakendub valikuga"
+* item[=].code.code = #pet-indication
+* item[=].required = true
+* item[=].repeats = false
+* item[=].readOnly = false
+* item[=].answerValueSet = $PI
+
 //  Esimene valik
 
-* item[0].type = #group
+* item[+].type = #group
 * item[=].linkId = "pet-indication-first"
 * item[=].text = "Elu säilitamisest keeldumine, kui selle tulemus on sulle vastuvõetamatu"
 * item[=].code.system = $PETQ
@@ -30,6 +43,10 @@ Usage: #example
 * item[=].repeats = false
 * item[=].readOnly = true
 * item[=].required = false
+* item[=].enableWhen.question = "pet-indication"
+* item[=].enableWhen.operator = #=
+* item[=].enableWhen.answerCoding.display = "Elu säilitamisest keeldumine, kui selle tulemus on sulle vastuvõetamatu"
+
 
 * item[=].item[0].type = #coding
 * item[=].item[=].linkId = "pet-indication-first.unacceptable-treatment"
@@ -103,6 +120,9 @@ Usage: #example
 * item[=].repeats = false
 * item[=].readOnly = true
 * item[=].required = false
+* item[=].enableWhen.question = "pet-indication"
+* item[=].enableWhen.operator = #=
+* item[=].enableWhen.answerCoding.display = "Elu säilitamisest keeldumine sõltumata ravitulemustest"
 
 * item[=].item[0].type = #coding
 * item[=].item[=].linkId = "pet-indication-second.unacceptable-treatment"
@@ -151,6 +171,9 @@ Usage: #example
 * item[=].repeats = false
 * item[=].readOnly = true
 * item[=].required = false
+* item[=].enableWhen.question = "pet-indication"
+* item[=].enableWhen.operator = #=
+* item[=].enableWhen.answerCoding.display = "kõigist ravisekkumistest keeldumine"
 
 * item[=].item[0].type = #coding
 * item[=].item[=].linkId = "pet-indication-third.unacceptable-treatment"
