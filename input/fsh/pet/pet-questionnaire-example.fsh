@@ -30,7 +30,13 @@ Usage: #example
 * item[=].required = true
 * item[=].repeats = false
 * item[=].readOnly = false
-* item[=].answerValueSet = $PI
+* item[=].answerValueSet = $PETQ
+* item[=].answerOption[0].valueCoding.code = #pet-indication-first-choice
+* item[=].answerOption[=].valueCoding.display = "Elu säilitamisest keeldumine, kui selle tulemus on sulle vastuvõetamatu"
+* item[=].answerOption[+].valueCoding.code = #pet-indication-second-choice
+* item[=].answerOption[=].valueCoding.display = "Elu säilitamisest keeldumine sõltumata ravitulemustest"
+* item[=].answerOption[+].valueCoding.code = #pet-indication-third-choice
+* item[=].answerOption[=].valueCoding.display = "kõigist ravisekkumistest keeldumine"
 
 //  Esimene valik
 
@@ -57,8 +63,11 @@ Usage: #example
 * item[=].item[=].required = false
 * item[=].item[=].repeats = false
 * item[=].item[=].readOnly = false
-* item[=].item[=].answerOption[0].valueCoding.display = "ei soovi ma ühtegi elu säilitavat sekkumist"
-* item[=].item[=].answerOption[+].valueCoding.display = "ei soovi ma järgmisi elu säilitavaid sekkumisi"
+* item[=].item[=].answerValueSet = $PETQ
+* item[=].item[=].answerOption[0].valueCoding.code = #no-life-sustaining-treatments
+* item[=].item[=].answerOption[=].valueCoding.display = "ei soovi ma järgmisi elu säilitavaid sekkumisi"
+* item[=].item[=].answerOption[+].valueCoding.code = #these-life-sustaining-treatments
+* item[=].item[=].answerOption[=].valueCoding.display = "ei soovi ma järgmisi elu säilitavaid sekkumisi"
 
 * item[=].item[=].item[0].type = #coding
 * item[=].item[=].item[=].linkId = "pet-indication-first.unacceptable-treatment.list"
@@ -91,7 +100,7 @@ Usage: #example
 * item[=].item[=].item[=].code.system = $PETQ
 * item[=].item[=].item[=].code.display = "Muu"
 * item[=].item[=].item[=].code.code = #other
-* item[=].item[=].item[=].enableWhen.question = "pet-indication.first-choice.unacceptable-condition"
+* item[=].item[=].item[=].enableWhen.question = "pet-indication-first.unacceptable-condition"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerCoding.display = "muu"
 * item[=].item[=].item[=].required = true
@@ -133,8 +142,11 @@ Usage: #example
 * item[=].item[=].required = false
 * item[=].item[=].repeats = false
 * item[=].item[=].readOnly = false
-* item[=].item[=].answerOption[0].valueCoding.display = "ei soovi ma ühtegi elu säilitavat sekkumist"
-* item[=].item[=].answerOption[+].valueCoding.display = "ei soovi ma järgmisi elu säilitavaid sekkumisi"
+* item[=].item[=].answerValueSet = $PETQ
+* item[=].item[=].answerOption[0].valueCoding.code = #no-life-sustaining-treatments
+* item[=].item[=].answerOption[=].valueCoding.display = "ei soovi ma järgmisi elu säilitavaid sekkumisi"
+* item[=].item[=].answerOption[+].valueCoding.code = #these-life-sustaining-treatments
+* item[=].item[=].answerOption[=].valueCoding.display = "ei soovi ma järgmisi elu säilitavaid sekkumisi"
 
 * item[=].item[=].item[0].type = #coding
 * item[=].item[=].item[=].linkId = "pet-indication-second.unacceptable-treatment.list"
@@ -184,8 +196,11 @@ Usage: #example
 * item[=].item[=].required = false
 * item[=].item[=].repeats = false
 * item[=].item[=].readOnly = false
-* item[=].item[=].answerOption[0].valueCoding.display = "ei soovi ma mitte ühtegi haigusest paranemisele suunatud meditsiinilist sekkumistega elu säilitavat sekkumist"
-* item[=].item[=].answerOption[+].valueCoding.display = "ei soovi ma mitte ühtegi haigusest paranemisele suunatud meditsiinilist sekkumistega elu säilitavat sekkumist, välja arvatud palliatiivravi sekkumised"
+* item[=].item[=].answerValueSet = $PETQ
+* item[=].item[=].answerOption[0].valueCoding.code = #no-life-sustaining-or-health-improving-treatments
+* item[=].item[=].answerOption[=].valueCoding.display = "ei soovi ma mitte ühtegi haigusest paranemisele suunatud meditsiinilist sekkumistega elu säilitavat sekkumist"
+* item[=].item[=].answerOption[+].valueCoding.code = #no-life-sustaining-or-health-improving-treatments-despite-palliative
+* item[=].item[=].answerOption[=].valueCoding.display = "ei soovi ma mitte ühtegi haigusest paranemisele suunatud meditsiinilist sekkumistega elu säilitavat sekkumist, välja arvatud palliatiivravi sekkumised"
 
 * item[=].item[+].type = #text
 * item[=].item[=].linkId = "pet-indication-third.other"
@@ -202,25 +217,28 @@ Usage: #example
 
 * item[+].type = #coding
 * item[=].linkId = "palliative-treatment"
-* item[=].text = "Soovin palliatiivravi (vali üks)"
+* item[=].text = "Soovin palliatiivravi"
 * item[=].code.system = $PETQ
-* item[=].code.display = "Soovin palliatiivravi (vali üks)"
+* item[=].code.display = "Soovin palliatiivravi"
 * item[=].code.code = #accept-palliative-care
 * item[=].required = true
 * item[=].repeats = false
 * item[=].readOnly = false
-* item[=].answerOption[0].valueCoding.display = "täies mahus"
-* item[=].answerOption[+].valueCoding.display = "ei soovi selliseid sekkumisi [kirjelda ise]"
+* item[=].answerValueSet = $PETQ
+* item[=].answerOption[0].valueCoding.code = #palliative-fully
+* item[=].answerOption[+].valueCoding.display = "Täies mahus"
+* item[=].answerOption[0].valueCoding.code = #refuse-specified-treatments
+* item[=].answerOption[+].valueCoding.display = "ei soovi selliseid sekkumisi"
 
 * item[=].item[0].type = #text
 * item[=].item[=].linkId = "palliative-treatment.treatments"
-* item[=].item[=].text = "ei soovi selliseid sekkumisi [kirjelda ise]"
+* item[=].item[=].text = "ei soovi selliseid sekkumisi"
 * item[=].item[=].code.system = $PETQ
-* item[=].item[=].code.display = "ei soovi selliseid sekkumisi [kirjelda ise]"
+* item[=].item[=].code.display = "ei soovi selliseid sekkumisi"
 * item[=].item[=].code.code = #refuse-specified-treatments
 * item[=].item[=].enableWhen.question = "palliative-treatment"
 * item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].enableWhen.answerCoding.display = "ei soovi selliseid sekkumisi [kirjelda ise]"
+* item[=].item[=].enableWhen.answerCoding.display = "ei soovi selliseid sekkumisi"
 * item[=].item[=].enableBehavior = #any
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
