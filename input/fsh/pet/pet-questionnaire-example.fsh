@@ -5,10 +5,10 @@ Usage: #example
 // * meta.versionId = "2.0.0"
 * name = "PET"
 * title = "Patsiendi elulõpu tahteavaldus"
-* version = "2.0.0"
+* version = "1.0.0"
 * subjectType = #Patient
 * id = "Questionnaire-PET"
-* url = "https://fhir.ee/qre/Questionnaire-PET"
+* url = "https://fhir.ee/qre/Questionnaire-AHD"
 * status = #active
 * date = "2023-12-12"
 * approvalDate = "2024-01-01"

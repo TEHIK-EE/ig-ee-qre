@@ -2,17 +2,20 @@ Instance: Questionnaire-health-declaration-upload
 InstanceOf: EEHealthDeclarationQuestionnaire
 Description: "Näidis töötervishoiu tervisedeklaratsiooni küsimustikust"
 Usage: #definition
-* meta.versionId = "2.0.0"
+// * id = "Questionnaire-health-declaration"
+    // * meta.versionId = "2.0.0"
 * name = "HDECL"
 * title = "Tervisedeklaratsioon"
 * version = "2.0.0"
 * subjectType = #Patient
-* id = "Questionnaire-health-declaration"
+// vaja lisada code element
+// * id = "Questionnaire-health-declaration-with-text"
 * url = "https://fhir.ee/qre/Questionnaire-health-declaration"
 * status = #active
 * date = "2023-12-12"
 * approvalDate = "2024-01-01"
 * effectivePeriod.start = "2024-03-16"
+// * effectivePeriod.end = "2026-03-16"
 * code.code = #156871000181103
 * code.system = "http://fhir.ee/CodeSystem/kysimustikud"
 
@@ -79,18 +82,6 @@ Usage: #definition
 
 * item[=].item[=].type = #coding
 * item[=].item[=].answerValueSet = $SH
-// * item[=].item[=].answerOption[0].valueCoding.system = $SH
-// * item[=].item[=].answerOption[0].valueCoding.code = #266919005
-
-// * item[=].item[=].answerOption[1].valueCoding.system = $SH
-// * item[=].item[=].answerOption[1].valueCoding.code = #160617001
-
-// * item[=].item[=].answerOption[2].valueCoding.system = $SH
-// * item[=].item[=].answerOption[2].valueCoding.code = #428041000124106
-
-// * item[=].item[=].answerOption[3].valueCoding.system = $SH
-// * item[=].item[=].answerOption[3].valueCoding.code = #449868002
-
 * item[=].item[=].required = true
 
 * item[=].item[=].item[0].linkId = "lifestyle.smoking-tobacco.which"
@@ -100,15 +91,6 @@ Usage: #definition
 
 * item[=].item[=].item[=].type = #coding
 * item[=].item[=].item[=].answerValueSet = $TT
-// * item[=].item[=].item[=].answerOption[0].valueCoding.system = $TT
-// * item[=].item[=].item[=].answerOption[0].valueCoding.code = #smoking-tobacco
-
-// * item[=].item[=].item[=].answerOption[1].valueCoding.system = $TT
-// * item[=].item[=].item[=].answerOption[1].valueCoding.code = #smokeless-tobacco
-
-// * item[=].item[=].item[=].answerOption[2].valueCoding.system = $TT
-// * item[=].item[=].item[=].answerOption[2].valueCoding.code = #novel-tobacco
-
 * item[=].item[=].item[=].enableWhen.question = "lifestyle.smoking-tobacco"
 * item[=].item[=].item[=].enableWhen.operator = #!=
 * item[=].item[=].item[=].enableWhen.answerCoding.code = #266919005
@@ -227,46 +209,7 @@ Usage: #definition
 * item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/maxValue"
 * item[=].item[=].item[=].extension[=].valueInteger = 3000
 
-// * item[=].item[+].linkId = "lifestyle.smoking"
-// * item[=].item[=].code.system = $HDQ
-// * item[=].item[=].code.code = #smoking
 
-// * item[=].item[=].text = "Kas sa suitsetad?"
-// * item[=].item[=].type = #boolean
-// * item[=].item[=].required = true
-
-// * item[=].item[=].item[0].linkId = "lifestyle.smoking.smoking-amount"
-// * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #smoking-amount
-
-// * item[=].item[=].item[=].text = "Mitu sigaretti päevas?"
-// * item[=].item[=].item[=].type = #integer
-// * item[=].item[=].item[=].enableWhen.question = "lifestyle.smoking"
-// * item[=].item[=].item[=].enableWhen.operator = #=
-// * item[=].item[=].item[=].enableWhen.answerBoolean = true
-// * item[=].item[=].item[=].required = true
-
-// * item[=].item[=].item[+].linkId = "lifestyle.smoking.smoking-period"
-// * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #smoking-period
-
-// * item[=].item[=].item[=].text = "Mitu aastat oled järjest suitsetanud?"
-// * item[=].item[=].item[=].type = #decimal
-// * item[=].item[=].item[=].enableWhen.question = "lifestyle.smoking"
-// * item[=].item[=].item[=].enableWhen.operator = #=
-// * item[=].item[=].item[=].enableWhen.answerBoolean = true
-// * item[=].item[=].item[=].required = true
-
-// * item[=].item[=].item[+].linkId = "lifestyle.smoking.smoking-quit"
-// * item[=].item[=].item[=].code.system = $HDQ
-// * item[=].item[=].item[=].code.code = #smoking-quit
-
-// * item[=].item[=].item[=].text = "Kui oled loobunud suitsetamisest, siis millal loobusid?"
-// * item[=].item[=].item[=].type = #date
-// * item[=].item[=].item[=].enableWhen.question = "lifestyle.smoking"
-// * item[=].item[=].item[=].enableWhen.operator = #=
-// * item[=].item[=].item[=].enableWhen.answerBoolean = false
-// * item[=].item[=].item[=].required = false
 
 * item[=].item[+].linkId = "lifestyle.narcotics"
 * item[=].item[=].code.system = $HDQ
