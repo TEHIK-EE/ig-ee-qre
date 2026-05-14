@@ -2,13 +2,13 @@ Instance: Questionnaire-health-declaration-with-text
 InstanceOf: EEHealthDeclarationQuestionnaire
 Description: "Näidis töötervishoiu tervisedeklaratsiooni küsimustikust"
 Usage: #example
-* meta.versionId = "2.0.0"
+    // * meta.versionId = "2.0.0"
 * name = "HDECL"
 * title = "Tervisedeklaratsioon"
 * version = "2.0.0"
 * subjectType = #Patient
 // vaja lisada code element
-* id = "Questionnaire-health-declaration-with-text"
+// * id = "Questionnaire-health-declaration-with-text"
 * url = "https://fhir.ee/qre/Questionnaire-health-declaration"
 * status = #active
 * date = "2023-12-12"
