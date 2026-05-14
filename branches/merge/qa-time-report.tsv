@@ -1,0 +1,17 @@
+Source File	Size	loadResources	load	generateSnapshots	load-configure	scan	loadDepInfo	loadInfo	checkR4R4B	generateNarratives	validate	loadLists	checkConformanceResources	checkConformanceResources2	checkConformanceResources3	generateLogicalMaps	validateExpressions	scanForUsageStats	checkURLsUnique	processProvenanceDetails	generate1	generate2	responsesForQuestionnaire	generateLogicals	makeDependencies	generateExampleZip	generateValidationPack	scanProfilesForR5	scanExamplesForR5
+/fsh-generated/resources/ImplementationGuide-ee.fhir.qre.json	4218	-	1	0	0	0	0	0	5	52	0	0	0	0	0	0	0	1	0	0	43	38	0	0	0	0	1	0	1
+fsh-generated/resources/CodeSystem-sagedus-ajas.json	1072	5	0	0	1	0	0	0	1	7	0	0	0	0	0	0	0	0	0	0	9	71	0	0	0	0	1	0	0
+fsh-generated/resources/Questionnaire-Questionnaire-PET.json	17443	13	0	0	0	0	0	0	3	3555	0	0	0	0	0	0	0	0	0	0	119	57	0	0	0	0	3	0	0
+fsh-generated/resources/Questionnaire-Questionnaire-health-declaration-cda.json	136466	48	0	0	0	0	0	0	17	13015	0	0	0	0	0	0	0	2	0	0	1040	52372	0	0	1	0	31	0	6
+fsh-generated/resources/Questionnaire-Questionnaire-health-declaration-upload.json	225888	64	0	0	0	0	0	0	15	10304	0	0	0	0	0	0	0	1	0	0	1682	11767	0	0	0	0	47	0	3
+fsh-generated/resources/Questionnaire-Questionnaire-health-declaration-with-text.json	269608	64	0	0	0	0	0	0	14	2780	0	0	0	0	0	0	0	1	0	0	1682	8599	0	0	0	0	42	0	2
+fsh-generated/resources/StructureDefinition-ee-health-declaration-questionnaire.json	5637	7	0	67	0	0	0	1	0	91	0	0	1	0	0	0	0	1	0	0	300	851	0	0	0	0	10	0	1
+fsh-generated/resources/StructureDefinition-pet-questionnaire.json	5352	5	0	72	0	0	0	0	0	30	0	0	0	0	0	0	0	1	0	0	264	279	0	0	0	0	9	0	1
+fsh-generated/resources/ValueSet-sagedus-ajas.json	427	2	0	0	0	0	0	0	0	54	0	0	0	0	0	0	0	0	0	0	5	58	0	0	1	0	0	0	0
+/fsh-generated/includes/fsh-link-references.md	607	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+/fsh-generated/includes/menu.xml	1298	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/input/pagecontent/index.md	817	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/input/pagecontent/download.md	170	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/template/config	0	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/template/config/_config.yml	140	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+/temp/pages/_includes/artifacts.xml	5790	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	0	0	0	0	0	0	0	0

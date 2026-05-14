@@ -1,0 +1,42 @@
+# ee.fhir.qre#1.0.0: Küsimustike teenus
+
+## Pages
+
+* [Sissejuhatus](index.md)
+* [Tervisedeklaratsioon](Questionnaire-Questionnaire-health-declaration-upload.md)
+* [Tervisedeklaratsioon - XML Representation](Questionnaire-Questionnaire-health-declaration-upload.xml.md)
+* [Tervisedeklaratsioon - JSON Representation](Questionnaire-Questionnaire-health-declaration-upload.json.md)
+* [Tervisedeklaratsioon - Testing](Questionnaire-Questionnaire-health-declaration-upload-testing.md)
+* [Artifacts Summary](artifacts.md)
+* [Tervisedeklaratsioon - TTL Representation](Questionnaire-Questionnaire-health-declaration-upload.ttl.md)
+* [Allalaadimised](download.md)
+* [](Questionnaire-Questionnaire-health-declaration-upload.change.history.md)
+
+## Resources
+
+### CodeSystems
+
+* [Sagedus ajas](CodeSystem-sagedus-ajas.md)
+
+### ValueSets
+
+* [Sagedus ajas loend](ValueSet-sagedus-ajas.md)
+
+### Resource Profiles
+
+* [EEHealthDeclarationQuestionnaire](StructureDefinition-ee-health-declaration-questionnaire.md)
+* [PETQuestionnaire](StructureDefinition-pet-questionnaire.md)
+
+### ImplementationGuides
+
+* [Küsimustike teenus](index.md)
+
+### Questionnaires
+
+* [Tervisedeklaratsioon](Questionnaire-Questionnaire-health-declaration-with-text.md)
+
+### Examples
+
+* [Patsiendi elulõpu tahteavaldus (Questionnaire)](Questionnaire-Questionnaire-PET.md)
+* [Tervisedeklaratsioon CDA-st (Questionnaire)](Questionnaire-Questionnaire-health-declaration-cda.md)
+* [Tervisedeklaratsioon (Questionnaire)](Questionnaire-Questionnaire-health-declaration-with-text.md)
