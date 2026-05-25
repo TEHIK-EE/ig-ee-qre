@@ -106,6 +106,8 @@ Usage: #example
 * item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].repeats = false 
 * item[=].item[=].item[=].readOnly = false
+* item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/minLength"
+* item[=].item[=].item[=].extension[=].valueInteger.value = 4
 
 * item[=].item[+].type = #text
 * item[=].item[=].linkId = "pet-indication-first.other"
@@ -116,6 +118,7 @@ Usage: #example
 * item[=].item[=].required = false
 * item[=].item[=].repeats = false 
 * item[=].item[=].readOnly = false
+
 
 
 //teine valik
@@ -243,6 +246,8 @@ Usage: #example
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
 * item[=].item[=].readOnly = false
+* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/minLength"
+* item[=].item[=].extension[=].valueInteger.value = 4
 
 // Muud soovid
 
@@ -270,6 +275,8 @@ Usage: #example
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
 * item[=].item[=].readOnly = false
+* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/minLength"
+* item[=].item[=].extension[=].valueInteger.value = 4
 
 
 * item[+].linkId = "People-by-side-death"
@@ -315,6 +322,8 @@ Usage: #example
 * item[=].item[=].required = false
 * item[=].item[=].repeats = false
 * item[=].item[=].readOnly = false
+* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/minLength"
+* item[=].item[=].extension[=].valueInteger.value = 4
 
 * item[+].type = #text
 * item[=].linkId = "other-wishes"
@@ -324,6 +333,7 @@ Usage: #example
 * item[=].code.code = #other-wishes
 * item[=].required = false
 * item[=].readOnly = false
+
 
 
 
