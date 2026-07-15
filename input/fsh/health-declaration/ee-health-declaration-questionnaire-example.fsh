@@ -127,11 +127,11 @@ Usage: #example
 * item[=].item[=].item[=].extension[=].valueCoding.code = #/mo
 * item[=].item[=].item[=].extension[=].valueCoding.display = "kuus"
 
-* item[=].item[=].item[+].linkId = "lifestyle.smoking-tobacco.smokeless-novel-tobacco-amount"
+* item[=].item[=].item[+].linkId = "lifestyle.smoking-tobacco.smokeless-other-tobacco-amount"
 * item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #smokeless-novel-tobacco-amount
-* item[=].item[=].item[=].code.display = "Mitu korda sa keskmiselt suitsuvabu või uudseid tubakatooteid tarvita(si)d päevas/nädalas/kuus?"
-* item[=].item[=].item[=].text = "Mitu korda sa keskmiselt suitsuvabu või uudseid tubakatooteid tarvita(si)d päevas/nädalas/kuus?"
+* item[=].item[=].item[=].code.code = #smokeless-other-tobacco-amount
+* item[=].item[=].item[=].code.display = "Mitu korda sa keskmiselt tarvita(si)d elektroonilisi sigarette, kuumutatavaid või suitsuvabu tubakatooteid päevas, nädalas, kuus?"
+* item[=].item[=].item[=].text = "Mitu korda sa keskmiselt tarvita(si)d elektroonilisi sigarette, kuumutatavaid või suitsuvabu tubakatooteid päevas, nädalas, kuus?"
 * item[=].item[=].item[=].type = #quantity
 * item[=].item[=].item[=].enableBehavior = #any
 * item[=].item[=].item[=].enableWhen[0].question = "lifestyle.smoking-tobacco.which"
@@ -194,8 +194,8 @@ Usage: #example
 * item[=].item[=].item[+].linkId = "lifestyle.smoking-tobacco.quit-year"
 * item[=].item[=].item[=].code.system = $HDQ
 * item[=].item[=].item[=].code.code = #smoking-tobacco-quit-year
-* item[=].item[=].item[=].code.display = "Mis aastal sa viimati tubakatooteid tarvitasid?"
-* item[=].item[=].item[=].text = "Mis aastal sa viimati tubakatooteid tarvitasid?"
+* item[=].item[=].item[=].code.display = "Mis aastal sa viimati tubakatooteid tarvitasid? Ära arvesta üksikuid tarvitamiskordi."
+* item[=].item[=].item[=].text = "Mis aastal sa viimati tubakatooteid tarvitasid? Ära arvesta üksikuid tarvitamiskordi."
 * item[=].item[=].item[=].type = #integer
 * item[=].item[=].item[=].enableWhen.question = "lifestyle.smoking-tobacco"
 * item[=].item[=].item[=].enableWhen.operator = #=
@@ -419,6 +419,18 @@ Usage: #example
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
+
+* item[=].item[+].linkId = "work-environment.previous-employers"
+* item[=].item[=].code.system = $HDQ
+* item[=].item[=].code.code = #previous-employers
+* item[=].item[=].code.display = "Varasemad tööandjad"
+* item[=].item[=].text = "Varasemad tööandjad"
+* item[=].item[=].type = #text
+* item[=].item[=].required = false
+* item[=].item[=].enableWhen.question = "category"
+* item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].enableWhen.answerCoding.system = "https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala"
+* item[=].item[=].enableWhen.answerCoding.code = #occupational
 
 
 * item[+].linkId = "allergies"
@@ -5221,12 +5233,12 @@ Usage: #example
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[+].linkId = "work-risk-factors"
+* item[+].linkId = "work-workplace"
 * item[=].prefix = "25"
 * item[=].code.system = $HDQ
-* item[=].code.code = #work-risk-factors
-* item[=].code.display = "Töökohal esinevad ohutegurid"
-* item[=].text = "Töökohal esinevad ohutegurid"
+* item[=].code.code = #work-workplace
+* item[=].code.display = "Tehtava töö ja töökoha kirjeldus"
+* item[=].text = "Tehtava töö ja töökoha kirjeldus"
 * item[=].type = #group
 * item[=].enableWhen.question = "category"
 * item[=].enableWhen.operator = #=
@@ -5234,20 +5246,12 @@ Usage: #example
 * item[=].enableWhen.answerCoding.code = #occupational
 * item[=].required = true
 
-* item[=].item[0].linkId = "work-risk-factors.risk-factor"
+* item[=].item[0].linkId = "work-workplace.work-description"
 * item[=].item[=].code.system = $HDQ
-* item[=].item[=].code.code = #risk-factor
-* item[=].item[=].code.display = "Ohutegur"
-* item[=].item[=].type = #coding
-* item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/toolaadi-ja-tookeskkonnaga-seotud-ohutegurid"
+* item[=].item[=].code.code = #work-description
+* item[=].item[=].code.display = "Kirjelda oma tööülesandeid ja töökeskkonda"
+* item[=].item[=].type = #text
 * item[=].item[=].required = false
-* item[=].item[=].repeats = true
-* item[=].item[=].text = "Ohutegur"
+* item[=].item[=].text = "Kirjelda oma tööülesandeid ja töökeskkonda"
 
-* item[=].item[=].item[0].linkId = "work-risk-factors.risk-factor.specification"
-* item[=].item[=].item[=].code.system = $HDQ
-* item[=].item[=].item[=].code.code = #specification
-* item[=].item[=].item[=].code.display = "Palun täpsusta"
-* item[=].item[=].item[=].text = "Palun täpsusta"
-* item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].required = false
+
