@@ -70,7 +70,7 @@ Usage: #example
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
-// * item[=].item[=].item[=].text = "Mitu ühikut nädalas?"
+
 
 * item[=].item[+].linkId = "lifestyle.smoking"
 * item[=].item[=].code.system = $HDQ
