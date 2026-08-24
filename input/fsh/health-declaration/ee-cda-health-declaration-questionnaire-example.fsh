@@ -59,7 +59,7 @@ Usage: #example
 // * item[=].item[=].code.display = "Kas te tarbite alkoholi?"
 * item[=].item[=].type = #boolean
 * item[=].item[=].required = true
-// * item[=].item[=].text = "Kas te tarbite alkoholi?"
+
 
 * item[=].item[=].item[0].linkId = "lifestyle.alcohol.alcohol-units"
 * item[=].item[=].item[=].code.system = $HDQ
