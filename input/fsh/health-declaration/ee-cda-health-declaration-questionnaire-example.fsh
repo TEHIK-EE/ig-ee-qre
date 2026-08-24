@@ -75,8 +75,7 @@ Usage: #example
 * item[=].item[+].linkId = "lifestyle.smoking"
 * item[=].item[=].code.system = $HDQ
 * item[=].item[=].code.code = #smoking
-// * item[=].item[=].code.display = "Kas te suitsetate?"
-// * item[=].item[=].text = "Kas te suitsetate?"
+
 * item[=].item[=].type = #boolean
 * item[=].item[=].required = true
 
