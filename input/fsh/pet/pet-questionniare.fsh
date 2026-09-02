@@ -36,6 +36,8 @@ Description: "Patsiendi elulõpu tahteavaldus"
 * title 1..1
 * description 0..0
 * code 1..1
+* code.system = "https://fhir.ee/CodeSystem/dokumendi-tyyp"
+* code.code = #18
 * item 1..*
   * id 0..0
   * extension 0..0
@@ -43,6 +45,7 @@ Description: "Patsiendi elulõpu tahteavaldus"
   * linkId 1..1
   * definition 0..0
   * code 0..*
+  * code from https://fhir.ee/ValueSet/patsiendi-elulopu-tahteavalduse-kysimustik (required)
   * prefix 0..1
   * text 0..1
   * initial 0..0

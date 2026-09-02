@@ -15,7 +15,7 @@ Usage: #example
 * effectivePeriod.start = "2024-03-16"
 
 // Võib-olla vajab eraldi dokumenditüüpi PETi jaoks ("Elulõpu tahteavaldus" vm)
-* code.system = "http://fhir.ee/CodeSystem/dokumendi-tyyp"
+* code.system = "https://fhir.ee/CodeSystem/dokumendi-tyyp"
 * code.code = #18
 * code.display = "Tahteavaldused"
 
