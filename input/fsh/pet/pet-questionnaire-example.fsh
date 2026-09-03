@@ -13,11 +13,12 @@ Usage: #example
 * date = "2023-12-12"
 * approvalDate = "2024-01-01"
 * effectivePeriod.start = "2024-03-16"
+* language = #et
 
 // Võib-olla vajab eraldi dokumenditüüpi PETi jaoks ("Elulõpu tahteavaldus" vm)
 * code.system = "https://fhir.ee/CodeSystem/dokumendi-tyyp"
 * code.code = #18
-* code.display = "Tahteavaldused"
+* code.display = "tahteavaldused"
 
 // PET rakendumine
 
@@ -51,7 +52,7 @@ Usage: #example
 * item[=].required = false
 * item[=].enableWhen.question = "pet-indication"
 * item[=].enableWhen.operator = #=
-* item[=].enableWhen.answerCoding.display = "Elu säilitavast ravist keeldumine, kui selle tulemus on mulle vastuvõetamatu"
+* item[=].enableWhen.answerCoding.code = #pet-indication-first-choice
 
 
 * item[=].item[0].type = #coding
@@ -60,7 +61,7 @@ Usage: #example
 * item[=].item[=].code.system = $PETQ
 * item[=].item[=].code.display = "Kui mulle vastuvõetava seisundi saavutamine minu elu säilitamisega ei ole võimalik, siis"
 * item[=].item[=].code.code = #pet-indication-first-choice-condition
-* item[=].item[=].required = false
+* item[=].item[=].required = true
 * item[=].item[=].repeats = false
 * item[=].item[=].readOnly = false
 * item[=].item[=].answerValueSet = $PETQ
@@ -77,7 +78,7 @@ Usage: #example
 * item[=].item[=].item[=].code.code = #these-life-sustaining-treatments
 * item[=].item[=].item[=].enableWhen.question = "pet-indication-first.unacceptable-treatment"
 * item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerCoding.display = "Ei soovi ma järgmisi elu säilitavaid sekkumisi"
+* item[=].item[=].item[=].enableWhen.answerCoding.code = #these-life-sustaining-treatments
 * item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].repeats = true
 * item[=].item[=].item[=].readOnly = false
@@ -85,29 +86,29 @@ Usage: #example
 
 * item[=].item[+].type = #coding
 * item[=].item[=].linkId = "pet-indication-first.unacceptable-condition"
-* item[=].item[=].text = "	Minu seisund muutub mulle vastuvõetamatuks, kui"
+* item[=].item[=].text = "Minu seisund muutub mulle vastuvõetamatuks, kui"
 * item[=].item[=].code.system = $PETQ
-* item[=].item[=].code.display = "	Minu seisund muutub mulle vastuvõetamatuks, kui"
+* item[=].item[=].code.display = "Minu seisund muutub mulle vastuvõetamatuks, kui"
 * item[=].item[=].code.code = #life-quality-is-unacceptable
-* item[=].item[=].required = false
+* item[=].item[=].required = true
 * item[=].item[=].repeats = true
 * item[=].item[=].readOnly = false
 * item[=].item[=].answerValueSet = $UC
 
-* item[=].item[=].item[0].type = #text
-* item[=].item[=].item[=].linkId = "pet-indication-first.unacceptable-condition.other"
-* item[=].item[=].item[=].text = "Muu"
-* item[=].item[=].item[=].code.system = $PETQ
-* item[=].item[=].item[=].code.display = "Muu"
-* item[=].item[=].item[=].code.code = #other
-* item[=].item[=].item[=].enableWhen.question = "pet-indication-first.unacceptable-condition"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerCoding.display = "muu"
-* item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].repeats = false 
-* item[=].item[=].item[=].readOnly = false
-* item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/minLength"
-* item[=].item[=].item[=].extension[=].valueInteger.value = 4
+* item[=].item[+].type = #text
+* item[=].item[=].linkId = "pet-indication-first.unacceptable-condition.other"
+* item[=].item[=].text = "Muu"
+* item[=].item[=].code.system = $PETQ
+* item[=].item[=].code.display = "Muu"
+* item[=].item[=].code.code = #other
+* item[=].item[=].enableWhen.question = "pet-indication-first.unacceptable-condition"
+* item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].enableWhen.answerCoding.code = #34
+* item[=].item[=].required = true
+* item[=].item[=].repeats = false 
+* item[=].item[=].readOnly = false
+* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/minLength"
+* item[=].item[=].extension[=].valueInteger.value = 4
 
 * item[=].item[+].type = #text
 * item[=].item[=].linkId = "pet-indication-first.other"
@@ -134,7 +135,7 @@ Usage: #example
 * item[=].required = false
 * item[=].enableWhen.question = "pet-indication"
 * item[=].enableWhen.operator = #=
-* item[=].enableWhen.answerCoding.display = "Elu säilitavast ravist keeldumine sõltumata ravitulemusest"
+* item[=].enableWhen.answerCoding.display = #pet-indication-second-choice
 
 * item[=].item[0].type = #coding
 * item[=].item[=].linkId = "pet-indication-second.unacceptable-treatment"
@@ -142,7 +143,7 @@ Usage: #example
 * item[=].item[=].code.system = $PETQ
 * item[=].item[=].code.display = "Kui minu terviseseisund halveneb nii, et ellu jäämine ilma elu säilitava ravita ei ole võimalik, siis"
 * item[=].item[=].code.code = #pet-indication-second-choice-condition
-* item[=].item[=].required = false
+* item[=].item[=].required = true
 * item[=].item[=].repeats = false
 * item[=].item[=].readOnly = false
 * item[=].item[=].answerValueSet = $PETQ
@@ -159,7 +160,7 @@ Usage: #example
 * item[=].item[=].item[=].code.code = #these-life-sustaining-treatments
 * item[=].item[=].item[=].enableWhen.question = "pet-indication-second.unacceptable-treatment"
 * item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerCoding.display = "Ei soovi ma järgmisi elu säilitavaid sekkumisi"
+* item[=].item[=].item[=].enableWhen.answerCoding.code = #these-life-sustaining-treatments
 * item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].repeats = true
 * item[=].item[=].item[=].readOnly = false
@@ -188,7 +189,7 @@ Usage: #example
 * item[=].required = false
 * item[=].enableWhen.question = "pet-indication"
 * item[=].enableWhen.operator = #=
-* item[=].enableWhen.answerCoding.display = "Kõigist ravisekkumistest keeldumine"
+* item[=].enableWhen.answerCoding.code = #pet-indication-third-choice
 
 * item[=].item[0].type = #coding
 * item[=].item[=].linkId = "pet-indication-third.unacceptable-treatment"
@@ -196,7 +197,7 @@ Usage: #example
 * item[=].item[=].code.system = $PETQ
 * item[=].item[=].code.display = "Kui ma olen haigestunud, siis"
 * item[=].item[=].code.code = #pet-indication-third-choice-condition
-* item[=].item[=].required = false
+* item[=].item[=].required = true
 * item[=].item[=].repeats = false
 * item[=].item[=].readOnly = false
 * item[=].item[=].answerValueSet = $PETQ
@@ -229,9 +230,9 @@ Usage: #example
 * item[=].readOnly = false
 * item[=].answerValueSet = $PETQ
 * item[=].answerOption[0].valueCoding.code = #palliative-fully
-* item[=].answerOption[+].valueCoding.display = "Täies mahus"
-* item[=].answerOption[0].valueCoding.code = #refuse-specified-treatments
-* item[=].answerOption[+].valueCoding.display = "Ei soovi selliseid sekkumisi"
+* item[=].answerOption[=].valueCoding.display = "Täies mahus"
+* item[=].answerOption[+].valueCoding.code = #refuse-specified-treatments
+* item[=].answerOption[=].valueCoding.display = "Ei soovi selliseid sekkumisi"
 
 * item[=].item[0].type = #text
 * item[=].item[=].linkId = "palliative-treatment.treatments"
@@ -241,7 +242,7 @@ Usage: #example
 * item[=].item[=].code.code = #refuse-specified-treatments
 * item[=].item[=].enableWhen.question = "palliative-treatment"
 * item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].enableWhen.answerCoding.display = "Ei soovi selliseid sekkumisi"
+* item[=].item[=].enableWhen.answerCoding.code = #refuse-specified-treatments
 * item[=].item[=].enableBehavior = #any
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
@@ -270,7 +271,7 @@ Usage: #example
 * item[=].item[=].code.code = #specify
 * item[=].item[=].enableWhen.question = "preferred-death-location"
 * item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].enableWhen.answerCoding.display = "Muu"
+* item[=].item[=].enableWhen.answerCoding.code = #99
 * item[=].item[=].enableBehavior = #any
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
@@ -318,7 +319,7 @@ Usage: #example
 * item[=].item[=].code.code = #specify
 * item[=].item[=].enableWhen.question = "actions-after-death"
 * item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].enableWhen.answerCoding.display = "Muu"
+* item[=].item[=].enableWhen.answerCoding.code = #33
 * item[=].item[=].required = false
 * item[=].item[=].repeats = false
 * item[=].item[=].readOnly = false

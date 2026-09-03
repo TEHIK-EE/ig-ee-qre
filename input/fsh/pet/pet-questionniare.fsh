@@ -40,7 +40,7 @@ Description: "Patsiendi elulõpu tahteavaldus"
 * code.code = #18
 * item 1..*
   * id 0..0
-  * extension 0..0
+  * extension 0..1
   * modifierExtension 0..0
   * linkId 1..1
   * definition 0..0
