@@ -134,7 +134,7 @@ Usage: #example
 * item[=].required = false
 * item[=].enableWhen.question = "pet-indication"
 * item[=].enableWhen.operator = #=
-* item[=].enableWhen.answerCoding.code = $PETQ#pet-indication-second-choice
+* item[=].enableWhen.answerCoding = $PETQ#pet-indication-second-choice
 
 * item[=].item[0].type = #coding
 * item[=].item[=].linkId = "pet-indication-second.unacceptable-treatment"
@@ -159,7 +159,7 @@ Usage: #example
 * item[=].item[=].item[=].code.code = #these-life-sustaining-treatments
 * item[=].item[=].item[=].enableWhen.question = "pet-indication-second.unacceptable-treatment"
 * item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerCoding.code = $PETQ#these-life-sustaining-treatments
+* item[=].item[=].item[=].enableWhen.answerCoding = $PETQ#these-life-sustaining-treatments
 * item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].repeats = true
 * item[=].item[=].item[=].readOnly = false
@@ -187,7 +187,7 @@ Usage: #example
 * item[=].required = false
 * item[=].enableWhen.question = "pet-indication"
 * item[=].enableWhen.operator = #=
-* item[=].enableWhen.answerCoding.code = $PETQ#pet-indication-third-choice
+* item[=].enableWhen.answerCoding = $PETQ#pet-indication-third-choice
 
 * item[=].item[0].type = #coding
 * item[=].item[=].linkId = "pet-indication-third.unacceptable-treatment"
@@ -240,7 +240,7 @@ Usage: #example
 * item[=].item[=].code.code = #refuse-specified-treatments
 * item[=].item[=].enableWhen.question = "palliative-treatment"
 * item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].enableWhen.answerCoding.code = $PETQ#refuse-specified-treatments
+* item[=].item[=].enableWhen.answerCoding = $PETQ#refuse-specified-treatments
 * item[=].item[=].enableBehavior = #any
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
