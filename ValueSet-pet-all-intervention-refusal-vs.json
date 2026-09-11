@@ -1,0 +1,43 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "pet-all-intervention-refusal-vs",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet pet-all-intervention-refusal-vs</b></p><a name=\"pet-all-intervention-refusal-vs\"> </a><a name=\"hcpet-all-intervention-refusal-vs\"> </a><ul><li>Include these codes as defined in <a href=\"https://term.tehik.ee/fhir\"><code>https://fhir.ee/CodeSystem/patsiendi-elulopu-tahteavalduse-kysimustik</code></a><span style=\"opacity: 0.5\" title=\"Version is not explicitly stated. When building this specification, the most recent version 2.0.0 has been used\"> version ⏿2.0.0</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"https://akk.tehik.ee/classifier/fhir/CodeSystem/patsiendi-elulopu-tahteavalduse-kysimustik#patsiendi-elulopu-tahteavalduse-kysimustik--2.0.0-no-life-sustaining-or-health-improving-treatments\">no-life-sustaining-or-health-improving-treatments</a></td><td style=\"color: #cccccc\">Ei soovi ma mitte ühtegi haigusest paranemisele suunatud meditsiinilist sekkumist ega elu säilitavat sekkumist</td></tr></table></li></ul></div>"
+  },
+  "url" : "https://fhir.ee/qre/ValueSet/pet-all-intervention-refusal-vs",
+  "version" : "1.0.0",
+  "name" : "PETAllInterventionRefusalVS",
+  "title" : "Kõigist ravisekkumistest keeldumise ulatus",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-09-11T12:41:58+00:00",
+  "publisher" : "TEHIK",
+  "contact" : [{
+    "name" : "TEHIK",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://tehik.ee"
+    },
+    {
+      "system" : "email",
+      "value" : "abi@tehik.ee"
+    }]
+  }],
+  "description" : "Alamhulk mõisteid PET küsimustiku koodisüsteemist, millega inimenekinnitab kolmanda valiku (patsient soovib loobuda kõikidest ravisekkumistest).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "EST",
+      "display" : "Estonia"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "https://fhir.ee/CodeSystem/patsiendi-elulopu-tahteavalduse-kysimustik",
+      "concept" : [{
+        "code" : "no-life-sustaining-or-health-improving-treatments"
+      }]
+    }]
+  }
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="pet-indication-vs"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet pet-indication-vs</b></p><a name="pet-indication-vs"> </a><a name="hcpet-indication-vs"> </a><ul><li>Include these codes as defined in <a href="https://term.tehik.ee/fhir"><code>https://fhir.ee/CodeSystem/patsiendi-elulopu-tahteavalduse-kysimustik</code></a><span style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 2.0.0 has been used"> version ⏿2.0.0</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="https://akk.tehik.ee/classifier/fhir/CodeSystem/patsiendi-elulopu-tahteavalduse-kysimustik#patsiendi-elulopu-tahteavalduse-kysimustik--2.0.0-pet-indication-first-choice">pet-indication-first-choice</a></td><td style="color: #cccccc">Elu säilitavast ravist keeldumine, kui selle tulemus on mulle vastuvõetamatu</td></tr><tr><td><a href="https://akk.tehik.ee/classifier/fhir/CodeSystem/patsiendi-elulopu-tahteavalduse-kysimustik#patsiendi-elulopu-tahteavalduse-kysimustik--2.0.0-pet-indication-second-choice">pet-indication-second-choice</a></td><td style="color: #cccccc">Elu säilitavast ravist keeldumine sõltumata ravitulemusest</td></tr><tr><td><a href="https://akk.tehik.ee/classifier/fhir/CodeSystem/patsiendi-elulopu-tahteavalduse-kysimustik#patsiendi-elulopu-tahteavalduse-kysimustik--2.0.0-pet-indication-third-choice">pet-indication-third-choice</a></td><td style="color: #cccccc">Kõigist ravisekkumistest keeldumine</td></tr></table></li></ul></div>
+  </text>
+  <url value="https://fhir.ee/qre/ValueSet/pet-indication-vs"/>
+  <version value="1.0.0"/>
+  <name value="PETIndicationVS"/>
+  <title value="PET tahteavalduse rakendumise valikud"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-09-11T12:41:58+00:00"/>
+  <publisher value="TEHIK"/>
+  <contact>
+    <name value="TEHIK"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://tehik.ee"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="abi@tehik.ee"/>
+    </telecom>
+  </contact>
+  <description value="Alamhulk mõisteid PET küsimustiku koodisüsteemist, mille järgi on võimalik valida tahteavalduse rakendumine."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="EST"/>
+      <display value="Estonia"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="https://fhir.ee/CodeSystem/patsiendi-elulopu-tahteavalduse-kysimustik"/>
+      <concept>
+        <code value="pet-indication-first-choice"/>
+      </concept>
+      <concept>
+        <code value="pet-indication-second-choice"/>
+      </concept>
+      <concept>
+        <code value="pet-indication-third-choice"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

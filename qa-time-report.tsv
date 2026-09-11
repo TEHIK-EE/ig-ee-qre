@@ -1,0 +1,21 @@
+Source File	Size	loadResources	load	generateSnapshots	load-configure	scan	loadDepInfo	loadInfo	checkR4R4B	generateNarratives	validate	loadLists	checkConformanceResources	checkConformanceResources2	checkConformanceResources3	generateLogicalMaps	validateExpressions	scanForUsageStats	checkURLsUnique	processProvenanceDetails	generate1	generate2	responsesForQuestionnaire	generateLogicals	makeDependencies	generateExampleZip	generateValidationPack	scanProfilesForR5	scanExamplesForR5
+/fsh-generated/resources/ImplementationGuide-ee.fhir.qre.json	5791	-	0	0	0	0	0	0	7	36	0	0	0	0	0	0	0	0	0	0	57	49	0	0	0	0	1	0	0
+fsh-generated/resources/CodeSystem-sagedus-ajas.json	1072	4	0	0	1	0	0	0	1	6	0	0	1	0	0	0	0	0	0	0	10	81	0	0	0	0	1	0	0
+fsh-generated/resources/Questionnaire-Questionnaire-PET.json	19295	12	0	0	0	0	0	0	5	5898	0	0	0	0	0	0	0	1	0	0	111	1114	0	0	0	0	2	0	1
+fsh-generated/resources/Questionnaire-Questionnaire-health-declaration-cda.json	136466	35	0	0	0	0	0	0	22	8963	0	0	0	0	0	0	0	2	0	0	903	30120	0	0	0	0	17	0	4
+fsh-generated/resources/Questionnaire-Questionnaire-health-declaration-with-text.json	269949	57	0	0	0	0	0	0	27	4883	0	0	0	0	0	0	0	1	0	0	1574	7652	0	0	1	0	30	0	7
+fsh-generated/resources/Questionnaire-Questionnaire-health-declaration.json	225980	51	0	0	0	0	0	0	21	2785	0	0	0	0	0	0	0	2	0	0	1449	5787	0	0	0	0	26	0	6
+fsh-generated/resources/StructureDefinition-ee-health-declaration-questionnaire.json	5637	5	0	58	0	0	0	0	0	37	0	0	0	0	0	0	0	1	0	0	257	1034	0	0	0	0	8	1	1
+fsh-generated/resources/StructureDefinition-pet-questionnaire.json	5910	4	0	44	0	0	0	0	0	522	0	0	0	0	0	0	0	0	0	0	254	371	0	0	0	0	8	0	1
+fsh-generated/resources/ValueSet-pet-all-intervention-refusal-vs.json	741	1	0	0	1	0	0	0	0	560	0	0	0	0	0	0	0	0	0	0	6	61	0	0	0	0	1	0	0
+fsh-generated/resources/ValueSet-pet-all-or-some-refusal-of-treatment-vs.json	888	1	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	5	37	0	0	0	0	0	0	0
+fsh-generated/resources/ValueSet-pet-indication-vs.json	789	1	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	6	39	0	0	0	0	0	0	0
+fsh-generated/resources/ValueSet-pet-palliative-care-fully-or-not-vs.json	810	1	0	0	0	0	0	0	1	2	0	0	0	0	0	0	0	0	0	0	6	38	0	0	0	0	0	0	0
+fsh-generated/resources/ValueSet-sagedus-ajas.json	427	1	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	5	33	0	0	0	0	0	0	0
+/fsh-generated/includes/menu.xml	1298	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+/fsh-generated/includes/fsh-link-references.md	882	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/input/pagecontent/download.md	170	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/input/pagecontent/index.md	817	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/template/config	0	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/template/config/_config.yml	140	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/temp/pages/_includes/artifacts.xml	7838	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	1	0	0	0	0	0	0	0

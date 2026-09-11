@@ -1,0 +1,47 @@
+{
+  "codeSystems" : [{
+    "url" : "https://fhir.ee/ValueSet/sagedus-ajas",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "Sagedus_VS",
+    "title" : "Sagedus ajas loend",
+    "description" : "No actual VS in terminology server. Sageduse mõõtühikud UCUM notatsioonis",
+    "systems" : ["https://fhir.ee/CodeSystem/sagedus-ajas"]
+  },
+  {
+    "url" : "https://fhir.ee/qre/ValueSet/pet-all-intervention-refusal-vs",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "PETAllInterventionRefusalVS",
+    "title" : "Kõigist ravisekkumistest keeldumise ulatus",
+    "description" : "Alamhulk mõisteid PET küsimustiku koodisüsteemist, millega inimenekinnitab kolmanda valiku (patsient soovib loobuda kõikidest ravisekkumistest).",
+    "systems" : ["https://fhir.ee/CodeSystem/patsiendi-elulopu-tahteavalduse-kysimustik"]
+  },
+  {
+    "url" : "https://fhir.ee/qre/ValueSet/pet-all-or-some-refusal-of-treatment-vs",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "PETLifeSustainingRefusalVS",
+    "title" : "Elu säilitavast sekkumisest keeldumise ulatus",
+    "description" : "Alamhulk mõisteid PET küsimustiku koodisüsteemist, mille järgi on võimalik valida elusäilitava ravi ulatus (kas inimene soovib loobuda igasugusest elusäilitavast ravist või täpsustada konkreetseid sekkumisi).",
+    "systems" : ["https://fhir.ee/CodeSystem/patsiendi-elulopu-tahteavalduse-kysimustik"]
+  },
+  {
+    "url" : "https://fhir.ee/qre/ValueSet/pet-indication-vs",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "PETIndicationVS",
+    "title" : "PET tahteavalduse rakendumise valikud",
+    "description" : "Alamhulk mõisteid PET küsimustiku koodisüsteemist, mille järgi on võimalik valida tahteavalduse rakendumine.",
+    "systems" : ["https://fhir.ee/CodeSystem/patsiendi-elulopu-tahteavalduse-kysimustik"]
+  },
+  {
+    "url" : "https://fhir.ee/qre/ValueSet/pet-palliative-care-fully-or-not-vs",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "PETPalliativeCareWishVS",
+    "title" : "Palliatiivravi ulatus",
+    "description" : "Alamhulk mõisteid PET küsimustiku koodisüsteemist, mille järgi on võimalik valida palliatiivravi ulatus (kas soovida täiel määral palliatiivravi või loobuda defineeritud sekkumistest).",
+    "systems" : ["https://fhir.ee/CodeSystem/patsiendi-elulopu-tahteavalduse-kysimustik"]
+  }]
+}
