@@ -53,37 +53,7 @@ Usage: #example
 * item[=].enableWhen.operator = #=
 * item[=].enableWhen.answerCoding = $PETQ#pet-indication-first-choice
 
-
 * item[=].item[0].type = #coding
-* item[=].item[=].linkId = "pet-indication-first.unacceptable-treatment"
-* item[=].item[=].text = "Kui mulle vastuvõetava seisundi saavutamine minu elu säilitamisega ei ole võimalik, siis"
-* item[=].item[=].code.system = $PETQ
-* item[=].item[=].code.display = "Kui mulle vastuvõetava seisundi saavutamine minu elu säilitamisega ei ole võimalik, siis"
-* item[=].item[=].code.code = #pet-indication-first-choice-condition
-* item[=].item[=].required = true
-* item[=].item[=].repeats = false
-* item[=].item[=].readOnly = false
-* item[=].item[=].answerValueSet = Canonical(PETLifeSustainingRefusalVS  )
-// * item[=].item[=].answerOption[0].valueCoding.code = #no-life-sustaining-treatments
-// * item[=].item[=].answerOption[=].valueCoding.display = "Ei soovi ma ühtegi elu säilitavat sekkumist"
-// * item[=].item[=].answerOption[+].valueCoding.code = #these-life-sustaining-treatments
-// * item[=].item[=].answerOption[=].valueCoding.display = "Ei soovi ma järgmisi elu säilitavaid sekkumisi"
-
-* item[=].item[=].item[0].type = #coding
-* item[=].item[=].item[=].linkId = "pet-indication-first.unacceptable-treatment.list"
-* item[=].item[=].item[=].text = "Ei soovi ma järgmisi elu säilitavaid sekkumisi"
-* item[=].item[=].item[=].code.system = $PETQ
-* item[=].item[=].item[=].code.display = "Ei soovi ma järgmisi elu säilitavaid sekkumisi"
-* item[=].item[=].item[=].code.code = #these-life-sustaining-treatments
-* item[=].item[=].item[=].enableWhen.question = "pet-indication-first.unacceptable-treatment"
-* item[=].item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].item[=].enableWhen.answerCoding = $PETQ#these-life-sustaining-treatments
-* item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].repeats = true
-* item[=].item[=].item[=].readOnly = false
-* item[=].item[=].item[=].answerValueSet = $UT
-
-* item[=].item[+].type = #coding
 * item[=].item[=].linkId = "pet-indication-first.unacceptable-condition"
 * item[=].item[=].text = "Minu seisund muutub mulle vastuvõetamatuks, kui"
 * item[=].item[=].code.system = $PETQ
@@ -119,6 +89,39 @@ Usage: #example
 * item[=].item[=].required = false
 * item[=].item[=].repeats = false 
 * item[=].item[=].readOnly = false
+
+
+* item[=].item[+].type = #coding
+* item[=].item[=].linkId = "pet-indication-first.unacceptable-treatment"
+* item[=].item[=].text = "Kui mulle vastuvõetava seisundi saavutamine minu elu säilitamisega ei ole võimalik, siis"
+* item[=].item[=].code.system = $PETQ
+* item[=].item[=].code.display = "Kui mulle vastuvõetava seisundi saavutamine minu elu säilitamisega ei ole võimalik, siis"
+* item[=].item[=].code.code = #pet-indication-first-choice-condition
+* item[=].item[=].required = true
+* item[=].item[=].repeats = false
+* item[=].item[=].readOnly = false
+* item[=].item[=].answerValueSet = Canonical(PETLifeSustainingRefusalVS)
+// * item[=].item[=].answerOption[0].valueCoding.code = #no-life-sustaining-treatments
+// * item[=].item[=].answerOption[=].valueCoding.display = "Ei soovi ma ühtegi elu säilitavat sekkumist"
+// * item[=].item[=].answerOption[+].valueCoding.code = #these-life-sustaining-treatments
+// * item[=].item[=].answerOption[=].valueCoding.display = "Ei soovi ma järgmisi elu säilitavaid sekkumisi"
+
+* item[=].item[=].item[0].type = #coding
+* item[=].item[=].item[=].linkId = "pet-indication-first.unacceptable-treatment.list"
+* item[=].item[=].item[=].text = "Ei soovi ma järgmisi elu säilitavaid sekkumisi"
+* item[=].item[=].item[=].code.system = $PETQ
+* item[=].item[=].item[=].code.display = "Ei soovi ma järgmisi elu säilitavaid sekkumisi"
+* item[=].item[=].item[=].code.code = #these-life-sustaining-treatments
+* item[=].item[=].item[=].enableWhen.question = "pet-indication-first.unacceptable-treatment"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerCoding = $PETQ#these-life-sustaining-treatments
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].repeats = true
+* item[=].item[=].item[=].readOnly = false
+* item[=].item[=].item[=].answerValueSet = $UT
+
+
+
 
 
 
@@ -335,6 +338,45 @@ Usage: #example
 * item[=].required = false
 * item[=].readOnly = false
 
+* item[+].type = #group
+* item[=].linkId = "confirmation"
+* item[=].text = "Kinnitan, et"
+* item[=].code.system = $PETQ
+* item[=].code.display = "Kinnitan, et"
+* item[=].code.code = #confirmation
+* item[=].required = true
+
+* item[=].item[+].type = #boolean
+* item[=].item[=].linkId = "confirmation.volition"
+* item[=].item[=].text = "Olen koostanud tahteavalduse vastavalt oma tahtele ja ilma välise surveta"
+* item[=].item[=].code.system = $PETQ
+* item[=].item[=].code.display = "Olen koostanud tahteavalduse vastavalt oma tahtele ja ilma välise surveta"
+* item[=].item[=].code.code = #confirmation-volition
+* item[=].item[=].required = true
+
+* item[=].item[+].type = #boolean
+* item[=].item[=].linkId = "confirmation.understand-content"
+* item[=].item[=].text = "Mõistan selles tehtud otsuste sisu ja tähendust"
+* item[=].item[=].code.system = $PETQ
+* item[=].item[=].code.display = "Mõistan selles tehtud otsuste sisu ja tähendust"
+* item[=].item[=].code.code = #confirmation-understand-content
+* item[=].item[=].required = true
+
+* item[=].item[+].type = #boolean
+* item[=].item[=].linkId = "confirmation.modification"
+* item[=].item[=].text = "Olen teadlik tahteavalduse muutmise ja tühistamise võimalusest"
+* item[=].item[=].code.system = $PETQ
+* item[=].item[=].code.display = "Olen teadlik tahteavalduse muutmise ja tühistamise võimalusest"
+* item[=].item[=].code.code = #confirmation-modification
+* item[=].item[=].required = true
+
+* item[=].item[+].type = #boolean
+* item[=].item[=].linkId = "confirmation.sharing"
+* item[=].item[=].text = "Olen teadlik, et mu lähedased võiksid teada tahteavalduse olemasolust"
+* item[=].item[=].code.system = $PETQ
+* item[=].item[=].code.display = "Olen teadlik, et mu lähedased võiksid teada tahteavalduse olemasolust"
+* item[=].item[=].code.code = #confirmation-sharing
+* item[=].item[=].required = true
 
 
 
