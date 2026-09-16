@@ -31,7 +31,7 @@ Usage: #example
 * item[=].required = true
 * item[=].repeats = false
 * item[=].readOnly = false
-* item[=].answerValueSet = Canonical(PETIndicationVS)
+* item[=].answerValueSet = $AHDI
 // * item[=].answerOption[0].valueCoding.code = #pet-indication-first-choice
 // * item[=].answerOption[=].valueCoding.display = "Elu säilitavast ravist keeldumine, kui selle tulemus on mulle vastuvõetamatu"
 // * item[=].answerOption[+].valueCoding.code = #pet-indication-second-choice
@@ -100,7 +100,7 @@ Usage: #example
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
 * item[=].item[=].readOnly = false
-* item[=].item[=].answerValueSet = Canonical(PETLifeSustainingRefusalVS)
+* item[=].item[=].answerValueSet = $QLST
 // * item[=].item[=].answerOption[0].valueCoding.code = #no-life-sustaining-treatments
 // * item[=].item[=].answerOption[=].valueCoding.display = "Ei soovi ma ühtegi elu säilitavat sekkumist"
 // * item[=].item[=].answerOption[+].valueCoding.code = #these-life-sustaining-treatments
@@ -148,7 +148,7 @@ Usage: #example
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
 * item[=].item[=].readOnly = false
-* item[=].item[=].answerValueSet = Canonical(PETLifeSustainingRefusalVS)
+* item[=].item[=].answerValueSet = $QLST
 // * item[=].item[=].answerOption[0].valueCoding.code = #no-life-sustaining-treatments
 // * item[=].item[=].answerOption[=].valueCoding.display = "Ei soovi ma ühtegi elu säilitavat sekkumist"
 // * item[=].item[=].answerOption[+].valueCoding.code = #these-life-sustaining-treatments
@@ -201,7 +201,7 @@ Usage: #example
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
 * item[=].item[=].readOnly = false
-* item[=].item[=].answerValueSet = Canonical(PETAllInterventionRefusalVS)
+* item[=].item[=].answerValueSet = $QAT
 // * item[=].item[=].answerOption[0].valueCoding.code = #no-life-sustaining-or-health-improving-treatments
 // * item[=].item[=].answerOption[=].valueCoding.display = "Ei soovi ma mitte ühtegi haigusest paranemisele suunatud meditsiinilist sekkumist ega elu säilitavat sekkumist"
 // * item[=].item[=].answerOption[+].valueCoding.code = #no-life-sustaining-or-health-improving-treatments-despite-palliative
@@ -229,7 +229,7 @@ Usage: #example
 * item[=].required = true
 * item[=].repeats = false
 * item[=].readOnly = false
-* item[=].answerValueSet = Canonical(PETPalliativeCareWishVS)
+* item[=].answerValueSet = $PTA
 // * item[=].answerOption[0].valueCoding.code = #palliative-fully
 // * item[=].answerOption[=].valueCoding.display = "Täies mahus"
 // * item[=].answerOption[+].valueCoding.code = #refuse-specified-treatments

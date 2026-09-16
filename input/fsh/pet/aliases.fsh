@@ -16,4 +16,12 @@ Alias: $UT = https://fhir.ee/ValueSet/elusailitavad-sekkumised
 
 Alias: $UC = https://fhir.ee/ValueSet/vastuvoetamatud-seisundid
 
+Alias: $AHDI = https://fhir.ee/ValueSet/patsiendi-elulopu-tahteavalduse-rakendumine
+
+Alias: $QLST = https://fhir.ee/ValueSet/elu-sailitavast-sekkumisest-keeldumise-ulatus
+
+Alias: $QAT = https://fhir.ee/ValueSet/koigist-ravisekkumistest-keeldumise-ulatus
+
+Alias: $PTA = https://fhir.ee/ValueSet/palliatiivravi-ulatus
+
 
