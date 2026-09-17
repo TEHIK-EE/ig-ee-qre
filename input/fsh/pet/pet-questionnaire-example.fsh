@@ -253,90 +253,100 @@ Usage: #example
 
 // Muud soovid
 
-* item[+].type = #coding
-* item[=].linkId = "preferred-death-location"
-* item[=].text = "Minu eelistatud suremispaik on"
+* item[+].type = #group
+* item[=].linkId = "other-preferences"
+* item[=].text = "Muud elulõpu juhised ja eelistused, mis ei ole tervishoiutöötajatele kohustuslikud"
 * item[=].code.system = $PETQ
-* item[=].code.display = "Minu eelistatud suremispaik on"
-* item[=].code.code = #death-location-wish
+* item[=].code.display = "Muud elulõpu juhised ja eelistused, mis ei ole tervishoiutöötajatele kohustuslikud"
+* item[=].code.code = #other-preferences
 * item[=].required = false
 * item[=].repeats = false
-* item[=].readOnly = false
-* item[=].answerValueSet = $PDL
 
-* item[=].item[0].type = #text
-* item[=].item[=].linkId = "preferred-death-location.other"
-* item[=].item[=].text = "Täpsustus"
+
+* item[=].item[0].type = #coding
+* item[=].item[=].linkId = "other-preferences.preferred-death-location"
+* item[=].item[=].text = "Minu eelistatud suremispaik on"
 * item[=].item[=].code.system = $PETQ
-* item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].code.code = #specify
-* item[=].item[=].enableWhen.question = "preferred-death-location"
-* item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].enableWhen.answerCoding.code = #99
-* item[=].item[=].enableWhen.answerCoding.system = "https://fhir.ee/CodeSystem/suremispaik"
-* item[=].item[=].enableBehavior = #any
-* item[=].item[=].required = true
-* item[=].item[=].repeats = false
-* item[=].item[=].readOnly = false
-* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/minLength"
-* item[=].item[=].extension[=].valueInteger = 4
-
-
-* item[+].linkId = "people-by-side-death"
-* item[=].type = #text
-* item[=].text = "Ma soovin, et minu suremise juures viibivad järgmised inimesed"
-* item[=].code.system = $PETQ
-* item[=].code.display = "Ma soovin, et minu suremise juures viibivad järgmised inimesed"
-* item[=].code.code = #people-beside-death-bed
-* item[=].required = false
-* item[=].repeats = false
-* item[=].readOnly = false
-
-* item[+].type = #text
-* item[=].linkId = "religious-preferences"
-* item[=].text = "Minu religioossed või muud spirituaalsed eelistused"
-* item[=].code.system = $PETQ
-* item[=].code.display = "Minu religioossed või muud spirituaalsed eelistused"
-* item[=].code.code = #religious-preferences
-* item[=].required = false
-* item[=].repeats = false
-* item[=].readOnly = false
-
-* item[+].type = #coding
-* item[=].linkId = "actions-after-death"
-* item[=].text = "Minu matmisviisi eelistus on"
-* item[=].code.system = $PETQ
-* item[=].code.display = "Minu matmisviisi eelistus on"
-* item[=].code.code = #burial-wish
-* item[=].required = false
-* item[=].readOnly = false
-* item[=].answerValueSet = $BM
-
-
-* item[=].item[+].type = #text
-* item[=].item[=].linkId = "actions-after-death.other"
-* item[=].item[=].text = "Täpsustus"
-* item[=].item[=].code.system = $PETQ
-* item[=].item[=].code.display = "Täpsustus"
-* item[=].item[=].code.code = #specify
-* item[=].item[=].enableWhen.question = "actions-after-death"
-* item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].enableWhen.answerCoding.code = #33
-* item[=].item[=].enableWhen.answerCoding.system = "https://fhir.ee/CodeSystem/eelistatud-matmisviis"
+* item[=].item[=].code.display = "Minu eelistatud suremispaik on"
+* item[=].item[=].code.code = #death-location-wish
 * item[=].item[=].required = false
 * item[=].item[=].repeats = false
 * item[=].item[=].readOnly = false
-* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/minLength"
-* item[=].item[=].extension[=].valueInteger = 4
+* item[=].item[=].answerValueSet = $PDL
 
-* item[+].type = #text
-* item[=].linkId = "other-wishes"
-* item[=].text = "Muud olulised soovid"
-* item[=].code.system = $PETQ
-* item[=].code.display = "Muud olulised soovid"
-* item[=].code.code = #other-wishes
-* item[=].required = false
-* item[=].readOnly = false
+* item[=].item[=].item[0].type = #text
+* item[=].item[=].item[=].linkId = "other-preferences.preferred-death-location.other"
+* item[=].item[=].item[=].text = "Täpsustus"
+* item[=].item[=].item[=].code.system = $PETQ
+* item[=].item[=].item[=].code.display = "Täpsustus"
+* item[=].item[=].item[=].code.code = #specify
+* item[=].item[=].item[=].enableWhen.question = "preferred-death-location"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerCoding.code = #99
+* item[=].item[=].item[=].enableWhen.answerCoding.system = "https://fhir.ee/CodeSystem/suremispaik"
+* item[=].item[=].item[=].enableBehavior = #any
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].repeats = false
+* item[=].item[=].item[=].readOnly = false
+* item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/minLength"
+* item[=].item[=].item[=].extension[=].valueInteger = 4
+
+
+* item[=].item[+].linkId = "other-preferences.people-by-side-death"
+* item[=].item[=].type = #text
+* item[=].item[=].text = "Ma soovin, et minu suremise juures viibivad järgmised inimesed"
+* item[=].item[=].code.system = $PETQ
+* item[=].item[=].code.display = "Ma soovin, et minu suremise juures viibivad järgmised inimesed"
+* item[=].item[=].code.code = #people-beside-death-bed
+* item[=].item[=].required = false
+* item[=].item[=].repeats = false
+* item[=].item[=].readOnly = false
+
+* item[=].item[+].type = #text
+* item[=].item[=].linkId = "other-preferences.religious-preferences"
+* item[=].item[=].text = "Minu religioossed või muud spirituaalsed eelistused"
+* item[=].item[=].code.system = $PETQ
+* item[=].item[=].code.display = "Minu religioossed või muud spirituaalsed eelistused"
+* item[=].item[=].code.code = #religious-preferences
+* item[=].item[=].required = false
+* item[=].item[=].repeats = false
+* item[=].item[=].readOnly = false
+
+* item[=].item[+].type = #coding
+* item[=].item[=].linkId = "other-preferences.actions-after-death"
+* item[=].item[=].text = "Minu matmisviisi eelistus on"
+* item[=].item[=].code.system = $PETQ
+* item[=].item[=].code.display = "Minu matmisviisi eelistus on"
+* item[=].item[=].code.code = #burial-wish
+* item[=].item[=].required = false
+* item[=].item[=].readOnly = false
+* item[=].item[=].answerValueSet = $BM
+
+
+* item[=].item[=].item[+].type = #text
+* item[=].item[=].item[=].linkId = "other-preferences.actions-after-death.other"
+* item[=].item[=].item[=].text = "Täpsustus"
+* item[=].item[=].item[=].code.system = $PETQ
+* item[=].item[=].item[=].code.display = "Täpsustus"
+* item[=].item[=].item[=].code.code = #specify
+* item[=].item[=].item[=].enableWhen.question = "actions-after-death"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerCoding.code = #33
+* item[=].item[=].item[=].enableWhen.answerCoding.system = "https://fhir.ee/CodeSystem/eelistatud-matmisviis"
+* item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].repeats = false
+* item[=].item[=].item[=].readOnly = false
+* item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/minLength"
+* item[=].item[=].item[=].extension[=].valueInteger = 4
+
+* item[=].item[+].type = #text
+* item[=].item[=].linkId = "other-preferences.other-wishes"
+* item[=].item[=].text = "Muud olulised soovid"
+* item[=].item[=].code.system = $PETQ
+* item[=].item[=].code.display = "Muud olulised soovid"
+* item[=].item[=].code.code = #other-wishes
+* item[=].item[=].required = false
+* item[=].item[=].readOnly = false
 
 * item[+].type = #group
 * item[=].linkId = "confirmation"
