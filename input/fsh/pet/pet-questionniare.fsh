@@ -1,6 +1,6 @@
-Profile: PETQuestionnaire
+Profile: AHDQuestionnaire
 Parent: Questionnaire
-Id: pet-questionnaire
+Id: ahd-questionnaire
 Description: "Patsiendi elulõpu tahteavaldus"
 // * ^version = "1.0.0"
 * ^status = #draft
@@ -32,7 +32,7 @@ Description: "Patsiendi elulõpu tahteavaldus"
 * effectivePeriod.start 1..1
 * effectivePeriod.end 0..1
 * name 1..1
-* name = "PET"
+* name = "AHD"
 * title 1..1
 * description 0..0
 * code 1..1

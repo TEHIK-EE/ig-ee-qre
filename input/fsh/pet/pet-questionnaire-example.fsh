@@ -1,13 +1,13 @@
-Instance: Questionnaire-PET
-InstanceOf: PETQuestionnaire
+Instance: Questionnaire-AHD-Example
+InstanceOf: AHDQuestionnaire
 Description: "Näidis patsiendi elulõpu tahteavaldusest"
 Usage: #example
 // * meta.versionId = "2.0.0"
-* name = "PET"
+* name = "AHD"
 * title = "Patsiendi elulõpu tahteavaldus"
 * version = "1.0.0"
 * subjectType = #Patient
-* id = "Questionnaire-PET"
+* id = "Questionnaire-AHD-Example"
 * url = "https://fhir.ee/qre/Questionnaire-AHD"
 * status = #active
 * date = "2023-12-12"
