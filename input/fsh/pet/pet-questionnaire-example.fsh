@@ -280,7 +280,7 @@ Usage: #example
 * item[=].item[=].item[=].code.system = $PETQ
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].code.code = #specify
-* item[=].item[=].item[=].enableWhen.question = "preferred-death-location"
+* item[=].item[=].item[=].enableWhen.question = "other-preferences.preferred-death-location"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerCoding.code = #99
 * item[=].item[=].item[=].enableWhen.answerCoding.system = "https://fhir.ee/CodeSystem/suremispaik"
@@ -329,7 +329,7 @@ Usage: #example
 * item[=].item[=].item[=].code.system = $PETQ
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].code.code = #specify
-* item[=].item[=].item[=].enableWhen.question = "actions-after-death"
+* item[=].item[=].item[=].enableWhen.question = "other-preferences.actions-after-death"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerCoding.code = #33
 * item[=].item[=].item[=].enableWhen.answerCoding.system = "https://fhir.ee/CodeSystem/eelistatud-matmisviis"
