@@ -48,7 +48,7 @@ Usage: #example
 * item[=].code.display = "Elu säilitavast ravist keeldumine, kui selle tulemus on mulle vastuvõetamatu"
 * item[=].code.code = #pet-indication-first-choice
 * item[=].repeats = false
-* item[=].required = false
+* item[=].required = true
 * item[=].enableWhen.question = "pet-indication"
 * item[=].enableWhen.operator = #=
 * item[=].enableWhen.answerCoding = $PETQ#pet-indication-first-choice
@@ -134,7 +134,7 @@ Usage: #example
 * item[=].code.display = "Elu säilitavast ravist keeldumine sõltumata ravitulemusest"
 * item[=].code.code = #pet-indication-second-choice
 * item[=].repeats = false
-* item[=].required = false
+* item[=].required = true
 * item[=].enableWhen.question = "pet-indication"
 * item[=].enableWhen.operator = #=
 * item[=].enableWhen.answerCoding = $PETQ#pet-indication-second-choice
@@ -187,7 +187,7 @@ Usage: #example
 * item[=].code.display = "Kõigist ravisekkumistest keeldumine"
 * item[=].code.code = #pet-indication-third-choice
 * item[=].repeats = false
-* item[=].required = false
+* item[=].required = true
 * item[=].enableWhen.question = "pet-indication"
 * item[=].enableWhen.operator = #=
 * item[=].enableWhen.answerCoding = $PETQ#pet-indication-third-choice
@@ -333,7 +333,7 @@ Usage: #example
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerCoding.code = #33
 * item[=].item[=].item[=].enableWhen.answerCoding.system = "https://fhir.ee/CodeSystem/eelistatud-matmisviis"
-* item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].repeats = false
 * item[=].item[=].item[=].readOnly = false
 * item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/minLength"
