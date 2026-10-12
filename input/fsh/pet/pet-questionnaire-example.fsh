@@ -64,21 +64,21 @@ Usage: #example
 * item[=].item[=].readOnly = false
 * item[=].item[=].answerValueSet = $UC
 
-* item[=].item[+].type = #text
-* item[=].item[=].linkId = "pet-indication-first.unacceptable-condition.other"
-* item[=].item[=].text = "Muu"
-* item[=].item[=].code.system = $PETQ
-* item[=].item[=].code.display = "Muu"
-* item[=].item[=].code.code = #other
-* item[=].item[=].enableWhen.question = "pet-indication-first.unacceptable-condition"
-* item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].enableWhen.answerCoding.code = #34
-* item[=].item[=].enableWhen.answerCoding.system = "https://fhir.ee/CodeSystem/vastuvoetamatud-seisundid"
-* item[=].item[=].required = true
-* item[=].item[=].repeats = false 
-* item[=].item[=].readOnly = false
-* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/minLength"
-* item[=].item[=].extension[=].valueInteger = 4
+* item[=].item[=].item[0].type = #text
+* item[=].item[=].item[=].linkId = "pet-indication-first.unacceptable-condition.other"
+* item[=].item[=].item[=].text = "Muu"
+* item[=].item[=].item[=].code.system = $PETQ
+* item[=].item[=].item[=].code.display = "Muu"
+* item[=].item[=].item[=].code.code = #other
+* item[=].item[=].item[=].enableWhen.question = "pet-indication-first.unacceptable-condition"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerCoding.code = #34
+* item[=].item[=].item[=].enableWhen.answerCoding.system = "https://fhir.ee/CodeSystem/vastuvoetamatud-seisundid"
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].repeats = false 
+* item[=].item[=].item[=].readOnly = false
+* item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/minLength"
+* item[=].item[=].item[=].extension[=].valueInteger = 4
 
 * item[=].item[+].type = #text
 * item[=].item[=].linkId = "pet-indication-first.other"
