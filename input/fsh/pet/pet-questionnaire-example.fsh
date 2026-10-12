@@ -380,13 +380,13 @@ Usage: #example
 * item[=].item[=].code.code = #confirmation-modification
 * item[=].item[=].required = true
 
-* item[=].item[+].type = #boolean
-* item[=].item[=].linkId = "confirmation.sharing"
-* item[=].item[=].text = "Olen teadlik, et mu lähedased võiksid teada tahteavalduse olemasolust"
-* item[=].item[=].code.system = $PETQ
-* item[=].item[=].code.display = "Olen teadlik, et mu lähedased võiksid teada tahteavalduse olemasolust"
-* item[=].item[=].code.code = #confirmation-sharing
-* item[=].item[=].required = true
+// * item[=].item[+].type = #boolean
+// * item[=].item[=].linkId = "confirmation.sharing"
+// * item[=].item[=].text = "Olen teadlik, et mu lähedased võiksid teada tahteavalduse olemasolust"
+// * item[=].item[=].code.system = $PETQ
+// * item[=].item[=].code.display = "Olen teadlik, et mu lähedased võiksid teada tahteavalduse olemasolust"
+// * item[=].item[=].code.code = #confirmation-sharing
+// * item[=].item[=].required = true
 
 
 
