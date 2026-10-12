@@ -1,0 +1,36 @@
+# ee.fhir.qre#1.0.0: Küsimustike teenus
+
+## Pages
+
+* [Sissejuhatus](index.md)
+* [Artifacts Summary](artifacts.md)
+* [Allalaadimised](download.md)
+
+## Resources
+
+### CodeSystems
+
+* [Sagedus ajas](CodeSystem-sagedus-ajas.md)
+
+### ValueSets
+
+* [Sagedus ajas loend](ValueSet-sagedus-ajas.md)
+
+### Resource Profiles
+
+* [AHDQuestionnaire](StructureDefinition-ahd-questionnaire.md)
+* [EEHealthDeclarationQuestionnaire](StructureDefinition-ee-health-declaration-questionnaire.md)
+
+### ImplementationGuides
+
+* [Küsimustike teenus](index.md)
+
+### Questionnaires
+
+* [Tervisedeklaratsioon](Questionnaire-Questionnaire-health-declaration.md)
+
+### Examples
+
+* [Patsiendi elulõpu tahteavaldus (Questionnaire)](Questionnaire-Questionnaire-AHD-Example.md)
+* [Tervisedeklaratsioon CDA-st (Questionnaire)](Questionnaire-Questionnaire-health-declaration-cda.md)
+* [Tervisedeklaratsioon (Questionnaire)](Questionnaire-Questionnaire-health-declaration.md)
