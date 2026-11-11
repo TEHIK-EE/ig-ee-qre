@@ -229,6 +229,9 @@ Usage: #example
 * item[=].required = true
 * item[=].repeats = false
 * item[=].readOnly = false
+* item[=].enableWhen.question = "pet-indication"
+* item[=].enableWhen.operator = #exists
+* item[=].enableWhen.answerBoolean = true
 * item[=].answerValueSet = $PTA
 // * item[=].answerOption[0].valueCoding.code = #palliative-fully
 // * item[=].answerOption[=].valueCoding.display = "Täies mahus"
