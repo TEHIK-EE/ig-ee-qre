@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Patsiendi elulõpu tahteavaldus - Küsimustike teenus v1.0.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/hl7.fhir.ee.tehik.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"3.6"}
+    h3,h4,h5,h6{--heading-prefix:"3.6"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Küsimustike teenus</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0 - trial-use
+
+
+
+  <img alt="Estonia flag" src="assets/images/est.svg" height="16" title="Estonia"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R5/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Esileht</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefaktid</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Muu
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="download.html">Allalaadimised</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Patsiendi elulõpu tahteavaldus</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Küsimustike teenus - Local Development build (v1.0.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://fhir.ee/qre/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="Questionnaire-Questionnaire-AHD-Example.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Questionnaire-Questionnaire-AHD-Example.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Questionnaire-Questionnaire-AHD-Example.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+  <a name="root"> </a>
+
+  <h2 id="root">Questionnaire: Patsiendi elulõpu tahteavaldus
+
+  </h2>
+
+  <table class="colsi">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">https://fhir.ee/qre/Questionnaire-AHD<button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://fhir.ee/qre/Questionnaire-AHD"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">1.0.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="https://fhir.ee/qre/Questionnaire-AHD|1.0.0"/></span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="4">
+        
+          Active
+          
+            as of 2023-12-12
+          
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">AHD</span></td>
+    </tr>
+
+
+
+
+  </table>
+
+
+
+  <!-- insert intro if present -->
+  
+
+
+
+<!--  <p>
+  Formats: <a href="Questionnaire-Questionnaire-AHD-Example.xml.html">XML</a>, <a href="Questionnaire-Questionnaire-AHD-Example.json.html">JSON</a>, <a href="Questionnaire-Questionnaire-AHD-Example.ttl.html">Turtle</a>
+  </p>-->
+
+  
+
+
+  <div data-fhir="generated"><p class="res-header-id"/><a name="Questionnaire-AHD-Example"> </a><a name="hcQuestionnaire-AHD-Example"> </a><div style="display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: et</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ahd-questionnaire.html">AHDQuestionnaire</a></p></div><table border="1" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" id="qtree=Questionnaire-AHD-Example" class="xhtTableBorder1" data-fhir="generated-heirarchy"><tr fhir="generated-heirarchy" class="xhtRowBorder2" data-fhir="generated-heirarchy"><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R5/formats.html#table" title="The linkID for the item">LinkID</a></th><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R5/formats.html#table" title="Text for the item">Text</a></th><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R5/formats.html#table" title="Minimum and Maximum # of times the item can appear in the instance">Cardinality</a></th><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R5/formats.html#table" title="The type of the item">Type</a></th><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R5/formats.html#table" title="Other attributes of the item">Flags</a></th><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R5/formats.html#table" title="Additional information about the item">Description &amp; Constraints</a><span style="float: right"><a href="https://hl7.org/fhir/R5/formats.html#table" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" onLoad="fhirTableInit(this)" style="background-color: inherit"/></a></span></th></tr><tr fhir="generated-heirarchy" id="qt-Questionnaire-AHD-Example-a" class="xhtRowBorder1 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck1.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_q_root.gif" alt="" style="background-color: white; background-color: inherit" title="QuestionnaireRoot" class="hierarchy"/> AHD</td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1">Questionnaire</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1">https://fhir.ee/qre/Questionnaire-AHD#1.0.0</td></tr>
+<tr fhir="generated-heirarchy" id="qt-Questionnaire-AHD-Example-aa" class="xhtRowBorder1 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck10.png)" id="item.pet-indication" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="coding" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">AHD / </span>pet-indication</td><td style="" class="hierarchy xhtCellBorder1">Soovin, et minu tahteavaldus rakenduks ühe järgmise valikuga</td><td style="" class="hierarchy xhtCellBorder1">1..1</td><td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-coding">coding</a></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">Value Set: <a href="https://akk.tehik.ee/classifier/fhir/ValueSet/patsiendi-elulopu-tahteavalduse-rakendumine">Patsiendi elulõpu tahteavalduse rakendumine</a></td></tr>
+<tr fhir="generated-heirarchy" id="qt-Questionnaire-AHD-Example-ab" class="xhtRowBorder1 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck11.png)" id="item.pet-indication-first" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin-open.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-group.png" alt="" style="background-color: white; background-color: inherit" title="group" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">AHD / </span>pet-indication-first</td><td style="" class="hierarchy xhtCellBorder1">Elu säilitavast ravist keeldumine, kui selle tulemus on mulle vastuvõetamatu</td><td style="" class="hierarchy xhtCellBorder1">1..1</td><td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-group">group</a></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">Enable When: <span><a href="#item.pet-indication">pet-indication</a> = Elu säilitavast ravist keeldumine, kui selle tulemus on mulle vastuvõetamatu (patsiendi-elulopu-tahteavalduse-kysimustik#pet-indication-first-choice)</span><br/>Value Set: </td></tr>
+<tr fhir="generated-heirarchy" id="qt-Questionnaire-AHD-Example-aba" class="xhtRowBorder1 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck111.png)" id="item.pet-indication-first.unacceptable-condition" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin-open.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="coding" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">AHD / pet-indication-first / </span>pet-indication-first.unacceptable-condition</td><td style="" class="hierarchy xhtCellBorder1">Minu seisund muutub mulle vastuvõetamatuks, kui</td><td style="" class="hierarchy xhtCellBorder1">1..*</td><td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-coding">coding</a></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">Value Set: <a href="https://akk.tehik.ee/classifier/fhir/ValueSet/vastuvoetamatud-seisundid">Vastuvõetamatud seisundid</a></td></tr>
+<tr fhir="generated-heirarchy" id="qt-Questionnaire-AHD-Example-abaa" class="xhtRowBorder1 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck1100.png)" id="item.pet-indication-first.unacceptable-condition.other" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-text.png" alt="" style="background-color: white; background-color: inherit" title="text" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">AHD / pet-indication-first / pet-indication-first.unacceptable-condition / </span>pet-indication-first.unacceptable-condition.other</td><td style="" class="hierarchy xhtCellBorder1">Muu</td><td style="" class="hierarchy xhtCellBorder1">1..1</td><td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-text">text</a></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">Enable When: <span><a href="#item.pet-indication-first.unacceptable-condition">pet-indication-first.unacceptable-condition</a> = Muu (vastuvoetamatud-seisundid#34)</span><br/>Value Set: </td></tr>
+<tr fhir="generated-heirarchy" id="qt-Questionnaire-AHD-Example-abb" class="xhtRowBorder1 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck110.png)" id="item.pet-indication-first.other" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-text.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="text" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">AHD / pet-indication-first / </span>pet-indication-first.other</td><td style="" class="hierarchy xhtCellBorder1">Soovin veel lisada</td><td style="" class="hierarchy xhtCellBorder1">0..1</td><td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-text">text</a></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">Value Set: </td></tr>
+<tr fhir="generated-heirarchy" id="qt-Questionnaire-AHD-Example-abc" class="xhtRowBorder1 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck101.png)" id="item.pet-indication-first.unacceptable-treatment" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin_end-open.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="" style="background-color: white; background-color: inherit" title="coding" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">AHD / pet-indication-first / </span>pet-indication-first.unacceptable-treatment</td><td style="" class="hierarchy xhtCellBorder1">Kui mulle vastuvõetava seisundi saavutamine minu elu säilitamisega ei ole võimalik, siis</td><td style="" class="hierarchy xhtCellBorder1">1..1</td><td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-coding">coding</a></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">Value Set: <a href="https://akk.tehik.ee/classifier/fhir/ValueSet/elu-sailitavast-sekkumisest-keeldumise-ulatus">Elu säilitavast sekkumisest keeldumise ulatus</a></td></tr>
+<tr fhir="generated-heirarchy" id="qt-Questionnaire-AHD-Example-abca" class="xhtRowBorder1 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck1000.png)" id="item.pet-indication-first.unacceptable-treatment.list" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="coding" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">AHD / pet-indication-first / pet-indication-first.unacceptable-treatment / </span>pet-indication-first.unacceptable-treatment.list</td><td style="" class="hierarchy xhtCellBorder1">Ei soovi ma järgmisi elu säilitavaid sekkumisi</td><td style="" class="hierarchy xhtCellBorder1">1..*</td><td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-coding">coding</a></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">Enable When: <span><a href="#item.pet-indication-first.unacceptable-treatment">pet-indication-first.unacceptable-treatment</a> = Ei soovi ma järgmisi elu säilitavaid sekkumisi (patsiendi-elulopu-tahteavalduse-kysimustik#these-life-sustaining-treatments)</span><br/>Value Set: <a href="https://akk.tehik.ee/classifier/fhir/ValueSet/elusailitavad-sekkumised">Elusäilitavad sekkumised</a></td></tr>
+<tr fhir="generated-heirarchy" id="qt-Questionnaire-AHD-Example-ac" class="xhtRowBorder1 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck11.png)" id="item.pet-indication-second" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin-open.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-group.png" alt="" style="background-color: white; background-color: inherit" title="group" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">AHD / </span>pet-indication-second</td><td style="" class="hierarchy xhtCellBorder1">Elu säilitavast ravist keeldumine sõltumata ravitulemusest</td><td style="" class="hierarchy xhtCellBorder1">1..1</td><td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-group">group</a></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">Enable When: <span><a href="#item.pet-indication">pet-indication</a> = Elu säilitavast ravist keeldumine sõltumata ravitulemusest (patsiendi-elulopu-tahteavalduse-kysimustik#pet-indication-second-choice)</span><br/>Value Set: </td></tr>
+<tr fhir="generated-heirarchy" id="qt-Questionnaire-AHD-Example-aca" class="xhtRowBorder1 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck111.png)" id="item.pet-indication-second.unacceptable-treatment" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin-open.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="coding" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">AHD / pet-indication-second / </span>pet-indication-second.unacceptable-treatment</td><td style="" class="hierarchy xhtCellBorder1">Kui minu terviseseisund halveneb nii, et ellu jäämine ilma elu säilitava ravita ei ole võimalik, siis</td><td style="" class="hierarchy xhtCellBorder1">1..1</td><td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-coding">coding</a></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">Value Set: <a href="https://akk.tehik.ee/classifier/fhir/ValueSet/elu-sailitavast-sekkumisest-keeldumise-ulatus">Elu säilitavast sekkumisest keeldumise ulatus</a></td></tr>
+<tr fhir="generated-heirarchy" id="qt-Questionnaire-AHD-Example-acaa" class="xhtRowBorder1 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck1100.png)" id="item.pet-indication-second.unacceptable-treatment.list" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="" style="background-color: white; background-color: inherit" title="coding" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">AHD / pet-indication-second / pet-indication-second.unacceptable-treatment / </span>pet-indication-second.unacceptable-treatment.list</td><td style="" class="hierarchy xhtCellBorder1">Ei soovi ma järgmisi elu säilitavaid sekkumisi</td><td style="" class="hierarchy xhtCellBorder1">1..*</td><td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-coding">coding</a></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">Enable When: <span><a href="#item.pet-indication-second.unacceptable-treatment">pet-indication-second.unacceptable-treatment</a> = Ei soovi ma järgmisi elu säilitavaid sekkumisi (patsiendi-elulopu-tahteavalduse-kysimustik#these-life-sustaining-treatments)</span><br/>Value Set: <a href="https://akk.tehik.ee/classifier/fhir/ValueSet/elusailitavad-sekkumised">Elusäilitavad sekkumised</a></td></tr>
+<tr fhir="generated-heirarchy" id="qt-Questionnaire-AHD-Example-acb" class="xhtRowBorder1 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck100.png)" id="item.pet-indication-second.other" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-text.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="text" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">AHD / pet-indication-second / </span>pet-indication-second.other</td><td style="" class="hierarchy xhtCellBorder1">Soovin veel lisada</td><td style="" class="hierarchy xhtCellBorder1">0..1</td><td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-text">text</a></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">Value Set: </td></tr>
+<tr fhir="generated-heirarchy" id="qt-Questionnaire-AHD-Example-ad" class="xhtRowBorder1 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck11.png)" id="item.pet-indication-third" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin-open.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-group.png" alt="" style="background-color: white; background-color: inherit" title="group" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">AHD / </span>pet-indication-third</td><td style="" class="hierarchy xhtCellBorder1">Kõigist ravisekkumistest keeldumine</td><td style="" class="hierarchy xhtCellBorder1">1..1</td><td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-group">group</a></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">Enable When: <span><a href="#item.pet-indication">pet-indication</a> = Kõigist ravisekkumistest keeldumine (patsiendi-elulopu-tahteavalduse-kysimustik#pet-indication-third-choice)</span><br/>Value Set: </td></tr>
+<tr fhir="generated-heirarchy" id="qt-Questionnaire-AHD-Example-ada" class="xhtRowBorder1 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck110.png)" id="item.pet-indication-third.unacceptable-treatment" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="coding" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">AHD / pet-indication-third / </span>pet-indication-third.unacceptable-treatment</td><td style="" class="hierarchy xhtCellBorder1">Kui ma olen haigestunud, siis</td><td style="" class="hierarchy xhtCellBorder1">1..1</td><td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-coding">coding</a></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">Value Set: <a href="https://akk.tehik.ee/classifier/fhir/ValueSet/koigist-ravisekkumistest-keeldumise-ulatus">Kõigist ravisekkumistest keeldumise ulatus</a></td></tr>
+<tr fhir="generated-heirarchy" id="qt-Questionnaire-AHD-Example-adb" class="xhtRowBorder1 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck100.png)" id="item.pet-indication-third.other" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-text.png" alt="" style="background-color: white; background-color: inherit" title="text" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">AHD / pet-indication-third / </span>pet-indication-third.other</td><td style="" class="hierarchy xhtCellBorder1">Soovin veel lisada</td><td style="" class="hierarchy xhtCellBorder1">0..1</td><td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-text">text</a></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">Value Set: </td></tr>
+<tr fhir="generated-heirarchy" id="qt-Questionnaire-AHD-Example-ae" class="xhtRowBorder1 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck11.png)" id="item.palliative-treatment" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin-open.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="coding" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">AHD / </span>palliative-treatment</td><td style="" class="hierarchy xhtCellBorder1">Soovin palliatiivravi</td><td style="" class="hierarchy xhtCellBorder1">1..1</td><td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-coding">coding</a></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">Enable When: <span><a href="#item.pet-indication">pet-indication</a> exists true</span><br/>Value Set: <a href="https://akk.tehik.ee/classifier/fhir/ValueSet/palliatiivravi-ulatus">Palliatiivravi ulatus</a></td></tr>
+<tr fhir="generated-heirarchy" id="qt-Questionnaire-AHD-Example-aea" class="xhtRowBorder1 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck100.png)" id="item.palliative-treatment.treatments" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-text.png" alt="" style="background-color: white; background-color: inherit" title="text" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">AHD / palliative-treatment / </span>palliative-treatment.treatments</td><td style="" class="hierarchy xhtCellBorder1">Ei soovi selliseid sekkumisi</td><td style="" class="hierarchy xhtCellBorder1">1..1</td><td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-text">text</a></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">Enable When: <span><a href="#item.palliative-treatment">palliative-treatment</a> = Ei soovi selliseid sekkumisi (patsiendi-elulopu-tahteavalduse-kysimustik#refuse-specified-treatments)</span><br/>Value Set: </td></tr>
+<tr fhir="generated-heirarchy" id="qt-Questionnaire-AHD-Example-af" class="xhtRowBorder1 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck11.png)" id="item.other-preferences" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin-open.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-group.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="group" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">AHD / </span>other-preferences</td><td style="" class="hierarchy xhtCellBorder1">Muud elulõpu juhised ja eelistused, mis ei ole tervishoiutöötajatele kohustuslikud</td><td style="" class="hierarchy xhtCellBorder1">0..1</td><td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-group">group</a></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">Value Set: </td></tr>
+<tr fhir="generated-heirarchy" id="qt-Questionnaire-AHD-Example-afa" class="xhtRowBorder1 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck111.png)" id="item.other-preferences.preferred-death-location" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin-open.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="" style="background-color: white; background-color: inherit" title="coding" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">AHD / other-preferences / </span>other-preferences.preferred-death-location</td><td style="" class="hierarchy xhtCellBorder1">Minu eelistatud suremispaik on</td><td style="" class="hierarchy xhtCellBorder1">0..1</td><td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-coding">coding</a></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">Value Set: <a href="https://akk.tehik.ee/classifier/fhir/ValueSet/eelistatud-suremispaik">Eelistatud suremispaik</a></td></tr>
+<tr fhir="generated-heirarchy" id="qt-Questionnaire-AHD-Example-afaa" class="xhtRowBorder1 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck1100.png)" id="item.other-preferences.preferred-death-location.other" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-text.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="text" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">AHD / other-preferences / other-preferences.preferred-death-location / </span>other-preferences.preferred-death-location.other</td><td style="" class="hierarchy xhtCellBorder1">Täpsustus</td><td style="" class="hierarchy xhtCellBorder1">1..1</td><td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-text">text</a></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">Enable When: <span><a href="#item.other-preferences.preferred-death-location">other-preferences.preferred-death-location</a> = Muu (suremispaik#99)</span><br/>Value Set: </td></tr>
+<tr fhir="generated-heirarchy" id="qt-Questionnaire-AHD-Example-afb" class="xhtRowBorder1 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck110.png)" id="item.other-preferences.people-by-side-death" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-text.png" alt="" style="background-color: white; background-color: inherit" title="text" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">AHD / other-preferences / </span>other-preferences.people-by-side-death</td><td style="" class="hierarchy xhtCellBorder1">Ma soovin, et minu suremise juures viibivad järgmised inimesed</td><td style="" class="hierarchy xhtCellBorder1">0..1</td><td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-text">text</a></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">Value Set: </td></tr>
+<tr fhir="generated-heirarchy" id="qt-Questionnaire-AHD-Example-afc" class="xhtRowBorder1 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck110.png)" id="item.other-preferences.religious-preferences" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-text.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="text" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">AHD / other-preferences / </span>other-preferences.religious-preferences</td><td style="" class="hierarchy xhtCellBorder1">Minu religioossed või muud spirituaalsed eelistused</td><td style="" class="hierarchy xhtCellBorder1">0..1</td><td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-text">text</a></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">Value Set: </td></tr>
+<tr fhir="generated-heirarchy" id="qt-Questionnaire-AHD-Example-afd" class="xhtRowBorder1 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck111.png)" id="item.other-preferences.actions-after-death" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin-open.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-coding.png" alt="" style="background-color: white; background-color: inherit" title="coding" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">AHD / other-preferences / </span>other-preferences.actions-after-death</td><td style="" class="hierarchy xhtCellBorder1">Minu matmisviisi eelistus on</td><td style="" class="hierarchy xhtCellBorder1">0..1</td><td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-coding">coding</a></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">Value Set: <a href="https://akk.tehik.ee/classifier/fhir/ValueSet/eelistatud-matmisviis">Eelistatud matmisviis</a></td></tr>
+<tr fhir="generated-heirarchy" id="qt-Questionnaire-AHD-Example-afda" class="xhtRowBorder1 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck1100.png)" id="item.other-preferences.actions-after-death.other" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-text.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="text" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">AHD / other-preferences / other-preferences.actions-after-death / </span>other-preferences.actions-after-death.other</td><td style="" class="hierarchy xhtCellBorder1">Täpsustus</td><td style="" class="hierarchy xhtCellBorder1">1..1</td><td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-text">text</a></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">Enable When: <span><a href="#item.other-preferences.actions-after-death">other-preferences.actions-after-death</a> = Muu (eelistatud-matmisviis#33)</span><br/>Value Set: </td></tr>
+<tr fhir="generated-heirarchy" id="qt-Questionnaire-AHD-Example-afe" class="xhtRowBorder1 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck100.png)" id="item.other-preferences.other-wishes" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-text.png" alt="" style="background-color: white; background-color: inherit" title="text" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">AHD / other-preferences / </span>other-preferences.other-wishes</td><td style="" class="hierarchy xhtCellBorder1">Muud olulised soovid</td><td style="" class="hierarchy xhtCellBorder1">0..1</td><td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-text">text</a></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">Value Set: </td></tr>
+<tr fhir="generated-heirarchy" id="qt-Questionnaire-AHD-Example-ag" class="xhtRowBorder1 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck01.png)" id="item.confirmation" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin_end-open.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-group.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="group" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">AHD / </span>confirmation</td><td style="" class="hierarchy xhtCellBorder1">Kinnitan, et</td><td style="" class="hierarchy xhtCellBorder1">1..1</td><td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-group">group</a></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">Value Set: </td></tr>
+<tr fhir="generated-heirarchy" id="qt-Questionnaire-AHD-Example-aga" class="xhtRowBorder1 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck010.png)" id="item.confirmation.volition" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-boolean.png" alt="" style="background-color: white; background-color: inherit" title="boolean" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">AHD / confirmation / </span>confirmation.volition</td><td style="" class="hierarchy xhtCellBorder1">Olen koostanud tahteavalduse vastavalt oma tahtele ja ilma välise surveta</td><td style="" class="hierarchy xhtCellBorder1">1..1</td><td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-boolean">boolean</a></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">Value Set: </td></tr>
+<tr fhir="generated-heirarchy" id="qt-Questionnaire-AHD-Example-agb" class="xhtRowBorder1 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck010.png)" id="item.confirmation.understand-content" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-boolean.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="boolean" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">AHD / confirmation / </span>confirmation.understand-content</td><td style="" class="hierarchy xhtCellBorder1">Mõistan selles tehtud otsuste sisu ja tähendust</td><td style="" class="hierarchy xhtCellBorder1">1..1</td><td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-boolean">boolean</a></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">Value Set: </td></tr>
+<tr fhir="generated-heirarchy" id="qt-Questionnaire-AHD-Example-agc" class="xhtRowBorder1 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck000.png)" id="item.confirmation.modification" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-boolean.png" alt="" style="background-color: white; background-color: inherit" title="boolean" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">AHD / confirmation / </span>confirmation.modification</td><td style="" class="hierarchy xhtCellBorder1">Olen teadlik tahteavalduse muutmise ja tühistamise võimalusest</td><td style="" class="hierarchy xhtCellBorder1">1..1</td><td style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R5/codesystem-item-type.html#item-type-boolean">boolean</a></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">Value Set: </td></tr>
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="6" class="hierarchy"><br/><a href="https://hl7.org/fhir/R5/formats.html#table" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
+
+  <!-- insert notes if present -->
+  
+
+
+
+  
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://tehik.ee">TEHIK</a>.  Package ee.fhir.qre#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Wed, Nov 11, 2026 14:21+0000">2026-11-11</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+
